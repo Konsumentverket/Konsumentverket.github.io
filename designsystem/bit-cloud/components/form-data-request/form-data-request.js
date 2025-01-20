@@ -28,7 +28,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm();
+  } = useForm({mode: 'onBlur'});
 
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
@@ -66,11 +66,24 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
       <div css={[reasonTitle]}>
         <Heading text="Vad vill du göra?" level={3} />
       </div>
-      <input css={[radio]} id="reason-aquire" type="radio" value="aquire" defaultChecked {...register('reason', { required: true })} />
+      <input
+        css={[radio]}
+        id="reason-aquire"
+        type="radio"
+        value="aquire"
+        defaultChecked
+        {...register('reason', { required: true })}
+      />
       <label htmlFor="reason-aquire" css={[radioLabel]}>
         Få ut information om mina personuppgifter
       </label>
-      <input css={[radio]} id="reason-delete" type="radio" value="delete" {...register('reason', { required: true })} />
+      <input
+        css={[radio]}
+        id="reason-delete"
+        type="radio"
+        value="delete"
+        {...register('reason', { required: true })}
+      />
       <label htmlFor="reason-delete" css={[radioLabel]}>
         Radera mina personuppgifter
       </label>
@@ -86,6 +99,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
             placeholder="Ange ditt förnamn"
             css={errors.firstName ? inputError : null}
             {...register('firstName', { required: true })}
+            watch={watch}
           />
           {errors.firstName && (
             <span css={[errorMessage]}>
@@ -101,6 +115,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
             placeholder="Ange ditt efternamn"
             css={errors.lastName ? inputError : null}
             {...register('lastName', { required: true })}
+            watch={watch}
           />
           {errors.lastName && (
             <span css={[errorMessage]}>

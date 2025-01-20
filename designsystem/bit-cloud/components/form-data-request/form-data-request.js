@@ -28,7 +28,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({mode: 'onBlur'});
+  } = useForm({ mode: 'onTouched' });
 
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
@@ -98,13 +98,15 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
             id="firstName"
             placeholder="Ange ditt förnamn"
             css={errors.firstName ? inputError : null}
-            {...register('firstName', { required: true })}
+            {...register('firstName', {
+              required: { value: true, message: 'Ange ditt förnamn' },
+            })}
             watch={watch}
           />
           {errors.firstName && (
             <span css={[errorMessage]}>
               <Icon icon="Warn" />
-              Ange ditt förnamn
+              {errors.firstName.message}
             </span>
           )}
         </div>
@@ -114,13 +116,15 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
             id="lastName"
             placeholder="Ange ditt efternamn"
             css={errors.lastName ? inputError : null}
-            {...register('lastName', { required: true })}
+            {...register('lastName', {
+              required: { value: true, message: 'Ange ditt efternamn' },
+            })}
             watch={watch}
           />
           {errors.lastName && (
             <span css={[errorMessage]}>
               <Icon icon="Warn" />
-              Ange ditt efternamn
+              {errors.lastName.message}
             </span>
           )}
         </div>

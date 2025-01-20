@@ -64,7 +64,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div css={[reasonTitle]}>
-        <Heading text="Vad vill du göra?" level={3} />
+        <Heading text="Vad vill du göra?" level={2} styleLevel={3} />
       </div>
       <input
         css={[radio]}

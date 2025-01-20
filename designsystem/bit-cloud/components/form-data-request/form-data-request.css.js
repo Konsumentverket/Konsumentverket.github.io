@@ -110,9 +110,9 @@ export const radio = css`
 `
 
 export const radioLabel = css`
-  display: flex;
+  display: inline-flex;
   align-items: flex-start;
-  width: 100%;
+  align-self: flex-start;
   padding: 1.2rem ${spacing.xs} 0;
   color: ${newColors.shades.kovBlack};
   font-size: 1.6rem;

@@ -194,6 +194,7 @@ import { DBWifiIcon } from "./Icons/EditorIcons/DBWifiIcon/DBWifiIcon.js";
 import { DBSocialShareIcon } from "./Icons/EditorIcons/DBSocialShareIcon/DBSocialShareIcon.js";
 import { DBFriendshipIcon } from "./Icons/EditorIcons/DBFriendshipIcon/DBFriendshipIcon.js";
 import { DBWebsiteInfoIcon } from "./Icons/EditorIcons/DBWebsiteInfoIcon/DBWebsiteInfoIcon.js";
+import { RSS } from "./Icons/EditorIcons/RSS/RSS.js";
 
 import useOnClickOutside from "./hooks/useOnClickOutside";
 
@@ -337,6 +338,7 @@ export {
   HandHeart,
   Snowboarding,
   //nya
+  RSS,
   TempIcon,
   NewsIcon,
   DiagramIcon,

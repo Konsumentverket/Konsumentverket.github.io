@@ -76,7 +76,8 @@ import {
   DBWifiIcon,
   DBSocialShareIcon,
   DBFriendshipIcon,
-  DBWebsiteInfoIcon
+  DBWebsiteInfoIcon,
+  RSS
 } from "@konsumentverket-sverige/designsystem.utils";
 
 const editorIconDefinitions = {
@@ -154,7 +155,8 @@ const editorIconDefinitions = {
   DBWifiIcon,
   DBSocialShareIcon,
   DBFriendshipIcon,
-  DBWebsiteInfoIcon
+  DBWebsiteInfoIcon,
+  RSS
 };
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {

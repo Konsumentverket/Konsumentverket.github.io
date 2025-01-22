@@ -11,6 +11,11 @@
       "url": "EditorIconsSvg/DBCalendarIcon.svg"
     },
     {
+      "name": "RSS",
+      "title": "Prenumerera",
+      "url": "EditorIconsSvg/RSS.svg"
+    },
+    {
       "name": "DBCarIcon",
       "title": "Bilar",
       "url": "EditorIconsSvg/blue-dual-car.svg"

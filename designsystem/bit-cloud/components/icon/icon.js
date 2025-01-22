@@ -183,7 +183,8 @@ import {
   DBWifiIcon,
   DBSocialShareIcon,
   DBFriendshipIcon,
-  DBWebsiteInfoIcon
+  DBWebsiteInfoIcon,
+  RSS
 
 } from "@konsumentverket-sverige/designsystem.utils"
 
@@ -258,6 +259,7 @@ const systemIconDefinitions = {
 };
 
 const editorIconDefinitions = {
+  RSS,
   DBAnimalsIcon,
   DBCalendarIcon,
   DBCarIcon,

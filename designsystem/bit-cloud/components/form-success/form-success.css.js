@@ -58,3 +58,7 @@ export const nestedKeyStyle = css`
   font-weight: bold;
   margin-right: 8px;
 `;
+
+export const loader = css`
+  margin: 0 0 24px;
+`;

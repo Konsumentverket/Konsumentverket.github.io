@@ -44,7 +44,7 @@ export const FormSuccess = ({
           <Loading />
         </div>
       ) : (
-        <>
+        <div>
           {formData && (
             <dl css={dataList}>
               {Object.keys(formData).map((key) => {
@@ -75,7 +75,7 @@ export const FormSuccess = ({
               })}
             </dl>
           )}
-        </>
+        </div>
       )}
 
       <Button

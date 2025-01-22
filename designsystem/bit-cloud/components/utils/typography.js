@@ -806,11 +806,7 @@ export const ulSmallStyling = css`
   ${ulSmallListSpacing};
 
   li {
-    ${paragraph};
-
-    @media (min-width: ${breakpoints.m}) {
-      ${textSmall};
-    }
+    ${textSmall};
   }
 `;
 
@@ -858,11 +854,7 @@ export const olSmallStyling = css`
   ${olSmallListSpacing};
 
   li {
-    ${paragraph};
-
-    @media (min-width: ${breakpoints.m}) {
-      ${textSmall};
-    }
+    ${textSmall};
   }
 `;
 

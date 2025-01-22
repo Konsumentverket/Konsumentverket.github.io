@@ -19,6 +19,7 @@ export const InputText = React.forwardRef(({
   placeholder,
   id,
   onChange,
+  autocompleteName,
   onClear,
   validationError,
   name,
@@ -64,6 +65,7 @@ export const InputText = React.forwardRef(({
       disabled={disabled}
       placeholder={placeholder}
       id={id}
+      autocomplete={autocompleteName ?? false}
       onChange={(e) => {
         onChange(e);
         setText(e.target.value);

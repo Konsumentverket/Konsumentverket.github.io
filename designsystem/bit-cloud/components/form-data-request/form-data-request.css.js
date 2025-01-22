@@ -22,7 +22,8 @@ export const form = css`
 `;
 
 export const reasonTitle = css`
-  h3 {
+  h2 {
+    margin-top: 0;
     margin-bottom: 4px;
   }
 `;

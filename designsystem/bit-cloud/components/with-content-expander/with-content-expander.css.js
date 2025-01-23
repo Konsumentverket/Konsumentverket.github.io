@@ -11,11 +11,11 @@ export const containerStyle = css`
 
 export const scrollDiv = css`
   position: absolute;
-  top: -10px;
+  top: -16px;
   left: 0;
 
   @media (min-width: ${breakpoints.m}) {
-    top: -70px;
+    top: -84px;
   }
 `;
 

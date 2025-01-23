@@ -16,6 +16,7 @@ import {NoticeBox} from '@konsumentverket-sverige/designsystem.notice-box';
 import {Loading} from '@konsumentverket-sverige/designsystem.loading';
 import {Button} from '@konsumentverket-sverige/designsystem.button';
 import {Icon} from '@konsumentverket-sverige/designsystem.icon';
+import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 
 export const FormSuccess = ({
   formData,
@@ -25,7 +26,7 @@ export const FormSuccess = ({
   contentfulName,
   buttonClick = () => {},
   buttonText,
-  loading = false,
+  loading = true,
 }) => {
   return (
     <div
@@ -41,7 +42,7 @@ export const FormSuccess = ({
 
       {loading ? (
         <div css={[loader]}>
-          <Loading />
+          <Loading color={newColors.primaries.fullBlue} />
         </div>
       ) : (
         <div>

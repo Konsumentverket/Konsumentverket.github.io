@@ -6,6 +6,17 @@ export const containerStyle = css`
   border-radius: ${spacing.s};
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   overflow: hidden;
+  position: relative;
+`;
+
+export const scrollDiv = css`
+  position: absolute;
+  top: -10px;
+  left: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    top: -70px;
+  }
 `;
 
 export const containerLightBlueAlternativeStyle = css`

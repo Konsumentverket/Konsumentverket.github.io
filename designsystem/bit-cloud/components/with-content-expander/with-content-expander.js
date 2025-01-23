@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import React, { useState, useRef, useEffect } from "react";
-import ReactDOM from "react-dom";
 import { Typography } from '@konsumentverket-sverige/designsystem.typography';
 import { MonoArrowDown, MonoArrowDownSmall } from '@konsumentverket-sverige/designsystem.utils';
 import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
 
 import {
   containerStyle,
+  scrollDiv,
   containerAlternativeStyle,
   containerLightBlueAlternativeStyle,
   noLeftBorderRadiusStyling,
@@ -85,8 +85,7 @@ export const WithContentExpander = ({
 
   useEffect(() => {
     if (scrollIntoView && topOfComponent.current && expanded) {
-      const DOMNode = ReactDOM.findDOMNode(topOfComponent.current);
-      DOMNode.scrollIntoView({ behavior: "smooth", block: "start" });
+      topOfComponent.current.scrollIntoView({ behavior: "smooth", block: "start" })
     }
   }, [expanded]);
 
@@ -153,8 +152,8 @@ export const WithContentExpander = ({
       className={`withContentExpander ${expanded ? "expanded" : ""}`}
       id={wrapperId}
       css={containerStyles}
-      ref={topOfComponent}
     >
+      <div ref={topOfComponent} css={scrollDiv}></div>
       <div className="link-element noStyle" onClick={(e) => handleExpansionOnClick(e)}>
         <a
           href={linkHref}
@@ -173,7 +172,7 @@ export const WithContentExpander = ({
             ref={linkContainerRef}
           >
             <div css={innerHeaderStyle}>
-              {icon && <EditorIcon icon={icon} css={iconStyle} />}
+              {icon && <EditorIcon icon={icon} css={iconStyle}/>}
               <div css={innerHeaderTextStyle}>
                 <HeadingLevel
                   className="noStyle"
@@ -181,7 +180,8 @@ export const WithContentExpander = ({
                 >
                   {text}
                 </HeadingLevel>
-                {preamble && <p css={preambleStyle} data-contentful-field-id={contentfulTextName} data-contentful-entry-id={contentfulId}>{preamble}</p>}
+                {preamble && <p css={preambleStyle} data-contentful-field-id={contentfulTextName}
+                                data-contentful-entry-id={contentfulId}>{preamble}</p>}
               </div>
             </div>
             {(!disabled && !useLightBlueAlternativeStyling) && (

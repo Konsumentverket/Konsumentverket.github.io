@@ -240,6 +240,7 @@ export const paragraph = css`
   line-height: 150%;
   word-break: normal;
   margin-bottom: 14px;
+
   overflow-wrap: anywhere;
   hyphens: auto;
 

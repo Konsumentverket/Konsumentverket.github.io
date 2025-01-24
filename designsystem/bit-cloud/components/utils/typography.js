@@ -240,6 +240,8 @@ export const paragraph = css`
   line-height: 150%;
   word-break: normal;
   margin-bottom: 14px;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 
   b, strong {
     font-weight: 500;
@@ -344,6 +346,7 @@ export const link = css`
   color: ${newColors.primaries.fullBlue};
   text-decoration: underline;
   border-radius: 3px;
+  hyphens: none;
 
   &:not(.noStyle):active,
   &:not(.noStyle):hover {

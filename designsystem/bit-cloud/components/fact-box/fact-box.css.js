@@ -8,6 +8,7 @@ export const wrapperStyling = css`
     padding: ${spacing.m} ${spacing.s};
     position: relative;
     margin-top: 24px;
+    overflow-wrap: break-word;
 
     ${medium} {
         margin-top: 40px;

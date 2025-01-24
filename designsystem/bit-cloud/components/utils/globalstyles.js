@@ -139,6 +139,8 @@ const globalStyles = (
     }
 
     a {
+      hyphens: none;
+
       &.external {
         svg.external {
           margin-left: 8px;

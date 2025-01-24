@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { colors } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 
-const loaderStyle = ({ color = colors.theme2.midLight, width = '80px', height = "80px", border = "6px" }) => css`
+const loaderStyle = ({ color = newColors.primaries.fullBlue, width = '80px', height = "80px", border = "6px" }) => css`
     display: inline-block;
     width: ${width};
     height: ${height};
@@ -26,6 +26,7 @@ const loaderStyle = ({ color = colors.theme2.midLight, width = '80px', height = 
     }
   }
 `
+
 export const Loading = ({ color, size = "small", style }) => {
   let sizeStyle = null
   switch (size) {

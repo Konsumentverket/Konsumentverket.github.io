@@ -88,25 +88,16 @@ export const smallTypographyContainerStyle = css`
 export const processStepStyle = css`
   p:not(.noStyleComponent p, .noStyle) {
     ${typography.paragraph};
-    strong {
-      ${typography.paragraph};
-    }
-    @media (min-width: ${breakpoints.m}) {
-      ${typography.textSmall};
-      strong {
-        ${typography.textSmall};
-        font-weight: 700;
-      }
-    }
   }
+
   a:not(.noStyleComponent a, .noStyle) {
     ${typography.linkBodyMedium}
   }
   ul:not(.noStyleComponent ul, .noStyle) {
-    ${typography.ulSmallStyling}
+    ${typography.ulStyling}
   }
   ol:not(.noStyleComponent ol, .noStyle) {
-    ${typography.olSmallStyling}
+    ${typography.olStyling}
   }
 `;
 

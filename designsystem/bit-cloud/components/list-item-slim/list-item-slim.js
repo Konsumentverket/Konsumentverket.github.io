@@ -9,6 +9,7 @@ export const ListItemSlim = ({
  href = '',
  disabled = false,
  preamble = '',
+ linkComponent: LinkComponent = 'a',
 }) => {
 
   if (!headline) {
@@ -33,7 +34,7 @@ export const ListItemSlim = ({
       </li>
     ) : (
       <li css={styles.listItemSlim}>
-        <a
+        <LinkComponent
           css={styles.link}
           className='noStyle'
           href={href}
@@ -43,7 +44,7 @@ export const ListItemSlim = ({
             {headline}
           </span>
           <Icon icon={'ChevronRight'} css={styles.chevronStyle}/>
-        </a>
+        </LinkComponent>
       </li>
     )
   )

@@ -85,22 +85,6 @@ export const smallTypographyContainerStyle = css`
   }
 `;
 
-export const processStepStyle = css`
-  p:not(.noStyleComponent p, .noStyle) {
-    ${typography.paragraph};
-  }
-
-  a:not(.noStyleComponent a, .noStyle) {
-    ${typography.linkBodyMedium}
-  }
-  ul:not(.noStyleComponent ul, .noStyle) {
-    ${typography.ulStyling}
-  }
-  ol:not(.noStyleComponent ol, .noStyle) {
-    ${typography.olStyling}
-  }
-`;
-
 export const alternativeHeadingStyle = css`
   h2:not(.noStyleComponent h2) {
     ${typography.subHeadingLarge};

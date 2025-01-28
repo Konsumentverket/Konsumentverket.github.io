@@ -5,11 +5,6 @@ import { spacing } from './spacing'
 import { colors, newColors } from './colors';
 import { paragraph } from "./typography";
 import React, { Children, useEffect } from 'react';
-import { filePdfPath } from './Icons/SystemIcons/FilePdf/FilePdf';
-import { fileWordPath } from './Icons/SystemIcons/FileWord/FileWord';
-import { filePowerpointPath } from './Icons/SystemIcons/FilePowerpoint/FilePowerpoint';
-import { fileExcelPath } from './Icons/SystemIcons/FileExcel/FileExcel';
-import { filePath } from './Icons/SystemIcons/File/File';
 
 export const CompositionFonts = ({children}) => {
   return (

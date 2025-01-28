@@ -139,7 +139,6 @@ const globalStyles = (
     }
 
     a {
-      hyphens: none;
 
       &.external {
         svg.external {

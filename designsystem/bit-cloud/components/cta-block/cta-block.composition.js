@@ -115,6 +115,31 @@ export const ContactCTAWithLinkAndGreyBackground = () => {
 }
 
 
+export const ContactCTAWithoutBoxshadow = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <CtaBlock
+        headline="Rapportera när produkter eller företag bryter mot lagen"
+        text="Konsumentverket granskar varor, tjänster och företag. Om du som konsument upptäcker att ett företag har gjort fel eller ser en risk med en vara eller tjänst kan du anmäla det till oss."
+        backgroundColor={"Blue"}
+        contactCta={true}
+        removeBoxShadow={true}
+        btn={
+          <Button
+            href={"#"}
+            iconRight={
+              <Icon icon="MonoArrowRightSmall"/>
+            }
+            text="Länktext"
+          />
+        }
+      />
+    </CompositionFonts>
+  );
+}
+
+
 export const CTAWithButtonNoImage = () => {
   return (
     <CompositionFonts>

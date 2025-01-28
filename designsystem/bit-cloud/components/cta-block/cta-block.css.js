@@ -31,6 +31,9 @@ export const ctaWrapper = css`
     }
   }
 `
+export const noBoxshadow = css`
+  box-shadow: none;
+`
 
 export const whiteBackground = css`
   background: ${newColors.kovWhite};

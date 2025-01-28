@@ -13,7 +13,8 @@ import {
   pictureWrapper,
   smallPaddingStyle,
   smallHeadlineStyle,
-  paragraphStyling
+  paragraphStyling,
+  noBoxshadow
 } from './cta-block.css.js';
 
 export const CtaBlock = ({
@@ -28,6 +29,7 @@ export const CtaBlock = ({
   contentfulName,
   contentfulId,
   contactCta = false,
+  removeBoxShadow = false
 }) => {
   let imageclass = "";
   let imageArea = imageComponent;
@@ -55,7 +57,7 @@ export const CtaBlock = ({
   const selectedBackgroundColor = validBackgroundColors[backgroundColor] || whiteBackground;
 
     return (
-      <div css={[ctaWrapper, selectedBackgroundColor]} className={imageclass} data-comp="cta-block" data-contentful-field-id={contentfulName}
+      <div css={[ctaWrapper, selectedBackgroundColor, removeBoxShadow? noBoxshadow : null]} className={imageclass} data-comp="cta-block" data-contentful-field-id={contentfulName}
            data-contentful-entry-id={contentfulId}>
         <div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
         <div css={[

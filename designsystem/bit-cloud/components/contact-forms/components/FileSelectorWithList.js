@@ -360,7 +360,7 @@ const FileSelectorWithList = ({
                 const itemCustomError = errors.customErrors?.files?.[itemKey]?.message;
                 const fileText = `${file.name} ( ${formatFileSize(file.size)} MB )`;
                 return (
-                  <li key={file.name} css={listItem}>
+                  <li key={`${file.name}-${index}`} css={listItem}>
 
                     <div css={fileTileTop}>
 

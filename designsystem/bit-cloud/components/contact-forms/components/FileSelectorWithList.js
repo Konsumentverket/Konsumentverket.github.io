@@ -141,8 +141,47 @@ const FileSelectorWithList = ({
   }, [dragAreaElement]);
 
   const handleFilesForUpload = (newFiles) => {
+    clearErrors(FORM_FILE_INPUT_KEY);
+
     const previousFiles = getValues(FORM_FILE_INPUT_KEY);
+
     const updatedFiles = [...previousFiles, ...newFiles];
+
+    let notAcceptedFiles = [];
+
+    for (const file of newFiles) {
+      if (!file.type || !ACCEPTED_FILE_TYPES.includes(file.type)) {
+        notAcceptedFiles.push(file);
+      }
+    }
+
+    if (notAcceptedFiles.length) {
+
+      let notAcceptedText = '';
+
+      if (newFiles.length > 1) {
+        notAcceptedText = `Filerna kunde inte bifogas eftersom en eller flera filer har en otillåten filtyp. Endast följande filtyper är tillåtna: pdf, docx, txt, odt, jpg/jpeg, png, gif.`
+      } else {
+        notAcceptedText = `Filen kunde inte bifogas eftersom den har en otillåten filtyp. Endast följande filtyper är tillåtna: pdf, docx, txt, odt, jpg/jpeg, png, gif.`
+      }
+      setError(FORM_FILE_INPUT_KEY, {message: notAcceptedText})
+      return;
+    }
+
+    let maxSizeText = "";
+
+    if (newFiles.length > 1) {
+      maxSizeText = `Filerna kunde inte bifogas eftersom den totala storleken skulle överskrida gränsen på ${MAX_MEGABYTES} MB.`;
+    } else {
+      maxSizeText = `Filen kunde inte bifogas eftersom den totala storleken skulle överskrida gränsen på ${MAX_MEGABYTES} MB.`;
+    }
+    const totalFileSize = updatedFiles.reduce((acc, file) => acc + file.size, 0);
+
+    if (totalFileSize > MAX_TOTAL_SIZE) {
+      setError(FORM_FILE_INPUT_KEY, {message: maxSizeText})
+      return
+    }
+
     setValue(FORM_FILE_INPUT_KEY, updatedFiles);
     trigger(FORM_FILE_INPUT_KEY);
   }
@@ -298,20 +337,7 @@ const FileSelectorWithList = ({
 
         {errors[FORM_FILE_INPUT_KEY]?.message && (
           <ErrorMessage id="file-error">
-            {errors[FORM_FILE_INPUT_KEY].message === "Invalid file size" ? (
-              <>
-                Den totala storleken för de bifogade filerna överskrider gränsen på {MAX_MEGABYTES} MB.
-                <br/>
-                Ta bort en eller flera filer och försök igen. Den aktuella totala storleken är {formattedFileSize} MB.
-              </>
-            ) : (
-              <>
-                En eller flera filer har en otillåten filtyp. De tillåtna filtyperna är: pdf, docx, txt, odt, jpg, png
-                och gif.
-                <br/>
-                Ta bort filer med otillåtna filtyper och försök igen.
-              </>
-            )}
+            {errors[FORM_FILE_INPUT_KEY]?.message}
           </ErrorMessage>
         )}
 

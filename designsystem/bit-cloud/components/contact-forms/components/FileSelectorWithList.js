@@ -377,6 +377,7 @@ const FileSelectorWithList = ({
                               message: `Texten får inte vara mer än ${maxLengthInput} tecken.`,
                             },
                           })}
+                          maxLength={maxLengthInput}
                           aria-invalid={Boolean(itemError)}
                           aria-describedby={`error-character-count-${itemKey}-${index}`}
                         />

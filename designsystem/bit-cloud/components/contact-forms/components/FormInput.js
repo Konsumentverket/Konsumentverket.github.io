@@ -62,6 +62,7 @@ const FormInput = ({
             error ? inputError : null
           ]}
           {...register(id, validation)}
+          maxLength={maxLengthValidation && maxLengthCount}
           {...otherAttributes}
         />
 

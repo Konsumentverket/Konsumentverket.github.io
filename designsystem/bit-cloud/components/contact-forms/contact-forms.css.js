@@ -439,7 +439,6 @@ export const fileListStyle = css`
 `;
 
 export const listItem = css`
-  //background-color: green;
   padding: 16px;
   border-radius: 16px;
   background-color: ${newColors.kovWhite};
@@ -450,30 +449,30 @@ export const listItem = css`
 
 export const fileTileTop = css`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  gap: 16px;
   margin-bottom: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    align-items: center;
+    flex-direction: row;
+  }
 `;
 
 export const fileThumbnail = css`
-  //outline: 1px solid blue;
   padding: 8px 16px;
   border-radius: 16px;
   background-color: ${newColors.shades.lightBlue50};
   display: flex;
   align-items: center;
   color: ${newColors.kovBlack};
-
-  //background: ${newColors.primaries.lightOrange};
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%230061C2FF' stroke-width='2' stroke-dasharray='4%2c 8' stroke-dashoffset='81' stroke-linecap='square'/%3e%3c/svg%3e");
-  margin-right: 16px;
 
-  //svg {
-  //  fill: green;
-  //}
+  @media (min-width: ${breakpoints.m}) {
+    margin-right: 16px;
+  }
 `;
-
-
 
 export const deleteFileButton = css`
   background: none;
@@ -482,7 +481,6 @@ export const deleteFileButton = css`
   align-items: center;
   ${typography.clickSmallUL};
   white-space: nowrap;
-  //margin-left: 16px;
 `;
 
 export const fileDescriptionInstruction = css`

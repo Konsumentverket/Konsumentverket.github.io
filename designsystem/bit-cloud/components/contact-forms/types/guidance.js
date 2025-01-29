@@ -107,8 +107,7 @@ export const Guidance = ({
           placeholder={guidanceEmailPlaceholder}
           tooltipText={guidanceEmailHelpText}
           error={errors && errors.email}
-          maxLengthValidation={true}
-          maxLengthCount={maxLengthEmail}
+          maxLengthValidation={false}
           register={register}
           validation={{
             required: {
@@ -118,10 +117,6 @@ export const Guidance = ({
             pattern: {
               value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
               message: 'Ange en giltig e-postadress ',
-            },
-            maxLength: {
-              value: maxLengthEmail,
-              message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken.`,
             },
           }}
           watch={watch}

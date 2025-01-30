@@ -91,6 +91,7 @@ export const Guidance = ({
       data-comp="contactForm-guidance"
       onSubmit={handleSubmit(onSubmit)}
       aria-busy={isLoading}
+      autoComplete={"on"}
     >
 
       {title && (
@@ -121,6 +122,7 @@ export const Guidance = ({
           }}
           watch={watch}
           autoComplete={"email"}
+          type={"email"}
         />
 
         <FormInput

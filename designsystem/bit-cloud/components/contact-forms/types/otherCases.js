@@ -66,38 +66,37 @@ export const OtherCases = ({
   } = texts;
 
   const onSubmit = async (data) => {
-    console.log("datan är: ", data)
-    // if (!executeRecaptcha) {
-    //   setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-    //   return;
-    // }
-    //
-    // try {
-    //   const token = await executeRecaptcha('personuppgifter');
-    //   if (!token) {
-    //     setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-    //     return;
-    //   }
-    //
-    //   if (data.fileDescriptions) {
-    //     data.fileDescriptions = restoreFileNames(data.fileDescriptions)
-    //
-    //     for (const key in data.fileDescriptions) {
-    //       if (data.fileDescriptions[key] === "") {
-    //         data.fileDescriptions[key] = "Saknar beskrivning.";
-    //       }
-    //     }
-    //   }
-    //
-    //   const formData = {
-    //     ...data,
-    //     recaptchaToken: token,
-    //   };
-    //
-    //   handleFormSubmit(formData);
-    // } catch (error) {
-    //   setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-    // }
+    if (!executeRecaptcha) {
+      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
+      return;
+    }
+
+    try {
+      const token = await executeRecaptcha('personuppgifter');
+      if (!token) {
+        setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
+        return;
+      }
+
+      if (data.fileDescriptions) {
+        data.fileDescriptions = restoreFileNames(data.fileDescriptions)
+
+        for (const key in data.fileDescriptions) {
+          if (data.fileDescriptions[key] === "") {
+            data.fileDescriptions[key] = "Saknar beskrivning.";
+          }
+        }
+      }
+
+      const formData = {
+        ...data,
+        recaptchaToken: token,
+      };
+
+      handleFormSubmit(formData);
+    } catch (error) {
+      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
+    }
   };
 
   const maxLengthInput = 40;

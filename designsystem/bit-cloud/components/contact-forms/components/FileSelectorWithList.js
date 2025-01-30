@@ -320,8 +320,6 @@ const FileSelectorWithList = ({
 
   const formattedFileSize = formatFileSize(totalSize);
 
-  console.log("errors: ", errors)
-
   return (
     <>
       <div css={[fileUploadWrapper]}>
@@ -384,7 +382,6 @@ const FileSelectorWithList = ({
             {fileList.map((file, index) => {
                 const itemKey = formatFileName(file.name);
                 const itemError = errors[FORM_FILE_DESCRIPTIONS_KEY] && errors[FORM_FILE_DESCRIPTIONS_KEY][itemKey] || null;
-                console.log("vad är itemerror: ", itemError)
                 const itemCustomError = errors.customErrors?.files?.[itemKey]?.message;
                 const fileText = `${file.name} ( ${formatFileSize(file.size)} MB )`;
                 return (

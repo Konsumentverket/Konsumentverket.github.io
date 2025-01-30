@@ -26,6 +26,7 @@ import ErrorMessage from "./ErrorMessage";
 
 const MAX_MEGABYTES = 20;
 const MAX_TOTAL_SIZE = MAX_MEGABYTES * 1024 * 1024; // 20 MB in bytes
+const MAX_NUMBER_OF_FILES = 10;
 const ACCEPTED_FILE_TYPES = [
   "application/pdf",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // docx
@@ -147,6 +148,22 @@ const FileSelectorWithList = ({
 
     const updatedFiles = [...previousFiles, ...newFiles];
 
+    // Validate number of files
+    if (updatedFiles.length > MAX_NUMBER_OF_FILES) {
+
+      let tooManyFilesText = '';
+
+      if (newFiles.length > 1) {
+        tooManyFilesText = `Filerna kunde inte bifogas eftersom det totala antalet filer då skulle överskrida gränsen på ${MAX_NUMBER_OF_FILES} filer.`;
+      } else {
+        tooManyFilesText = `Filen kunde inte bifogas eftersom det totala antalet filer då skulle överskrida gränsen på ${MAX_NUMBER_OF_FILES} filer.`;
+      }
+
+      setError(FORM_FILE_INPUT_KEY, {message: tooManyFilesText})
+      return;
+    }
+
+    // Validate file extensions
     let notAcceptedFiles = [];
 
     for (const file of newFiles) {
@@ -168,6 +185,7 @@ const FileSelectorWithList = ({
       return;
     }
 
+    // Validate total file size
     let maxSizeText = "";
 
     if (newFiles.length > 1) {

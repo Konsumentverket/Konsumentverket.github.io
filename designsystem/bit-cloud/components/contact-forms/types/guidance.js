@@ -112,7 +112,7 @@ export const Guidance = ({
           validation={{
             required: {
               value: true,
-              message: "Det här fältet måste vara ifyllt.",
+              message: "Du behöver skriva din e-postadress.",
             },
             pattern: {
               value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
@@ -185,7 +185,7 @@ export const Guidance = ({
         validation={{
           required: {
             value: true,
-            message: "Det här fältet måste vara ifyllt.",
+            message: "Du behöver beskriva vad din fråga handlar om.",
           },
           maxLength: {
             value: maxLengthInput,
@@ -207,7 +207,7 @@ export const Guidance = ({
         validation={{
           required: {
             value: true,
-            message: "Det här fältet måste vara ifyllt.",
+            message: "Du behöver skriva vad du vill ha hjälp med.",
           },
           maxLength: {
             value: maxLengthText,

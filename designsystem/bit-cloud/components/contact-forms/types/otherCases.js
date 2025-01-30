@@ -66,40 +66,42 @@ export const OtherCases = ({
   } = texts;
 
   const onSubmit = async (data) => {
-    if (!executeRecaptcha) {
-      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-      return;
-    }
-
-    try {
-      const token = await executeRecaptcha('personuppgifter');
-      if (!token) {
-        setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-        return;
-      }
-
-      if (data.fileDescriptions) {
-        data.fileDescriptions = restoreFileNames(data.fileDescriptions)
-
-        for (const key in data.fileDescriptions) {
-          if (data.fileDescriptions[key] === "") {
-            data.fileDescriptions[key] = "Saknar beskrivning.";
-          }
-        }
-      }
-
-      const formData = {
-        ...data,
-        recaptchaToken: token,
-      };
-
-      handleFormSubmit(formData);
-    } catch (error) {
-      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-    }
+    console.log("datan är: ", data)
+    // if (!executeRecaptcha) {
+    //   setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
+    //   return;
+    // }
+    //
+    // try {
+    //   const token = await executeRecaptcha('personuppgifter');
+    //   if (!token) {
+    //     setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
+    //     return;
+    //   }
+    //
+    //   if (data.fileDescriptions) {
+    //     data.fileDescriptions = restoreFileNames(data.fileDescriptions)
+    //
+    //     for (const key in data.fileDescriptions) {
+    //       if (data.fileDescriptions[key] === "") {
+    //         data.fileDescriptions[key] = "Saknar beskrivning.";
+    //       }
+    //     }
+    //   }
+    //
+    //   const formData = {
+    //     ...data,
+    //     recaptchaToken: token,
+    //   };
+    //
+    //   handleFormSubmit(formData);
+    // } catch (error) {
+    //   setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
+    // }
   };
 
   const maxLengthInput = 40;
+  const maxLengthFileDescription = 50;
   const maxLengthEmail = 100;
   const maxLengthText = 2000;
 
@@ -109,6 +111,7 @@ export const OtherCases = ({
       data-comp="contactForm-otherCases"
       onSubmit={handleSubmit(onSubmit)}
       aria-busy={isLoading}
+      autoComplete={"on"}
     >
 
       {title && (
@@ -129,7 +132,7 @@ export const OtherCases = ({
         validation={{
           required: {
             value: true,
-            message: "Det här fältet måste vara ifyllt.",
+            message: "Du behöver skriva din e-postadress.",
           },
           pattern: {
             value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
@@ -142,6 +145,7 @@ export const OtherCases = ({
         }}
         watch={watch}
         autoComplete={"email"}
+        type={"email"}
       />
 
       <FormInput
@@ -157,7 +161,7 @@ export const OtherCases = ({
         validation={{
           required: {
             value: true,
-            message: "Det här fältet måste vara ifyllt.",
+            message: "Du behöver beskriva vad din fråga handlar om.",
           },
           maxLength: {
             value: maxLengthInput,
@@ -180,7 +184,7 @@ export const OtherCases = ({
         validation={{
           required: {
             value: true,
-            message: "Det här fältet måste vara ifyllt.",
+            message: "Du behöver skriva vad du vill ha hjälp med.",
           },
           maxLength: {
             value: maxLengthText,
@@ -210,7 +214,7 @@ export const OtherCases = ({
         fileDescriptionText={otherCasesFileDescriptionText}
         fileDescriptionPlaceholder={otherCasesFileDescriptionPlaceholder}
         removeFileText={otherCasesRemoveFile}
-        maxLengthInput={maxLengthInput}
+        maxLengthInput={maxLengthFileDescription}
       />
 
       {recaptchaError !== '' && (

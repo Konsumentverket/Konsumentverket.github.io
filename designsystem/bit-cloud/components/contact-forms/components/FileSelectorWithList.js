@@ -30,17 +30,22 @@ const MAX_NUMBER_OF_FILES = 10;
 const ACCEPTED_FILE_TYPES = [
   "application/pdf",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // docx
+  "application/msword", // doc
+  "text/rtf",
   "text/plain",
   "application/vnd.oasis.opendocument.text", // odt
   "image/jpeg",
   "image/png",
   "image/gif",
 ];
+const ACCEPTED_FILE_TYPES_STRING = "pdf, docx/doc, rtf, txt, odt, jpg/jpeg, png, gif."
 
 const extensionMappings = {
   "-pdf": ".pdf",
   "-docx": ".docx",
+  "-doc": ".doc",
   "-txt": ".txt",
+  "-rtf": ".rtf",
   "-odt": ".odt",
   "-jpeg": ".jpeg",
   "-jpg": ".jpg",
@@ -50,6 +55,8 @@ const extensionMappings = {
 const FILE_TYPE_ICONS = {
   "application/pdf": "DBFilePDF",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document": "DBFileText",
+  "application/msword": "DBFileText",
+  "text/rtf": "DBFileText",
   "text/plain": "DBFileText",
   "application/vnd.oasis.opendocument.text": "DBFileText",
   "image/jpeg": "DBFileImage",
@@ -177,9 +184,9 @@ const FileSelectorWithList = ({
       let notAcceptedText = '';
 
       if (newFiles.length > 1) {
-        notAcceptedText = `Filerna kunde inte bifogas eftersom en eller flera filer har en otillåten filtyp. Endast följande filtyper är tillåtna: pdf, docx, txt, odt, jpg/jpeg, png, gif.`
+        notAcceptedText = `Filerna kunde inte bifogas eftersom en eller flera filer har en otillåten filtyp. Endast följande filtyper är tillåtna: ${ACCEPTED_FILE_TYPES_STRING}`
       } else {
-        notAcceptedText = `Filen kunde inte bifogas eftersom den har en otillåten filtyp. Endast följande filtyper är tillåtna: pdf, docx, txt, odt, jpg/jpeg, png, gif.`
+        notAcceptedText = `Filen kunde inte bifogas eftersom den har en otillåten filtyp. Endast följande filtyper är tillåtna: ${ACCEPTED_FILE_TYPES_STRING}`
       }
       setError(FORM_FILE_INPUT_KEY, {message: notAcceptedText})
       return;
@@ -249,7 +256,7 @@ const FileSelectorWithList = ({
     }
 
     if (notAcceptedFiles.length) {
-      const errorData = generateCustomErrorsData(notAcceptedFiles, `Otillåten filtyp. Tillåtna filtyper: pdf, docx, txt, odt, jpg, png, gif.`);
+      const errorData = generateCustomErrorsData(notAcceptedFiles, `Otillåten filtyp. Tillåtna filtyper: ${ACCEPTED_FILE_TYPES_STRING}`);
       setError(`customErrors`, {files: errorData})
       return `Invalid file type`;
     }
@@ -313,6 +320,8 @@ const FileSelectorWithList = ({
 
   const formattedFileSize = formatFileSize(totalSize);
 
+  console.log("errors: ", errors)
+
   return (
     <>
       <div css={[fileUploadWrapper]}>
@@ -375,6 +384,7 @@ const FileSelectorWithList = ({
             {fileList.map((file, index) => {
                 const itemKey = formatFileName(file.name);
                 const itemError = errors[FORM_FILE_DESCRIPTIONS_KEY] && errors[FORM_FILE_DESCRIPTIONS_KEY][itemKey] || null;
+                console.log("vad är itemerror: ", itemError)
                 const itemCustomError = errors.customErrors?.files?.[itemKey]?.message;
                 const fileText = `${file.name} ( ${formatFileSize(file.size)} MB )`;
                 return (
@@ -416,14 +426,18 @@ const FileSelectorWithList = ({
                           placeholder={fileDescriptionPlaceholder}
                           css={[inputDescriptionStyle, itemError ? inputError : null]}
                           {...register(`${FORM_FILE_DESCRIPTIONS_KEY}[${itemKey}]`, {
+                            required: {
+                              value: true,
+                              message: "Du behöver skriva en kort beskrivning av filen.",
+                            },
                             maxLength: {
                               value: maxLengthInput,
-                              message: `Texten får inte vara mer än ${maxLengthInput} tecken.`,
+                              message: `Beskrivningen får inte vara mer än ${maxLengthInput} tecken.`,
                             },
                           })}
                           maxLength={maxLengthInput}
                           aria-invalid={Boolean(itemError)}
-                          aria-describedby={`error-character-count-${itemKey}-${index}`}
+                          aria-describedby={`error-file-description-${itemKey}-${index}`}
                         />
 
                         <span
@@ -433,7 +447,7 @@ const FileSelectorWithList = ({
                             watch(`${FORM_FILE_DESCRIPTIONS_KEY}[${itemKey}]`, "").length > maxLengthInput ? exceededMaxCount : null
                           ]}>{
                           watch(`${FORM_FILE_DESCRIPTIONS_KEY}[${itemKey}]`, "").length
-                        }/40
+                        }/{maxLengthInput}
                         </span>
 
                       </span>
@@ -449,9 +463,9 @@ const FileSelectorWithList = ({
 
                     {itemError && (
                       <ErrorMessage
-                        id={`error-character-count-${itemKey}-${index}`}
+                        id={`error-file-description-${itemKey}-${index}`}
                       >
-                        Texten får inte vara mer än {maxLengthInput} tecken.
+                        {itemError.message}
                       </ErrorMessage>
                     )}
                   </li>

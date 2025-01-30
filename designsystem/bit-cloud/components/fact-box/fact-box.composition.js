@@ -34,7 +34,7 @@ export const BasicFactBoxWithArticleEntryMargin = () => {
       >
         <ul>
           <li>En rad i punktlista</li>
-          <li>En rad i punktlista som har längre text.</li>
+          <li><a href="#">asuperlongemailaddress@alongdomainname.ocm</a></li>
           <li>Lorem ipsum dolor sit amet</li>
           <li>Consectetur adipiscing elit, sed do eiusmod tempor</li>
           <li>Incididunt ut labore et dolore magna aliqua</li>

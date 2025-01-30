@@ -54,7 +54,7 @@ const FormTextArea = ({
             textAreaStyle,
             error ? inputError : null
           ]}
-          maxLength={maxLengthValidation && maxLengthCount}
+          maxLength={maxLengthValidation ? maxLengthCount : undefined}
           {...register(id, validation)}
         />
 

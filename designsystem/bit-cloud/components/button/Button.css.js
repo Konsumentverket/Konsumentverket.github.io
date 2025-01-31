@@ -111,6 +111,15 @@ export const buttonIconLeft = css`
     justify-content: center;
     align-items: center;
 
+    [data-comp="link-card"] & {
+      text-align: left;
+      align-items: baseline;
+
+      svg {
+        transform: translateY(2px);
+      }
+    }
+
     svg {
         max-width: 2.4rem;
         height: auto;

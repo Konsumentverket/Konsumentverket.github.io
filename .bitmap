@@ -19,7 +19,7 @@
     "button": {
         "name": "button",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.157",
+        "version": "0.0.158",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/button"
     },
@@ -40,7 +40,7 @@
     "cta-block": {
         "name": "cta-block",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.154",
+        "version": "0.0.155",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/cta-block"
     },
@@ -68,7 +68,7 @@
     "eventbox": {
         "name": "eventbox",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.66",
+        "version": "0.0.67",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/eventbox"
     },
@@ -117,7 +117,7 @@
     "form-data-request": {
         "name": "form-data-request",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.78",
+        "version": "0.0.79",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-data-request"
     },
@@ -131,14 +131,14 @@
     "form-search-field": {
         "name": "form-search-field",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.157",
+        "version": "0.0.158",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-search-field"
     },
     "form-success": {
         "name": "form-success",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.56",
+        "version": "0.0.57",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-success"
     },
@@ -194,14 +194,14 @@
     "link-card": {
         "name": "link-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.177",
+        "version": "0.0.178",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/link-card"
     },
     "link-text-card": {
         "name": "link-text-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.177",
+        "version": "0.0.178",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/link-text-card"
     },

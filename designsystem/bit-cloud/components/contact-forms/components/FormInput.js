@@ -34,7 +34,7 @@ const FormInput = ({
 
       <div css={labelWrapper}>
 
-
+        <label htmlFor={id} css={labelStyle}>{label}</label>
 
         {!!tooltipText && (
           <ToolTip
@@ -51,7 +51,6 @@ const FormInput = ({
         !showCounter ? resetRightPadding : null,
       ]}
       >
-        <label htmlFor={id} css={labelStyle}>{label}</label>
         <input
           id={id}
           placeholder={placeholder}

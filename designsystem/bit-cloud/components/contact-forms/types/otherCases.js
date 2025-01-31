@@ -110,7 +110,6 @@ export const OtherCases = ({
       data-comp="contactForm-otherCases"
       onSubmit={handleSubmit(onSubmit)}
       aria-busy={isLoading}
-      autoComplete={"on"}
     >
 
       {title && (
@@ -121,6 +120,7 @@ export const OtherCases = ({
 
       <FormInput
         id={"email"}
+        type={"email"}
         label={otherCasesEmailLabel}
         placeholder={otherCasesEmailPlaceholder}
         tooltipText={otherCasesEmailHelpText}
@@ -143,8 +143,6 @@ export const OtherCases = ({
           },
         }}
         watch={watch}
-        autoComplete={"email"}
-        type={"email"}
       />
 
       <FormInput

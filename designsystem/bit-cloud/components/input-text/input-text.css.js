@@ -30,7 +30,7 @@ export const InputStyle = (hasInnerContent) => css`
 `
 export const invalidStyle = css`
     input {
-        border-color: #F00;
+        border-color: #B50156;
     }
 `
 export const InputWrapperStyle = css`

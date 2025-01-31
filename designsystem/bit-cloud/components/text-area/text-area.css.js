@@ -23,6 +23,6 @@ export const Label = css`
 
 export const invalidStyle = css`
     textarea {
-        border-color: #F00;
+        border-color: #B50156;
     }
 `

@@ -53,7 +53,6 @@ export const InputText = React.forwardRef(({
   } return <div css={[InputWrapperStyle, wrapperStyle, invalid]}>
 
     {label && <label css={[Label, hideLabel ? VisuallyHidden : null]} htmlFor={id}>{label}</label>}
-    {validationError}
 
     <input
       ref={(el) => {
@@ -76,5 +75,7 @@ export const InputText = React.forwardRef(({
     />
 
     {innerContent}
+
+    {validationError}
   </div>
 })

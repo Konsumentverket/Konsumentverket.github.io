@@ -104,6 +104,7 @@ export const Guidance = ({
         <FormInput
           id={"email"}
           type={"email"}
+          autoComplete={"email"}
           label={guidanceEmailLabel}
           placeholder={guidanceEmailPlaceholder}
           tooltipText={guidanceEmailHelpText}

@@ -34,7 +34,7 @@ const FormInput = ({
 
       <div css={labelWrapper}>
 
-        <label htmlFor={id} css={labelStyle}>{label}</label>
+
 
         {!!tooltipText && (
           <ToolTip
@@ -51,7 +51,7 @@ const FormInput = ({
         !showCounter ? resetRightPadding : null,
       ]}
       >
-
+        <label htmlFor={id} css={labelStyle}>{label}</label>
         <input
           id={id}
           placeholder={placeholder}
@@ -70,11 +70,11 @@ const FormInput = ({
           <span
             aria-hidden={true}
             css={[
-                characterCountInput,
-                watch(id, "").length > maxLengthCount ? exceededMaxCount : null
-              ]}>{
-              watch(id, "").length
-            }/{maxLengthCount}
+              characterCountInput,
+              watch(id, "").length > maxLengthCount ? exceededMaxCount : null
+            ]}>{
+            watch(id, "").length
+          }/{maxLengthCount}
           </span>
         )}
 

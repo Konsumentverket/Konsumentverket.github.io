@@ -16,7 +16,7 @@ import {
 } from 'react-google-recaptcha-v3';
 import FormInput from "../components/FormInput";
 import FormTextArea from "../components/FormTextArea";
-import FileSelectorWithList, {restoreFileNames} from "../components/FileSelectorWithList";
+import FileSelectorWithList from "../components/FileSelectorWithList";
 import ErrorMessage from "../components/ErrorMessage";
 import LoaderOverlay from "../components/LoaderOverlay";
 
@@ -78,14 +78,13 @@ export const OtherCases = ({
         return;
       }
 
-      if (data.fileDescriptions) {
-        data.fileDescriptions = restoreFileNames(data.fileDescriptions)
+      if (data.files?.length > 0) {
+        // Sort the descriptions in same order as the files
+        data.fileDescriptions = data.files.map(entry => ({
+          [entry.file.name]: data.fileDescriptions[entry.id]
+        }));
 
-        for (const key in data.fileDescriptions) {
-          if (data.fileDescriptions[key] === "") {
-            data.fileDescriptions[key] = "Saknar beskrivning.";
-          }
-        }
+        data.files = data.files.map(entry => entry.file);
       }
 
       const formData = {

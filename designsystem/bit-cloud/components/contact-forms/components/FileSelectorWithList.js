@@ -8,12 +8,19 @@ import {
   dragAreaWrapper,
   exceededMaxCount,
   fileDescriptionInstruction,
-  fileListStyle, fileThumbnail, fileTileTop,
+  fileListStyle,
+  fileThumbnail,
+  fileTileTop,
   fileUploadLabel,
   fileUploadLabelText,
   fileUploadTypes,
-  fileUploadWrapper, iconMarginLeft,
-  iconMarginRight, iconSize, inputDescriptionStyle, inputError, inputWrapper,
+  fileUploadWrapper,
+  iconMarginLeft,
+  iconMarginRight,
+  iconSize,
+  inputDescriptionStyle,
+  inputError,
+  inputWrapper,
   listItem,
   uploadBox,
   uploadBoxActive,
@@ -40,18 +47,6 @@ const ACCEPTED_FILE_TYPES = [
 ];
 const ACCEPTED_FILE_TYPES_STRING = "pdf, docx/doc, rtf, txt, odt, jpg/jpeg, png, gif."
 
-const extensionMappings = {
-  "-pdf": ".pdf",
-  "-docx": ".docx",
-  "-doc": ".doc",
-  "-txt": ".txt",
-  "-rtf": ".rtf",
-  "-odt": ".odt",
-  "-jpeg": ".jpeg",
-  "-jpg": ".jpg",
-  "-gif": ".gif",
-}
-
 const FILE_TYPE_ICONS = {
   "application/pdf": "DBFilePDF",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document": "DBFileText",
@@ -69,32 +64,8 @@ const FILE_TYPE_ICONS = {
 // to ensure the name is compatible as a key in react-hook-form
 const formatFileName = string => string.replace(/[. ]/g, match => match === "." ? "-" : "_")
 
-/*
- * Replaces the last dash and its suffix in file names with the correct
- * file extension (e.g., "-jpg" → ".jpg"), preserving descriptions as values.
- */
-export const restoreFileNames = (fileDescriptions) => {
-  const descriptionsWithCorrectFilename = {};
-
-  for (const key in fileDescriptions) {
-    const value = fileDescriptions[key];
-
-    // Find the last dash and its suffix
-    const dashIndex = key.lastIndexOf('-');
-    if (dashIndex !== -1) {
-      const suffix = key.substring(dashIndex);
-      const replacement = extensionMappings[suffix];
-      if (replacement) {
-        descriptionsWithCorrectFilename[key.slice(0, dashIndex) + replacement] = value;
-        continue;
-      }
-    }
-
-    // If no replacement found, keep the key as is
-    descriptionsWithCorrectFilename[key] = value;
-  }
-
-  return descriptionsWithCorrectFilename;
+const generateUniqueId = (fileName = "") => {
+  return `${Date.now()}_${Math.floor(Math.random() * 1000)}_filename__${formatFileName(fileName)}`;
 };
 
 const FORM_FILE_INPUT_KEY = 'files';
@@ -151,9 +122,9 @@ const FileSelectorWithList = ({
   const checkForDuplicates = (newFiles, previousFiles) => {
     const duplicates = newFiles.filter(file =>
       previousFiles.some(prevFile =>
-        prevFile.name === file.name &&
-        prevFile.size === file.size &&
-        prevFile.lastModified === file.lastModified
+        prevFile.file.name === file.name &&
+        prevFile.file.size === file.size &&
+        prevFile.file.lastModified === file.lastModified
       )
     );
 
@@ -180,8 +151,12 @@ const FileSelectorWithList = ({
       return;
     }
 
-    const updatedFiles = [...previousFiles, ...newFiles];
+    const newFilesWithId = newFiles.map(file => ({
+        file,
+        id: generateUniqueId(file.name)}
+    ));
 
+    const updatedFiles = [...previousFiles, ...newFilesWithId];
     // Validate number of files
     if (updatedFiles.length > MAX_NUMBER_OF_FILES) {
 
@@ -198,38 +173,34 @@ const FileSelectorWithList = ({
     }
 
     // Validate file extensions
-    let notAcceptedFiles = [];
-
     for (const file of newFiles) {
+
       if (!file.type || !ACCEPTED_FILE_TYPES.includes(file.type)) {
-        notAcceptedFiles.push(file);
+        let notAcceptedText = '';
+
+        if (newFiles.length > 1) {
+          notAcceptedText = `Filerna kunde inte bifogas eftersom en eller flera filer har en otillåten filtyp. Endast följande filtyper är tillåtna: ${ACCEPTED_FILE_TYPES_STRING}`
+        } else {
+          notAcceptedText = `Filen kunde inte bifogas eftersom den har en otillåten filtyp. Endast följande filtyper är tillåtna: ${ACCEPTED_FILE_TYPES_STRING}`
+        }
+        setError(FORM_FILE_INPUT_KEY, {message: notAcceptedText})
+        return;
       }
     }
 
-    if (notAcceptedFiles.length) {
-
-      let notAcceptedText = '';
-
-      if (newFiles.length > 1) {
-        notAcceptedText = `Filerna kunde inte bifogas eftersom en eller flera filer har en otillåten filtyp. Endast följande filtyper är tillåtna: ${ACCEPTED_FILE_TYPES_STRING}`
-      } else {
-        notAcceptedText = `Filen kunde inte bifogas eftersom den har en otillåten filtyp. Endast följande filtyper är tillåtna: ${ACCEPTED_FILE_TYPES_STRING}`
-      }
-      setError(FORM_FILE_INPUT_KEY, {message: notAcceptedText})
-      return;
-    }
 
     // Validate total file size
-    let maxSizeText = "";
-
-    if (newFiles.length > 1) {
-      maxSizeText = `Filerna kunde inte bifogas eftersom den totala storleken skulle överskrida gränsen på ${MAX_MEGABYTES} MB.`;
-    } else {
-      maxSizeText = `Filen kunde inte bifogas eftersom den totala storleken skulle överskrida gränsen på ${MAX_MEGABYTES} MB.`;
-    }
-    const totalFileSize = updatedFiles.reduce((acc, file) => acc + file.size, 0);
+    const totalFileSize = updatedFiles.reduce((acc, file) => acc + file.file.size, 0);
 
     if (totalFileSize > MAX_TOTAL_SIZE) {
+      let maxSizeText = "";
+
+      if (newFiles.length > 1) {
+        maxSizeText = `Filerna kunde inte bifogas eftersom den totala storleken skulle överskrida gränsen på ${MAX_MEGABYTES} MB.`;
+      } else {
+        maxSizeText = `Filen kunde inte bifogas eftersom den totala storleken skulle överskrida gränsen på ${MAX_MEGABYTES} MB.`;
+      }
+
       setError(FORM_FILE_INPUT_KEY, {message: maxSizeText})
       return
     }
@@ -249,10 +220,8 @@ const FileSelectorWithList = ({
     setValue(FORM_FILE_INPUT_KEY, updatedFiles);
     trigger(FORM_FILE_INPUT_KEY);
 
-    const formattedFileName = formatFileName(fileToRemove.name);
-
-    unregister(`${FORM_FILE_DESCRIPTIONS_KEY}[${formattedFileName}]`);
-    clearErrors(`customErrors.files.[${formattedFileName}]`);
+    unregister(`${FORM_FILE_DESCRIPTIONS_KEY}[${fileToRemove.id}]`);
+    clearErrors(`customErrors.files.[${fileToRemove.id}]`);
 
     if (errors.customErrors && !errors.customErrors.files) {
       clearErrors('customErrors');
@@ -276,7 +245,8 @@ const FileSelectorWithList = ({
 
     let notAcceptedFiles = [];
 
-    for (const file of files) {
+    for (const entry of files) {
+      const file = entry.file;
       if (!file.type || !ACCEPTED_FILE_TYPES.includes(file.type)) {
         notAcceptedFiles.push(file);
       }
@@ -406,8 +376,9 @@ const FileSelectorWithList = ({
           </p>
 
           <ul aria-label="Lista med bifogade filer" css={fileListStyle}>
-            {fileList.map((file, index) => {
-                const itemKey = formatFileName(file.name);
+            {fileList.map((fileEntry, index) => {
+                const file = fileEntry.file;
+                const itemKey = fileEntry.id;
                 const itemError = errors[FORM_FILE_DESCRIPTIONS_KEY] && errors[FORM_FILE_DESCRIPTIONS_KEY][itemKey] || null;
                 const itemCustomError = errors.customErrors?.files?.[itemKey]?.message;
                 const fileText = `${file.name} ( ${formatFileSize(file.size)} MB )`;

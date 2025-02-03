@@ -49,19 +49,21 @@ export const FormSuccess = ({
           {formData && (
             <dl css={dataList}>
               {Object.keys(formData).map((key) => {
-                const hasNestedData = typeof formData[key] === 'object' && formData[key] !== null;
-
+                const hasNestedData = Array.isArray(formData[key]);
                 return (
                   hasNestedData ? (
                     <div key={key} css={nestedWrapper}>
                       <dt css={nestedContainerTitle}>{key}:&nbsp;</dt>
                       <dd css={nestedFlex}>
-                        {Object.entries(formData[key]).map(([nestedKey, nestedValue]) => (
-                          <span key={nestedKey} css={[nestedFlex, nestedFlexChild]}>
-                              <span css={nestedKeyStyle}>{nestedKey}: </span>
-                              <span>{!!nestedValue ? nestedValue : "Saknar beskrivning."}</span>
+                        {formData[key].map((item, index) => {
+                          const [key, value] = Object.entries(item)[0];
+                          return (
+                            <span key={index} css={[nestedFlex, nestedFlexChild]}>
+                              <span css={nestedKeyStyle}>{key}: </span>
+                              <span>{!!value ? value : "Saknar beskrivning."}</span>
                           </span>
-                        ))}
+                          )
+                        })}
                       </dd>
                     </div>
                   ) : (

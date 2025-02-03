@@ -18,11 +18,17 @@ export const BasicFormSuccess = () => {
           'E-postadress': 'lorem@ipsum.com',
           Datum: '2024-01-01',
           Fråga: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium animi aperiam aspernatur cum deserunt dolor ducimus esse et eum expedita fuga illo impedit itaque iusto laborum laudantium quae quas quia, quidem r epellat saepe sequi similique suscipit temporibus ullam vel! A ab architecto aut cupiditate distinctio dolor doloribus ducimus eligendi est expedita explicabo illum in inventore ipsa ipsam ipsum iure, laboriosam libero maxime molestias necessitatibus odio optio perspiciatis porro, quaerat quam quisquam quos ratione repellat suscipit tempore ullam voluptatibus voluptatum. Eos excepturi hic molestiae molestias optio reiciendis tenetur? Assumenda at, beatae distinctio modi nemo omnis quae quo ullam vero voluptatibus.',
-          Filer: {
-            "file_1.jpg": "",
-            "file 2.pdf": "Description of file 2",
-            "file 3.jpg": "Description of file 3"
-          },
+          Filer: [
+            {
+              "file_1.jpg": "",
+            },
+            {
+              "file 2.pdf": "Description of file 2",
+            },
+            {
+              "file 3.jpg": "Description of file 3"
+            },
+          ],
         }}
         headline="Konsumentverket har tagit emot din begäran om radering av information."
       >

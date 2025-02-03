@@ -148,10 +148,37 @@ const FileSelectorWithList = ({
 
   }, [dragAreaElement]);
 
+  const checkForDuplicates = (newFiles, previousFiles) => {
+    const duplicates = newFiles.filter(file =>
+      previousFiles.some(prevFile =>
+        prevFile.name === file.name &&
+        prevFile.size === file.size &&
+        prevFile.lastModified === file.lastModified
+      )
+    );
+
+    return !!duplicates.length
+  }
+
   const handleFilesForUpload = (newFiles) => {
     clearErrors(FORM_FILE_INPUT_KEY);
 
     const previousFiles = getValues(FORM_FILE_INPUT_KEY);
+
+    // No duplicates are allowed
+    const duplicates = previousFiles?.length ? checkForDuplicates(newFiles, previousFiles) : false;
+    if (duplicates) {
+      let duplicatesText = '';
+
+      if (newFiles.length > 1) {
+        duplicatesText = `Filerna kunde inte bifogas eftersom en av dem redan har laddats upp.`;
+      } else {
+        duplicatesText = `Filen kunde inte bifogas eftersom den redan har laddats upp.`;
+      }
+
+      setError(FORM_FILE_INPUT_KEY, {message: duplicatesText})
+      return;
+    }
 
     const updatedFiles = [...previousFiles, ...newFiles];
 

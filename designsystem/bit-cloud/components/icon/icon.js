@@ -64,6 +64,8 @@ import {
   DBFilePDF,
   DBFileImage,
   DBDeleteFileAlt2,
+  DualBlueHelpChat,
+  DualBlueChatAnswer,
 
   // Editor Icons
   NewsIcon,
@@ -196,6 +198,8 @@ const systemIconDefinitions = {
   DBFilePDF,
   DBFileImage,
   DBDeleteFileAlt2,
+  DualBlueHelpChat,
+  DualBlueChatAnswer,
 };
 
 const editorIconDefinitions = {

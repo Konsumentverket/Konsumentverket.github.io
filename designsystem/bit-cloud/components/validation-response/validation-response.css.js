@@ -5,6 +5,7 @@ export const wrapperStyle = success => css`
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 12px;
   color: ${success ? newColors.validation.success : newColors.validation.warning};
 
   p {

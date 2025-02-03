@@ -110,7 +110,8 @@ import { RightsIcon } from "./Icons/EditorIcons/RightsIcon/RightsIcon.js";
 import { WarningIcon } from "./Icons/EditorIcons/WarningIcon/WarningIcon.js";
 import { MicrophoneIcon } from "./Icons/EditorIcons/MicrophoneIcon/MicrophoneIcon.js";
 import { WebbinarIcon } from "./Icons/EditorIcons/WebbinarIcon/WebbinarIcon.js";
-
+import { DualBlueChatAnswer } from "./Icons/SystemIcons/DualBlueChatAnswer/DualBlueChatAnswer.js";
+import { DualBlueHelpChat } from "./Icons/SystemIcons/DualBlueHelpChat/DualBlueHelpChat.js";
 
 import { DBAnimalsIcon } from "./Icons/EditorIcons/DBAnimalsIcon/DBAnimalsIcon.js";
 import { DBCalendarIcon } from "./Icons/EditorIcons/DBCalendarIcon/DBCalendarIcon.js";
@@ -229,6 +230,9 @@ export {
   DBFilePDF,
   DBFileImage,
   DBDeleteFileAlt2,
+  DualBlueHelpChat,
+  DualBlueChatAnswer,
+
 
   // System icons
 

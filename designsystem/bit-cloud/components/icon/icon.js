@@ -66,6 +66,8 @@ import {
   DBDeleteFileAlt2,
   DualBlueHelpChat,
   DualBlueChatAnswer,
+  MonoArrowBend,
+  MonoArrowBendDown,
 
   // Editor Icons
   NewsIcon,
@@ -200,6 +202,8 @@ const systemIconDefinitions = {
   DBDeleteFileAlt2,
   DualBlueHelpChat,
   DualBlueChatAnswer,
+  MonoArrowBend,
+  MonoArrowBendDown
 };
 
 const editorIconDefinitions = {

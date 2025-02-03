@@ -50,6 +50,8 @@ import { MegamenuCompany } from "./Icons/SystemIcons/MegamenuCompany/MegamenuCom
 import { MonoBookmark } from "./Icons/SystemIcons/MonoBookmark/MonoBookmark";
 import { MonoArrowRight } from "./Icons/SystemIcons/MonoArrowRight/MonoArrowRight";
 import { MonoArrowRightSmall } from "./Icons/SystemIcons/MonoArrowRightSmall/MonoArrowRightSmall";
+import { MonoArrowBend } from "./Icons/SystemIcons/MonoArrowBend/MonoArrowBend";
+import { MonoArrowBendDown } from "./Icons/SystemIcons/MonoArrowBendDown/MonoArrowBendDown";
 import { MonoCopy } from "./Icons/SystemIcons/MonoCopy/MonoCopy";
 import { MonoArrowDown } from "./Icons/SystemIcons/MonoArrowDown/MonoArrowDown";
 import { MonoArrowDownSmall } from "./Icons/SystemIcons/MonoArrowDownSmall/MonoArrowDownSmall";
@@ -205,6 +207,8 @@ export {
   MonoSettings,
   Logo,
   MonoArrowSmall,
+  MonoArrowBend,
+  MonoArrowBendDown,
   MonoDelete,
   MonoDeleteSmall,
   MonoSearch,

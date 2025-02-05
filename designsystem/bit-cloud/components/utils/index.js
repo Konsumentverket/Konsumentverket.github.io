@@ -67,6 +67,7 @@ import { DBFileText } from "./Icons/SystemIcons/DBFileText/DBFileText";
 import { DBFilePDF } from "./Icons/SystemIcons/DBFilePDF/DBFilePDF";
 import { DBFileImage } from "./Icons/SystemIcons/DBFileImage/DBFileImage";
 import { DBDeleteFileAlt2 } from "./Icons/SystemIcons/DBDeleteFileAlt2/DBDeleteFileAlt2";
+import { WarningTriangle } from "./Icons/SystemIcons/WarningTriangle/WarningTriangle";
 
 
 // Editor icons
@@ -236,6 +237,7 @@ export {
   DBDeleteFileAlt2,
   DualBlueHelpChat,
   DualBlueChatAnswer,
+  WarningTriangle,
 
 
   // System icons

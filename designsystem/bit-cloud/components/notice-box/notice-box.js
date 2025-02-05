@@ -1,7 +1,16 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@emotion/core'
-import {wrapperStyling, tagMargin, titleStyling, iconWrapper, iconColor, articleEntryMarginStyling} from './notice-box.css.js'
+import {
+  wrapperStyling,
+  warningWrapperStyling,
+  tagMargin,
+  titleStyling,
+  iconWrapper,
+  iconWrapperWarning,
+  iconColor,
+  articleEntryMarginStyling
+} from './notice-box.css.js'
 import {
   Icon
 } from '@konsumentverket-sverige/designsystem.icon';
@@ -15,15 +24,19 @@ export const NoticeBox = ({
   contentfulId,
   contentfulName,
   articleEntryMargin = false,
+  type = "success",
 }) => {
 
   if (!content && !children) {
     return null;
   }
 
+  const icon = type === "warning" ? "WarningTriangle" : "MonoCheck";
+
   return (
     <div css={[
       wrapperStyling,
+      type === "warning" ? warningWrapperStyling : null,
       tag ? tagMargin : null,
       articleEntryMargin ? articleEntryMarginStyling : null,
     ]}
@@ -32,9 +45,12 @@ export const NoticeBox = ({
      data-contentful-entry-id={contentfulId}
     >
       {tag && (
-          <div css={iconWrapper}>
+          <div css={[
+            iconWrapper,
+            type === "warning" ? iconWrapperWarning : null,
+          ]}>
             <Icon
-              icon="MonoCheck"
+              icon={icon}
               style={iconColor}
             />
           </div>

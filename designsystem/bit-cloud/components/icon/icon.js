@@ -68,6 +68,7 @@ import {
   DualBlueChatAnswer,
   MonoArrowBend,
   MonoArrowBendDown,
+  WarningTriangle,
 
   // Editor Icons
   NewsIcon,
@@ -203,7 +204,8 @@ const systemIconDefinitions = {
   DualBlueHelpChat,
   DualBlueChatAnswer,
   MonoArrowBend,
-  MonoArrowBendDown
+  MonoArrowBendDown,
+  WarningTriangle,
 };
 
 const editorIconDefinitions = {
@@ -270,7 +272,7 @@ const editorIconDefinitions = {
   WebbinarIcon,
   DBSocialShareIcon,
   DBFriendshipIcon,
-  DBWebsiteInfoIcon
+  DBWebsiteInfoIcon,
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {

@@ -42,6 +42,10 @@ export const wrapperStyling = css`
     }
 `;
 
+export const warningWrapperStyling = css`
+  background-color: ${newColors.primaries.lightOrange};
+`;
+
 export const tagMargin = css`
   margin-top: 32px; // 24px + 8px
 
@@ -62,7 +66,11 @@ export const titleStyling = css`
     ${typography.h2NoMargin};
     color: ${newColors.primaries.kovBlack};
     & {
-      margin-bottom: 32px;
+      margin-bottom: 16px;
+
+      ${medium} {
+        margin-bottom: 32px;
+      }
     }
 `;
 
@@ -78,6 +86,32 @@ export const iconWrapper = css`
   width: 32px;
   height: 32px;
 `;
+
+export const iconWrapperWarning = css`
+  background: none;
+  width: 32px;
+  height: 32px;
+  top: -16px;
+  left: -16px;
+
+  ${medium} {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: -20px;
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+
+    ${medium} {
+      width: 40px;
+      height: 40px;
+    }
+  }
+`;
+
 
 export const iconColor = css`
   fill: ${newColors.secondaries.lightGreen};

@@ -57,25 +57,12 @@ export const WithContentExpander = ({
   level = 3,
 }) => {
   useEffect(() => {
-    const handleHashChange = () => {
-      if (!location || !location.hash) return;
-
+    if (location && location.hash) {
       const split = location.hash.split(",");
-      const shouldOpen = split.some((x) => x === `#${wrapperId}`);
-
-      if (shouldOpen) {
-        scrollIntoView=true;
-      }
-    };
-
-    handleHashChange();
-
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, [wrapperId])
+      open = split.some((x) => x === `#${wrapperId}`);
+      if (open) scrollIntoView=true;
+    }
+  }, []);
 
   const [expanded, setExpanded] = useState(open);
   const linkContainerRef = useRef();

@@ -6,6 +6,7 @@ import {
 
 import {Guidance} from "./types/guidance";
 import {OtherCases} from "./types/otherCases";
+import {Subscribe} from "./types/subscribe";
 
 export const ContactForms = ({
   recaptchaSiteKey,
@@ -19,6 +20,7 @@ export const ContactForms = ({
   const forms = {
     guidance: Guidance,
     otherCases: OtherCases,
+    subscribe: Subscribe,
   }
 
   const SelectedForm = forms[type] || null;

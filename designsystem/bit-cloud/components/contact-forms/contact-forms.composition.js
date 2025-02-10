@@ -43,6 +43,13 @@ const formMicroCopy = {
     otherCasesRemoveFile: 'Ta bort filen',
     otherCasesFileDescriptionPlaceholder: 'Skriv en kort beskrivning av filen',
     otherCasesSubmitButtonText: 'Skicka',
+  },
+  subscribe: {
+    subscribeEmailLabel: 'E-post (obligatoriskt)*',
+    subscribeEmailPlaceholder: 'Skriv din e-postadress',
+    subscribeEmailHelpText: '',
+    consentLabel: 'Ja, jag samtycker till att Konsumentverket får använda min e-postadress för att skicka nyheter från Konsumentverket till mig.',
+    subscribeSubmitButtonText: 'Skicka',
   }
 }
 
@@ -89,6 +96,30 @@ export const BasicFormOtherCases = () => {
             </>
           }
         />
+        <WithContentExpander
+          useLightBlueAlternativeStyling={true}
+          text="Så behandlar vi dina personuppgifter"
+          wrappedComponent={
+            <>
+              <p>Lorem ipsum dolor sit amet</p>
+            </>
+          }
+        />
+      </ContactForms>
+    </CompositionFonts>
+  );
+};
+
+export const BasicFormSubscribe = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <ContactForms
+        title="Prenumerera"
+        type={'subscribe'}
+        handleFormSubmit={(data) => console.log(data)}
+        texts={formMicroCopy.subscribe}
+      >
         <WithContentExpander
           useLightBlueAlternativeStyling={true}
           text="Så behandlar vi dina personuppgifter"

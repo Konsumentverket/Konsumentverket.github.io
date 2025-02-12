@@ -91,7 +91,7 @@ export const WithContentExpander = ({
       const scrollAction = () => topOfComponent.current.scrollIntoView({ behavior: "smooth", block: "start" });
 
       if (delayScroll) {
-        timeout = setTimeout(scrollAction, 1000);
+        timeout = setTimeout(scrollAction, 500);
       } else {
         scrollAction();
       }

@@ -44,6 +44,7 @@ export const WithContentExpander = ({
   wrapperId,
   show = true,
   scrollIntoView = true,
+  delayScroll = false,
   open = false,
   linkHref = "",
   disabled = false,
@@ -85,10 +86,18 @@ export const WithContentExpander = ({
   }, [open]);
 
   useEffect(() => {
+    let timeout;
     if (scrollIntoView && topOfComponent.current && expanded) {
-      topOfComponent.current.scrollIntoView({ behavior: "smooth", block: "start" })
+      const scrollAction = () => topOfComponent.current.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      if (delayScroll) {
+        timeout = setTimeout(scrollAction, 1000);
+      } else {
+        scrollAction();
+      }
     }
-  }, [expanded]);
+    return () => clearTimeout(timeout);
+  }, [expanded, delayScroll]);
 
   if (!show) return null;
 

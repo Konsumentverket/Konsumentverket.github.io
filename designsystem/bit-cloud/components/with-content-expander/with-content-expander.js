@@ -7,7 +7,6 @@ import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
 
 import {
   containerStyle,
-  scrollDiv,
   containerAlternativeStyle,
   containerLightBlueAlternativeStyle,
   noLeftBorderRadiusStyling,
@@ -62,6 +61,8 @@ export const WithContentExpander = ({
       open = split.some((x) => x === `#${wrapperId}`);
       if (open) scrollIntoView=true;
     }
+
+    return () => setExpanded(false);
   }, []);
 
   const [expanded, setExpanded] = useState(open);
@@ -152,8 +153,8 @@ export const WithContentExpander = ({
       className={`withContentExpander ${expanded ? "expanded" : ""}`}
       id={wrapperId}
       css={containerStyles}
+      ref={topOfComponent}
     >
-      <div ref={topOfComponent} css={scrollDiv}></div>
       <div className="link-element noStyle" onClick={(e) => handleExpansionOnClick(e)}>
         <a
           href={linkHref}

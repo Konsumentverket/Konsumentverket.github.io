@@ -67,6 +67,7 @@ export const WithContentExpander = ({
   }, []);
 
   const [expanded, setExpanded] = useState(open);
+  const [skipDelay, setSkipDelay] = useState(false);
   const linkContainerRef = useRef();
   const linkRef = useRef();
   const topOfComponent = useRef();
@@ -76,7 +77,7 @@ export const WithContentExpander = ({
     e.preventDefault();
 
     if (disabled) return false;
-
+    setSkipDelay(true);
     setExpanded(!expanded);
     return false;
   };
@@ -90,14 +91,16 @@ export const WithContentExpander = ({
     if (scrollIntoView && topOfComponent.current && expanded) {
       const scrollAction = () => topOfComponent.current.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      if (delayScroll) {
+      if (delayScroll && !skipDelay) {
+        // Add a delay when scrolling due to location.hash to account for slow content loading
         timeout = setTimeout(scrollAction, 500);
       } else {
         scrollAction();
       }
     }
+    setSkipDelay(false);
     return () => clearTimeout(timeout);
-  }, [expanded, delayScroll]);
+  }, [expanded, delayScroll, skipDelay]);
 
   if (!show) return null;
 

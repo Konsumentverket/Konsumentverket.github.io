@@ -70,7 +70,14 @@ export const FormSuccess = ({
                     <div key={key}>
                       <dt>{key}:&nbsp;</dt>
                       <dd>
-                        {formData[key]}
+                        {typeof formData[key] === "string"
+                          ? formData[key].split("\n").map((line, index) => (
+                            <React.Fragment key={index}>
+                              {line}
+                              <br />
+                            </React.Fragment>
+                          ))
+                          : formData[key]}
                       </dd>
                     </div>
                   )

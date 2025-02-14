@@ -150,9 +150,6 @@ export const Dropdown = ({
           {data && (
             <ul
               css={itemsListStyle}
-              role={
-                type === "radio" ? "radiogroup" : "group"
-              }
             >
               {data.map((item, index) => (
                 <li key={index}>

@@ -147,21 +147,18 @@ export const Dropdown = ({
           </button>
         )}
         <div
-          aria-hidden={!isExpanded}
-          tabIndex={!isExpanded ? "-1" : "1" }
           id={`dropdown-${id}`}
           css={[itemsWrapperStyle, isExpanded && itemsWrapperExpandedStyle]}
         >
           {data && (
             <ul
               css={itemsListStyle}
-              tabIndex={!isExpanded ? "-1" : "1" }
               role={
                 type === "radio" ? "radiogroup" : "group"
               }
             >
               {data.map((item, index) => (
-                <li key={index} tabIndex={!isExpanded ? "-1" : "1" }>
+                <li key={index}>
                   <Component
                     id={id}
                     onChange={(checked) => handleOptionChange(item.value, checked)}

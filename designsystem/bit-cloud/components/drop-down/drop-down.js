@@ -126,10 +126,7 @@ export const Dropdown = ({
       tabIndex="-1"
       onBlur={handleBlur}
     >
-      <div
-        css={innerWrapperStyle}
-        aria-labelledby={`legend-${id}`}
-      >
+      <div css={innerWrapperStyle} >
         {label && (
           <button
             css={buttonStyle}
@@ -137,9 +134,7 @@ export const Dropdown = ({
             aria-expanded={isExpanded}
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            <span id={`legend-${id}`}>
-              {label}
-            </span>
+            {label}
             <ChevronRight
               aria-hidden="true"
               style={[chevronStyle, isExpanded && chevronExpandedStyle]}
@@ -148,7 +143,9 @@ export const Dropdown = ({
         )}
         <div
           id={`dropdown-${id}`}
-          css={[itemsWrapperStyle, isExpanded && itemsWrapperExpandedStyle]}
+          css={[
+            itemsWrapperStyle,
+            isExpanded && itemsWrapperExpandedStyle]}
         >
           {data && (
             <ul

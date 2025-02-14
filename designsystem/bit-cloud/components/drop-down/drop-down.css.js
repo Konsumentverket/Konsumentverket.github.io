@@ -20,7 +20,6 @@ export const innerWrapperStyle = css`
 
 export const itemsWrapperStyle = css`
     display: none;
-
 `;
 
 export const itemsWrapperExpandedStyle = css`
@@ -59,10 +58,6 @@ export const buttonStyle = css`
     ${medium} {
         font-size: 1.8rem;
     }
-`;
-
-export const invalidStyle = css`
-
 `;
 
 export const chevronStyle = css`

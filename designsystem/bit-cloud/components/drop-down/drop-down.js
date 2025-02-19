@@ -21,12 +21,12 @@ import {
   useOnClickOutside
 } from '@konsumentverket-sverige/designsystem.utils';
 
-const CheckboxOption = ({ text, value, onChange, stateValue, disabled }) => (
+const CheckboxOption = ({ text, value, onChange, stateValue, disabled, id }) => (
     <div css={itemOptionWrapperStyle}>
         <FormCheckbox
-            id={value}
+            id={id}
             labelText={text}
-            name={value}
+            name={id}
             value={value}
             onChange={(event) => onChange(event, value)}
             usePrimaryColor={true}
@@ -39,7 +39,7 @@ const CheckboxOption = ({ text, value, onChange, stateValue, disabled }) => (
 const RadioOption = ({ text, value, id, onChange, stateValue, disabled }) => (
     <div css={itemOptionWrapperStyle}>
         <FormRadiobutton
-            id={value}
+            id={id}
             labelText={text}
             name={id}
             value={value}
@@ -154,7 +154,7 @@ export const Dropdown = ({
               {data.map((item, index) => (
                 <li key={index}>
                   <Component
-                    id={id}
+                    id={`${id}-${index}`}
                     onChange={(checked) => handleOptionChange(item.value, checked)}
                     stateValue={value}
                     {...item}

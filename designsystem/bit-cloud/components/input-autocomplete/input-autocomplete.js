@@ -13,6 +13,7 @@ import {
   inputHasSuggestionsStyle,
   inputHeaderSearchHasSuggestionsStyle,
   dropdownWrapperStyle,
+  showDropdownStyle,
   dropdownItemStyle,
   dropdownItemActiveStyle,
   dropdownButtonStyle,
@@ -230,7 +231,6 @@ export const InputAutocomplete = forwardRef(({
           <label
             css={[labelStyle]}
             htmlFor={autoCompleteInputId}
-            // htmlFor="autocomplete-input"
           >
             {placeholder}
           </label>
@@ -247,13 +247,11 @@ export const InputAutocomplete = forwardRef(({
             ]}
             type="text"
             id={autoCompleteInputId}
-            // id="autocomplete-input"
             value={initQuery || query}
             onChange={handleInputChange}
             onKeyDown={handleInputKeyDown}
             aria-autocomplete="list"
             aria-controls={autoCompleteSuggestionsId}
-            // aria-controls={"input-autocomplete-suggestions"}
             aria-expanded={isDropdownOpen}
             aria-activedescendant={activeIndex >= 0 ? `autocomplete-option-${activeIndex}` : undefined}
             aria-describedby={loading ? loadingId : undefined}
@@ -275,40 +273,39 @@ export const InputAutocomplete = forwardRef(({
             </button>
           )}
 
-          {isDropdownOpen && suggestions.length > 0 && !loading && (
-            <ul
-              css={[
-                dropdownWrapperStyle,
-                dropdownPositionRelative && dropdownPositionRelativeStyle,
-                showingResult && dropdownHasSuggestionsStyle,
-              ]}
-              id={autoCompleteSuggestionsId}
-              role="listbox"
-            >
-              {suggestions.map((suggestion, index) => (
-                <li
-                  css={[dropdownItemStyle, index === activeIndex ? dropdownItemActiveStyle : null]}
-                  key={index}
-                  role="option"
-                  id={`autocomplete-option-${index}`}
-                  aria-selected={index === activeIndex}
+          <ul
+            css={[
+              dropdownWrapperStyle,
+              dropdownPositionRelative && dropdownPositionRelativeStyle,
+              showingResult && dropdownHasSuggestionsStyle,
+              isDropdownOpen && suggestions.length > 0 && !loading && showDropdownStyle,
+            ]}
+            id={autoCompleteSuggestionsId}
+            role="listbox"
+          >
+            {suggestions.map((suggestion, index) => (
+              <li
+                css={[dropdownItemStyle, index === activeIndex ? dropdownItemActiveStyle : null]}
+                key={index}
+                role="option"
+                id={`autocomplete-option-${index}`}
+                aria-selected={index === activeIndex}
+              >
+                <button
+                  className={"noStyle"}
+                  css={dropdownButtonStyle}
+                  onClick={(e) => {
+                    handleSuggestionClick(suggestion)
+                    callbackOnClick(e, suggestion)
+                    blurInputRef();
+                  }}
+                  tabIndex="-1"
                 >
-                  <button
-                    className={"noStyle"}
-                    css={dropdownButtonStyle}
-                    onClick={(e) => {
-                      handleSuggestionClick(suggestion)
-                      callbackOnClick(e, suggestion)
-                      blurInputRef();
-                    }}
-                    tabIndex="-1"
-                  >
-                    {sanitizeText(suggestion[suggestionText])}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
+                  {sanitizeText(suggestion[suggestionText])}
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {searchButton && (

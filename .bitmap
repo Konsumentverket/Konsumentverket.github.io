@@ -173,7 +173,7 @@
     "input-autocomplete": {
         "name": "input-autocomplete",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.119",
+        "version": "0.0.120",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/input-autocomplete"
     },

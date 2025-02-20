@@ -92,6 +92,7 @@ export const inputHeaderSearchHasSuggestionsStyle = css`
 `;
 
 export const dropdownWrapperStyle = css`
+  display: none;
   position: absolute;
   width: 100%;
   list-style: none;
@@ -104,6 +105,10 @@ export const dropdownWrapperStyle = css`
   padding: 0;
   border-radius: 0px 0px 8px 8px;
   overflow: hidden;
+`;
+
+export const showDropdownStyle = css`
+  display: block;
 `;
 
 export const dropdownPositionRelativeStyle = css`

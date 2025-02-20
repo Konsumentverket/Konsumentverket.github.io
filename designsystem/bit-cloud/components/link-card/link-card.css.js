@@ -28,12 +28,20 @@ export const wrapper = css`
     line-height: 1.5;
     margin-bottom: 10px;
   }
+
+  h2,h3,h4,h5,h6 {
+    margin: 0;
+    line-height: 0;
+    width: 100%;
+  }
 `
 export const heading = css`
-   padding-left: 8px;
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+
 
    & > svg {
       width: 12px !important;
@@ -62,6 +70,10 @@ export const mainLinkStyle = css`
     text-decoration: none !important;
     z-index: 1;
     padding-left: 12px;
+    //display: block;
+    //border: 1px solid red;
+    ////width: 100%;
+    ////height: 100%;
 
     h2 {
       margin: 0 !important;
@@ -72,7 +84,9 @@ export const mainLinkStyle = css`
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      //padding: 16px;
+      //padding: 32px 32px 16px;
+      //padding: 16px 8px;
       padding: 17px 16px 15px 8px;
       line-height: 1.5;
       color: ${newColors.shades.fullBlue};
@@ -114,7 +128,8 @@ export const mainLinkStyle = css`
       border-radius: 16px 16px 0 0 !important;
       box-shadow: none !important;
 
-      .singleItem &, .noLinkChildren & {
+      .singleItem &,
+      .noLinkChildren & {
           border-radius: 16px !important;
       }
       .linkCardBorder {
@@ -123,9 +138,6 @@ export const mainLinkStyle = css`
         padding: 0 !important;
       }
 
-      .singleItem & {
-
-      }
       .noLinkChildren & {
           &:before {
             position: absolute;
@@ -190,9 +202,7 @@ export const mainLinkStyle = css`
     }
 
     width: 100%;
-    span{
-        max-width: 84%;
-    }
+
     [dir='rtl'] &{
         svg{
             right: 1.4rem;
@@ -254,6 +264,16 @@ export const childrenWrapper = css`
           height: 16px;
         }
     }
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    margin: 0;
+  }
 `
 
 export const showAllLink = css`

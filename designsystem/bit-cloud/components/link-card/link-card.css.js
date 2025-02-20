@@ -38,6 +38,7 @@ export const heading = css`
 
 
    & > svg {
+      min-width: 12px;
       width: 12px !important;
       height: 16px !important;
       margin-right: 4px;

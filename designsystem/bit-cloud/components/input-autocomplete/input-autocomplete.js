@@ -310,7 +310,10 @@ export const InputAutocomplete = forwardRef(({
 
         {searchButton && (
           <button
-            css={[searchButtonStyle, css`height: ${searchButtonHeight}px`]}
+            css={[
+              searchButtonStyle,
+              searchButtonHeight != null && css`height: ${searchButtonHeight}px;`
+            ]}
             onClick={(event) => handleFreeTextSearch(event)}
             type="submit"
             aria-label={searchButtonAriaLabel}

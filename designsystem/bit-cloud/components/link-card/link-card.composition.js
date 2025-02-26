@@ -113,6 +113,27 @@ export const BasicTextLinkCard = () => {
   );
 }
 
+export const BasicTextLinkCardWithH3 = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+
+      <LinkCard
+        id="one"
+        href="#"
+        text="Sport och fritid"
+        icon={<Icon icon="BeautyEngagement" />}
+        headingLevel={3}
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        </p>
+
+      </LinkCard>
+    </CompositionFonts>
+  );
+}
+
 
 
 export const BasicOnlyTitleLinkCard = () => {

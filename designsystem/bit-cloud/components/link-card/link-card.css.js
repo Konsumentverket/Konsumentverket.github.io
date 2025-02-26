@@ -66,7 +66,7 @@ export const mainLinkStyle = css`
     z-index: 1;
     padding-left: 12px;
 
-    h2 {
+    h2, h3, h4, h5, h6 {
       margin: 0 !important;
       padding-left: 4px;
     }

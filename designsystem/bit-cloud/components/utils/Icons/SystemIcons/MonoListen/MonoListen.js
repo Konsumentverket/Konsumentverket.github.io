@@ -22,7 +22,7 @@ export const MonoListen = ({className, style, title, ...otherAttr}) => {
         />
       </g>
       <defs>
-        <clipPath id="clip0_129_11">
+        <clipPath>
           <rect width="18" height="18" fill="white"/>
         </clipPath>
       </defs>

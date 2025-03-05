@@ -117,6 +117,7 @@ import { DualBlueChatAnswer } from "./Icons/SystemIcons/DualBlueChatAnswer/DualB
 import { DualBlueHelpChat } from "./Icons/SystemIcons/DualBlueHelpChat/DualBlueHelpChat.js";
 
 import { DBAnimalsIcon } from "./Icons/EditorIcons/DBAnimalsIcon/DBAnimalsIcon.js";
+import { DualBlueHeart } from "./Icons/EditorIcons/DualBlueHeart/DualBlueHeart.js";
 import { DBCalendarIcon } from "./Icons/EditorIcons/DBCalendarIcon/DBCalendarIcon.js";
 import { DBCarIcon } from "./Icons/EditorIcons/DBCarIcon/DBCarIcon.js";
 import { DBClothesIcon } from "./Icons/EditorIcons/DBClothesIcon/DBClothesIcon.js";
@@ -308,5 +309,6 @@ export {
   DBSocialShareIcon,
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
-  RSS
+  RSS,
+  DualBlueHeart
 }

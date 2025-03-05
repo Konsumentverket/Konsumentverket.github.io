@@ -30,7 +30,8 @@ import {
   DBSocialShareIcon,
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
-  RSS
+  RSS,
+  DualBlueHeart
 } from "@konsumentverket-sverige/designsystem.utils";
 
 const editorIconDefinitions = {
@@ -62,7 +63,8 @@ const editorIconDefinitions = {
   DBSocialShareIcon,
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
-  RSS
+  RSS,
+  DualBlueHeart
 };
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {

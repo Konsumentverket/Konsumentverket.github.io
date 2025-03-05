@@ -134,7 +134,8 @@ import {
   DBSocialShareIcon,
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
-  RSS
+  RSS,
+  DualBlueHeart
 
 } from "@konsumentverket-sverige/designsystem.utils"
 
@@ -205,11 +206,12 @@ const systemIconDefinitions = {
   DualBlueChatAnswer,
   MonoArrowBend,
   MonoArrowBendDown,
-  WarningTriangle,
+  WarningTriangle
 };
 
 const editorIconDefinitions = {
   RSS,
+  DualBlueHeart,
   DBAnimalsIcon,
   DBCalendarIcon,
   DBCarIcon,

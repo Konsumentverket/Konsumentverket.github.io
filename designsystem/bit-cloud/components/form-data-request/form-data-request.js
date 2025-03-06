@@ -132,7 +132,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
 
       <div css={[formRow]}>
         <div>
-          <label htmlFor="ssn">Personnummer 10-siffror*</label>
+          <label htmlFor="ssn">Personnummer (ÅÅMMDD-XXXX)*</label>
           <input
             id="ssn"
             placeholder="ÅÅMMDD-XXXX"

@@ -76,7 +76,7 @@ export const Subscribe = ({
   return (
     <form
       css={[form]}
-      data-comp="contactForm-guidance"
+      data-comp="contactForm-subscribe"
       onSubmit={handleSubmit(onSubmit)}
       aria-busy={isLoading}
     >

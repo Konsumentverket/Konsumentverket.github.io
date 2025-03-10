@@ -70,3 +70,55 @@ export const InputAutocompleteInHeaderSeearch = () => {
     </>
   );
 }
+
+// Dummy data to use when testing list of suggestions
+export const dummySuggestions = [
+  {
+    description: "Stockholm, Sverige",
+    matched_substrings: [{ length: 4, offset: 0 }],
+    place_id: "ChIJywtkGTF2X0YRZnedZ9MnDag",
+    reference: "ChIJywtkGTF2X0YRZnedZ9MnDag",
+    structured_formatting: {
+      main_text: "Stockholm",
+      main_text_matched_substrings: [{ length: 4, offset: 0 }],
+      secondary_text: "Sverige"
+    },
+    terms: [
+      { offset: 0, value: "Stockholm" },
+      { offset: 11, value: "Sverige" }
+    ],
+    types: ["geocode", "political", "locality"]
+  },
+  {
+    description: "Stockholms län, Sverige",
+    matched_substrings: [{ length: 4, offset: 0 }],
+    place_id: "ChIJPauYNIoH2EUR-vzAobVCa7M",
+    reference: "ChIJPauYNIoH2EUR-vzAobVCa7M",
+    structured_formatting: {
+      main_text: "Stockholms län",
+      main_text_matched_substrings: [{ length: 4, offset: 0 }],
+      secondary_text: "Sverige"
+    },
+    terms: [
+      { offset: 0, value: "Stockholms län" },
+      { offset: 16, value: "Sverige" }
+    ],
+    types: ["political", "geocode", "administrative_area_level_1"]
+  },
+  {
+    description: "Stocksund, Sverige",
+    matched_substrings: [{ length: 4, offset: 0 }],
+    place_id: "ChIJ7Ze3gvmcX0YRie4hytt1A1Q",
+    reference: "ChIJ7Ze3gvmcX0YRie4hytt1A1Q",
+    structured_formatting: {
+      main_text: "Stocksund",
+      main_text_matched_substrings: [{ length: 4, offset: 0 }],
+      secondary_text: "Sverige"
+    },
+    terms: [
+      { offset: 0, value: "Stocksund" },
+      { offset: 11, value: "Sverige" }
+    ],
+    types: ["geocode", "locality", "political"]
+  }
+];

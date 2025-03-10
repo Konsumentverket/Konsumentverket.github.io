@@ -69,6 +69,7 @@ import {
   MonoArrowBend,
   MonoArrowBendDown,
   WarningTriangle,
+  DualBlueNews,
 
   // Editor Icons
   NewsIcon,
@@ -206,7 +207,8 @@ const systemIconDefinitions = {
   DualBlueChatAnswer,
   MonoArrowBend,
   MonoArrowBendDown,
-  WarningTriangle
+  WarningTriangle,
+  DualBlueNews,
 };
 
 const editorIconDefinitions = {

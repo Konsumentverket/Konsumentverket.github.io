@@ -154,7 +154,7 @@ import { DBFlight } from "./Icons/EditorIcons/DBFlight/DBFlight.js";
 import { DBBudget } from "./Icons/EditorIcons/DBBudget/DBBudget.js";
 import { DBStats } from "./Icons/EditorIcons/DBStats/DBStats.js";
 import { DBPublications } from "./Icons/EditorIcons/DBPublications/DBPublications.js";
-import { DBAIchat } from "./Icons/EditorIcons/DBAIchat/DBAIchat.js";
+import { DBAIchat } from "./Icons/EditorIcons/DBAIChat/DBAIchat.js";
 
 import useOnClickOutside from "./hooks/useOnClickOutside";
 

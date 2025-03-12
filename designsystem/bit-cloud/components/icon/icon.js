@@ -136,7 +136,12 @@ import {
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
   RSS,
-  DualBlueHeart
+  DualBlueHeart,
+  DBFlight,
+  DBBudget,
+  DBStats,
+  DBPublications,
+  DBAIchat
 
 } from "@konsumentverket-sverige/designsystem.utils"
 
@@ -277,6 +282,11 @@ const editorIconDefinitions = {
   DBSocialShareIcon,
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
+  DBFlight,
+  DBBudget,
+  DBStats,
+  DBPublications,
+  DBAIchat
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {

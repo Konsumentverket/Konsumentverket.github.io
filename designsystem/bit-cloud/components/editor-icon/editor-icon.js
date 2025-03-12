@@ -31,7 +31,12 @@ import {
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
   RSS,
-  DualBlueHeart
+  DualBlueHeart,
+  DBFlight,
+  DBBudget,
+  DBStats,
+  DBPublications,
+  DBAIchat
 } from "@konsumentverket-sverige/designsystem.utils";
 
 const editorIconDefinitions = {
@@ -64,7 +69,12 @@ const editorIconDefinitions = {
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
   RSS,
-  DualBlueHeart
+  DualBlueHeart,
+  DBFlight,
+  DBBudget,
+  DBStats,
+  DBPublications,
+  DBAIchat
 };
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {

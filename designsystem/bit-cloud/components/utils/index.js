@@ -117,6 +117,7 @@ import { WebbinarIcon } from "./Icons/EditorIcons/WebbinarIcon/WebbinarIcon.js";
 import { DualBlueChatAnswer } from "./Icons/SystemIcons/DualBlueChatAnswer/DualBlueChatAnswer.js";
 import { DualBlueHelpChat } from "./Icons/SystemIcons/DualBlueHelpChat/DualBlueHelpChat.js";
 
+
 import { DBAnimalsIcon } from "./Icons/EditorIcons/DBAnimalsIcon/DBAnimalsIcon.js";
 import { DualBlueHeart } from "./Icons/EditorIcons/DualBlueHeart/DualBlueHeart.js";
 import { DBCalendarIcon } from "./Icons/EditorIcons/DBCalendarIcon/DBCalendarIcon.js";
@@ -148,6 +149,12 @@ import { DBSocialShareIcon } from "./Icons/EditorIcons/DBSocialShareIcon/DBSocia
 import { DBFriendshipIcon } from "./Icons/EditorIcons/DBFriendshipIcon/DBFriendshipIcon.js";
 import { DBWebsiteInfoIcon } from "./Icons/EditorIcons/DBWebsiteInfoIcon/DBWebsiteInfoIcon.js";
 import { RSS } from "./Icons/EditorIcons/RSS/RSS.js";
+
+import { DBFlight } from "./Icons/EditorIcons/DBFlight/DBFlight.js";
+import { DBBudget } from "./Icons/EditorIcons/DBBudget/DBBudget.js";
+import { DBStats } from "./Icons/EditorIcons/DBStats/DBStats.js";
+import { DBPublications } from "./Icons/EditorIcons/DBPublications/DBPublications.js";
+import { DBAIchat } from "./Icons/EditorIcons/DBAIchat/DBAIchat.js";
 
 import useOnClickOutside from "./hooks/useOnClickOutside";
 
@@ -311,5 +318,10 @@ export {
   DBFriendshipIcon,
   DBWebsiteInfoIcon,
   RSS,
-  DualBlueHeart
+  DualBlueHeart,
+  DBFlight,
+  DBBudget,
+  DBStats,
+  DBPublications,
+  DBAIchat
 }

@@ -1,6 +1,31 @@
 {
   "icons": [
     {
+      "name": "DBFlight",
+      "title": "Flygkalkylatorn",
+      "url": "EditorIconsSvg/yellow-dual-plane-calc.svg"
+    },
+    {
+      "name": "DBBudget",
+      "title": "Budgetkalkylen",
+      "url": "EditorIconsSvg/yellow-dual-calc.svg"
+    },
+    {
+      "name": "DBStats",
+      "title": "Statistik",
+      "url": "EditorIconsSvg/yellow-dual-stats.svg"
+    },
+    {
+      "name": "DBPublications",
+      "title": "Publikationer",
+      "url": "EditorIconsSvg/yellow-dual-book.svg"
+    },
+    {
+      "name": "DBAIchat",
+      "title": "AI-chatt",
+      "url": "EditorIconsSvg/yellow-dual-ai-chat.svg"
+    },
+    {
       "name": "DBAnimalsIcon",
       "title": "Djur",
       "url": "EditorIconsSvg/blue-dual-paw.svg"

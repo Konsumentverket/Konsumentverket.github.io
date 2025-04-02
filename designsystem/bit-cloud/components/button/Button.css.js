@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors, typography } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, typography, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 const disabled = css`
     color: ${newColors.secondaries.fullGrey};
@@ -144,3 +144,69 @@ export const buttonIconOnly = css`
         margin: 0 !important;
     }
 `
+
+
+export const cookieStyle = css`
+  text-decoration: none;
+  line-height: 2.4rem;
+  padding: 1.6rem 2.4rem;
+  box-sizing: border-box;
+  cursor:pointer;
+  box-shadow: 0px 3px 10px 3px rgba(22,34,89,0.07);
+
+
+
+  background-color: #ffffff;
+  color: #161616;
+  font-weight: 500;
+  font-size: 1.6rem;
+  height: 5.6rem;
+  border-radius: 16px;
+  display: inline-block;
+  margin-bottom: 2.4rem;
+  text-align: center;
+  width: fit-content !important;
+
+  img {
+    height: 100%;
+    width: 24px;
+    margin-right: 16px;
+    vertical-align: middle;
+  }
+  align-items: center;
+
+  &:focus {
+    box-shadow: 0 0 0 3px #00944b;
+  }
+
+  &:hover {
+    background-color: #edebeb;
+    box-shadow: 0px 0px 0px 2px #161616;
+    outline: none;
+    text-decoration:underline;
+  }
+
+  &:active {
+    color: ${newColors.shades.fullBlue} !important;
+    outline: none;
+    background-color: ${newColors.shades.lightBlue};
+    text-decoration:underline;
+  }
+
+  &:disabled {
+    background-color: #d0d0d0;
+  }
+
+
+  ${medium} {
+    margin-bottom: 1.6rem;
+    text-align: center;
+    display: block;
+  }
+
+  svg {
+    fill: ${newColors.kovWhite};
+    flex-shrink: 0;
+  }
+
+`;

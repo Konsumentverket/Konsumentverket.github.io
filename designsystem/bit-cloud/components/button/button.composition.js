@@ -262,56 +262,11 @@ export const BasicSecondaryBasicButton = () => {
 
 // Cookie Compliance Custom Styling Example
 export const CookieComplianceCustomStylingButton = () => {
-  const cookieComplianceButtonCss = css`
-    margin-right: 15px;
-    background-color: #ffffff;
-    color: #161616;
-    font-weight: 700;
-    height: 5.6rem;
-    box-shadow: none;
-    img {
-      height: 100%;
-      width: 24px;
-      margin-right: 2rem;
-      vertical-align: middle;
-    }
-    align-items: center;
-
-    &:focus {
-      box-shadow: 0 0 0 3px #00944b;
-      outline-color: #ffffff !important;
-      border-radius: 0.4rem !important;
-      outline-offset: 4px;
-    }
-
-    &:hover {
-      background-color: #edebeb;
-      box-shadow: 0px 0px 0px 2px #161616;
-      outline: none;
-    }
-
-    &:active {
-      background-color: #403836;
-      color: #ffffff;
-      border-radius: 8px;
-      outline: none;
-    }
-
-    &:disabled {
-      background-color: #d0d0d0;
-    }
-    ${small} {
-      text-align: center;
-    }
-    ${medium} {
-      text-align: center;
-    }
-  `;
 
   const element = <>
     <Button
       text="Nej, jag avböjer"
-      style={cookieComplianceButtonCss}
+      isCookie={true}
       iconLeft={
         <img
           src='https://www.hallakonsument.se/images/thumbs-down.svg'
@@ -322,7 +277,7 @@ export const CookieComplianceCustomStylingButton = () => {
 
     <Button
       text="Ja, jag godkänner"
-      style={cookieComplianceButtonCss}
+      isCookie={true}
       iconLeft={
         <img
           src='https://www.hallakonsument.se/images/thumbs-up.svg'

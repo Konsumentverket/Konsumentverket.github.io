@@ -28,7 +28,7 @@ export const buttonStyle = css`
     justify-content: flex-start;
     text-decoration: none;
     font-size: 1.6rem;
-    line-height: 1.5;
+
     font-weight: 500;
     color: ${newColors.kovWhite};
     box-sizing: border-box;

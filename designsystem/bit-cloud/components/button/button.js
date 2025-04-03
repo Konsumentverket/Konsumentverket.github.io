@@ -33,6 +33,7 @@ export const Button = ({
   contentfulName,
   contentfulId,
   isCookie = false,
+  noStyle = false,
   linkComponent: LinkComponent = 'a',
   ...other
 }) => {
@@ -41,7 +42,8 @@ export const Button = ({
   const cssClass = [className];
   let styles = [buttonStyle];
 
-  if (!!isCookie) styles = [cookieStyle];
+  if (!!noStyle) styles = [];
+  else if (!!isCookie) styles = [cookieStyle];
   else {
     secondaryButtonStyle && styles.push(secondaryStyle);
     linkStyle && styles.push(linkStyles);

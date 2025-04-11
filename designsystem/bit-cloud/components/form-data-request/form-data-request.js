@@ -163,7 +163,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
               required: 'Ange din e-postadress',
               pattern: {
                 value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                message: 'Ange en giltig e-postadress ',
+                message: 'E-postadressen måste innehålla ett @',
               },
             })}
           />

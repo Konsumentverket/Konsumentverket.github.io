@@ -38,6 +38,7 @@ const FormTextArea = ({
             position={tooltipPosition}
             id={id}
             text={tooltipText}
+            label={label}
           />
         )}
 

@@ -11,7 +11,7 @@ import {
   rightPosition, showTooltip, tooltip, tooltipText
 } from "../contact-forms.css";
 
-const ToolTip = ({position = 'left', id = '', text=''}) => {
+const ToolTip = ({position = 'left', id = '', text='', label=''}) => {
   const [isOpen , setIsOpen] = useState(false);
 
   const tooltipRef = useRef();
@@ -64,7 +64,7 @@ const ToolTip = ({position = 'left', id = '', text=''}) => {
         onClick={onClick}
         aria-controls={`tooltip-${id}`}
         aria-expanded={isOpen}
-        aria-label={`Visa en hjälpande text för detta fält: ${id}`}
+        aria-label={`Visa en hjälpande text för detta fält: ${label}`}
       >
         <Icon icon={'Information'}/>
       </button>
@@ -88,7 +88,7 @@ const ToolTip = ({position = 'left', id = '', text=''}) => {
           type="button"
           onClick={() => setIsOpen(false)}
           aria-controls={`tooltip-${id}`}
-          aria-label={`Stäng tooltip-${id}`}
+          aria-label={`Stäng tooltip ${label}`}
         >
           <Icon icon={'MonoDeleteSmall'}/>
         </button>

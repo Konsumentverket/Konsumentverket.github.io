@@ -41,6 +41,7 @@ const FormInput = ({
             position={tooltipPosition}
             id={id}
             text={tooltipText}
+            label={label}
           />
         )}
 

@@ -25,7 +25,7 @@ const FormTextArea = ({
   maxLengthCount = 2000,
   register,
   validation,
-  watch
+  watch, tooltipLabel = ''
 }) => {
   return (
     <div css={formInputWrapper}>
@@ -38,7 +38,7 @@ const FormTextArea = ({
             position={tooltipPosition}
             id={id}
             text={tooltipText}
-            label={label}
+            label={tooltipLabel}
           />
         )}
 

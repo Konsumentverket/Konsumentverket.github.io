@@ -95,6 +95,7 @@ export const Subscribe = ({
           label={subscribeEmailLabel}
           placeholder={subscribeEmailPlaceholder}
           tooltipText={subscribeEmailHelpText}
+          tooltipLabel={"e-post"}
           error={errors && errors.email}
           maxLengthValidation={false}
           register={register}

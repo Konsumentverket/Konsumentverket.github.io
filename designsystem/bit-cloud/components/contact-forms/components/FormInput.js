@@ -18,7 +18,7 @@ const FormInput = ({
   id,
   label,
   placeholder,
-  tooltipText,
+  tooltipText, tooltipLabel,
   tooltipPosition='left',
   error,
   maxLengthValidation = false,
@@ -41,7 +41,7 @@ const FormInput = ({
             position={tooltipPosition}
             id={id}
             text={tooltipText}
-            label={label}
+            label={tooltipLabel}
           />
         )}
 

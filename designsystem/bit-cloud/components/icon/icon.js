@@ -302,7 +302,7 @@ const Icon = ({ icon, className, style, title, ...otherAttr }) => {
       focusable="false"
       className={className}
       style={style}
-      aria-hidden="true"
+      aria-hidden={icon !== "External"}
       {...otherAttr}
     />
   );

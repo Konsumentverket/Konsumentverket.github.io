@@ -126,9 +126,7 @@ export const Dropdown = ({
 
   const handleApplyFilter = ()  => {
     onApplyFilter();
-    setTimeout(() => {
-      closeDropdown();
-    }, 300);
+    closeDropdown();
   }
 
   return (

@@ -83,7 +83,7 @@ export const Dropdown = ({
   const dropdownRef = useRef();
 
   const closeDropdown = () => setIsExpanded(false)
-  useOnClickOutside(dropdownRef, () => closeDropdo0wn());
+  useOnClickOutside(dropdownRef, () => closeDropdown());
 
   useEffect(() => {
     const handleKeyDown = (event) => {

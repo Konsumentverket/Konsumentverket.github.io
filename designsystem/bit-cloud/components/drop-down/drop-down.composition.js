@@ -80,8 +80,8 @@ export const BasicCheckboxDropDown = () => {
     setDropdownValue([])
   }
 
-  const onApplyFilters = () => {
-    console.log("Apply filters callback")
+  const onApplyFilter = () => {
+    console.log("Apply filter callback")
   }
 
   return (
@@ -99,8 +99,8 @@ export const BasicCheckboxDropDown = () => {
           }}
           value={dropdownValue}
           data={data}
-          onApplyFilters={onApplyFilters}
-          onResetFilters={resetValue}
+          onApplyFilter={onApplyFilter}
+          onResetFilter={resetValue}
         />
       </CompositionFonts>
     </div>
@@ -116,7 +116,7 @@ export const BasicRadioDropDown = () => {
     setDropdownValue([])
   }
 
-  const onApplyFilters = () => {
+  const onApplyFilter = () => {
     console.log("Apply filters callback")
   }
 
@@ -135,8 +135,8 @@ export const BasicRadioDropDown = () => {
           }}
           value={dropdownValue}
           data={radioData}
-          onApplyFilters={onApplyFilters}
-          onResetFilters={resetValue}
+          onApplyFilter={onApplyFilter}
+          onResetFilter={resetValue}
         />
       </CompositionFonts>
     </div>

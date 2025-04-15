@@ -73,8 +73,8 @@ export const Dropdown = ({
   value = [],
   isExpanded = false,
   setIsExpanded = () => {},
-  onApplyFilters = () => {},
-  onResetFilters = () => {},
+  onApplyFilter = () => {},
+  onResetFilter = () => {},
   showApplyButton = true,
 }) => {
   const Component = componentMap[type];
@@ -117,8 +117,15 @@ export const Dropdown = ({
     onChange(updatedValue, event);
   };
 
-  const handleApplyFilters = ()  => {
-    onApplyFilters();
+  const handleBlur = (e) => {
+    // Close dropdown when focusing outside of it
+    if (!dropdownRef.current.contains(e.relatedTarget)) {
+      closeDropdown();
+    }
+  }
+
+  const handleApplyFilter = ()  => {
+    onApplyFilter();
     setTimeout(() => {
       closeDropdown();
     }, 300);
@@ -130,6 +137,7 @@ export const Dropdown = ({
       css={[wrapperStyle, isExpanded && wrapperExpandedStyle]}
       ref={dropdownRef}
       tabIndex="-1"
+      onBlur={handleBlur}
     >
       <div css={innerWrapperStyle} >
         {label && (
@@ -176,7 +184,7 @@ export const Dropdown = ({
                   <Icon icon="MonoWhiteFilter1" />
                 }
                 text="Filtrera"
-                onClick={handleApplyFilters}
+                onClick={handleApplyFilter}
               />
               <Button
                 text="Rensa"
@@ -184,7 +192,7 @@ export const Dropdown = ({
                   <Icon icon="DualBlueBin" />
                 }
                 linkStyleSmall={true}
-                onClick={onResetFilters}
+                onClick={onResetFilter}
               />
             </div>
           )}

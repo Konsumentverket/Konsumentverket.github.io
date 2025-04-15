@@ -13,6 +13,7 @@ import {
     itemsListStyle,
     itemLinkStyle,
     itemOptionWrapperStyle,
+    applyFiltersBoxStyle,
 } from './drop-down.css.js';
 import { FormCheckbox } from '@konsumentverket-sverige/designsystem.form-checkbox';
 import { FormRadiobutton } from '@konsumentverket-sverige/designsystem.form-radiobutton';
@@ -20,6 +21,8 @@ import {
   ChevronRight,
   useOnClickOutside
 } from '@konsumentverket-sverige/designsystem.utils';
+import { Button } from "@konsumentverket-sverige/designsystem.button";
+import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 
 const CheckboxOption = ({ text, value, onChange, stateValue, disabled, id }) => (
     <div css={itemOptionWrapperStyle}>
@@ -70,6 +73,9 @@ export const Dropdown = ({
   value = [],
   isExpanded = false,
   setIsExpanded = () => {},
+  onApplyFilters = () => {},
+  onResetFilters = () => {},
+  showApplyButton = true,
 }) => {
   const Component = componentMap[type];
   if (!Component) return null;
@@ -77,7 +83,7 @@ export const Dropdown = ({
   const dropdownRef = useRef();
 
   const closeDropdown = () => setIsExpanded(false)
-  useOnClickOutside(dropdownRef, () => closeDropdown());
+  useOnClickOutside(dropdownRef, () => closeDropdo0wn());
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -111,12 +117,12 @@ export const Dropdown = ({
     onChange(updatedValue, event);
   };
 
-  const handleBlur = (e) => {
-    // Close dropdown when focusing outside of it
-    if (!dropdownRef.current.contains(e.relatedTarget)) {
+  const handleApplyFilters = ()  => {
+    onApplyFilters();
+    setTimeout(() => {
       closeDropdown();
-    }
-  };
+    }, 300);
+  }
 
   return (
     <div
@@ -124,7 +130,6 @@ export const Dropdown = ({
       css={[wrapperStyle, isExpanded && wrapperExpandedStyle]}
       ref={dropdownRef}
       tabIndex="-1"
-      onBlur={handleBlur}
     >
       <div css={innerWrapperStyle} >
         {label && (
@@ -162,6 +167,26 @@ export const Dropdown = ({
                 </li>
               ))}
             </ul>
+          )}
+
+          {showApplyButton && (
+            <div css={applyFiltersBoxStyle} >
+              <Button
+                iconRight={
+                  <Icon icon="MonoWhiteFilter1" />
+                }
+                text="Filtrera"
+                onClick={handleApplyFilters}
+              />
+              <Button
+                text="Rensa"
+                iconLeft={
+                  <Icon icon="DualBlueBin" />
+                }
+                linkStyleSmall={true}
+                onClick={onResetFilters}
+              />
+            </div>
           )}
         </div>
       </div>

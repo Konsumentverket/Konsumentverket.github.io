@@ -3,8 +3,6 @@ import React, {useState} from 'react';
 import { Dropdown } from './drop-down.js';
 
 import {
-  small,
-  medium,
   globalStyles as GlobalStyles,
   CompositionFonts
 } from '@konsumentverket-sverige/designsystem.utils';
@@ -78,6 +76,14 @@ export const BasicCheckboxDropDown = () => {
   const [dropdownValue, setDropdownValue] = useState([]);
   console.log("Dropdown value: ", dropdownValue)
 
+  const resetValue = () => {
+    setDropdownValue([])
+  }
+
+  const onApplyFilters = () => {
+    console.log("Apply filters callback")
+  }
+
   return (
     <div style={{ minHeight: '400px' }}>
       <CompositionFonts>
@@ -93,6 +99,8 @@ export const BasicCheckboxDropDown = () => {
           }}
           value={dropdownValue}
           data={data}
+          onApplyFilters={onApplyFilters}
+          onResetFilters={resetValue}
         />
       </CompositionFonts>
     </div>
@@ -103,6 +111,14 @@ export const BasicRadioDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [dropdownValue, setDropdownValue] = useState([]);
   console.log("Dropdown value: ", dropdownValue)
+
+  const resetValue = () => {
+    setDropdownValue([])
+  }
+
+  const onApplyFilters = () => {
+    console.log("Apply filters callback")
+  }
 
   return (
     <div style={{ minHeight: '600px' }}>
@@ -119,6 +135,8 @@ export const BasicRadioDropDown = () => {
           }}
           value={dropdownValue}
           data={radioData}
+          onApplyFilters={onApplyFilters}
+          onResetFilters={resetValue}
         />
       </CompositionFonts>
     </div>

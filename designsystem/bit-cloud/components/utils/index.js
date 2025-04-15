@@ -69,6 +69,8 @@ import { DBFileImage } from "./Icons/SystemIcons/DBFileImage/DBFileImage";
 import { DBDeleteFileAlt2 } from "./Icons/SystemIcons/DBDeleteFileAlt2/DBDeleteFileAlt2";
 import { WarningTriangle } from "./Icons/SystemIcons/WarningTriangle/WarningTriangle";
 import { DualBlueNews } from "./Icons/SystemIcons/DualBlueNews/DualBlueNews";
+import { MonoWhiteFilter1 } from "./Icons/SystemIcons/MonoWhiteFilter1/MonoWhiteFilter1";
+import { DualBlueBin } from "./Icons/SystemIcons/DualBlueBin/DualBlueBin";
 
 
 // Editor icons
@@ -248,6 +250,8 @@ export {
   DualBlueChatAnswer,
   WarningTriangle,
   DualBlueNews,
+  MonoWhiteFilter1,
+  DualBlueBin,
 
   // System icons
 

@@ -70,6 +70,8 @@ import {
   MonoArrowBendDown,
   WarningTriangle,
   DualBlueNews,
+  MonoWhiteFilter1,
+  DualBlueBin,
 
   // Editor Icons
   NewsIcon,
@@ -214,6 +216,8 @@ const systemIconDefinitions = {
   MonoArrowBendDown,
   WarningTriangle,
   DualBlueNews,
+  MonoWhiteFilter1,
+  DualBlueBin,
 };
 
 const editorIconDefinitions = {

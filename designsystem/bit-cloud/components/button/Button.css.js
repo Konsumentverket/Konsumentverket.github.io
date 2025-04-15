@@ -98,6 +98,8 @@ export const linkStyles = css`
 export const linkStylesSmall = css`
   ${linkStyles};
   font-size: 1.6rem !important;
+  padding-right: 8px;
+
   svg {
         max-width: 1.8rem !important;
         height: auto;

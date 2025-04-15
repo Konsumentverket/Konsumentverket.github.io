@@ -114,3 +114,22 @@ export const itemOptionWrapperStyle = css`
     display: flex;
     padding: 0 ${spacing.xs};
 `;
+
+export const applyFiltersBoxStyle = css`
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+  > :first-of-type svg {
+    width: 24px;
+    max-width: 24px;
+    height: 24px;
+  }
+
+  > :last-of-type {
+    align-self: flex-start;
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+`;

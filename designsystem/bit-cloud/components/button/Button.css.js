@@ -28,7 +28,7 @@ export const buttonStyle = css`
     box-shadow: 0px 3px 10px 3px rgba(22,34,89,0.07);
 
     svg {
-        fill: ${newColors.kovWhite};
+        fill: currentColor;
         flex-shrink: 0;
     }
 
@@ -52,7 +52,7 @@ export const secondaryStyle = css`
     box-shadow: inset 0px 0px 0px 1px ${newColors.primaries.fullBlue}, 0px 3px 10px 3px rgba(22,34,89,0.07);
 
     svg {
-        fill: ${newColors.primaries.fullBlue};
+        fill: currentColor;
     }
 
     &:hover, &.selectedButtonStyle {
@@ -89,6 +89,12 @@ export const linkStyles = css`
    svg {
     fill: ${newColors.kovBlack};
    }
+
+    @media (prefers-color-scheme: dark) {
+      svg {
+        fill: #fff;
+      }
+    }
 
    &:hover {
     background: none;

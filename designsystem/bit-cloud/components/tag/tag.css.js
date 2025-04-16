@@ -22,5 +22,12 @@ export const tagStyle = {
       text-decoration: underline;
       background-color: #B9E1F6;
     }
+
+    @media (prefers-color-scheme: dark) {
+      border: 1px solid #fff;
+    }
+    @media (prefers-color-scheme: light) {
+      border: 1px solid #000;
+    }
   `
 };

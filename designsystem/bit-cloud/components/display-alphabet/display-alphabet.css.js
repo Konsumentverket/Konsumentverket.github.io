@@ -70,6 +70,13 @@ export const activeLetter = css`
     background-color: ${newColors.shades.kovBlue};
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #fff;
+    }
+    @media (prefers-color-scheme: light) {
+      background-color: ${newColors.shades.kovBlue};
+    }
   }
 
   &:hover {

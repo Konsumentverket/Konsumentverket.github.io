@@ -63,6 +63,13 @@ export const buttonStyle = css`
 export const chevronStyle = css`
     fill: ${newColors.shades.fullBlue};
     transform: rotate(90deg);
+
+    @media (prefers-color-scheme: dark) {
+      fill: #fff;
+    }
+    @media (prefers-color-scheme: light) {
+      fill: ${newColors.shades.fullBlue};
+    }
 `;
 
 export const chevronExpandedStyle = css`

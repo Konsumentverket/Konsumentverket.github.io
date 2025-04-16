@@ -124,11 +124,6 @@ export const Dropdown = ({
     }
   }
 
-  const handleApplyFilter = ()  => {
-    onApplyFilter();
-    closeDropdown();
-  }
-
   return (
     <div
       data-comp="drop-down"
@@ -182,7 +177,7 @@ export const Dropdown = ({
                   <Icon icon="MonoWhiteFilter1" />
                 }
                 text="Filtrera"
-                onClick={handleApplyFilter}
+                onClick={onApplyFilter}
               />
               <Button
                 text="Rensa"

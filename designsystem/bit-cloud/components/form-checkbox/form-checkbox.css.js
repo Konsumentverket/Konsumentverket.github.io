@@ -52,6 +52,10 @@ export const checkboxStyle = css`
     &:checked + .checkbox-label:before {
       background: ${newColors.shades.fullBlue};
       border: 1px solid ${newColors.shades.fullBlue};
+
+      @media (prefers-color-scheme: light) {
+        background: ${newColors.shades.fullBlue};
+      }
     }
   }
 
@@ -71,9 +75,7 @@ export const checkboxStyle = css`
     @media (prefers-color-scheme: dark) {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent('#fff')}' d='${checkPath}'/%3E%3C/svg%3E");;
     }
-    @media (prefers-color-scheme: light) {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent('#000')}' d='${checkPath}'/%3E%3C/svg%3E");
-    }
+
   }
 
   .checkbox[disabled],

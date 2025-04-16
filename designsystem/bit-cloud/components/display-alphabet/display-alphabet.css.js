@@ -45,6 +45,13 @@ export const validLetter = css`
     left: 0;
     width: 100%;
     background-color: ${newColors.shades.fullBlue};
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #fff;
+    }
+    @media (prefers-color-scheme: light) {
+      background-color: ${newColors.shades.fullBlue};
+    }
   }
 
   &:hover {

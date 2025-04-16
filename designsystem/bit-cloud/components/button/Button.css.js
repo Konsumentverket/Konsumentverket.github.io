@@ -207,7 +207,7 @@ export const cookieStyle = css`
   }
 
   svg {
-    fill: ${newColors.kovWhite};
+    fill: currentColor;
     flex-shrink: 0;
   }
 

@@ -55,5 +55,10 @@ export const arrowStyle = css`
   margin: 0 ${spacing.xs};
   vertical-align: middle;
   fill: ${newColors.kovBlack};
+
+  @media (prefers-color-scheme: dark) {
+    fill: #fff;
+  }
+
 `;
 

@@ -26,10 +26,7 @@ export const buttonStyle = css`
     cursor:pointer;
     background-color: ${newColors.primaries.fullBlue};
     box-shadow: 0px 3px 10px 3px rgba(22,34,89,0.07);
-
-    @media (prefers-color-scheme: dark) {
-      border: 1px solid #fff;
-    }
+    border: 1px solid ${newColors.primaries.fullBlue};
 
     svg {
         fill: currentColor;

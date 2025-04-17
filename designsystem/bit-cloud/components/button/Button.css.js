@@ -27,6 +27,10 @@ export const buttonStyle = css`
     background-color: ${newColors.primaries.fullBlue};
     box-shadow: 0px 3px 10px 3px rgba(22,34,89,0.07);
 
+    @media (prefers-color-scheme: dark) {
+      border: 1px solid #fff;
+    }
+
     svg {
         fill: currentColor;
         flex-shrink: 0;
@@ -161,9 +165,6 @@ export const cookieStyle = css`
   box-sizing: border-box;
   cursor:pointer;
   box-shadow: 0px 3px 10px 3px rgba(22,34,89,0.07);
-
-
-
   background-color: #ffffff;
   color: #161616;
   font-weight: 500;
@@ -174,6 +175,10 @@ export const cookieStyle = css`
   margin-bottom: 2.4rem;
   text-align: center;
   width: fit-content !important;
+
+  @media (prefers-color-scheme: dark) {
+      border: 1px solid #fff;
+  }
 
   img {
     height: 100%;

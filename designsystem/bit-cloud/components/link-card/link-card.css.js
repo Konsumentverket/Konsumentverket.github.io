@@ -13,6 +13,10 @@ export const wrapper = css`
   position: relative;
   width: 100%;
 
+  @media (prefers-color-scheme: dark) {
+      border: 1px solid #fff;
+  }
+
 
   ${medium}{
   }

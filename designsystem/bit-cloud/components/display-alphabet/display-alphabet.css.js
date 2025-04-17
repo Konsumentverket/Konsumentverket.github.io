@@ -48,6 +48,7 @@ export const validLetter = css`
 
     @media (prefers-color-scheme: dark) {
       background-color: #fff;
+      border-bottom: 1px solid #fff;
     }
     @media (prefers-color-scheme: light) {
       background-color: ${newColors.shades.fullBlue};

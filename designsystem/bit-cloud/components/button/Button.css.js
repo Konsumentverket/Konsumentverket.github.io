@@ -172,10 +172,7 @@ export const cookieStyle = css`
   margin-bottom: 2.4rem;
   text-align: center;
   width: fit-content !important;
-
-  @media (prefers-color-scheme: dark) {
-      border: 1px solid #fff;
-  }
+  border: 1px solid #fff;
 
   img {
     height: 100%;

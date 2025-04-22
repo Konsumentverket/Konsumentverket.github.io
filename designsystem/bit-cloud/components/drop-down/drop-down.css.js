@@ -124,7 +124,8 @@ export const itemOptionWrapperStyle = css`
 
 export const applyFiltersBoxStyle = css`
     padding-top: 16px;
-    display: flex;
+    display: inline-flex;
+    align-items: flex-start;
     flex-direction: column;
     gap: 16px;
 
@@ -135,7 +136,6 @@ export const applyFiltersBoxStyle = css`
   }
 
   > :last-of-type {
-    align-self: flex-start;
     margin-bottom: 0;
     margin-left: 8px;
   }

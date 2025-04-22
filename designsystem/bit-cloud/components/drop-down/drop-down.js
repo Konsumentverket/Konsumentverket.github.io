@@ -173,10 +173,8 @@ export const Dropdown = ({
           {showApplyButton && (
             <div css={applyFiltersBoxStyle} >
               <Button
-                iconRight={
-                  <Icon icon="MonoWhiteFilter1" />
-                }
-                text="Filtrera"
+                secondaryButtonStyle={true}
+                text="Använd filter"
                 onClick={onApplyFilter}
               />
               <Button

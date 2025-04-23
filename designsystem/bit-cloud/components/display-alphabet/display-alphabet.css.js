@@ -44,25 +44,17 @@ export const validLetter = css`
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: ${newColors.shades.fullBlue};
-
-    @media (prefers-color-scheme: dark) {
-      background-color: #fff;
-      border-bottom: 1px solid #fff;
-    }
-    @media (prefers-color-scheme: light) {
-      background-color: ${newColors.shades.fullBlue};
-    }
+    border-bottom: 1px solid ${newColors.shades.fullBlue};
   }
 
   &:hover {
     color: ${newColors.shades.kovBlue50};
-    background: ${newColors.shades.mediumBlue50};
+
+    &::after {
+      border-bottom: 1px solid ${newColors.shades.kovBlue50};
+    }
   }
 
-  &:hover::after {
-    visibility: hidden;
-  }
 `;
 
 export const invalidLetter = css`
@@ -72,19 +64,11 @@ export const invalidLetter = css`
 export const activeLetter = css`
   color: ${newColors.shades.kovBlue};
   background: ${newColors.shades.mediumBlue50};
+  border: 1px solid ${newColors.shades.mediumBlue50};
 
   &::after {
     height: 2px;
-    background-color: ${newColors.shades.kovBlue};
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-
-    @media (prefers-color-scheme: dark) {
-      background-color: #fff;
-    }
-    @media (prefers-color-scheme: light) {
-      background-color: ${newColors.shades.kovBlue};
-    }
+    border-bottom: 1px solid ${newColors.shades.kovBlue};
   }
 
   &:hover {

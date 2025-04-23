@@ -2,7 +2,7 @@ import {css} from '@emotion/core';
 
 export const tagStyle = {
   style: css`
-    box-shadow: inset 0px 0px 0px 1px #0061C2;
+    border: 1px solid #0061C2;
     border-radius: 32px;
     color: #0061C2;
     padding: 8px 16px;
@@ -25,9 +25,6 @@ export const tagStyle = {
 
     @media (prefers-color-scheme: dark) {
       border: 1px solid #fff;
-    }
-    @media (prefers-color-scheme: light) {
-      border: 1px solid #000;
     }
   `
 };

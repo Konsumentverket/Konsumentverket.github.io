@@ -4,7 +4,8 @@ import { newColors, spacing, breakpoints, typography } from '@konsumentverket-sv
 export const containerStyle = css`
   width: 100%;
   border-radius: ${spacing.s};
-  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+//  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+  border: 1px solid rgba(22, 34, 89, 0.10);
   overflow: hidden;
 `;
 
@@ -13,7 +14,8 @@ export const containerLightBlueAlternativeStyle = css`
 `;
 
 export const containerAlternativeStyle = css`
-    box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
+  border: 1px solid ${newColors.secondaries.lightGrey};
+  //box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
 `;
 
 export const noLeftBorderRadiusStyling = css`

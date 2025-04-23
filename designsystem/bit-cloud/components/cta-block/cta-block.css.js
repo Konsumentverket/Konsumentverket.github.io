@@ -37,14 +37,17 @@ export const noBoxshadow = css`
 
 export const whiteBackground = css`
   background: ${newColors.kovWhite};
+  border: 1px solid #fff;
 `
 
 export const blueBackground = css`
   background: ${newColors.shades.lightBlue50};
+  border: 1px solid ${newColors.shades.lightBlue50};
 `
 
 export const greyBackground = css`
   background: ${newColors.shades.lightGrey25};
+  border: 1px solid ${newColors.shades.lightGrey25};
 `
 
 export const focusHeadline = css`

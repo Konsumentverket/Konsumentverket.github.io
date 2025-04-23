@@ -4,6 +4,7 @@ import { newColors, colors, spacing, medium, typography } from '@konsumentverket
 export const wrapperStyling = css`
     width: 100%;
     background-color: ${newColors.primaries.lightOrange};
+    border: 1px solid ${newColors.primaries.lightOrange};
     border-radius: 16px;
     padding: ${spacing.m} ${spacing.s};
     position: relative;
@@ -37,11 +38,12 @@ export const wrapperStyling = css`
 
             &:before {
                 content: '';
-                width: 9px;
-                height: 9px;
+                width: 8px;
+                height: 8px;
                 display: inline-block;
                 border-radius: 50%;
                 background-color: ${newColors.secondaries.fullGrey};
+                border: 1px solid ${newColors.secondaries.fullGrey};
             }
         }
     }

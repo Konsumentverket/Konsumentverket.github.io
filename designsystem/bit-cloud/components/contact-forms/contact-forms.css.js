@@ -11,6 +11,7 @@ export const form = css`
   display: flex;
   flex-direction: column;
   background-color: ${newColors.shades.lightBlue50};
+  border: 1px solid ${newColors.shades.lightBlue50};
   border-radius: 8px;
   padding: 24px 16px;
   position: relative;
@@ -175,6 +176,7 @@ export const informationButtonOpen = css`
 export const tooltip = css`
   display: none;
   background: ${newColors.primaries.lightOrange};
+  border: 1px solid ${newColors.primaries.lightOrange};
   padding: 16px 16px 0 16px;
   position: absolute;
   width: 275px;
@@ -383,11 +385,13 @@ export const uploadBox = css`
 
   &:hover {
     background: ${newColors.shades.lightBlue50};
+    border: 1px solid ${newColors.shades.lightBlue50};
   }
 `;
 
 export const uploadBoxActive = css`
   background: ${newColors.shades.lightBlue50};
+  border: 1px solid ${newColors.shades.lightBlue50};
 `;
 
 export const uploadBoxTitleStyle = css`
@@ -452,6 +456,7 @@ export const listItem = css`
   padding: 16px;
   border-radius: 16px;
   background-color: ${newColors.kovWhite};
+  border: 1px solid ${newColors.kovWhite};
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   margin-bottom: 0;
 `;

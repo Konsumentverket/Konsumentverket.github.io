@@ -71,6 +71,8 @@ import { WarningTriangle } from "./Icons/SystemIcons/WarningTriangle/WarningTria
 import { DualBlueNews } from "./Icons/SystemIcons/DualBlueNews/DualBlueNews";
 import { MonoWhiteFilter1 } from "./Icons/SystemIcons/MonoWhiteFilter1/MonoWhiteFilter1";
 import { DualBlueBin } from "./Icons/SystemIcons/DualBlueBin/DualBlueBin";
+import { DualBlueAiChat } from "./Icons/SystemIcons/DualBlueAiChat/DualBlueAiChat";
+import { MonoWhiteAiChat } from "./Icons/SystemIcons/MonoWhiteAiChat/MonoWhiteAiChat";
 
 
 // Editor icons
@@ -252,6 +254,8 @@ export {
   DualBlueNews,
   MonoWhiteFilter1,
   DualBlueBin,
+  DualBlueAiChat,
+  MonoWhiteAiChat,
 
   // System icons
 

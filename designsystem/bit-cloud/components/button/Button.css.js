@@ -50,7 +50,6 @@ export const buttonStyle = css`
 export const secondaryStyle = css`
     background-color: ${newColors.primaries.kovWhite};
     color: ${newColors.primaries.fullBlue};
-    box-shadow: inset 0px 0px 0px 1px ${newColors.primaries.fullBlue}, 0px 3px 10px 3px rgba(22,34,89,0.07);
 
     svg {
         fill: currentColor;
@@ -60,14 +59,12 @@ export const secondaryStyle = css`
         background-color: ${newColors.shades.lightBlue50};
         text-decoration: underline;
         border-color: ${newColors.primaries.fullBlue};
-        box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue}, 0px 3px 10px 3px rgba(22,34,89,0.07);
     }
 
     &:active, &.selectedButtonStyle {
         background-color: ${newColors.shades.lightBlue};
         text-decoration: underline;
         border-color: ${newColors.primaries.fullBlue};
-        box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue}, 0px 3px 10px 3px rgba(22,34,89,0.07);
     }
     &:disabled{
         ${disabled}

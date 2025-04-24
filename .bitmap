@@ -250,7 +250,7 @@
     "pagination": {
         "name": "pagination",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.180",
+        "version": "0.0.181",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/pagination"
     },

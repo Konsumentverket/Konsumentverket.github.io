@@ -83,9 +83,9 @@ export const Pagination = ({
 
   const getClass = (pageNumber) => {
     if (lastPage === pageNumber)
-      return "last";
+      return "last noStyle";
     if (pageNumber === 1)
-      return "first";
+      return "first noStyle";
     return "noStyle";
   }
 

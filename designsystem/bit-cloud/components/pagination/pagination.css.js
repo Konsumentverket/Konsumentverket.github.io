@@ -26,7 +26,7 @@ export const pageStyle = css`
     justify-content: center;
     font-size: 1.6rem;
     text-align: center;
-    text-decoration: none !important;
+    text-decoration: none ;
 
     &:hover {
         box-shadow: none !important;
@@ -75,5 +75,6 @@ export const currentPageStyle = css`
         color: ${newColors.shades.fullBlue};
         border: 1px solid ${newColors.shades.mediumBlue};
         background-color: ${newColors.shades.mediumBlue};
+        text-decoration: underline;
     }
 `

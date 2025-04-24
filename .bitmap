@@ -54,7 +54,7 @@
     "drop-down": {
         "name": "drop-down",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.197",
+        "version": "0.0.198",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/drop-down"
     },
@@ -124,7 +124,7 @@
     "form-radiobutton": {
         "name": "form-radiobutton",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.174",
+        "version": "0.0.175",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-radiobutton"
     },

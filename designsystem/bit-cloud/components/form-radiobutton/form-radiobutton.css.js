@@ -79,7 +79,7 @@ export const fieldStyle = css`
     height: 6px;
     border-radius: 50%;
     position: absolute;
-    left: 14px;
+    left: 13px;
     top: auto;
     background: #fff;
   }

@@ -18,8 +18,8 @@ export const pageStyle = css`
     width: 36px;
     line-height: 1.5;
     font-weight: 500;
-    color: ${newColors.shades.fullBlue50};
-    border: 1px solid ${newColors.shades.fullBlue50};
+    color: ${newColors.shades.fullBlue};
+    background-color: ${newColors.shades.lightBlue};
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -30,6 +30,8 @@ export const pageStyle = css`
 
     &:hover {
         box-shadow: none !important;
+        background-color: ${newColors.shades.mediumBlue};
+        text-decoration: underline;
         border-radius: ${spacing.xs} !important;
     }
 
@@ -63,12 +65,15 @@ export const distanceIndicatorStyle = css`
 `
 
 export const currentPageStyle = css`
-    background-color:${colors.theme1.dark};
-    border: 1px solid ${colors.theme1.dark};
-    color: #fff!important;
+    background-color: ${newColors.kovBlue};
+    border: 1px solid ${newColors.kovBlue};
+    color: #fff;
+    height: 34px;
+    width: 34px;
 
     &:hover{
-        color: ${colors.theme1.mid}!important;
-        border: 1px solid ${colors.theme1.mid};
+        color: ${newColors.shades.fullBlue};
+        border: 1px solid ${newColors.shades.mediumBlue};
+        background-color: ${newColors.shades.mediumBlue};
     }
 `

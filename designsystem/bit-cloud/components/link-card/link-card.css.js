@@ -12,6 +12,7 @@ export const wrapper = css`
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   position: relative;
   width: 100%;
+  border: 1px solid #fff;
 
   @media (prefers-color-scheme: dark) {
       border: 1px solid #fff;

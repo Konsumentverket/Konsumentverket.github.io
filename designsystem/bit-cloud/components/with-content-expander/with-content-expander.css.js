@@ -11,6 +11,7 @@ export const containerStyle = css`
 
 export const containerLightBlueAlternativeStyle = css`
   box-shadow: none;
+  border: 1px solid ${newColors.primaries.lightBlue};
 `;
 
 export const containerAlternativeStyle = css`

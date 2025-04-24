@@ -31,6 +31,7 @@ export const Breadcrumbs = ({
                   aria-current="page"
                   dir={crumb.isRtl ? "rtl" : null}
                   css={breadcrumbTextStyle}
+                  lang={crumb.lang ? crumb.lang : null}
                 >
                   {crumb.title}
                 </span>
@@ -39,6 +40,7 @@ export const Breadcrumbs = ({
                   href={crumb.url}
                   css={breadcrumbLinkStyle}
                   dir={crumb.isRtl ? "rtl" : null}
+                  lang={crumb.lang ? crumb.lang : null}
                   injected={true}
                 >
                   {crumb.title}

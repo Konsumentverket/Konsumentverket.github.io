@@ -165,7 +165,7 @@ export const cookieStyle = css`
   font-size: 1.6rem;
   height: 5.6rem;
   border-radius: 16px;
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 2.4rem;
   text-align: center;
   width: fit-content !important;
@@ -177,6 +177,11 @@ export const cookieStyle = css`
     margin-right: 16px;
     vertical-align: middle;
   }
+
+  svg {
+    margin-right: 1.6rem;
+  }
+
   align-items: center;
 
   &:focus {
@@ -205,7 +210,7 @@ export const cookieStyle = css`
   ${medium} {
     margin-bottom: 1.6rem;
     text-align: center;
-    display: block;
+    display: flex;
   }
 
   svg {

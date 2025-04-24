@@ -11,6 +11,7 @@ import {
   formRow,
   childrenContainer,
   recaptchaContainer,
+  topLeftIcon,
 } from '../contact-forms.css.js';
 import {
   useGoogleReCaptcha,
@@ -75,7 +76,7 @@ export const Subscribe = ({
 
   return (
     <form
-      css={[form]}
+      css={[form, topLeftIcon]}
       data-comp="contactForm-subscribe"
       onSubmit={handleSubmit(onSubmit)}
       aria-busy={isLoading}

@@ -52,12 +52,18 @@ export const fieldStyle = css`
     height: 16px;
     margin-right: 1.6rem;
     border-radius: 50%;
+
+    forced-color-adjust: none;
+    -ms-high-contrast-adjust: none;
   }
 
   .radio {
     &:checked + label:before {
       background: ${newColors.shades.fullBlue};
       border: 1px solid ${newColors.shades.fullBlue};
+
+      forced-color-adjust: none;
+      -ms-high-contrast-adjust: none;
     }
   }
 

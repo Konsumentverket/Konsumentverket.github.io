@@ -50,12 +50,8 @@ export const checkboxStyle = css`
 
   .checkbox {
     &:checked + .checkbox-label:before {
-      background: ${newColors.shades.fullBlue};
+      background: ${newColors.shades.kovWhite};
       border: 1px solid ${newColors.shades.fullBlue};
-
-      @media (prefers-color-scheme: light) {
-        background: ${newColors.shades.fullBlue};
-      }
     }
   }
 
@@ -66,7 +62,7 @@ export const checkboxStyle = css`
   }
 
   .checkbox:checked + .checkbox-label:before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent('#fff')}' d='${checkPath}'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent('#0061C2')}' d='${checkPath}'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 48px 48px;
     background-position: 6px 8px;

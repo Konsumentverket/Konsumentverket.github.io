@@ -783,10 +783,11 @@ export const ulStyling = css`
       content: " ";
       flex-shrink: 0;
       background-color: ${newColors.shades.fullGrey};
+      border: 1px solid ${newColors.shades.fullGrey};
       border-radius: 50%;
       display: inline-block;
-      width: 9px;
-      height: 9px;
+      width: 7px;
+      height: 7px;
       margin-right: 16px;
 
       [dir="rtl"] & {

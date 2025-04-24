@@ -61,7 +61,7 @@ export const fieldInput = css`
     &:checked {
         box-shadow: none;
         outline: none;
-        border: 8px solid ${newColors.primaries.fullBlue};
+        border: 1px solid ${newColors.primaries.fullBlue};
         background-color: ${newColors.primaries.kovWhite};
         position: relative;
 
@@ -76,10 +76,13 @@ export const fieldInput = css`
             height: 1.6rem;
             border-radius: 50%;
             display:block;
-            background: transparent;
+            background: ${newColors.primaries.fullBlue};
             position: absolute;
-            top:-2px;
-            left:-2px;
+            top: 3px;
+            left: 3px;
+
+            forced-color-adjust: none;
+           -ms-high-contrast-adjust: none;
         }
 
         &:disabled {

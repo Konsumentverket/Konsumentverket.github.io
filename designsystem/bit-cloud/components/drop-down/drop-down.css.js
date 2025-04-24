@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, spacing, medium, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyle = css`
     display: block;
@@ -103,7 +103,7 @@ export const itemsListStyle = css`
 
 export const itemLinkStyle = css`
     display: block;
-    padding: 1.2rem ${spacing.xs};
+    padding: 1.2rem 7px;
     color: ${newColors.shades.fullBlue};
     font-size: 1.6rem;
     line-height: 1.5;
@@ -127,7 +127,7 @@ export const applyFiltersBoxStyle = css`
     display: inline-flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
 
   > :first-of-type svg {
     width: 24px;
@@ -137,6 +137,51 @@ export const applyFiltersBoxStyle = css`
 
   > :last-of-type {
     margin-bottom: 0;
-    margin-left: 8px;
+  }
+`;
+
+export const resetFilterStyle = css`
+ ${typography.clickSmall};
+  border-radius: 16px;
+  color: ${newColors.primaries.fullBlue};
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 16px 8px 42px; //16px + 18px + 8px
+
+  svg {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 8px;
+    transform: translateY(-50%);
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: currentColor;
+
+    ${medium} {
+      left: 16px;
+    }
+  }
+
+  &:hover {
+    background-color: ${newColors.shades.lightBlue};
+  }
+  &:active {
+    background-color: ${newColors.shades.mediumBlue50};
+  }
+
+  &:hover, &:focus, &:active, &:visited {
+    color: ${newColors.primaries.fullBlue};
+    svg {
+      fill: ${newColors.primaries.fullBlue};
+    }
+  }
+
+
+  &:visited {
+    color: ${newColors.primaries.fullBlue};
+    svg {
+      fill: ${newColors.primaries.fullBlue};
+    }
   }
 `;

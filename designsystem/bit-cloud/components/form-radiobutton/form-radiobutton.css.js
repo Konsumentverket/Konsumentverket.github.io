@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors, spacing, newColors } from '@konsumentverket-sverige/designsystem.utils';
+import { colors, newColors } from '@konsumentverket-sverige/designsystem.utils';
 
 
 export const wrapperStyle = css`
@@ -12,7 +12,7 @@ export const labelStyle = css`
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 1.2rem ${spacing.xs};
+    padding: 1.2rem 7px;
     color: ${newColors.shades.kovBlack};
     font-size: 1.6rem;
     line-height: 1.5;

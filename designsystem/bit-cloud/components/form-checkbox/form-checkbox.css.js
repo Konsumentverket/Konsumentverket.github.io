@@ -11,7 +11,7 @@ export const labelStyle = css`
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 1.2rem ${spacing.xs};
+    padding: 1.2rem 7px;
     color: ${newColors.shades.kovBlack};
     font-size: 1.6rem;
     line-height: 1.5;
@@ -46,6 +46,7 @@ export const checkboxStyle = css`
     height: 24px;
     margin-right: 1.6rem;
     box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
+    border-radius: 4px;
   }
 
   .checkbox {

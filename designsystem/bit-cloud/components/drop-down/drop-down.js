@@ -14,6 +14,7 @@ import {
     itemLinkStyle,
     itemOptionWrapperStyle,
     applyFiltersBoxStyle,
+    resetFilterStyle,
 } from './drop-down.css.js';
 import { FormCheckbox } from '@konsumentverket-sverige/designsystem.form-checkbox';
 import { FormRadiobutton } from '@konsumentverket-sverige/designsystem.form-radiobutton';
@@ -177,14 +178,10 @@ export const Dropdown = ({
                 text="Använd filter"
                 onClick={onApplyFilter}
               />
-              <Button
-                text="Rensa"
-                iconLeft={
-                  <Icon icon="DualBlueBin" />
-                }
-                linkStyleSmall={true}
-                onClick={onResetFilter}
-              />
+              <button css={resetFilterStyle} onClick={onResetFilter}>
+                <Icon icon="DualBlueBin" />
+                Rensa filter
+              </button>
             </div>
           )}
         </div>

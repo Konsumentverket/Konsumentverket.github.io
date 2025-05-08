@@ -68,11 +68,6 @@ export const checkboxStyle = css`
     background-size: 48px 48px;
     background-position: 6px 8px;
     position: relative;
-
-    @media (prefers-color-scheme: dark) {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent('#fff')}' d='${checkPath}'/%3E%3C/svg%3E");;
-    }
-
   }
 
   .checkbox[disabled],

@@ -71,6 +71,17 @@ export const iconWrapper = css`
   left: -11.665px;
 `;
 
+export const iconWrapperReport = css`
+  position: absolute;
+  top: -14.255px;
+  left: -11.665px;
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+`;
+
 export const iconColor = css`
   fill: ${newColors.primaries.fullBlue};
 `;

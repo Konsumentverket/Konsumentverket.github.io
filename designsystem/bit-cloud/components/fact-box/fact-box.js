@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@emotion/core'
-import {wrapperStyling, titleStyling, iconWrapper, iconColor, articleEntryMarginStyling} from './fact-box.css.js'
+import {wrapperStyling, titleStyling, iconWrapper, iconWrapperReport, iconColor, articleEntryMarginStyling} from './fact-box.css.js'
 import {
   Icon
 } from '@konsumentverket-sverige/designsystem.icon';
@@ -32,7 +32,7 @@ export const FactBox = ({
      data-contentful-entry-id={contentfulId}
     >
       {tag && (
-        <div css={iconWrapper}>
+        <div css={reportIcon ? iconWrapperReport : iconWrapper}>
           <Icon
             icon={reportIcon ? "Information" : "MonoBookmark"}
             style={iconColor}

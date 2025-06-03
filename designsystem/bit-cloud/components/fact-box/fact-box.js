@@ -15,6 +15,7 @@ export const FactBox = ({
   contentfulId,
   contentfulName,
   articleEntryMargin = false,
+  reportIcon = false
 }) => {
 
   if (!content && !children) {
@@ -31,14 +32,14 @@ export const FactBox = ({
      data-contentful-entry-id={contentfulId}
     >
       {tag && (
-          <div css={iconWrapper}>
-            <Icon
-              icon="MonoBookmark"
-              style={iconColor}
-            />
-          </div>
-        )
-      }
+        <div css={iconWrapper}>
+          <Icon
+            icon={reportIcon ? "Information" : "MonoBookmark"}
+            style={iconColor}
+          />
+        </div>
+      )}
+
       {headline && (
         <h2 css={titleStyling}>{headline}</h2>
       )}

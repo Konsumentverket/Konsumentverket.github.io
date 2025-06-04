@@ -8,7 +8,8 @@ import {
     showAllLink,
     customFontSize,
     heading,
-    border
+    border,
+    iconWrapper
 } from './link-card.css.js';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
@@ -42,8 +43,10 @@ const LinkCard = React.forwardRef(({
 
   const InnerLink = () => (
     <span css={heading}>
-      {icon}
-      <span css={customFontSize} dangerouslySetInnerHTML={{__html: text}}></span>
+      <span css={iconWrapper}>
+        {icon}
+        <span css={customFontSize} dangerouslySetInnerHTML={{__html: text}}></span>
+      </span>
       <Icon icon="MonoArrowRight"/>
     </span>
   )

@@ -101,8 +101,8 @@ export const BasicTextLinkCard = () => {
       <LinkCard
         id="one"
         href="#"
-        text="Sport och fritid"
-        icon={<Icon icon="BeautyEngagement" />}
+        text="Sport och fritid test"
+        icon={<Icon icon="HomeDelivery" />}
       >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

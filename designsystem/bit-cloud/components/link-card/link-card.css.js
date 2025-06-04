@@ -96,7 +96,7 @@ export const mainLinkStyle = css`
         width: 18px;
         height: 18px;
         right: unset !important;
-        margin-right: ${spacing.xs};
+        margin-right: 16px;
         margin-left: 4px;
         fill: ${newColors.shades.fullBlue};
         z-index: 1;
@@ -296,5 +296,10 @@ export const customFontSize = css`
     ${medium}{
       font-size: 1.8rem;
     }
+`
+
+export const iconWrapper = css`
+    display: flex;
+    align-items: center;
 `
 

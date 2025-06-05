@@ -87,5 +87,5 @@ export const iconColor = css`
 `;
 
 export const removeMargin = css`
-  margin: 0;
+  margin-top: 0 !important;
 `;

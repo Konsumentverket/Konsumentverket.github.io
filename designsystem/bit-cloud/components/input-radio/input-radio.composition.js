@@ -32,6 +32,20 @@ export const BasicInputRadioGrey = () => {
   );
 }
 
+export const BasicInputRadioBlue = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <InputRadio
+        name="basic-input-radio-lorem-ipsum"
+        labelText="Lorem ipsum"
+        id="basic-input-radio-lorem-ipsum"
+        colorTheme="blue"
+      />
+    </CompositionFonts>
+  );
+}
+
 export const BasicInputRadioDisabled = () => {
   return (
     <CompositionFonts>

@@ -8,6 +8,8 @@ import {
   disabledStyle,
   colorThemeWhite,
   colorThemeGrey,
+  colorThemeBlue,
+  colorThemeBlueWrapper
 } from './input-radio.css.js'
 
 export const InputRadio = ({
@@ -27,14 +29,18 @@ export const InputRadio = ({
   const inputRef = useRef(null);
   return <div
     data-comp="input-radio"
-    css={[fieldWrapper, disabled && disabledStyle]}
+    css={[fieldWrapper, disabled && disabledStyle, colorTheme==="blue" && colorThemeBlueWrapper]}
     className={`${checked ? "inputHasValue" : ""} ${className}`}
   >
     <label
       className="radiolabel"
       css={[
         fieldLabel,
-        colorTheme === 'white' ? colorThemeWhite : colorThemeGrey,
+        colorTheme === "white"
+          ? colorThemeWhite
+          : colorTheme === "blue"
+            ? colorThemeBlue
+            : colorThemeGrey,
       ]}
       htmlFor={id}>
       <input

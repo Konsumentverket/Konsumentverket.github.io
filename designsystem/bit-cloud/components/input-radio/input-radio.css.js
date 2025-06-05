@@ -30,7 +30,21 @@ export const fieldWrapper = css`
     }
 `
 
+export const colorThemeBlueWrapper = css`
+    border: 1px solid ${newColors.primaries.fullBlue};
+
+    &:hover{
+        border: 1px solid ${newColors.primaries.fullBlue};
+    }
+`;
+
+
 export const colorThemeWhite = css`
+  background: ${newColors.primaries.kovWhite};
+`;
+
+
+export const colorThemeBlue = css`
   background: ${newColors.primaries.kovWhite};
 `;
 

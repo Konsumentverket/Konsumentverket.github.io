@@ -85,3 +85,7 @@ export const iconWrapperReport = css`
 export const iconColor = css`
   fill: ${newColors.primaries.fullBlue};
 `;
+
+export const removeMargin = css`
+  margin: 0;
+`;

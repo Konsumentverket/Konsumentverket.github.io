@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@emotion/core'
-import {wrapperStyling, titleStyling, iconWrapper, iconWrapperReport, iconColor, articleEntryMarginStyling} from './fact-box.css.js'
+import {wrapperStyling, titleStyling, iconWrapper, iconWrapperReport, removeMargin, iconColor, articleEntryMarginStyling} from './fact-box.css.js'
 import {
   Icon
 } from '@konsumentverket-sverige/designsystem.icon';
@@ -15,7 +15,8 @@ export const FactBox = ({
   contentfulId,
   contentfulName,
   articleEntryMargin = false,
-  reportIcon = false
+  reportIcon = false,
+  noMargin = false
 }) => {
 
   if (!content && !children) {
@@ -26,6 +27,7 @@ export const FactBox = ({
     <div css={[
       wrapperStyling,
       articleEntryMargin ? articleEntryMarginStyling : null,
+      noMargin ? removeMargin : null
     ]}
      data-comp="fact-box"
      data-contentful-field-id={contentfulName ?? "considerationBox"}

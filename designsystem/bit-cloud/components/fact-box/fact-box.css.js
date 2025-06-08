@@ -3,8 +3,6 @@ import { newColors, colors, spacing, medium, typography } from '@konsumentverket
 
 export const wrapperStyling = css`
     width: 100%;
-    background-color: ${newColors.primaries.lightOrange};
-    border: 1px solid ${newColors.primaries.lightOrange};
     border-radius: 16px;
     padding: ${spacing.m} ${spacing.s};
     position: relative;
@@ -47,6 +45,17 @@ export const wrapperStyling = css`
             }
         }
     }
+`;
+
+
+export const themeGrey = css`
+  background-color: ${newColors.secondaries.lightGrey25};
+  border: 1px solid ${newColors.secondaries.lightGrey25};
+`;
+
+export const themeBlue = css`
+  background-color: ${newColors.primaries.lightOrange};
+  border: 1px solid ${newColors.primaries.lightOrange};
 `;
 
 export const articleEntryMarginStyling = css`

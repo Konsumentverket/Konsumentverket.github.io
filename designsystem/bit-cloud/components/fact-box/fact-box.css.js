@@ -49,8 +49,8 @@ export const wrapperStyling = css`
 
 
 export const themeGrey = css`
-  background-color: ${newColors.secondaries.lightGrey25};
-  border: 1px solid ${newColors.secondaries.lightGrey25};
+  background-color: ${newColors.shades.lightGrey25};
+  border: 1px solid ${newColors.shades.lightGrey25};
 `;
 
 export const themeBlue = css`

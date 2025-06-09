@@ -117,6 +117,16 @@ export const itemLinkStyle = css`
     }
 `;
 
+export const itemTextStyle = css`
+    display: block;
+    padding: 1.2rem 7px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 0;
+`;
+
 export const itemOptionWrapperStyle = css`
     display: flex;
     padding: 0 ${spacing.xs};

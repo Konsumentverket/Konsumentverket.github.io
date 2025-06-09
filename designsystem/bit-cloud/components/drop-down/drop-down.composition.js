@@ -42,6 +42,42 @@ export const BasicLinksDropDown = () => {
   );
 }
 
+export const BasicTextDropDown = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const onValueSet = (val) => {
+  }
+
+  return (
+    <div style={{ minHeight: '400px' }}>
+      <CompositionFonts>
+        <GlobalStyles />
+        <Dropdown
+          id="lorem"
+          label="Lorem ipsum dolor sit amet"
+          type="text"
+          showApplyButton={false}
+          isExpanded={isExpanded}
+          setIsExpanded={setIsExpanded}
+          setValue={onValueSet}
+          data={[{
+            text: 'Vivamus non feugiat justo, id ullamcorper est',
+          },
+            {
+              text: 'Integer vehicula luctus',
+            },
+            {
+              text: 'Mauris mattis est sapien nec accumsan est',
+            },
+            {
+              text: 'Proin sit amet tempor lorem ut sed dignissim velit, semper tristique',
+            }]}
+        />
+      </CompositionFonts>
+    </div>
+  );
+}
+
 const data = [
   {
     text: 'Vivamus non feugiat justo, id ullamcorper est',

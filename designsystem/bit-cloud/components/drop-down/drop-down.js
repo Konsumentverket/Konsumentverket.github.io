@@ -15,6 +15,7 @@ import {
     itemOptionWrapperStyle,
     applyFiltersBoxStyle,
     resetFilterStyle,
+  itemTextStyle
 } from './drop-down.css.js';
 import { FormCheckbox } from '@konsumentverket-sverige/designsystem.form-checkbox';
 import { FormRadiobutton } from '@konsumentverket-sverige/designsystem.form-radiobutton';
@@ -59,10 +60,18 @@ const LinkOption = ({ href, text }) => (
     <a className="noStyle" css={itemLinkStyle} href={href}>{text}</a>
 )
 
+const TextOption = ({ text, value, setValue, setIsExpanded }) => (
+  <p className="noStyle" css={itemTextStyle} onClick={() => {
+    setValue(value);
+    setIsExpanded(false);
+  }}>{text}</p>
+)
+
 const componentMap = {
   checkbox: CheckboxOption,
   radio: RadioOption,
   link: LinkOption,
+  text: TextOption
 };
 
 export const Dropdown = ({
@@ -77,9 +86,11 @@ export const Dropdown = ({
   onApplyFilter = () => {},
   onResetFilter = () => {},
   showApplyButton = true,
+  setValue = () => {},
 }) => {
   const Component = componentMap[type];
   if (!Component) return null;
+
 
   const dropdownRef = useRef();
 
@@ -113,6 +124,8 @@ export const Dropdown = ({
       updatedValue = value.includes(newValue)
         ? value.filter(item => item !== newValue)
         : [...value, newValue];
+
+      setIsExpanded(false);
     }
 
     onChange(updatedValue, event);
@@ -120,9 +133,14 @@ export const Dropdown = ({
 
   const handleBlur = (e) => {
     // Close dropdown when focusing outside of it
-    if (!dropdownRef.current.contains(e.relatedTarget)) {
-      closeDropdown();
-    }
+    setTimeout(() => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(document.activeElement)
+      ) {
+        closeDropdown();
+      }
+    }, 0);
   }
 
   return (
@@ -139,7 +157,10 @@ export const Dropdown = ({
             css={buttonStyle}
             aria-controls={`dropdown-${id}`}
             aria-expanded={isExpanded}
-            onClick={() => setIsExpanded(!isExpanded)}
+            onClick={(e) => {
+              e.preventDefault();
+              setIsExpanded(!isExpanded);
+            }}
           >
             {label}
             <ChevronRight
@@ -164,6 +185,10 @@ export const Dropdown = ({
                     id={`${id}-${index}`}
                     onChange={(checked) => handleOptionChange(item.value, checked)}
                     stateValue={value}
+                    setValue={setValue}
+                    setIsExpanded={setIsExpanded}
+                    value={item.text}
+                    text={item.text}
                     {...item}
                   />
                 </li>

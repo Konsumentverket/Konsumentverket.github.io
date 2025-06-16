@@ -76,6 +76,11 @@ export const chevronExpandedStyle = css`
     transform: rotate(-90deg);
 `;
 
+export const maxHeightStyle = css`
+    max-height: 450px;
+    overflow: scroll;
+`;
+
 export const itemsListStyle = css`
     margin: 0;
     padding: 0;
@@ -125,6 +130,7 @@ export const itemTextStyle = css`
     font-weight: 400;
     text-decoration: none;
     margin-bottom: 0;
+    margin-top: 0;
 `;
 
 export const itemOptionWrapperStyle = css`

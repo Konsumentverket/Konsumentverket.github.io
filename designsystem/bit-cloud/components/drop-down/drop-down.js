@@ -11,6 +11,7 @@ import {
     chevronStyle,
     chevronExpandedStyle,
     itemsListStyle,
+    maxHeightStyle,
     itemLinkStyle,
     itemOptionWrapperStyle,
     applyFiltersBoxStyle,
@@ -87,6 +88,7 @@ export const Dropdown = ({
   onResetFilter = () => {},
   showApplyButton = true,
   setValue = () => {},
+  maxHeight = false
 }) => {
   const Component = componentMap[type];
   if (!Component) return null;
@@ -177,7 +179,8 @@ export const Dropdown = ({
         >
           {data && (
             <ul
-              css={itemsListStyle}
+              css={[itemsListStyle,
+                maxHeight && maxHeightStyle]}
             >
               {data.map((item, index) => (
                 <li key={index}>

@@ -14,6 +14,7 @@ export const InputStyle = (hasInnerContent) => css`
     width: 100%;
     font-size: 1.6rem;
     margin-bottom: 24px;
+    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
 
     @media (min-width: ${breakpoints.m}) {
       margin-bottom: 0;

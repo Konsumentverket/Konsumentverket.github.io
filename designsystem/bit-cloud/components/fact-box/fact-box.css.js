@@ -14,10 +14,6 @@ export const wrapperStyling = css`
         padding: ${spacing.l} ${spacing.l};
     }
 
-    a {
-      word-break: break-all;
-    }
-
     li, p {
         ${typography.paragraphNoMargin};
 

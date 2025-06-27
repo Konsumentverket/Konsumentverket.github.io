@@ -74,6 +74,8 @@ export const Subscribe = ({
 
   const checkboxId = "consent";
 
+  const maxLengthEmail = 254;
+
   return (
     <form
       css={[form, topLeftIcon]}
@@ -106,8 +108,12 @@ export const Subscribe = ({
               message: "Du behöver skriva din e-postadress.",
             },
             pattern: {
-              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/,
               message: 'E-postadressen måste innehålla ett @',
+            },
+            maxLength: {
+              value: maxLengthEmail,
+              message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken.`,
             },
           }}
           watch={watch}

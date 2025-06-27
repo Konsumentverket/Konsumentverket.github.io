@@ -57,6 +57,8 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
     }
   };
 
+  const maxLengthEmail = 254;
+
   return (
     <form
       css={[form]}
@@ -162,8 +164,12 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
             {...register('email', {
               required: 'Ange din e-postadress',
               pattern: {
-                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/,
                 message: 'E-postadressen måste innehålla ett @',
+              },
+              maxLength: {
+                value: maxLengthEmail,
+                message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken.`,
               },
             })}
           />

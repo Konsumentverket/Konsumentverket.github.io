@@ -82,7 +82,7 @@ export const Guidance = ({
   };
 
   const maxLengthInput = 40;
-  const maxLengthEmail = 100;
+  const maxLengthEmail = 254;
   const maxLengthText = 2000;
 
   return (
@@ -117,8 +117,12 @@ export const Guidance = ({
               message: "Du behöver skriva din e-postadress.",
             },
             pattern: {
-              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/,
               message: 'E-postadressen måste innehålla ett @',
+            },
+            maxLength: {
+              value: maxLengthEmail,
+              message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken.`,
             },
           }}
           watch={watch}

@@ -13,7 +13,9 @@ export const SubHeading = ({
   contentfulId = null,
   contentfulName = '',
   color = '',
-  visuallyHidden = false
+  visuallyHidden = false,
+  addSearch = null,
+  noSnippet = null,
 }) => {
   const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
@@ -52,7 +54,18 @@ export const SubHeading = ({
   const selectedStyling = styling[styleLevel ? styleLevel - 1 : level - 1];
 
   return (
-    <SelectedHeading css={[selectedStyling, headingLine ? typography.headingLine : null, customColor ? customColor : null, visuallyHidden ? visuallyHiddenStyle : null]} data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}>
+    <SelectedHeading
+      css={[
+        selectedStyling,
+        headingLine ? typography.headingLine : null,
+        customColor ? customColor : null,
+        visuallyHidden ? visuallyHiddenStyle : null
+      ]}
+      data-contentful-field-id={contentfulName}
+      data-contentful-entry-id={contentfulId}
+      data-addsearch={addSearch}
+      data-nosnippet={noSnippet}
+    >
       {children}
       {text}
     </SelectedHeading>

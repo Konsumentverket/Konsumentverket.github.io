@@ -11,6 +11,8 @@ export const Heading = ({
   richText = true,
   contentfulId = null,
   contentfulName = '',
+  addSearch = null,
+  noSnippet = null,
   }) => (
   <SubHeading
     level={level}
@@ -20,6 +22,8 @@ export const Heading = ({
     richText={richText}
     contentfulId={contentfulId}
     contentfulName={contentfulName}
+    data-addsearch={addSearch}
+    data-nosnippet={noSnippet}
   >
     {children}
   </SubHeading>

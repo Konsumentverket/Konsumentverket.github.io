@@ -125,21 +125,30 @@ export const OtherCases = ({
         tooltipText={otherCasesEmailHelpText}
         tooltipLabel={"e-post"}
         error={errors && errors.email}
-        maxLengthValidation={true}
-        maxLengthCount={maxLengthEmail}
         register={register}
         validation={{
           required: {
             value: true,
             message: "Du behöver skriva din e-postadress.",
           },
-          pattern: {
-            value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/,
-            message: 'E-postadressen måste innehålla ett @',
-          },
           maxLength: {
             value: maxLengthEmail,
-            message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken.`,
+            message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken`,
+          },
+          validate: {
+            hasAt: (value) =>
+              value.includes("@") || "E-postadressen måste innehålla ett @",
+            tldLength: (value) => {
+              const domainParts = value.split(".");
+              const tld = domainParts[domainParts.length - 1];
+              return (
+                (!tld || tld.length <= 63) ||
+                "Toppdomänen (t.ex. .se) får inte vara längre än 63 tecken"
+              );
+            },
+            format: (value) =>
+              /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(value) ||
+              "E-postadressen måste vara giltig, (t.ex. namn@domän.se)",
           },
         }}
         watch={watch}

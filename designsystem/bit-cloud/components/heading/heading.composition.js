@@ -10,6 +10,7 @@ export const BasicHeadings = () => {
         <CompositionFonts>
           <GlobalStyles/>
           <Heading level={1} text="h1 Default" richText={false} />
+          <Heading level={1} text="h1 with addsearch and nosnippet" richText={false} addSearch={"exclude"} noSnippet={"true"} />
           <Heading level={1} text="h1 with styleLevel 4" styleLevel={4} richText={false} />
           <Heading level={2} text="h2 Default" richText={false} />
           <Heading level={3} text="h3 Default" richText={false} />

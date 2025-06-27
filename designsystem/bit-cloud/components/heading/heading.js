@@ -22,8 +22,8 @@ export const Heading = ({
     richText={richText}
     contentfulId={contentfulId}
     contentfulName={contentfulName}
-    data-addsearch={addSearch}
-    data-nosnippet={noSnippet}
+    addSearch={addSearch}
+    noSnippet={noSnippet}
   >
     {children}
   </SubHeading>

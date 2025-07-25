@@ -73,6 +73,7 @@ import { MonoWhiteFilter1 } from "./Icons/SystemIcons/MonoWhiteFilter1/MonoWhite
 import { DualBlueBin } from "./Icons/SystemIcons/DualBlueBin/DualBlueBin";
 import { DualBlueAiChat } from "./Icons/SystemIcons/DualBlueAiChat/DualBlueAiChat";
 import { MonoWhiteAiChat } from "./Icons/SystemIcons/MonoWhiteAiChat/MonoWhiteAiChat";
+import { MonoBlueFilter1 } from "./Icons/SystemIcons/MonoBlueFilter1/MonoBlueFilter1";
 
 
 // Editor icons
@@ -256,6 +257,7 @@ export {
   DualBlueBin,
   DualBlueAiChat,
   MonoWhiteAiChat,
+  MonoBlueFilter1,
 
   // System icons
 

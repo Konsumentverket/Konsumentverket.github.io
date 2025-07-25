@@ -137,6 +137,7 @@ export const BasicCheckboxDropDown = () => {
           data={data}
           onApplyFilter={onApplyFilter}
           onResetFilter={resetValue}
+          closeOnChange={false}
         />
       </CompositionFonts>
     </div>

@@ -88,11 +88,11 @@ export const Dropdown = ({
   onResetFilter = () => {},
   showApplyButton = true,
   setValue = () => {},
-  maxHeight = false
+  maxHeight = false,
+  closeOnChange = true,
 }) => {
   const Component = componentMap[type];
   if (!Component) return null;
-
 
   const dropdownRef = useRef();
 
@@ -127,7 +127,7 @@ export const Dropdown = ({
         ? value.filter(item => item !== newValue)
         : [...value, newValue];
 
-      setIsExpanded(false);
+      if (closeOnChange) setIsExpanded(false);
     }
 
     onChange(updatedValue, event);
@@ -143,6 +143,16 @@ export const Dropdown = ({
         closeDropdown();
       }
     }, 0);
+  }
+
+  const handleApplyFilter = () => {
+    onApplyFilter();
+    closeDropdown();
+  }
+
+  const handleResetFilter = () => {
+    onResetFilter();
+    closeDropdown();
   }
 
   return (
@@ -204,9 +214,10 @@ export const Dropdown = ({
               <Button
                 secondaryButtonStyle={true}
                 text="Använd filter"
-                onClick={onApplyFilter}
+                onClick={handleApplyFilter}
+                iconLeft={<Icon icon="MonoBlueFilter1" />}
               />
-              <button css={resetFilterStyle} onClick={onResetFilter}>
+              <button css={resetFilterStyle} onClick={handleResetFilter}>
                 <Icon icon="DualBlueBin" />
                 Rensa filter
               </button>

@@ -74,6 +74,7 @@ import {
   DualBlueBin,
   DualBlueAiChat,
   MonoWhiteAiChat,
+  MonoBlueFilter1,
 
   // Editor Icons
   NewsIcon,
@@ -222,6 +223,7 @@ const systemIconDefinitions = {
   DualBlueBin,
   DualBlueAiChat,
   MonoWhiteAiChat,
+  MonoBlueFilter1,
 };
 
 const editorIconDefinitions = {

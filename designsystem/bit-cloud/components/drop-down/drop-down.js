@@ -27,7 +27,15 @@ import {
 import { Button } from "@konsumentverket-sverige/designsystem.button";
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 
-const CheckboxOption = ({ text, value, onChange, stateValue, disabled, id }) => (
+const CheckboxOption = ({
+  text,
+  value,
+  onChange,
+  stateValue,
+  disabled,
+  id,
+  stats,
+}) => (
     <div css={itemOptionWrapperStyle}>
         <FormCheckbox
             id={id}
@@ -38,6 +46,7 @@ const CheckboxOption = ({ text, value, onChange, stateValue, disabled, id }) => 
             usePrimaryColor={true}
             checked={stateValue.includes(value)}
             disabled={disabled}
+            stats={stats}
         />
     </div>
 )

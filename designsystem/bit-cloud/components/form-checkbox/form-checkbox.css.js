@@ -19,11 +19,12 @@ export const labelStyle = css`
     text-decoration: none;
     position: relative;
 
-    &:hover {
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2px;
-      text-decoration: underline;
-  }
+    &:hover .underline {
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        text-decoration: underline;
+      }
+    }
 `;
 
 export const checkboxStyle = css`
@@ -89,3 +90,7 @@ export const checkboxStyle = css`
 export const labelPrimaryStyle = css`
   color: ${newColors.shades.fullBlue};
 `
+
+export const statsStyle = css`
+  margin-left: auto;
+`;

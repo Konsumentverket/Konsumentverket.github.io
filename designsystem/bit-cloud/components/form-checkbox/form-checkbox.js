@@ -7,6 +7,7 @@ import {
   checkboxStyle,
   labelStyle,
   labelPrimaryStyle,
+  statsStyle,
 } from './form-checkbox.css.js'
 
 export const FormCheckbox = ({
@@ -18,6 +19,7 @@ export const FormCheckbox = ({
   disabled = false,
   checked = false,
   usePrimaryColor = false,
+  stats = null,
 }) => (
   <div
     data-comp="form-checkbox"
@@ -41,7 +43,13 @@ export const FormCheckbox = ({
       css={[labelStyle, usePrimaryColor && labelPrimaryStyle]}
       className='checkbox-label'
     >
-      {labelText}
+      <span className="underline">{labelText}</span>
+      {stats?.number &&
+        <span css={statsStyle}
+              aria-label={`${stats.number} ${stats.label}`}>
+          ({stats.number})
+        </span>
+      }
     </label>
   </div>
 )

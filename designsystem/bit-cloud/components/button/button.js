@@ -5,6 +5,7 @@ import React from 'react';
 import {
   buttonStyle,
   smallStyle,
+  chipsStyle,
   linkStyles,
   linkStylesSmall,
   secondaryStyle,
@@ -18,6 +19,7 @@ export const Button = ({
   text,
   secondaryButtonStyle = false,
   smallButtonStyle = false,
+  chipsButtonStyle = false,
   linkStyle = false,
   linkStyleSmall = false,
   className,
@@ -46,6 +48,7 @@ export const Button = ({
   else if (!!isCookie) styles = [cookieStyle];
   else {
     secondaryButtonStyle && styles.push(secondaryStyle);
+    chipsButtonStyle && styles.push(chipsStyle);
     linkStyle && styles.push(linkStyles);
     linkStyleSmall && styles.push(linkStylesSmall);
     selected && cssClass.push("selectedButtonStyle");

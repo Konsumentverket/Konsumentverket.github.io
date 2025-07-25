@@ -317,3 +317,26 @@ export const CookieComplianceCustomStylingButton = () => {
     </>
   );
 }
+
+// Chips button Example
+export const BasicChipsButton = () => {
+  const element = <Button
+    text="Lorem ipsum"
+    chipsButtonStyle={true}
+    iconLeft={
+      <Icon icon="LinkArrow" />
+    }
+  />;
+
+  return (
+    <>
+      <GlobalStyles />
+      <div style={whiteBackground}>
+        {element}
+      </div>
+      <div style={blackBackground}>
+        {element}
+      </div>
+    </>
+  );
+}

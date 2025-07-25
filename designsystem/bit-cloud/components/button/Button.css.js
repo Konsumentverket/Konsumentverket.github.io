@@ -71,6 +71,18 @@ export const secondaryStyle = css`
     }
 `;
 
+export const chipsStyle = css`
+  ${secondaryStyle};
+  box-shadow: none;
+  padding: 0.8rem 1.6rem;
+
+  && svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+`;
+
 export const smallStyle = css`
     padding: 0.8rem 2.4rem;
 `;

@@ -45,10 +45,16 @@ export const FormCheckbox = ({
     >
       <span className="underline">{labelText}</span>
       {stats?.number &&
+        <>
+          <span className="sr-only">
+            {stats.label + stats.number}
+          </span>
         <span css={statsStyle}
-              aria-label={`${stats.number} ${stats.label}`}>
+              aria-hidden="true"
+        >
           ({stats.number})
         </span>
+        </>
       }
     </label>
   </div>

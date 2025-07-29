@@ -54,7 +54,7 @@
     "drop-down": {
         "name": "drop-down",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.213",
+        "version": "0.0.214",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/drop-down"
     },
@@ -110,7 +110,7 @@
     "form-checkbox": {
         "name": "form-checkbox",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.182",
+        "version": "0.0.183",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-checkbox"
     },

@@ -85,7 +85,7 @@ const data = [
     disabled: true,
     stats: {
       number: 109,
-      label: "Antal sidor: "
+      label: "Antal sidor: 109"
     }
   },
   {
@@ -93,7 +93,7 @@ const data = [
     value: 'integer-vehicula-luctus-radio',
     stats: {
       number: 19,
-      label: "Antal sidor: "
+      label: "Antal sidor: 19"
     }
   },
   {
@@ -102,7 +102,7 @@ const data = [
     disabled: true,
     stats: {
       number: 9,
-      label: "Antal sidor: "
+      label: "Antal sidor: 9"
     }
   },
   {

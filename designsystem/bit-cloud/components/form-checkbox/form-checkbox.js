@@ -47,7 +47,7 @@ export const FormCheckbox = ({
       {stats?.number &&
         <>
           <span className="sr-only">
-            {stats.label + stats.number}
+            {stats.label}
           </span>
         <span css={statsStyle}
               aria-hidden="true"

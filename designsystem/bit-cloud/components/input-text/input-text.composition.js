@@ -6,6 +6,7 @@ export const BasicInputText = () => {
     <InputText
       label="Lorem ipsum"
       placeholder="Lorem ipsum"
+      onChange={(e) => console.log("Onchange event: ", e.target.value)}
     />
   );
 }

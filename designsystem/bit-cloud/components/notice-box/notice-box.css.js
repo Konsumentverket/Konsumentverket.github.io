@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { newColors, colors, spacing, medium, typography } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, spacing, medium, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyling = css`
     width: 100%;
@@ -79,37 +79,20 @@ export const iconWrapper = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  top: calc((28.51px / 2) * -1);
-  left: calc((23.33px / 2) * -1);
+  top: -8px;
+  left: -12px;
   background-color: ${newColors.validation.success};
   border-radius: 100vmax;
   width: 32px;
   height: 32px;
+
+  ${medium} {
+    top: -14px;
+  }
 `;
 
 export const iconWrapperWarning = css`
-  background: none;
-  width: 32px;
-  height: 32px;
-  top: -16px;
-  left: -16px;
-
-  ${medium} {
-    width: 40px;
-    height: 40px;
-    top: -20px;
-    left: -20px;
-  }
-
-  svg {
-    width: 32px;
-    height: 32px;
-
-    ${medium} {
-      width: 40px;
-      height: 40px;
-    }
-  }
+   background: none;
 `;
 
 

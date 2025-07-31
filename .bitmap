@@ -138,7 +138,7 @@
     "form-success": {
         "name": "form-success",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.110",
+        "version": "0.0.111",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-success"
     },
@@ -243,7 +243,7 @@
     "notice-box": {
         "name": "notice-box",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.90",
+        "version": "0.0.91",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/notice-box"
     },

@@ -72,15 +72,15 @@ export const titleStyling = css`
 
 export const iconWrapper = css`
   position: absolute;
-  top: -14.255px;
+  top: -8px;
   left: -11.665px;
+
+  ${medium} {
+    top: -14.255px;
+  }
 `;
 
 export const iconWrapperReport = css`
-  position: absolute;
-  top: -14.255px;
-  left: -11.665px;
-
   svg {
     width: 30px;
     height: 30px;

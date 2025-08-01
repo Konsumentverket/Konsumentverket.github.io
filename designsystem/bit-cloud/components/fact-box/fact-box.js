@@ -36,7 +36,10 @@ export const FactBox = ({
      data-contentful-entry-id={contentfulId}
     >
       {tag && (
-        <div css={reportIcon ? iconWrapperReport : iconWrapper}>
+        <div css={[
+          iconWrapper,
+          reportIcon ? iconWrapperReport : null
+        ]}>
           <Icon
             icon={reportIcon ? "Information" : "MonoBookmark"}
             style={iconColor}

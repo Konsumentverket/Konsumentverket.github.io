@@ -30,7 +30,6 @@ export const FactBox = ({
     return null;
   }
 
-  const hej = 'hej';
   return (
     <div
       css={[

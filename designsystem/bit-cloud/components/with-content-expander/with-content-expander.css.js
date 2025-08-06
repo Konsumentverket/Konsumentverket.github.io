@@ -1,11 +1,16 @@
-import { css } from "@emotion/core";
-import { newColors, spacing, breakpoints, typography } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  spacing,
+  breakpoints,
+  typography,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const containerStyle = css`
   width: 100%;
   border-radius: ${spacing.s};
-//  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
-  border: 1px solid rgba(22, 34, 89, 0.10);
+  //  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+  border: 1px solid rgba(22, 34, 89, 0.1);
   overflow: hidden;
 `;
 
@@ -112,7 +117,7 @@ export const titleLightBlueAlternativeStyle = css`
 `;
 
 export const titleProcessStepStyle = css`
-   ${typography.clickLarge};
+  ${typography.clickLarge};
 `;
 
 export const preambleStyle = css`
@@ -143,6 +148,20 @@ export const linkStyle = css`
   }
 `;
 
+export const buttonResetStyle = css`
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+`;
+
 export const linkAlternativeStyle = css`
   border-radius: ${spacing.s};
   background-color: ${newColors.shades.lightGrey25};
@@ -155,7 +174,7 @@ export const linkAlternativeStyle = css`
     background-color: ${newColors.shades.lightGrey50};
     box-shadow: none;
   }
-`
+`;
 
 export const linkLightBlueAlternativeStyle = css`
   background-color: ${newColors.primaries.lightBlue};
@@ -283,4 +302,3 @@ export const expandedAreaExpandedStyle = css`
     padding: ${spacing.m} ${spacing.m} ${spacing.l} ${spacing.m};
   }
 `;
-

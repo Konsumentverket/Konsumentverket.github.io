@@ -33,7 +33,7 @@
     "contact-forms": {
         "name": "contact-forms",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.117",
+        "version": "0.0.118",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/contact-forms"
     },
@@ -117,7 +117,7 @@
     "form-data-request": {
         "name": "form-data-request",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.143",
+        "version": "0.0.144",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-data-request"
     },
@@ -327,7 +327,7 @@
     "with-content-expander": {
         "name": "with-content-expander",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.240",
+        "version": "0.0.241",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/with-content-expander"
     }

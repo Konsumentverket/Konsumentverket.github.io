@@ -110,6 +110,7 @@ export const WithContentExpander = ({
 
   const buttonStyles = [
     linkStyle,
+    buttonResetStyle,
     expanded && linkStyleExpanded,
     (useAlternativeStyling && expanded && !useProcessStepStyling) &&
     linkStyleAlternativeExpanded,
@@ -120,7 +121,6 @@ export const WithContentExpander = ({
     (useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling) &&
     linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
     useProcessStepStyling && noLeftBorderRadiusStyling,
-    buttonResetStyle,
   ];
 
   const headerStyles = [

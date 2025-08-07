@@ -137,6 +137,8 @@ export const linkStyle = css`
   text-decoration: none;
   background-color: ${newColors.kovWhite};
   border-radius: ${spacing.s};
+  width: 100%;
+  cursor: pointer;
 
   &:hover {
     background-color: ${newColors.shades.lightBlue};

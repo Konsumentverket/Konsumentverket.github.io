@@ -111,20 +111,14 @@ export const WithContentExpander = ({
   const buttonStyles = [
     linkStyle,
     expanded && linkStyleExpanded,
-    useAlternativeStyling &&
-      expanded &&
-      !useProcessStepStyling &&
-      linkStyleAlternativeExpanded,
+    (useAlternativeStyling && expanded && !useProcessStepStyling) &&
+    linkStyleAlternativeExpanded,
     useAlternativeStyling && linkAlternativeStyle,
     useLightBlueAlternativeStyling && linkLightBlueAlternativeStyle,
-    useLightBlueAlternativeStyling &&
-      expanded &&
-      !noLeftBorderRadiusStyling &&
-      linkStyleLightBlueAlternativeExpanded,
-    useLightBlueAlternativeStyling &&
-      expanded &&
-      noLeftBorderRadiusStyling &&
-      linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
+    (useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling) &&
+    linkStyleLightBlueAlternativeExpanded,
+    (useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling) &&
+    linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
     useProcessStepStyling && noLeftBorderRadiusStyling,
     buttonResetStyle,
   ];

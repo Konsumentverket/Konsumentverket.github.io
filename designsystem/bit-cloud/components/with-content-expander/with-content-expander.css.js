@@ -152,7 +152,6 @@ export const linkStyle = css`
 
 export const buttonResetStyle = css`
   border: none;
-  background: none;
   padding: 0;
   margin: 0;
   text-align: left;

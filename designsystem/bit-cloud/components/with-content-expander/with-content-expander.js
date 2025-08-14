@@ -78,7 +78,16 @@ export const WithContentExpander = ({
     e.preventDefault();
 
     if (disabled) return false;
-    setExpanded(!expanded);
+
+    const newExpandedState = !expanded;
+    setExpanded(newExpandedState);
+
+    // Update URL hash when expanding so agents can copy the URL in the browser
+    // Not using window.location.hash since we already handle scrolling with react
+    if (newExpandedState && wrapperId) {
+      window.history.replaceState(null, null, `#${wrapperId}`);
+    }
+
     return false;
   };
 
@@ -109,17 +118,23 @@ export const WithContentExpander = ({
   ];
 
   const buttonStyles = [
-    linkStyle,
     buttonResetStyle,
+    linkStyle,
     expanded && linkStyleExpanded,
-    (useAlternativeStyling && expanded && !useProcessStepStyling) &&
-    linkStyleAlternativeExpanded,
+    useAlternativeStyling &&
+      expanded &&
+      !useProcessStepStyling &&
+      linkStyleAlternativeExpanded,
     useAlternativeStyling && linkAlternativeStyle,
     useLightBlueAlternativeStyling && linkLightBlueAlternativeStyle,
-    (useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling) &&
-    linkStyleLightBlueAlternativeExpanded,
-    (useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling) &&
-    linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
+    useLightBlueAlternativeStyling &&
+      expanded &&
+      !noLeftBorderRadiusStyling &&
+      linkStyleLightBlueAlternativeExpanded,
+    useLightBlueAlternativeStyling &&
+      expanded &&
+      noLeftBorderRadiusStyling &&
+      linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
     useProcessStepStyling && noLeftBorderRadiusStyling,
   ];
 

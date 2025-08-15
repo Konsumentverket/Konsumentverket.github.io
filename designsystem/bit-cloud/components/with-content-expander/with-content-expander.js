@@ -83,7 +83,7 @@ export const WithContentExpander = ({
     setExpanded(newExpandedState);
 
     // Update URL hash when expanding so agents can copy the URL in the browser
-    // Not using window.location.hash since we already handle scrolling with React.
+    // Not using window.location.hash since we already handle scrolling with React
     if (newExpandedState && wrapperId) {
       window.history.replaceState(null, null, `#${wrapperId}`);
     }

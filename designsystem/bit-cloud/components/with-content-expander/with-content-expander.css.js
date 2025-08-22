@@ -9,7 +9,7 @@ import {
 export const containerStyle = css`
   width: 100%;
   border-radius: ${spacing.s};
-  //  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
   border: 1px solid rgba(22, 34, 89, 0.1);
   overflow: hidden;
 `;
@@ -21,7 +21,7 @@ export const containerLightBlueAlternativeStyle = css`
 
 export const containerAlternativeStyle = css`
   border: 1px solid ${newColors.secondaries.lightGrey};
-  //box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
+  box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
 `;
 
 export const noLeftBorderRadiusStyling = css`

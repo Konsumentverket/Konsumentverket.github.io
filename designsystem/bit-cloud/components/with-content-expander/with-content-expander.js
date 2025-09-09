@@ -60,8 +60,10 @@ export const WithContentExpander = ({
 }) => {
   useEffect(() => {
     if (location && location.hash) {
-      const split = location.hash.split(',');
-      open = split.some((x) => x === `#${wrapperId}`);
+      const currentHash = window.location.hash.slice(1); // Remove the # character
+
+      const hashParts = currentHash.split(','); // Hash can contain multiple ids separated by commas
+      open = hashParts[hashParts.length - 1] === wrapperId; // Only scroll if this id is the last in the hash
       if (open) scrollIntoView = true;
     }
 
@@ -79,13 +81,26 @@ export const WithContentExpander = ({
 
     if (disabled) return false;
 
-    const newExpandedState = !expanded;
-    setExpanded(newExpandedState);
+    const becameExpanded = !expanded;
+    setExpanded(becameExpanded);
 
     // Update URL hash when expanding so agents can copy the URL in the browser
     // Not using window.location.hash since we already handle scrolling with React.
-    if (newExpandedState && wrapperId) {
-      window.history.replaceState(null, null, `#${wrapperId}`);
+    if (wrapperId) {
+      const currentHash = window.location.hash.slice(1); // Remove the # character
+      const hashParts = currentHash ? currentHash.split(',') : [];
+
+      if (becameExpanded) {
+        // Add wrapper id to the hash if its being expanded
+        hashParts.push(wrapperId);
+      } else {
+        // Remove wrapper id from the hash if it exists and its being collapsed
+        const index = hashParts.indexOf(wrapperId);
+        if (index > -1) {
+          hashParts.splice(index, 1);
+        }
+      }
+      window.history.replaceState(null, null, `#${hashParts.join(',')}`);
     }
 
     return false;

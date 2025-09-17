@@ -46,6 +46,7 @@ export const WithContentExpander = ({
   preamble,
   icon,
   wrapperId,
+  linkHref = '',
   show = true,
   scrollIntoView = true,
   open = false,
@@ -60,10 +61,8 @@ export const WithContentExpander = ({
 }) => {
   useEffect(() => {
     if (location && location.hash) {
-      const currentHash = window.location.hash.slice(1); // Remove the # character
-
-      const hashParts = currentHash.split(','); // Hash can contain multiple ids separated by commas
-      open = hashParts[hashParts.length - 1] === wrapperId; // Only scroll if this id is the last in the hash
+      const split = location.hash.split(',');
+      open = split.some((x) => x === `#${wrapperId}`);
       if (open) scrollIntoView = true;
     }
 
@@ -81,26 +80,18 @@ export const WithContentExpander = ({
 
     if (disabled) return false;
 
-    const becameExpanded = !expanded;
-    setExpanded(becameExpanded);
+    const newExpandedState = !expanded;
+    setExpanded(newExpandedState);
+
+    const hasHashLinkHref =
+      linkHref && linkHref !== '' && linkHref.startsWith('#');
 
     // Update URL hash when expanding so agents can copy the URL in the browser
     // Not using window.location.hash since we already handle scrolling with React.
-    if (wrapperId) {
-      const currentHash = window.location.hash.slice(1); // Remove the # character
-      const hashParts = currentHash ? currentHash.split(',') : [];
-
-      if (becameExpanded) {
-        // Add wrapper id to the hash if its being expanded
-        hashParts.push(wrapperId);
-      } else {
-        // Remove wrapper id from the hash if it exists and its being collapsed
-        const index = hashParts.indexOf(wrapperId);
-        if (index > -1) {
-          hashParts.splice(index, 1);
-        }
-      }
-      window.history.replaceState(null, null, `#${hashParts.join(',')}`);
+    // If linkHref is set and starts with # we use that, otherwise we use the wrapperId
+    if (newExpandedState && (wrapperId || hasHashLinkHref)) {
+      const hash = hasHashLinkHref ? linkHref : `#${wrapperId}`;
+      window.history.replaceState(null, null, hash);
     }
 
     return false;

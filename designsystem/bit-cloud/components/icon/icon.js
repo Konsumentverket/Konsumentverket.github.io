@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from '@emotion/core';
 
 import {
   Adapt,
@@ -37,6 +37,8 @@ import {
   Send,
   MonoSettings,
   Logo,
+  LogOut,
+  LogIn,
   MegamenuCompany,
   MonoArrowSmall,
   MonoDelete,
@@ -146,9 +148,8 @@ import {
   DBBudget,
   DBStats,
   DBPublications,
-  DBAIchat
-
-} from "@konsumentverket-sverige/designsystem.utils"
+  DBAIchat,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 const systemIconDefinitions = {
   Adapt,
@@ -187,6 +188,8 @@ const systemIconDefinitions = {
   MegamenuCompany,
   MonoSettings,
   Logo,
+  LogIn,
+  LogOut,
   MonoArrowSmall,
   MonoDelete,
   MonoDeleteSmall,
@@ -296,11 +299,14 @@ const editorIconDefinitions = {
   DBBudget,
   DBStats,
   DBPublications,
-  DBAIchat
-}
+  DBAIchat,
+};
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
-  const concatenatedIcons = {...systemIconDefinitions, ...editorIconDefinitions};
+  const concatenatedIcons = {
+    ...systemIconDefinitions,
+    ...editorIconDefinitions,
+  };
   const Element = concatenatedIcons[icon];
 
   if (Element === undefined) {
@@ -312,7 +318,7 @@ const Icon = ({ icon, className, style, title, ...otherAttr }) => {
       focusable="false"
       className={className}
       style={style}
-      aria-hidden={icon !== "External"}
+      aria-hidden={icon !== 'External'}
       {...otherAttr}
     />
   );

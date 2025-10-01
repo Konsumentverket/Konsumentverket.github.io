@@ -105,12 +105,41 @@ export const Dropdown = ({
 
   const dropdownRef = useRef();
 
+
+
+  const [focusedIndex, setFocusedIndex] = React.useState(-1);
+
+  useEffect(() => {
+    if (isExpanded && focusedIndex >= 0 && dropdownRef.current) {
+      const options = dropdownRef.current.querySelectorAll('li[tabindex="0"]');
+      if (options[focusedIndex]) {
+        options[focusedIndex].focus();
+      }
+    }
+  }, [focusedIndex, isExpanded]);
+
+
+
   const closeDropdown = () => setIsExpanded(false)
   useOnClickOutside(dropdownRef, () => closeDropdown());
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape' || event.key === 'Esc') {
+      if (!isExpanded) return;
+
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        setFocusedIndex((prev) => (prev + 1) % data.length);
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        setFocusedIndex((prev) => (prev - 1 + data.length) % data.length);
+      } else if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        if (focusedIndex >= 0) {
+          const item = data[focusedIndex];
+          handleOptionChange(item.value, event);
+        }
+      } else if (event.key === 'Escape') {
         closeDropdown();
       }
     };
@@ -202,7 +231,7 @@ export const Dropdown = ({
                 maxHeight && maxHeightStyle]}
             >
               {data.map((item, index) => (
-                <li key={index}>
+                <li key={index} tabIndex={0}>
                   <Component
                     id={`${id}-${index}`}
                     onChange={(checked) => handleOptionChange(item.value, checked)}

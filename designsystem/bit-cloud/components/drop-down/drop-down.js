@@ -74,7 +74,7 @@ const TextOption = ({ text, value, setValue, setIsExpanded }) => (
   <p className="noStyle" css={itemTextStyle} onClick={() => {
     setValue(value);
     setIsExpanded(false);
-  }}>{text}</p>
+  }}>{text} alalal</p>
 )
 
 const componentMap = {
@@ -129,20 +129,14 @@ export const Dropdown = ({
 
       if (event.key === 'ArrowDown') {
         event.preventDefault();
-        setFocusedIndex((prev) => (prev + 1) % data.length);
+        setFocusedIndex((prev) => {
+          return (prev + 1) % data.length;
+        });
       } else if (event.key === 'ArrowUp') {
         event.preventDefault();
         setFocusedIndex((prev) => (prev - 1 + data.length) % data.length);
-      } else if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        if (focusedIndex >= 0) {
-          const item = data[focusedIndex];
-          handleOptionChange(item.value, event);
-        }
-      } else if (event.key === 'Escape') {
-        closeDropdown();
       }
-    };
+    }
 
     if (isExpanded) {
       document.addEventListener('keydown', handleKeyDown);
@@ -167,7 +161,6 @@ export const Dropdown = ({
 
       if (closeOnChange) setIsExpanded(false);
     }
-
     onChange(updatedValue, event);
   };
 
@@ -231,7 +224,12 @@ export const Dropdown = ({
                 maxHeight && maxHeightStyle]}
             >
               {data.map((item, index) => (
-                <li key={index} tabIndex={0}>
+                <li key={index} role="button" tabIndex={0} onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    setValue(item.text);
+                    setIsExpanded(false);
+                  }
+                }}>
                   <Component
                     id={`${id}-${index}`}
                     onChange={(checked) => handleOptionChange(item.value, checked)}

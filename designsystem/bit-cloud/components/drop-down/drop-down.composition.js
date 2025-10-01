@@ -45,7 +45,14 @@ export const BasicLinksDropDown = () => {
 export const BasicTextDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const onValueSet = (val) => {
+  const [value, setInputValue] = useState("");
+  const [placeholder, setPlaceholder] = useState(false);
+
+  const onValueSet = (val, e) => {
+    alert("VAL" + val)
+    setPlaceholder(val)
+    const value = val;
+    setInputValue({ value: value, label: value });
   }
 
   return (
@@ -54,12 +61,18 @@ export const BasicTextDropDown = () => {
         <GlobalStyles />
         <Dropdown
           id="lorem"
-          label="Lorem ipsum dolor sit amet"
           type="text"
+          closeOnChange={true}
           showApplyButton={false}
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}
           setValue={onValueSet}
+          label={ placeholder ? placeholder : "Lorem ipsum dolor sit amet"}
+          value={value}
+          onChange={(e) => {
+            setInputValue(e.value);
+            setIsExpanded(false)
+          }}
           data={[{
             text: 'Vivamus non feugiat justo, id ullamcorper est',
           },

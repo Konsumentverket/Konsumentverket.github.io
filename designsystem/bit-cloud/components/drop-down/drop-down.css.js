@@ -103,6 +103,10 @@ export const itemsListStyle = css`
         &:first-of-type {
             margin-top: ${spacing.s};
         }
+
+        &:focus {
+          outline-offset: -4px !important;
+        }
     }
 `;
 

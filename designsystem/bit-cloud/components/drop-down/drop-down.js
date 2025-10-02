@@ -74,7 +74,7 @@ const TextOption = ({ text, value, setValue, setIsExpanded }) => (
   <p className="noStyle" css={itemTextStyle} onClick={() => {
     setValue(value);
     setIsExpanded(false);
-  }}>{text} alalal</p>
+  }}>{text}</p>
 )
 
 const componentMap = {

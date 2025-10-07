@@ -225,6 +225,7 @@ export const Dropdown = ({
             >
               {data.map((item, index) => (
                 <li key={index} role="button" tabIndex={0} onKeyDown={(e) => {
+                  if (!isExpanded) return;
                   if (e.key === "Enter") {
                     setValue(item.text);
                     setIsExpanded(false);

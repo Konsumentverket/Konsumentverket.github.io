@@ -126,6 +126,7 @@ export const Dropdown = ({
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (!isExpanded) return;
+      if (!dropdownRef?.current?.contains(event.target)) return;
 
       if (event.key === 'ArrowDown') {
         event.preventDefault();
@@ -202,7 +203,16 @@ export const Dropdown = ({
             aria-expanded={isExpanded}
             onClick={(e) => {
               e.preventDefault();
+              if (e.clientX === 0 && e.clientY === 0) return;
+
               setIsExpanded(!isExpanded);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                if (!dropdownRef?.current?.contains(e.target)) return;
+                e.preventDefault();
+                setIsExpanded(!isExpanded);
+              }
             }}
           >
             {label}
@@ -224,7 +234,7 @@ export const Dropdown = ({
                 maxHeight && maxHeightStyle]}
             >
               {data.map((item, index) => (
-                <li key={index} role="button" tabIndex={0} onKeyDown={(e) => {
+                <li key={index} role="button" tabIndex={isExpanded ? 0 : -1} onKeyDown={(e) => {
                   if (!isExpanded) return;
                   if (e.key === "Enter") {
                     setValue(item.text);

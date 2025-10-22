@@ -51,6 +51,7 @@ import { HomeDelivery } from './Icons/SystemIcons/HomeDelivery/HomeDelivery.js';
 import { Online } from './Icons/SystemIcons/Online/Online.js';
 import { Send } from './Icons/SystemIcons/Send/Send.js';
 import { MonoSettings } from './Icons/SystemIcons/MonoSettings/MonoSettings.js';
+import { MonoSettingsWhite } from './Icons/SystemIcons/MonoSettingsWhite/MonoSettingsWhite.js';
 import { Logo } from './Icons/SystemIcons/Logo/Logo.js';
 import { LogIn } from './Icons/SystemIcons/LogIn/LogIn.js';
 import { LogOut } from './Icons/SystemIcons/LogOut/LogOut.js';
@@ -66,6 +67,7 @@ import { MonoArrowDownSmall } from './Icons/SystemIcons/MonoArrowDownSmall/MonoA
 import { MonoCheck } from './Icons/SystemIcons/MonoCheck/MonoCheck';
 import { MonoBlueRss } from './Icons/SystemIcons/MonoBlueRss/MonoBlueRss';
 import { MonoLogOut } from './Icons/SystemIcons/MonoLogout/MonoLogOut';
+import { MonoLogIn } from './Icons/SystemIcons/MonoLogIn/MonoLogIn';
 import { WarningCircle } from './Icons/SystemIcons/WarningCircle/WarningCircle';
 import { WarningCirclePink } from './Icons/SystemIcons/WarningCirclePink/WarningCirclePink';
 import { Video } from './Icons/SystemIcons/Video/Video';
@@ -225,6 +227,7 @@ export {
   Send,
   MegamenuCompany,
   MonoSettings,
+  MonoSettingsWhite,
   Logo,
   LogIn,
   LogOut,
@@ -245,6 +248,7 @@ export {
   MonoCheck,
   MonoBlueRss,
   MonoLogOut,
+  MonoLogIn,
   WarningCircle,
   WarningCirclePink,
   Video,

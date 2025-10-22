@@ -46,6 +46,7 @@ import { AirTime } from './Icons/SystemIcons/AirTime/AirTime.js';
 import { AtBranch } from './Icons/SystemIcons/AtBranch/AtBranch.js';
 import { BankAccount } from './Icons/SystemIcons/BankAccount/BankAccount.js';
 import { CallCenter } from './Icons/SystemIcons/CallCenter/CallCenter.js';
+import { ForumPost } from './Icons/SystemIcons/ForumPost/ForumPost.js';
 import { HomeDelivery } from './Icons/SystemIcons/HomeDelivery/HomeDelivery.js';
 import { Online } from './Icons/SystemIcons/Online/Online.js';
 import { Send } from './Icons/SystemIcons/Send/Send.js';
@@ -64,6 +65,7 @@ import { MonoArrowDown } from './Icons/SystemIcons/MonoArrowDown/MonoArrowDown';
 import { MonoArrowDownSmall } from './Icons/SystemIcons/MonoArrowDownSmall/MonoArrowDownSmall';
 import { MonoCheck } from './Icons/SystemIcons/MonoCheck/MonoCheck';
 import { MonoBlueRss } from './Icons/SystemIcons/MonoBlueRss/MonoBlueRss';
+import { MonoLogOut } from './Icons/SystemIcons/MonoLogout/MonoLogOut';
 import { WarningCircle } from './Icons/SystemIcons/WarningCircle/WarningCircle';
 import { WarningCirclePink } from './Icons/SystemIcons/WarningCirclePink/WarningCirclePink';
 import { Video } from './Icons/SystemIcons/Video/Video';
@@ -217,6 +219,7 @@ export {
   AtBranch,
   BankAccount,
   CallCenter,
+  ForumPost,
   HomeDelivery,
   Online,
   Send,
@@ -241,6 +244,7 @@ export {
   MonoArrowDownSmall,
   MonoCheck,
   MonoBlueRss,
+  MonoLogOut,
   WarningCircle,
   WarningCirclePink,
   Video,

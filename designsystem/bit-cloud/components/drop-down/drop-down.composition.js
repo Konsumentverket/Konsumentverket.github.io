@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import { Dropdown } from './drop-down.js';
 
 import {
   globalStyles as GlobalStyles,
-  CompositionFonts
+  CompositionFonts,
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const BasicLinksDropDown = () => {
@@ -20,40 +20,42 @@ export const BasicLinksDropDown = () => {
           type="link"
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}
-          data={[{
-            text: 'Vivamus non feugiat justo, id ullamcorper est',
-            href: '#1'
-          },
-          {
-            text: 'Integer vehicula luctus',
-            href: '#2'
-          },
-          {
-            text: 'Mauris mattis est sapien nec accumsan est',
-            href: '#3'
-          },
-          {
-            text: 'Proin sit amet tempor lorem ut sed dignissim velit, semper tristique',
-            href: '#4'
-          }]}
+          data={[
+            {
+              text: 'Vivamus non feugiat justo, id ullamcorper est',
+              href: '#1',
+            },
+            {
+              text: 'Integer vehicula luctus',
+              href: '#2',
+            },
+            {
+              text: 'Mauris mattis est sapien nec accumsan est',
+              href: '#3',
+            },
+            {
+              text: 'Proin sit amet tempor lorem ut sed dignissim velit, semper tristique',
+              href: '#4',
+            },
+          ]}
         />
       </CompositionFonts>
     </div>
   );
-}
+};
 
 export const BasicTextDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const [value, setInputValue] = useState("");
+  const [value, setInputValue] = useState('');
   const [placeholder, setPlaceholder] = useState(false);
 
   const onValueSet = (val, e) => {
-    alert("VAL" + val)
-    setPlaceholder(val)
+    alert('VAL' + val);
+    setPlaceholder(val);
     const value = val;
     setInputValue({ value: value, label: value });
-  }
+  };
 
   return (
     <div style={{ minHeight: '400px' }}>
@@ -67,15 +69,16 @@ export const BasicTextDropDown = () => {
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}
           setValue={onValueSet}
-          label={ placeholder ? placeholder : "Lorem ipsum dolor sit amet"}
+          label={placeholder ? placeholder : 'Lorem ipsum dolor sit amet'}
           value={value}
           onChange={(e) => {
             setInputValue(e.value);
-            setIsExpanded(false)
+            setIsExpanded(false);
           }}
-          data={[{
-            text: 'Vivamus non feugiat justo, id ullamcorper est',
-          },
+          data={[
+            {
+              text: 'Vivamus non feugiat justo, id ullamcorper est',
+            },
             {
               text: 'Integer vehicula luctus',
             },
@@ -84,12 +87,13 @@ export const BasicTextDropDown = () => {
             },
             {
               text: 'Proin sit amet tempor lorem ut sed dignissim velit, semper tristique',
-            }]}
+            },
+          ]}
         />
       </CompositionFonts>
     </div>
   );
-}
+};
 
 const data = [
   {
@@ -98,16 +102,16 @@ const data = [
     disabled: true,
     stats: {
       number: 109,
-      label: "Antal sidor: 109"
-    }
+      label: 'Antal sidor: 109',
+    },
   },
   {
     text: 'Integer vehicula luctus',
     value: 'integer-vehicula-luctus-radio',
     stats: {
       number: 19,
-      label: "Antal sidor: 19"
-    }
+      label: 'Antal sidor: 19',
+    },
   },
   {
     text: 'Mauris mattis est sapien nec accumsan est',
@@ -115,14 +119,15 @@ const data = [
     disabled: true,
     stats: {
       number: 9,
-      label: "Antal sidor: 9"
-    }
+      label: 'Antal sidor: 9',
+    },
   },
   {
     text: 'Proin sit amet tempor lorem ut sed dignissim velit, semper tristique',
-    value: 'proin-sit-amet-tempor-lorem-ut-sed-dignissim-velit-semper-tristique-radio',
-  }
-]
+    value:
+      'proin-sit-amet-tempor-lorem-ut-sed-dignissim-velit-semper-tristique-radio',
+  },
+];
 
 const radioData = [
   {
@@ -130,20 +135,20 @@ const radioData = [
     value: 'default',
   },
   ...data,
-]
+];
 
 export const BasicCheckboxDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [dropdownValue, setDropdownValue] = useState([]);
-  console.log("Dropdown value: ", dropdownValue)
+  console.log('Dropdown value: ', dropdownValue);
 
   const resetValue = () => {
-    setDropdownValue([])
-  }
+    setDropdownValue([]);
+  };
 
   const onApplyFilter = () => {
-    console.log("Apply filter callback")
-  }
+    console.log('Apply filter callback');
+  };
 
   return (
     <div style={{ minHeight: '400px' }}>
@@ -167,20 +172,20 @@ export const BasicCheckboxDropDown = () => {
       </CompositionFonts>
     </div>
   );
-}
+};
 
 export const BasicRadioDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [dropdownValue, setDropdownValue] = useState([]);
-  console.log("Dropdown value: ", dropdownValue)
+  console.log('Dropdown value: ', dropdownValue);
 
   const resetValue = () => {
-    setDropdownValue([])
-  }
+    setDropdownValue([]);
+  };
 
   const onApplyFilter = () => {
-    console.log("Apply filters callback")
-  }
+    console.log('Apply filters callback');
+  };
 
   return (
     <div style={{ minHeight: '600px' }}>
@@ -202,5 +207,5 @@ export const BasicRadioDropDown = () => {
         />
       </CompositionFonts>
     </div>
-  )
-}
+  );
+};

@@ -14,7 +14,7 @@ import {
   smallPaddingStyle,
   smallHeadlineStyle,
   paragraphStyling,
-  noBoxshadow
+  noBoxshadow,
 } from './cta-block.css.js';
 
 export const CtaBlock = ({
@@ -24,59 +24,64 @@ export const CtaBlock = ({
   image,
   imageAlt,
   icon,
-  backgroundColor= "White",
+  backgroundColor = 'White',
   imageComponent,
   contentfulName,
   contentfulId,
   contactCta = false,
-  removeBoxShadow = false
+  removeBoxShadow = false,
 }) => {
-  let imageclass = "";
+  let imageclass = '';
   let imageArea = imageComponent;
   if (imageArea == null) {
     if (image != null) imageArea = <img src={image} alt={imageAlt} />;
-    else if(icon != null) {
-      imageArea = (
-        <div>
-          {icon}
-        </div>
-      );
+    else if (icon != null) {
+      imageArea = <div>{icon}</div>;
 
-      imageclass = "hasicon";
+      imageclass = 'hasicon';
     }
   }
 
-  if (imageArea == null) imageclass = "noimage";
+  if (imageArea == null) imageclass = 'noimage';
 
   const validBackgroundColors = {
     White: whiteBackground,
     Blue: blueBackground,
-    Grey: greyBackground
+    Grey: greyBackground,
   };
 
-  const selectedBackgroundColor = validBackgroundColors[backgroundColor] || whiteBackground;
+  const selectedBackgroundColor =
+    validBackgroundColors[backgroundColor] || whiteBackground;
 
-    return (
-      <div css={[ctaWrapper, selectedBackgroundColor, removeBoxShadow? noBoxshadow : null]} className={imageclass} data-comp="cta-block" data-contentful-field-id={contentfulName}
-           data-contentful-entry-id={contentfulId}>
-        <div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
-        <div css={[
+  return (
+    <div
+      css={[
+        ctaWrapper,
+        selectedBackgroundColor,
+        removeBoxShadow ? noBoxshadow : null,
+      ]}
+      className={imageclass}
+      data-comp="cta-block"
+      data-contentful-field-id={contentfulName}
+      data-contentful-entry-id={contentfulId}
+    >
+      <div css={pictureWrapper} className={imageComponent ? 'image' : null}>
+        {imageArea}
+      </div>
+      <div
+        css={[
           textArea,
           contactCta ? buttonRightStyle : null,
           contactCta ? smallPaddingStyle : null,
-        ]} className='textarea'>
-          <h2 css={[
-            contactCta ? smallHeadlineStyle : focusHeadline
-          ]}>
-            {headline}
-          </h2>
-          <p css={[
-           contactCta ? paragraphStyling : focusText
-          ]}>
-            {text}
-          </p>
-          {btn}
-        </div>
+        ]}
+        className="textarea"
+      >
+        <h2 css={[contactCta ? smallHeadlineStyle : focusHeadline]}>
+          {headline}
+        </h2>
+        <p css={[contactCta ? paragraphStyling : focusText]}>{text}</p>
+        {btn}
       </div>
-    );
+    </div>
+  );
 };

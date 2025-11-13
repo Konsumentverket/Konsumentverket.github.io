@@ -76,6 +76,8 @@ import { MonoWhiteChat } from './Icons/SystemIcons/MonoWhiteChat/MonoWhiteChat';
 import { DBFileUpload } from './Icons/SystemIcons/DBFileUpload/DBFileUpload';
 import { DBFileText } from './Icons/SystemIcons/DBFileText/DBFileText';
 import { DBFilePDF } from './Icons/SystemIcons/DBFilePDF/DBFilePDF';
+import { DBFilePowerpoint } from './Icons/SystemIcons/DBFilePowerpoint/DBFilePowerpoint';
+import { DBFileExcel } from './Icons/SystemIcons/DBFileExcel/DBFileExcel';
 import { DBFileImage } from './Icons/SystemIcons/DBFileImage/DBFileImage';
 import { DBDeleteFileAlt2 } from './Icons/SystemIcons/DBDeleteFileAlt2/DBDeleteFileAlt2';
 import { WarningTriangle } from './Icons/SystemIcons/WarningTriangle/WarningTriangle';
@@ -259,6 +261,8 @@ export {
   DBFileUpload,
   DBFileText,
   DBFilePDF,
+  DBFilePowerpoint,
+  DBFileExcel,
   DBFileImage,
   DBDeleteFileAlt2,
   DualBlueHelpChat,

@@ -87,6 +87,7 @@ import { DualBlueBin } from './Icons/SystemIcons/DualBlueBin/DualBlueBin';
 import { DualBlueAiChat } from './Icons/SystemIcons/DualBlueAiChat/DualBlueAiChat';
 import { MonoWhiteAiChat } from './Icons/SystemIcons/MonoWhiteAiChat/MonoWhiteAiChat';
 import { MonoBlueFilter1 } from './Icons/SystemIcons/MonoBlueFilter1/MonoBlueFilter1';
+import { WritePost } from './Icons/SystemIcons/WritePost/WritePost';
 
 // Editor icons
 import { MonoArrowSmall } from './Icons/SystemIcons/MonoArrowSmall/MonoArrowSmall.js';
@@ -274,6 +275,7 @@ export {
   DualBlueAiChat,
   MonoWhiteAiChat,
   MonoBlueFilter1,
+  WritePost,
 
   // System icons
 

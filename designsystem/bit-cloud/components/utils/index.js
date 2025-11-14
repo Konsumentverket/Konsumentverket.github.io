@@ -89,6 +89,13 @@ import { MonoWhiteAiChat } from './Icons/SystemIcons/MonoWhiteAiChat/MonoWhiteAi
 import { MonoBlueFilter1 } from './Icons/SystemIcons/MonoBlueFilter1/MonoBlueFilter1';
 import { WritePost } from './Icons/SystemIcons/WritePost/WritePost';
 
+// Text Editor icons
+import { TextEditorBold } from './Icons/SystemIcons/TextEditorBold/TextEditorBold';
+import { TextEditorItalic } from './Icons/SystemIcons/TextEditorItalic/TextEditorItalic';
+import { TextEditorList } from './Icons/SystemIcons/TextEditorList/TextEditorList';
+import { TextEditorUnorderedList } from './Icons/SystemIcons/TextEditorUnorderedList/TextEditorUnorderedList';
+import { TextEditorLink } from './Icons/SystemIcons/TextEditorLink/TextEditorLink';
+
 // Editor icons
 import { MonoArrowSmall } from './Icons/SystemIcons/MonoArrowSmall/MonoArrowSmall.js';
 import { MonoDelete } from './Icons/SystemIcons/MonoDelete/MonoDelete.js';
@@ -276,6 +283,13 @@ export {
   MonoWhiteAiChat,
   MonoBlueFilter1,
   WritePost,
+
+  // Text Editor icons
+  TextEditorBold,
+  TextEditorItalic,
+  TextEditorList,
+  TextEditorUnorderedList,
+  TextEditorLink,
 
   // System icons
 

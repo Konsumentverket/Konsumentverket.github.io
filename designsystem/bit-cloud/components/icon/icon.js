@@ -85,6 +85,13 @@ import {
   MonoBlueFilter1,
   WritePost,
 
+  // Text Editor Icons
+  TextEditorBold,
+  TextEditorItalic,
+  TextEditorList,
+  TextEditorUnorderedList,
+  TextEditorLink,
+
   // Editor Icons
   NewsIcon,
   DiagramIcon,
@@ -241,6 +248,13 @@ const systemIconDefinitions = {
   MonoWhiteAiChat,
   MonoBlueFilter1,
   WritePost,
+
+  // Text Editor Icons
+  TextEditorBold,
+  TextEditorItalic,
+  TextEditorList,
+  TextEditorUnorderedList,
+  TextEditorLink,
 };
 
 const editorIconDefinitions = {

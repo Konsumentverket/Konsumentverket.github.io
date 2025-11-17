@@ -1,4 +1,4 @@
-import React from 'react';;
+import React from 'react';
 
 import { Icon, systemIconDefinitions, editorIconDefinitions } from './icon.js';
 
@@ -11,12 +11,15 @@ const iconContainerStyle = { display: 'flex', alignItems: 'center', flexDirectio
 const iconStyle = { marginTop: '8px', display: 'block', fill: 'black' };
 const titleStyle = { fontSize: '16px', fontWeight: 600, marginBottom: '24px', textAlign: 'center' };
 
+
 export const BasicSystemIcon = () => {
+  const icons = systemIconDefinitions || {};
+
   return (
     <CompositionFonts>
       <GlobalStyles />
-      <h3 style={titleStyle}>System icons ({Object.keys(systemIconDefinitions).length})</h3>
-      {Object.keys(systemIconDefinitions).map((key) => (
+      <h3 style={titleStyle}>System icons ({Object.keys(icons).length})</h3>
+      {Object.keys(icons).map((key) => (
         <div style={iconContainerStyle} key={key} data-id={key}>
         <h4>{key}</h4>
           <Icon icon={key} style={iconStyle} />
@@ -27,11 +30,13 @@ export const BasicSystemIcon = () => {
 }
 
 export const BasicEditorIcon = () => {
+  const iconsEditor = editorIconDefinitions || {};
+
   return (
     <CompositionFonts>
       <GlobalStyles />
-      <h3 style={titleStyle}>Editor icons ({Object.keys(editorIconDefinitions).length})</h3>
-      {Object.keys(editorIconDefinitions).map((key, index) => (
+      <h3 style={titleStyle}>Editor icons ({Object.keys(iconsEditor).length})</h3>
+      {Object.keys(iconsEditor).map((key, index) => (
         <div style={iconContainerStyle} key={key} data-id={key} data-index={index}>
           <h4>{key}</h4>
           <Icon icon={key} style={iconStyle} />

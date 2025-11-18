@@ -181,6 +181,11 @@ const systemIconDefinitions = {
   TextEditorLink,
 };
 
+Object.entries(systemIconDefinitions).forEach(([name, component]) => {
+  // @ts-ignore
+  exports[name] = component;
+});
+
 const SystemIcon = ({ icon, className, style, title, ...otherAttr }) => {
   const Element = systemIconDefinitions[icon];
 

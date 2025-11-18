@@ -21,9 +21,11 @@ import {
 import { FormCheckbox } from '@konsumentverket-sverige/designsystem.form-checkbox';
 import { FormRadiobutton } from '@konsumentverket-sverige/designsystem.form-radiobutton';
 import {
-  ChevronRight,
   useOnClickOutside
 } from '@konsumentverket-sverige/designsystem.utils';
+import {
+  ChevronRight,
+} from '@konsumentverket-sverige/designsystem.icons-system';
 import { Button } from "@konsumentverket-sverige/designsystem.button";
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 

@@ -100,6 +100,11 @@ const editorIconDefinitions = {
   Snowboarding
 };
 
+Object.entries(editorIconDefinitions).forEach(([name, component]) => {
+  // @ts-ignore
+  exports[name] = component;
+});
+
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
   const Element = editorIconDefinitions[icon];
 

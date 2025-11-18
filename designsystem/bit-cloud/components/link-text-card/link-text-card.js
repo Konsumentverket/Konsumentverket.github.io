@@ -11,7 +11,7 @@ import {
   linkTextMainLinkStyle
 } from '@konsumentverket-sverige/designsystem.link-card';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
-import { Arrow } from '@konsumentverket-sverige/designsystem.utils';
+import { Arrow } from '@konsumentverket-sverige/designsystem.icons-system';
 
 const LinkTextCard = React.forwardRef(({
   text,

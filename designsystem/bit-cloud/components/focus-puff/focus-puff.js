@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import * as css from './focus-puff.css.js';
-import { External } from '@konsumentverket-sverige/designsystem.utils';
+import { External } from '@konsumentverket-sverige/designsystem.icons-system';
 
 const FocusPuff = React.forwardRef(({
   headline,

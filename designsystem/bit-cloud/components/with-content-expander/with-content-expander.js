@@ -5,8 +5,8 @@ import { Typography } from '@konsumentverket-sverige/designsystem.typography';
 import {
   MonoArrowDown,
   MonoArrowDownSmall,
-} from '@konsumentverket-sverige/designsystem.utils';
-import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
+} from '@konsumentverket-sverige/designsystem.icons-system';
+import { EditorIcon } from '@konsumentverket-sverige/designsystem.icons-editor';
 
 import {
   containerStyle,
@@ -220,14 +220,14 @@ export const WithContentExpander = ({
               <MonoArrowDown
                 aria-hidden="true"
                 className="expand-icon"
-                style={chevronStyles}
+                css={chevronStyles}
               />
             )}
             {!disabled && useLightBlueAlternativeStyling && (
               <MonoArrowDownSmall
                 aria-hidden="true"
                 className="expand-icon"
-                style={chevronStyles}
+                css={chevronStyles}
               />
             )}
           </div>

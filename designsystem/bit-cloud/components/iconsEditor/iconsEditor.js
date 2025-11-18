@@ -49,6 +49,39 @@ import { Ellipsis } from "./EditorIcons/Ellipsis/Ellipsis.js";
 import { HandHeart } from "./EditorIcons/HandHeart/HandHeart.js";
 import { Snowboarding } from "./EditorIcons/Snowboarding/Snowboarding.js";
 
+import { RecallIcon } from "./EditorIcons/RecallIcon/RecallIcon.js";
+import { NewsIcon } from "./EditorIcons/NewsIcon/NewsIcon.js";
+import { KOIcon } from "./EditorIcons/KOIcon/KOIcon.js";
+import { RightsIcon } from "./EditorIcons/RightsIcon/RightsIcon.js";
+import { ShoppingIcon } from "./EditorIcons/ShoppingIcon/ShoppingIcon.js";
+import { WebbinarIcon } from "./EditorIcons/WebbinarIcon/WebbinarIcon.js";
+import { ConsumerRightsShieldIcon } from "./EditorIcons/ConsumerRightsShieldIcon/ConsumerRightsShieldIcon.js";
+import { ConsumerLawIcon } from "./EditorIcons/ConsumerLawIcon/ConsumerLawIcon.js";
+import { EconomyIcon } from "./EditorIcons/EconomyIcon/EconomyIcon.js";
+import { EnvironmentIcon } from "./EditorIcons/EnvironmentIcon/EnvironmentIcon.js";
+import { ProductSafetyIcon } from "./EditorIcons/ProductSafetyIcon/ProductSafetyIcon.js";
+import { EUIcon } from "./EditorIcons/EUIcon/EUIcon.js";
+import { TeacherIcon } from "./EditorIcons/TeacherIcon/TeacherIcon.js";
+import { MunicipalSupportIcon } from "./EditorIcons/MunicipalSupportIcon/MunicipalSupportIcon.js";
+import { ConsumerSupportIcon } from "./EditorIcons/ConsumerSupportIcon/ConsumerSupportIcon.js";
+import { DBFriendshipIcon } from "./EditorIcons/DBFriendshipIcon/DBFriendshipIcon.js";
+import { ReportIcon } from "./EditorIcons/ReportIcon/ReportIcon.js";
+import { OperationIcon } from "./EditorIcons/OperationIcon/OperationIcon.js";
+import { WorkIcon } from "./EditorIcons/WorkIcon/WorkIcon.js";
+import { DBSocialShareIcon } from "./EditorIcons/DBSocialShareIcon/DBSocialShareIcon.js";
+import { ContractIcon } from "./EditorIcons/ContractIcon/ContractIcon.js";
+import { DBWebsiteInfoIcon } from "./EditorIcons/DBWebsiteInfoIcon/DBWebsiteInfoIcon.js";
+
+import { DBCarIcon } from "./EditorIcons/DBCarIcon/DBCarIcon.js";
+import { DBGamesIcon } from "./EditorIcons/DBGamesIcon/DBGamesIcon.js";
+import { DBWifiIcon } from "./EditorIcons/DBWifiIcon/DBWifiIcon.js";
+import { DBPhoneIcon } from "./EditorIcons/DBPhoneIcon/DBPhoneIcon.js";
+import { DBFridgeIcon } from "./EditorIcons/DBFridgeIcon/DBFridgeIcon.js";
+import { DBFurnitureIcon } from "./EditorIcons/DBFurnitureIcon/DBFurnitureIcon.js";
+import { DBTravelIcon } from "./EditorIcons/DBTravelIcon/DBTravelIcon.js";
+import { DBRenovationIcon } from "./EditorIcons/DBRenovationIcon/DBRenovationIcon.js";
+import { DBClothesIcon } from "./EditorIcons/DBClothesIcon/DBClothesIcon.js";
+
 
 const editorIconDefinitions = {
   AppsAndGames,
@@ -97,7 +130,44 @@ const editorIconDefinitions = {
   BabyCarriage,
   Ellipsis,
   HandHeart,
-  Snowboarding
+  Snowboarding,
+  RecallIcon,
+  NewsIcon,
+  KOIcon,
+  WebbinarIcon,
+  RightsIcon,
+  ShoppingIcon,
+  ConsumerRightsShieldIcon,
+  ConsumerLawIcon,
+  EconomyIcon,
+  EnvironmentIcon,
+  ProductSafetyIcon,
+  EUIcon,
+  ProductSafetyIcon,
+  RightsIcon,
+  TeacherIcon,
+  MunicipalSupportIcon,
+  ConsumerSupportIcon,
+  WebbinarIcon,
+  DBFriendshipIcon,
+  ReportIcon,
+  OperationIcon,
+  WorkIcon,
+  DBSocialShareIcon,
+  ContractIcon,
+  DBWebsiteInfoIcon,
+  DBGamesIcon,
+  DBWifiIcon,
+  DBPhoneIcon,
+  DBFridgeIcon,
+  DBFurnitureIcon,
+  DBTravelIcon,
+  DBRenovationIcon,
+  DBClothesIcon,
+  DBTravelIcon,
+  DBRenovationIcon,
+  DBCarIcon
+
 };
 
 Object.entries(editorIconDefinitions).forEach(([name, component]) => {

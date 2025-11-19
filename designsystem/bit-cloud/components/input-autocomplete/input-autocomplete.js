@@ -2,7 +2,6 @@
 import { jsx, css } from '@emotion/core';
 import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle, useMemo } from 'react';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
-import {MonoDelete} from '@konsumentverket-sverige/designsystem.utils';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 import {
   containerStyle,
@@ -269,7 +268,7 @@ export const InputAutocomplete = forwardRef(({
               onClick={handleClearInput}
               aria-label={ariaLabelClearInput}
             >
-              <MonoDelete/>
+              <Icon icon="MonoDelete" />
             </button>
           )}
 

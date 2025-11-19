@@ -13,7 +13,6 @@ import {
 } from './image-card.css.js';
 import React from 'react';
 
-import External from '@konsumentverket-sverige/designsystem.utils';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 
 export const ImageCard = ({

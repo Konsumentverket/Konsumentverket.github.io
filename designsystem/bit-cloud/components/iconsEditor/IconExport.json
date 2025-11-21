@@ -359,6 +359,11 @@
       "name": "Bullhorn",
       "title": "Avtal, pris och marknadsföring",
       "url": "EditorIconsSvg/blue-dual-megaphone.svg"
+    },
+    {
+      "name": "DBHurt",
+      "title": "Kroppsskada",
+      "url": "EditorIconsSvg/blue-dual-hurt-person.svg"
     }
   ]
 }

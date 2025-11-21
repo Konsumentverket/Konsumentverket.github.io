@@ -12,6 +12,7 @@ import {
 
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
+  if (!icon) return;
   const concatenatedIcons = {
     ...systemIconDefinitions,
     ...editorIconDefinitions

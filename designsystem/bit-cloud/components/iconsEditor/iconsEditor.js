@@ -43,7 +43,6 @@ import { ChatWithUs } from "./EditorIcons/ChatWithUs/ChatWithUs.js";
 import { CallUs } from "./EditorIcons/CallUs/CallUs.js";
 import { Mic } from "./EditorIcons/Mic/Mic.js";
 import { DatingServices } from "./EditorIcons/DatingServices/DatingServices.js";
-import { UserInjured } from "./EditorIcons/UserInjured/UserInjured.js";
 import { BabyCarriage } from "./EditorIcons/BabyCarriage/BabyCarriage.js";
 import { Ellipsis } from "./EditorIcons/Ellipsis/Ellipsis.js";
 import { HandHeart } from "./EditorIcons/HandHeart/HandHeart.js";
@@ -124,6 +123,7 @@ import { WarningIcon } from "./EditorIcons/WarningIcon/WarningIcon.js";
 import { MicrophoneIcon } from "./EditorIcons/MicrophoneIcon/MicrophoneIcon.js";
 import { WebbinarIcon } from "./EditorIcons/WebbinarIcon/WebbinarIcon.js";
 import { NewsIcon } from "./EditorIcons/NewsIcon/NewsIcon.js";
+import { DBHurt } from "./EditorIcons/DBHurt/DBHurt.js";
 
 
 const editorIconDefinitions = {
@@ -169,7 +169,6 @@ const editorIconDefinitions = {
   CallUs,
   Mic,
   DatingServices,
-  UserInjured,
   BabyCarriage,
   Ellipsis,
   HandHeart,
@@ -245,6 +244,7 @@ const editorIconDefinitions = {
   WarningIcon,
   MicrophoneIcon,
   MarketingIcon,
+  DBHurt
 };
 
 

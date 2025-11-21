@@ -174,7 +174,6 @@ const editorIconDefinitions = {
   Ellipsis,
   HandHeart,
   Snowboarding,
-
   RecallIcon,
   NewsIcon,
   KOIcon,
@@ -206,7 +205,6 @@ const editorIconDefinitions = {
   DBRenovationIcon,
   DBCarIcon,
   DBOnlineGamingIcon,
-
   DBFlight,
   DBBudget,
   DBStats,
@@ -240,13 +238,13 @@ const editorIconDefinitions = {
   WarningDiamondIcon,
   KOVWorkIcon,
   PaymentIcon,
-  MarketingIcon,
   RulesIcon,
   SalesRulesIcon,
   ConsumerRightsIcon,
   PressIcon,
   WarningIcon,
-  MicrophoneIcon
+  MicrophoneIcon,
+  MarketingIcon,
 };
 
 

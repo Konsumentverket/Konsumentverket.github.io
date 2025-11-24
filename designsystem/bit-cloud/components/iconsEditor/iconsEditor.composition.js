@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { editorIconDefinitions } from "./index";
+import * as editorIconDefinitions from "./index";
 import {
   globalStyles as GlobalStyles,
   CompositionFonts
@@ -29,6 +29,11 @@ const titleStyle = {
 
 export const BasicEditorIcon = () => {
   const icons = editorIconDefinitions || {}; // fallback
+  if (icons == null || icons == undefined) {
+    console.error("none found"); 
+    return;
+  }
+
   return (
     <CompositionFonts>
       <GlobalStyles />

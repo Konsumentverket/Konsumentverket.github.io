@@ -25,44 +25,44 @@ export const DBFileExcel = ({ className, style, title, ...otherAttr }) => {
       <path
         d="M7.34 24.14H24.66"
         stroke="#DFF1FB"
-        stroke-width="2.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M7.34 14.49H24.66"
         stroke="#DFF1FB"
-        stroke-width="2.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M7.34 19.29H24.66"
         stroke="#DFF1FB"
-        stroke-width="2.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M7.34 14.49V24.16"
         stroke="#DFF1FB"
-        stroke-width="2.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M16 14.49V24.16"
         stroke="#DFF1FB"
-        stroke-width="2.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M24.66 14.49V24.16"
         stroke="#DFF1FB"
-        stroke-width="2.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
     </svg>
   );

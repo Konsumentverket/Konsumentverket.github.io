@@ -25,17 +25,17 @@ export const DBFilePowerpoint = ({ className, style, title, ...otherAttr }) => {
       <path
         d="M14.58 24.35C17.8551 24.35 20.51 21.6951 20.51 18.42C20.51 15.145 17.8551 12.49 14.58 12.49C11.305 12.49 8.65 15.145 8.65 18.42C8.65 21.6951 11.305 24.35 14.58 24.35Z"
         stroke="#DFF1FB"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M15.74 13.42V17.55H19.64C19.64 17.55 19.79 15.87 18.63 14.71C17.47 13.55 15.73 13.42 15.73 13.42H15.74Z"
         fill="#DFF1FB"
         stroke="#DFF1FB"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

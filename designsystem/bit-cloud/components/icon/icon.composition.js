@@ -4,11 +4,8 @@ import React from 'react';
 import * as EditorIconsPackage from '@konsumentverket-sverige/designsystem.icons-editor';
 import * as SystemIconsPackage from '@konsumentverket-sverige/designsystem.icons-system';
 
-const EditorIcon = EditorIconsPackage.EditorIcon;
-const SystemIcon = SystemIconsPackage.SystemIcon;
-
-const editorIconDefinitions = EditorIconsPackage.editorIconDefinitions;
-const systemIconDefinitions = SystemIconsPackage.systemIconDefinitions;
+const EditorIcon = EditorIconsPackage["EditorIcon"]
+const SystemIcon = SystemIconsPackage["SystemIcon"];
 
 import {
   globalStyles as GlobalStyles,
@@ -20,8 +17,8 @@ const iconStyle = { marginTop: '8px', display: 'block' };
 const titleStyle = { fontSize: '16px', fontWeight: 600, marginBottom: '24px', textAlign: 'center' };
 
 export const BasicSystemIcon = () => {
-  const icons = systemIconDefinitions || {};
-  console.log("systemIconDefinitions", systemIconDefinitions)
+  const icons = SystemIconsPackage || {};
+  console.log("systemIconDefinitions", SystemIconsPackage)
 
   return (
     <CompositionFonts>
@@ -38,8 +35,13 @@ export const BasicSystemIcon = () => {
 }
 
 export const BasicEditorIcon = () => {
-  const iconsEditor = editorIconDefinitions || {};
-  console.log("editorIconDefinitions", editorIconDefinitions)
+  const iconsEditor = EditorIconsPackage || {};
+  console.log("editorIconDefinitions are ", EditorIconsPackage)
+
+  if (iconsEditor == null || iconsEditor == undefined) {
+    console.error("none found"); 
+    return;
+  }
 
   return (
     <CompositionFonts>

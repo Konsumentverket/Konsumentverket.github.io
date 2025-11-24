@@ -364,6 +364,29 @@
       "name": "DBHurt",
       "title": "Kroppsskada",
       "url": "EditorIconsSvg/blue-dual-hurt-person.svg"
+    },
+
+
+    {
+      "name": "BabyCarriage",
+      "title": "Barnprodukter",
+      "url": "EditorIconsSvg/blue-dual-stroller.svg"
+    },
+    {
+      "name": "Hardhat",
+      "title": "Skyddsutrustning",
+      "url": "EditorIconsSvg/blue-dual-protection.svg"
+    },
+    {
+      "name": "Sports",
+      "title": "Sport och fritid",
+      "url": "EditorIconsSvg/blue-dual-dumbbell.svg"
+    },
+    {
+      "name": "Home",
+      "title": "Hyra och köpa boende",
+      "url": "EditorIconsSvg/home.svg"
     }
+    
   ]
 }

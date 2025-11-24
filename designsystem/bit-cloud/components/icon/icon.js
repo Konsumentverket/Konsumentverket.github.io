@@ -1,40 +1,28 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-
-import {
-  systemIconDefinitions
-} from '@konsumentverket-sverige/designsystem.icons-system';
-
-import {
-  // Editor Icons
- editorIconDefinitions
-} from '@konsumentverket-sverige/designsystem.icons-editor';
+import * as SystemIcons from '@konsumentverket-sverige/designsystem.icons-system';
+import * as EditorIcons from '@konsumentverket-sverige/designsystem.icons-editor';
 
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
-  if (!icon) return;
-  const concatenatedIcons = {
-    ...systemIconDefinitions,
-    ...editorIconDefinitions
-  };
-  const Element = concatenatedIcons[icon];
+  console.log("EditorIcons", EditorIcons)
+  const Component = SystemIcons[icon] || EditorIcons[icon];
 
-  if (Element === undefined) {
-    console.error("❌ Icon not found:", icon);
-    console.log("Available icons:", Object.keys(concatenatedIcons));
+  if (!Component) {
+    console.warn(`Icon not found: ${icon}`);
     return null;
   }
 
-
   return (
-    <Element
+    <Component
       focusable="false"
       className={className}
       style={style}
       aria-hidden={icon !== 'External'}
+      title={title}
       {...otherAttr}
     />
   );
 };
 
-export { Icon, systemIconDefinitions, editorIconDefinitions };
+export { Icon };

@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
-import {
-  editorIconDefinitions
-} from "@konsumentverket-sverige/designsystem.icons-editor";
+import 
+  * as editorIconDefinitions
+ from "@konsumentverket-sverige/designsystem.icons-editor";
 
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {

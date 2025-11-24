@@ -1,5 +1,6 @@
 import { css } from '@emotion/core';
-import { checkPath, colors, newColors, spacing } from '@konsumentverket-sverige/designsystem.utils';
+import { colors, newColors, spacing } from '@konsumentverket-sverige/designsystem.utils';
+import { checkPath } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const wrapperStyle = css`
     position: relative;

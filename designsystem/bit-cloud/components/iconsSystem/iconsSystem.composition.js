@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { SystemIcon, systemIconDefinitions } from "./index";
+import * as systemIconDefinitions from "./index";
 import {
   globalStyles as GlobalStyles,
   CompositionFonts
 } from '@konsumentverket-sverige/designsystem.utils';
+import { SystemIcon } from "./iconsSystem";
 
 const iconContainerStyle = {
   display: "block",

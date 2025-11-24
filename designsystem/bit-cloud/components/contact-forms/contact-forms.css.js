@@ -4,8 +4,11 @@ import {
   breakpoints,
   typography,
   colors,
-  checkPath,
 } from '@konsumentverket-sverige/designsystem.utils';
+
+import {
+  checkPath,
+} from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const form = css`
   display: flex;

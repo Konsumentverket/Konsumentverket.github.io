@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React, { useState, useEffect, useRef } from 'react';
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import {useOnClickOutside} from '@konsumentverket-sverige/designsystem.utils';
 import {
   centerPosition,
@@ -66,7 +66,7 @@ const ToolTip = ({position = 'left', id = '', text='', label=''}) => {
         aria-expanded={isOpen}
         aria-label={`Visa en hjälpande text för detta fält: ${label}`}
       >
-        <Icon icon={'Information'}/>
+        <SystemIcon icon={'Information'}/>
       </button>
 
       <div
@@ -90,7 +90,7 @@ const ToolTip = ({position = 'left', id = '', text='', label=''}) => {
           aria-controls={`tooltip-${id}`}
           aria-label={`Stäng tooltip ${label}`}
         >
-          <Icon icon={'MonoDeleteSmall'}/>
+          <SystemIcon icon={'MonoDeleteSmall'}/>
         </button>
 
       </div>

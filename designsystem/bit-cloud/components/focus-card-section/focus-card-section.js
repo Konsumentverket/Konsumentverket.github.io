@@ -16,7 +16,7 @@ import {
   focusCardSectionItemStyle,
 } from './focus-card-section.css.js';
 
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { EditorIcon } from '@konsumentverket-sverige/designsystem.icons-editor';
 import { FocusCard } from '@konsumentverket-sverige/designsystem.focus-card';
 
 export const FocusCardSection = ({
@@ -38,7 +38,7 @@ export const FocusCardSection = ({
     <div css={[focusCardSectionStyle, modifierCssClass && modifierCssClass]} data-comp="focus-card-section">
       <div css={focusCardSectionContainerStyle}>
         <div css={focusCardSectionHeaderStyle}>
-          {icon && (<div css={focusCardSectionIconWrapperStyle}><Icon icon={icon} /></div>)}
+          {icon && (<div css={focusCardSectionIconWrapperStyle}><EditorIcon icon={icon} /></div>)}
           <div css={focusCardSectionTextWrapperStyle}>
             {title && (<h2 css={focusCardSectionTitleStyle}>{title}</h2>)}
             {text && (<p css={focusCardSectionTextStyle}>{text}</p>)}

@@ -6,7 +6,7 @@ import {
   breadcrumbTextStyle,
   breadcrumbLinkStyle
 } from './Breadcrumbs.css.js';
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const Breadcrumbs = ({
   items = [],
@@ -19,7 +19,7 @@ export const Breadcrumbs = ({
           return (
             <React.Fragment key={`bread${idx}`}>
               {idx !== 0 && (
-                <Icon
+                <SystemIcon
                   aria-hidden="true"
                   icon="ArrowFat"
                   title={crumb.url}

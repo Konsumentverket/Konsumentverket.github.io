@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import * as css from './list-item.css.js';
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const ListItem = ({
   headline,
@@ -28,7 +28,7 @@ export const ListItem = ({
     injected={true}
   >
     <p css={css.headline} className="listItemHeadline">
-      {headline} {<Icon icon={icon} />}
+      {headline} {<SystemIcon icon={icon} />}
     </p>
     {children && children}
     {preamble && (

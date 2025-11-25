@@ -27,7 +27,7 @@ import {
   ChevronRight,
 } from '@konsumentverket-sverige/designsystem.icons-system';
 import { Button } from "@konsumentverket-sverige/designsystem.button";
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 const CheckboxOption = ({
   text,
@@ -264,10 +264,10 @@ export const Dropdown = ({
                 secondaryButtonStyle={true}
                 text="Använd filter"
                 onClick={handleApplyFilter}
-                iconLeft={<Icon icon="MonoBlueFilter1" />}
+                iconLeft={<SystemIcon icon="MonoBlueFilter1" />}
               />
               <button css={resetFilterStyle} onClick={handleResetFilter}>
-                <Icon icon="DualBlueBin" />
+                <SystemIcon icon="DualBlueBin" />
                 Rensa filter
               </button>
             </div>

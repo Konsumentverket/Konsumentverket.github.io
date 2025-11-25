@@ -12,7 +12,7 @@ import {
   eventBoxApply
 } from './eventbox.css.js';
 
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import { Button }  from '@konsumentverket-sverige/designsystem.button';
 
 export const EventBox = ({
@@ -58,7 +58,7 @@ export const EventBox = ({
           <Button
             href={url}
             iconRight={
-              <Icon icon="External"/>
+              <SystemIcon icon="External"/>
             }
             text="Anmäl dig till webbinarium"
           />}
@@ -66,7 +66,7 @@ export const EventBox = ({
         </div>
       ) : (
         <>
-          { !oldEvent && <p css={eventBoxOverdue}><Icon icon="WarningCircle"/> Sista dag för anmälan har passerat</p>}
+          { !oldEvent && <p css={eventBoxOverdue}><SystemIcon icon="WarningCircle"/> Sista dag för anmälan har passerat</p>}
         </>
       )}
 

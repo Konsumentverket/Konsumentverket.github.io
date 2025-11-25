@@ -2,7 +2,7 @@
 import {jsx} from '@emotion/core'
 import React from "react"
 import * as styles from "./list-item-slim.css.js"
-import {Icon} from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const ListItemSlim = ({
  headline = '',
@@ -43,7 +43,7 @@ export const ListItemSlim = ({
           <span css={styles.headline}>
             {headline}
           </span>
-          <Icon icon={'ChevronRight'} css={styles.chevronStyle}/>
+          <SystemIcon icon={'ChevronRight'} css={styles.chevronStyle}/>
         </LinkComponent>
       </li>
     )

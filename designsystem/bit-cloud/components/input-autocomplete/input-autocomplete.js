@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core';
 import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle, useMemo } from 'react';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import {
   containerStyle,
   dropdownHasSuggestionsStyle,
@@ -268,7 +268,7 @@ export const InputAutocomplete = forwardRef(({
               onClick={handleClearInput}
               aria-label={ariaLabelClearInput}
             >
-              <Icon icon="MonoDelete" />
+              <SystemIcon icon="MonoDelete" />
             </button>
           )}
 
@@ -321,7 +321,7 @@ export const InputAutocomplete = forwardRef(({
               {searchButtonText}
             </span>
 
-            <Icon
+            <SystemIcon
               aria-hidden="true"
               icon="MonoSearch"
             />

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
 import { Heading } from '@konsumentverket-sverige/designsystem.heading';
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import {
   form,
   reasonTitle,
@@ -107,7 +107,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
           />
           {errors.firstName && (
             <span css={[errorMessage]}>
-              <Icon icon="Warn" />
+              <SystemIcon icon="Warn" />
               {errors.firstName.message}
             </span>
           )}
@@ -125,7 +125,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
           />
           {errors.lastName && (
             <span css={[errorMessage]}>
-              <Icon icon="Warn" />
+              <SystemIcon icon="Warn" />
               {errors.lastName.message}
             </span>
           )}
@@ -149,7 +149,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
           />
           {errors.ssn && (
             <span css={[errorMessage]}>
-              <Icon icon="Warn" />
+              <SystemIcon icon="Warn" />
               {errors.ssn.message}
             </span>
           )}
@@ -186,7 +186,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
           />
           {errors.email && (
             <span css={[errorMessage]}>
-              <Icon icon="Warn" />
+              <SystemIcon icon="Warn" />
               {errors.email.message}
             </span>
           )}
@@ -195,14 +195,14 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
       {recaptchaError !== '' && (
         <div css={[recaptchaContainer]}>
           <span css={[errorMessage]}>
-            <Icon icon="Warn" />
+            <SystemIcon icon="Warn" />
             {recaptchaError}
           </span>
         </div>
       )}
 
       <div css={[childrenContainer]}>{children}</div>
-      <Button text="Skicka begäran" iconRight={<Icon icon="ChevronRight" />} />
+      <Button text="Skicka begäran" iconRight={<SystemIcon icon="ChevronRight" />} />
     </form>
   );
 };

@@ -28,7 +28,7 @@ import {
   uploadBoxTitleStyle,
   visuallyHidden
 } from "../contact-forms.css";
-import {Icon} from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import ErrorMessage from "./ErrorMessage";
 
 const MAX_MEGABYTES = 20;
@@ -332,7 +332,7 @@ const FileSelectorWithList = ({
             </span>
             <span css={[uploadBox, dragging && uploadBoxActive]}>
               <span css={uploadBoxTitleStyle}>
-                <Icon icon="DBFileUpload" style={iconMarginRight}/>
+                <SystemIcon icon="DBFileUpload" style={iconMarginRight}/>
                 {uploadBoxLabel}
               </span>
               <span css={uploadBoxTextStyle}>
@@ -390,7 +390,7 @@ const FileSelectorWithList = ({
                       <span
                         css={fileThumbnail}
                         aria-label={`Bifogad fil: ${fileText}`}>
-                        <Icon
+                        <SystemIcon
                           icon={FILE_TYPE_ICONS[file.type] || "Warn"}
                           style={[iconMarginRight, iconSize]}
                         />
@@ -404,7 +404,7 @@ const FileSelectorWithList = ({
                         aria-label={`Ta bort ${file.name} från listan`}
                       >
                         {removeFileText}
-                        <Icon icon={"DBDeleteFileAlt2"} style={iconMarginLeft}/>
+                        <SystemIcon icon={"DBDeleteFileAlt2"} style={iconMarginLeft}/>
                       </button>
 
                     </div>

@@ -13,7 +13,7 @@ import {
 } from './image-card.css.js';
 import React from 'react';
 
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const ImageCard = ({
   headline,
@@ -47,7 +47,7 @@ export const ImageCard = ({
         <div css={textArea} className='textarea'>
           <h3 css={focusHeadline}>
             {headline}
-            {!isExternalLink && <Icon aria-hidden="true" icon="ChevronRight" />}
+            {!isExternalLink && <SystemIcon aria-hidden="true" icon="ChevronRight" />}
           </h3>
           {!!text && <p css={focusText}>{text}</p>}
         </div>

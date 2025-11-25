@@ -15,7 +15,7 @@ import {
 import {NoticeBox} from '@konsumentverket-sverige/designsystem.notice-box';
 import {Loading} from '@konsumentverket-sverige/designsystem.loading';
 import {Button} from '@konsumentverket-sverige/designsystem.button';
-import {Icon} from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 
 export const FormSuccess = ({
@@ -92,7 +92,7 @@ export const FormSuccess = ({
         onClick={buttonClick}
         text={buttonText ?? "Ladda ner bekräftelse"}
         iconRight={
-          <Icon icon="MonoDownload"/>
+          <SystemIcon icon="MonoDownload"/>
         }
       />
     </div>

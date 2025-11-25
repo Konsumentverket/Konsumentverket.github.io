@@ -12,7 +12,7 @@ import {
   iconColor,
   articleEntryMarginStyling,
 } from './fact-box.css.js';
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const FactBox = ({
   children,
@@ -44,7 +44,7 @@ export const FactBox = ({
     >
       {tag && (
         <div css={[iconWrapper, reportIcon ? iconWrapperReport : null]}>
-          <Icon
+          <SystemIcon
             icon={reportIcon ? 'Information' : 'MonoBookmark'}
             style={iconColor}
           />

@@ -3,7 +3,7 @@ import {jsx} from '@emotion/core';
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@konsumentverket-sverige/designsystem.button';
-import {Icon} from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon} from '@konsumentverket-sverige/designsystem.icons-system';
 import {Loading} from '@konsumentverket-sverige/designsystem.loading';
 import {
   form,
@@ -240,7 +240,7 @@ export const OtherCases = ({
         className="submitButton"
         disabled={isLoading}
         text={isLoading ? "Skickar..." : otherCasesSubmitButtonText}
-        iconRight={isLoading ? <Loading color={"#FFF"}/> : <Icon icon="ChevronRight"/>}
+        iconRight={isLoading ? <Loading color={"#FFF"}/> : <SystemIcon icon="ChevronRight"/>}
       />
     </form>
   );

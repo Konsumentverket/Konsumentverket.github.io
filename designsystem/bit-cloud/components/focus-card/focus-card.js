@@ -13,7 +13,7 @@ import {
   focusCardChevronIconStyle,
 } from './focus-card.css.js';
 
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const FocusCard = ({
   title,
@@ -38,7 +38,7 @@ export const FocusCard = ({
         {text && (<p css={focusCardTextStyle}>{text}</p>)}
       </div>
       <div css={[focusCardIconSectionStyle, !dark && focusCardIconDarkSectionStyle]} className="focusCardIconSection">
-        <Icon
+        <SystemIcon
           title={"Pil till höger"}
           icon="MonoArrowRight"
           css={focusCardChevronIconStyle}

@@ -16,7 +16,7 @@ export const FocusCardSectionExample = () => {
       <FocusCardSection
         title={"Lorem ipsum dolor sit amet"}
         text={"Praesent elementum a massa ac elementum. Donec ipsum orci a porta odio tempor vel"}
-        icon={"MegamenuCompany"}
+        icon={"Bullhorn"}
         items={[
           {
             title: "Lorem ipsum dolor sit amet",
@@ -41,7 +41,7 @@ export const FocusCardSectionGreyExample = () => {
       <FocusCardSection
         title={"Lorem ipsum dolor sit amet"}
         text={"Praesent elementum a massa ac elementum. Donec ipsum orci a porta odio tempor vel"}
-        icon={"MegamenuCompany"}
+        icon={"DBBudget"}
         backgroundColor={"grey"}
         items={[
           {
@@ -72,7 +72,7 @@ export const FocusCardSectionBlueExample = () => {
       <FocusCardSection
         title={"Lorem ipsum dolor sit amet"}
         text={"Praesent elementum a massa ac elementum. Donec ipsum orci a porta odio tempor vel"}
-        icon={"MegamenuCompany"}
+        icon={"DBBudget"}
         backgroundColor={"blue"}
         items={[
           {

@@ -12,7 +12,7 @@ import {
     iconWrapper
 } from './link-card.css.js';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 const LinkCard = React.forwardRef(({
     text,
@@ -47,7 +47,7 @@ const LinkCard = React.forwardRef(({
         {icon}
         <span css={customFontSize} dangerouslySetInnerHTML={{__html: text}}></span>
       </span>
-      <Icon icon="MonoArrowRight"/>
+      <SystemIcon icon="MonoArrowRight"/>
     </span>
   )
 
@@ -98,7 +98,7 @@ const LinkCard = React.forwardRef(({
           onClick={onClick}
           injected={true}
         >
-          {expandText} ({num}) <Icon icon="MonoArrowRight"/>
+          {expandText} ({num}) <SystemIcon icon="MonoArrowRight"/>
         </LinkComponent>
       }
     </div>

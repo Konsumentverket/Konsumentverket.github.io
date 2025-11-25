@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core';
 import {errorMessage} from "../contact-forms.css";
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 const ErrorMessage = ({id, children}) => {
   return (
@@ -10,7 +10,7 @@ const ErrorMessage = ({id, children}) => {
       id={id}
       role="alert"
     >
-      <Icon icon="Warn"/>
+      <SystemIcon icon="Warn"/>
       {children}
     </span>
   )

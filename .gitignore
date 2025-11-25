@@ -5,3 +5,5 @@ package-lock.json
 *.njsproj
 *.sln
 .DS_Store
+.idea/*
+.npmrc

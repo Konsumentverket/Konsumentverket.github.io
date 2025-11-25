@@ -40,7 +40,7 @@ const globalStyles = (
   fontSize = "62.5%",
   fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
 ) => css`
-  html, body, 
+  html, body,
   button, div, span, applet,
   object, iframe, h1, h2, h3, h4,h5, h6,
   p, blockquote, pre,a,abbr, acronym,address,
@@ -60,10 +60,10 @@ const globalStyles = (
     }
     html{
       font-size: ${fontSize};
-      font-family: ${fontFamily}; 
+      font-family: ${fontFamily};
       line-height: 16px;
       color: #4D4D4D;
-      overflow-x:hidden;   
+      overflow-x:hidden;
     }
 
     body {
@@ -71,7 +71,7 @@ const globalStyles = (
       font-size: 1.6rem;
       margin:0;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;   
+      -moz-osx-font-smoothing: grayscale;
       margin: 0;
 
       &:not(.tabnav){
@@ -87,7 +87,7 @@ const globalStyles = (
 
     }
 
-      
+
     p {
       padding-bottom: ${spacing.s};
       font-size: 1.8rem;
@@ -96,12 +96,9 @@ const globalStyles = (
 
     ul {
       list-style: bullet inside none;
-      padding-left: ${spacing.xl};
+
       li {
         margin-bottom: ${spacing.s};
-      }
-      p {
-        display: inline;
       }
     }
 
@@ -166,12 +163,12 @@ const globalStyles = (
             transform: translateY(-50%);
           }
         }
-        
+
         &[href$=".pdf"] { ${fileIcon(filePdfPath)} }
-          
+
         &[href$=".ppt"],
         &[href$=".pptx"] { ${fileIcon(filePowerpointPath)} }
-        
+
         &[href$=".doc"],
         &[href$=".docx"] { ${fileIcon(fileWordPath)} }
 
@@ -195,7 +192,7 @@ const globalStyles = (
             fill: ${colors.states.visited};
           }
         }
-        
+
         &:active{
           box-shadow: 0 0 0 4px ${colors.theme1.midLight};
           border-radius: .4rem;
@@ -206,7 +203,7 @@ const globalStyles = (
             fill: ${colors.theme1.xDark};
           }
         }
-      
+
         &.invertedStyle:not(.noStyle){
           &:visited{
             background-color:inherit;
@@ -235,7 +232,7 @@ const LinkColors = css`
     color:${colors.theme1.xDark} !important;
    }
    &:visited{
-    color:${colors.states.visited} !important;   
+    color:${colors.states.visited} !important;
   }
 `;
 
@@ -251,20 +248,20 @@ const LinkColorsInverted = css`
      color:${colors.theme1.xDark} !important;
    }
    &:visited{
-    color:${colors.states.visited} !important;   
+    color:${colors.states.visited} !important;
   }
 `;
 
 export const LinkWrapperColorStyle = css`
     a {
       ${LinkColors}
-    }  
+    }
 `;
 
 export const LinkWrapperInvertedColorStyle = css`
     a {
       ${LinkColorsInverted}
-    }  
+    }
 `;
 
 export const ElementLinkColorStyle = css`

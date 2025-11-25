@@ -1,0 +1,27 @@
+---
+description: A WithContentExpander component.
+---
+
+import { WithContentExpander } from './with-content-expander';
+
+### Component identifier
+```js
+data-comp="with-content-expander"
+```
+
+## Basic usage
+
+Use the WithContentExpander component:
+
+```js
+<WithContentExpander {...data} />
+```
+
+```js live
+<WithContentExpander
+    text="Lorem ipsum"
+    icon="Auction"
+    preamble="Lorem ipsum"
+    wrappedComponent={<p>Lorem ipsum</p>}
+/>
+```

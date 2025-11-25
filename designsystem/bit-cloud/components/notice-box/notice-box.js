@@ -1,0 +1,66 @@
+/** @jsx jsx */
+import React from 'react'
+import { jsx } from '@emotion/core'
+import {
+  wrapperStyling,
+  warningWrapperStyling,
+  tagMargin,
+  titleStyling,
+  iconWrapper,
+  iconWrapperWarning,
+  iconColor,
+  articleEntryMarginStyling
+} from './notice-box.css.js'
+import {
+  EditorIcon
+} from '@konsumentverket-sverige/designsystem.icons-editor';
+
+
+export const NoticeBox = ({
+  children,
+  headline,
+  content,
+  tag = true,
+  contentfulId,
+  contentfulName,
+  articleEntryMargin = false,
+  type = "success",
+}) => {
+
+  if (!content && !children) {
+    return null;
+  }
+
+  const icon = type === "warning" ? "WarningTriangle" : "MonoCheck";
+
+  return (
+    <div css={[
+      wrapperStyling,
+      type === "warning" ? warningWrapperStyling : null,
+      tag ? tagMargin : null,
+      articleEntryMargin ? articleEntryMarginStyling : null,
+    ]}
+     data-comp="notice-box"
+     data-contentful-field-id={contentfulName ?? "noticeBox"}
+     data-contentful-entry-id={contentfulId}
+    >
+      {tag && (
+          <div css={[
+            iconWrapper,
+            type === "warning" ? iconWrapperWarning : null,
+          ]}>
+            <EditorIcon
+              icon={icon}
+              style={iconColor}
+            />
+          </div>
+        )
+      }
+      {headline && (
+        <h2 css={titleStyling}>{headline}</h2>
+      )}
+      {children}
+      {content}
+    </div>
+  )
+}

@@ -1,0 +1,38 @@
+---
+description: A DisplayAlphabet component.
+---
+
+
+## Introduction
+
+The DisplayAlphabet component is a reusable UI element designed for React applications, providing users with interactive clickable alphabet characters. The "Visa alla A-Ö" link will only appear when a character is selected.
+
+import { DisplayAlphabet } from './display-alphabet';
+
+### Instructions
+#### Installation
+
+```js
+npm i @konsumentverket-sverige/designsystem.display-alphabet@0.0.1
+```
+
+#### Importing
+
+```js
+import DisplayAlphabet from '@konsumentverket-sverige/designsystem.display-alphabet@0.0.1';
+```
+
+### Component identifier
+```js
+data-comp="display-alphabet"
+```
+
+### Usage:
+
+#### As DisplayAlphabet
+```js
+<DisplayAlphabet
+    activeLetter="L"
+    visibleLetters={["L", "O", "R", "E", "M"]}
+/>
+```

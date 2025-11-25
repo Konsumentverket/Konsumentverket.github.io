@@ -1,0 +1,36 @@
+---
+description: A ContactForms component.
+---
+
+import { ContactForms } from './contact-forms';
+import { WithContentExpander } from '@konsumentverket-sverige/designsystem.with-content-expander';
+
+### Component identifier
+```js
+data-comp="contact-forms"
+```
+
+## Basic usage
+
+Use the form checkbox component:
+
+```js
+<ContactForms />
+```
+
+```js live
+<ContactForms
+    title="Kontakta vägledning"
+    type="guidance"
+>
+    <WithContentExpander
+      useLightBlueAlternativeStyling={true}
+      text="Så behandlar vi dina personuppgifter"
+      wrappedComponent={
+        <>
+          <p>Lorem ipsum dolor sit amet</p>
+        </>
+      }
+    />
+</ContactForms>
+```

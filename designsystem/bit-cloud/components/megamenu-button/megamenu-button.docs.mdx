@@ -1,0 +1,37 @@
+---
+
+description: A megamenu button component.
+
+---
+
+## Introduction
+
+The megamenu buttton component is a reusable UI element designed for React applications, providing users with interactive clickable elements. It can serve as both a standard button and a link. The appearance of the button can be easily customized using Emotion styling. Additionally, it supports onClick event handling to trigger actions.
+
+import { MegamenuButton } from './megamenu-button';
+
+### Instructions
+#### Installation
+
+```js
+npm i @konsumentverket-sverige/designsystem.megamenu-button@0.0.1
+```
+
+#### Importing
+
+```js
+import Megamenubtn from '@konsumentverket-sverige/designsystem.megamenu-button@0.0.1';
+```
+
+### Usage:
+
+#### As megamenubtn
+```js
+<MegamenuButton
+    href={"link"}
+    iconLeft={
+      <Icon icon="MegamenuCompany" />
+    }
+    text="Lorem ipsum"
+  />;
+```

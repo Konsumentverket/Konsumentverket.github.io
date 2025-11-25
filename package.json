@@ -8,11 +8,9 @@
     "name": "Zero"
   },
   "peerDependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "@emotion/core": "^10.0.21",
-    "@emotion": "^10.0.21",
-    "date-fns": "^2.11.0"
+    "@emotion/core": "^10.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "scripts": {
     "start": "nodemon --watch designsystem --exec \"rollup -c\"",
@@ -20,30 +18,24 @@
     "build": "rollup -c"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.0-beta",
-    "nodemon": "^1.19.4",
-    "rollup": "^1.27.11",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-visualizer": "^4.1.0"
+    "@babel/core": "^7.24.5",
+    "@babel/node": "^7.25.0",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "babel-loader": "^9.1.3",
+    "nodemon": "^3.1.0",
+    "prop-types": "15.8.1",
+    "rollup": "^4.17.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-visualizer": "^5.12.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.21",
-    "date-fns": "^2.14.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react@1.0.21"
-    },
-    "componentsDefaultDirectory": "designsystem/components/{name}",
-    "packageManager": "npm"
+    "@emotion/core": "^10.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-google-recaptcha": "^3.1.0"
   }
 }

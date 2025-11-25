@@ -1,0 +1,39 @@
+---
+description: A Source component.
+---
+
+import { Source } from './source';
+
+## Basic usage
+
+Use the source component:
+
+```js
+<Source />
+```
+
+### Component identifier
+```js
+data-comp="source"
+```
+
+### Usage:
+
+```js live
+<Source
+    baseUrl={"Gå till konsumentverket.se"}
+    sourcesCollection={{
+    items: [
+        {
+        linkUrl: "/",
+        linkText: "Konsumentverket",
+        occupationId: "fda16320-2da2-e411-9405-000d3a200e7c"
+        }
+    ]
+    }}
+    markdownText={"Lorem ipsum"}
+    reviewedDate={new Date()}
+    english={false}
+    bottomContent={"Granskad"}
+/>
+```

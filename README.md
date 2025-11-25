@@ -68,6 +68,25 @@ I projektets root katalog för föjande kommando:
     npm start
 ```
 
+## Bit.cloud
+
+```
+  ### install bit globally - you will need a bit.cloud account
+  > nvm use 20
+  > npx @teambit/bvm install
+  ### init bit and login to your bit account
+  > bit install
+  > bit login
+  ### build OR start bit
+  > bit build
+  > bit start
+
+  ### To export to bit.cloud
+  > bit tag --message "Export msg"
+  > bit export
+
+```
+
 ## Bit.dev
 
 ```

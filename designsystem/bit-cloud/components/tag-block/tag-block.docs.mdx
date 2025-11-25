@@ -1,0 +1,33 @@
+---
+description: A TagBlock component.
+---
+
+import { TagBlock } from './tag-block';
+
+### Component identifier
+```js
+data-comp="tag-block"
+```
+
+## Basic usage
+
+Use the tag block component:
+
+```js
+<TagBlock />
+```
+
+```js live
+<TagBlock
+    heading="Lorem ipsum"
+    //icon="SalesLaw"
+    invertedColors={false}
+    secondaryArrowStyle={false}
+    tags={[
+    { titleInNavigation: "Lorem" },
+    { titleInNavigation: "Ipsum" },
+    { titleInNavigation: "Dolor" },
+    { titleInNavigation: "Sit" }
+    ]}
+/>
+```

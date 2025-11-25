@@ -1,0 +1,35 @@
+---
+description: A FormDataRequest component.
+---
+
+import { FormDataRequest } from './form-data-request';
+import { WithContentExpander } from '@konsumentverket-sverige/designsystem.with-content-expander';
+
+### Component identifier
+```js
+data-comp="form-data-request"
+```
+
+## Basic usage
+
+Use the form checkbox component:
+
+```js
+<FormDataRequest />
+```
+
+```js live
+<FormDataRequest
+    title="Ange dina uppgifter"
+>
+    <WithContentExpander
+      useLightBlueAlternativeStyling={true}
+      text="Så behandlar vi dina personuppgifter"
+      wrappedComponent={
+        <>
+          <p>Lorem ipsum dolor sit amet</p>
+        </>
+      }
+    />
+</FormDataRequest>
+```

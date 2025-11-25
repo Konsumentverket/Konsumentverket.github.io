@@ -5,7 +5,6 @@ import * as EditorIcons from '@konsumentverket-sverige/designsystem.icons-editor
 
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
-  console.log("EditorIcons", EditorIcons)
   const Component = SystemIcons[icon] || EditorIcons[icon];
 
   if (!Component) {
@@ -17,7 +16,7 @@ const Icon = ({ icon, className, style, title, ...otherAttr }) => {
     <Component
       focusable="false"
       className={className}
-      style={style}
+      css={style}
       aria-hidden={icon !== 'External'}
       title={title}
       {...otherAttr}

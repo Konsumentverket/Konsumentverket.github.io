@@ -21,7 +21,7 @@ export const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
     <Element
       title={title}
       className={className}
-      style={style}
+      css={style}
       role="img"
       aria-label={title || icon || ""}
       {...otherAttr}

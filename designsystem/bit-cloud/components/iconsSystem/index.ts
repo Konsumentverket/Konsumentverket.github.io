@@ -14,6 +14,7 @@ export * from "./SystemIcons/BankAccount/BankAccount.js";
 export * from "./SystemIcons/CallCenter/CallCenter.js";
 export * from "./SystemIcons/Camera/Camera.js";
 export * from "./SystemIcons/Check/Check.js";
+export * from "./SystemIcons/CheckPath/checkPath.js";
 export * from "./SystemIcons/ChevronLeft/ChevronLeft.js";
 export * from "./SystemIcons/ChevronRight/ChevronRight.js";
 export * from "./SystemIcons/Clear/Clear.js";

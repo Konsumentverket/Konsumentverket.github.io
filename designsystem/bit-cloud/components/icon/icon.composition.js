@@ -13,7 +13,7 @@ import {
 } from '@konsumentverket-sverige/designsystem.utils';
 
 const iconContainerStyle = { display: 'flex', alignItems: 'center', flexDirection: 'column', padding: '16px 0' };
-const iconStyle = { marginTop: '8px', display: 'block' };
+const iconStyle = { marginTop: '8px', display: 'block', marginRight: '8px', backgroundColor: 'red' };
 const titleStyle = { fontSize: '16px', fontWeight: 600, marginBottom: '24px', textAlign: 'center' };
 
 export const BasicSystemIcon = () => {

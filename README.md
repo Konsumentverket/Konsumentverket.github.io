@@ -4,6 +4,10 @@
 Designsystem för Konsumentverkets sajter:
 [https://bit.cloud/konsumentverket-sverige/designsystem](https://bit.cloud/konsumentverket-sverige/designsystem)
 
+## Install dependencies
+```
+> npm install
+```
 
 ## Bit.cloud
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/core';
+import {jsx} from '@emotion/react';
 import {errorMessage} from "../contact-forms.css";
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 

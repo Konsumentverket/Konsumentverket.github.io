@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import React from 'react';
 
 export const DBFlight = ({ className, style, title, ...otherAttr }) => {

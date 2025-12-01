@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import {spacing, newColors, breakpoints, containerStyles} from '@konsumentverket-sverige/designsystem.utils';
 
 export const breadcrumbStyle = css`

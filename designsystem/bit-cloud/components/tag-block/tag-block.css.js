@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { newColors, colors, medium, spacing } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyle = css`

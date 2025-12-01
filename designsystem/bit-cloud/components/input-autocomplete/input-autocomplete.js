@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx, css } from '@emotion/react';
 import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle, useMemo } from 'react';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';

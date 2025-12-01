@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import { jsx, css } from '@emotion/react'
 import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 
 const loaderStyle = ({ color = newColors.primaries.fullBlue, width = '80px', height = "80px", border = "6px" }) => css`

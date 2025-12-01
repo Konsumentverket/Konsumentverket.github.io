@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { TextAreaStyle, TextAreaWrapperStyle, Label, invalidStyle } from "./text-area.css.js"
 import { useRef, useState } from 'react';
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import { jsx, css } from '@emotion/react'
 import { colors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 const disabled = css` 

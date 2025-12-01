@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import { colors, newColors, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const fieldWrapper = css`

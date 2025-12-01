@@ -1,4 +1,4 @@
-import {css} from "@emotion/core";
+import {css} from "@emotion/react";
 import {newColors, breakpoints, typography} from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyling = css`

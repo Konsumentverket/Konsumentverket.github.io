@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.disabledStyle = exports.fieldLabel = exports.fieldInput = exports.fieldWrapper = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _Colors = require("../Colors/Colors");
 

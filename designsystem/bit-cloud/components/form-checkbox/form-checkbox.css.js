@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { colors, newColors, spacing } from '@konsumentverket-sverige/designsystem.utils';
 import { checkPath } from '@konsumentverket-sverige/designsystem.icons-system';
 

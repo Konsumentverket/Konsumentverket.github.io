@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.TextArea = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _TextArea = require("./TextArea.css");
 

@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.topAreaIcon = exports.noIcon = exports.iconText = exports.iconCardStyle = exports.iconStyle = exports.arrowStyle = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _Colors = require("../Colors/Colors.js");
 

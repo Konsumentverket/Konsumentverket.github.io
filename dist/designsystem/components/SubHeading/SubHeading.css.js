@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.h7Style = exports.h6Style = exports.h5Style = exports.h4Style = exports.h3Style = exports.h2Style = exports.h1Style = exports.commonSubHeadingStyle = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _globalStyles = require("../GlobalStyles/globalStyles");
 

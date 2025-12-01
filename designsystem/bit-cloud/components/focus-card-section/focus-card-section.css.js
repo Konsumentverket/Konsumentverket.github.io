@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import { spacing, newColors, containerStyles, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 // Set the background color in a :before pseudo element instead?

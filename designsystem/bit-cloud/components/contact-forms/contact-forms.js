@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import {
   GoogleReCaptchaProvider,
 } from 'react-google-recaptcha-v3';

@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { css, Global } from '@emotion/core'
+import { jsx } from '@emotion/react';
+import { css, Global } from '@emotion/react'
 import { spacing } from './spacing'
 import { colors, newColors } from './colors';
 import { paragraph } from "./typography";

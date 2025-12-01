@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { typography } from '@konsumentverket-sverige/designsystem.utils';
 import {kovBlackStyle, kovBlueStyle, visuallyHiddenStyle} from "./sub-heading.css";
 

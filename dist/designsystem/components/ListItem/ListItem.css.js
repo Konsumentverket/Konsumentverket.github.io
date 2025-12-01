@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.invertedLink = exports.bottomText = exports.preambleStyle = exports.headline = exports.headlineDisabled = exports.disabled = exports.news = exports.wrapper = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _Colors = require("../Colors/Colors");
 

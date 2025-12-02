@@ -75,6 +75,13 @@ export const BasicTypography = () => {
               <li>Cras justo odio, dapibus ac facilisis in, egestas eget quam</li>
               <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros</li>
             </ol>
+            <h3>Unordered List with links</h3>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+              <li><a href="#">Consectetur adipiscing elit</a></li>
+              <li><a href="#">Integer molestie lorem at massa</a></li>
+              <li><a href="#">Facilisis in pretium nisl aliquet</a></li>
+            </ul>
           </>
         }/>
       </CompositionFonts>

@@ -35,6 +35,7 @@ export const typographyContainerStyle = css`
   }
   a:not(.noStyleComponent a, .noStyle) {
     ${typography.link}
+
     &:hover {
       ${typography.linkHover}
     }

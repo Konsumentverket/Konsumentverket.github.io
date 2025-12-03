@@ -159,7 +159,7 @@ export const BasicTypography = () => {
                   <a href="#">Facilisis in pretium nisl aliquet</a>
                 </li>
               </ul>
-              <h3>List with bold</h3>
+              <h3>List with bold text</h3>
               <ul>
                 <li>
                   Lorem ipsum: <strong>dolor</strong> sit amet

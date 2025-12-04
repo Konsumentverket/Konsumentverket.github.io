@@ -508,3 +508,31 @@ export const BasicWithSubComponentWithContentExpander = () => {
     </CompositionFonts>
   );
 };
+export const WithJustLinksInLists = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+
+      <WithContentExpander
+        wrapperId={'linksinlists'}
+        text={'Lorem ipsum dolor sit amet consectetur adipiscing elit'}
+        preamble={
+          'Pellentesque vulputate risus sit amet lorem volutpat eu aliquam odio varius?'
+        }
+        wrappedComponent={
+          <ul>
+            <li>
+              <a href="#">Test</a>
+            </li>
+            <li>
+              <a href="#">Test</a>
+            </li>
+            <li>
+              <a href="#">Test</a>
+            </li>
+          </ul>
+        }
+      />
+    </CompositionFonts>
+  );
+};

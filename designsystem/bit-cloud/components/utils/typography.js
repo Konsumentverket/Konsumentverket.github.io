@@ -354,10 +354,6 @@ export const link = css`
   &:not(.noStyle):focus {
     ${linkFocus};
   }
-
-  @media (min-width: ${breakpoints.m}) {
-    margin-bottom: 0;
-  }
 `;
 
 export const linkNoMargin = css`

@@ -1,4 +1,4 @@
-import {css} from '@emotion/react'
+import { css } from '@emotion/react';
 import {
   typography,
   breakpoints,
@@ -50,8 +50,23 @@ export const typographyContainerStyle = css`
     ${typography.olStyling};
   }
   blockquote:not(.noStyleComponent blockquote, .noStyle) {
-    p, a, li {
+    p,
+    a,
+    li {
       ${typography.blockquoteText};
+    }
+  }
+
+  li:not(.noStyleComponent li, .noStyle) {
+    a:not(.noStyleComponent a, .noStyle) {
+      ${typography.linkNoMargin}
+
+      &:hover {
+        ${typography.linkHover}
+      }
+      &:focus {
+        ${typography.linkFocus}
+      }
     }
   }
 `;
@@ -95,7 +110,7 @@ export const alternativeHeadingStyle = css`
     ${typography.subHeadingMedium};
   }
   h5:not(.noStyleComponent h5),
-  h6:not(.noStyleComponent h6){
+  h6:not(.noStyleComponent h6) {
     ${typography.subHeadingSmall};
   }
   h2:not(.noStyleComponent h2),
@@ -106,4 +121,3 @@ export const alternativeHeadingStyle = css`
     ${typography.richTextHeadingMargin};
   }
 `;
-

@@ -133,8 +133,15 @@ export const mainLinkStyle = css`
       width: calc(100% + 12px) !important;
       margin-left: -12px !important;
       padding: 0 !important;
-      z-index: 1;
-      position: relative;
+
+      .noLinkChildren & {
+        z-index: 1;
+        position: relative;
+
+        width: calc(100% - 16px) !important;
+        margin-left: 4px !important;
+        padding: 0 !important;
+      }
     }
 
     .noLinkChildren & {

@@ -13,18 +13,20 @@ export const Heading = ({
   contentfulName = '',
   addSearch = null,
   noSnippet = null,
-  }) => (
-  <SubHeading
-    level={level}
-    text={text}
-    styleLevel={styleLevel}
-    headingLine={headingLine}
-    richText={richText}
-    contentfulId={contentfulId}
-    contentfulName={contentfulName}
-    addSearch={addSearch}
-    noSnippet={noSnippet}
-  >
-    {children}
-  </SubHeading>
-);
+}) => {
+  return (
+    <SubHeading
+      level={level}
+      text={text}
+      styleLevel={styleLevel}
+      headingLine={headingLine}
+      richText={richText}
+      contentfulId={contentfulId}
+      contentfulName={contentfulName}
+      addSearch={addSearch}
+      noSnippet={noSnippet}
+    >
+      {children}
+    </SubHeading>
+  );
+};

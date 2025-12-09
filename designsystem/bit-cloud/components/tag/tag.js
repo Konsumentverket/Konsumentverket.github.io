@@ -3,12 +3,7 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 import { tagStyle } from './tag.css.js';
 
-const Tag = ({
-  id,
-  url,
-  text,
-  onClick
-}) => {
+const Tag = ({ id, url, text, onClick }) => {
   return (
     <a
       data-comp="tag"
@@ -19,7 +14,8 @@ const Tag = ({
       className="noStyle"
     >
       {text}
-    </a>)
-}
+    </a>
+  );
+};
 
 export { Tag };

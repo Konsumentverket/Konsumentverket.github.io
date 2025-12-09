@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React from "react";
-import { jsx } from "@emotion/core";
+import React from 'react';
+import { jsx } from '@emotion/core';
 import {
   sourceWrapperStyle,
   topWrapperStyle,
@@ -11,8 +11,8 @@ import {
   reviewText,
   bottomTextStyle,
   bottomBorderStyle,
-} from "./sourcs.css.js";
-import isExternal from "./isExternalUrl";
+} from './sourcs.css.js';
+import isExternal from './isExternalUrl';
 import { External } from '@konsumentverket-sverige/designsystem.utils';
 
 export const Source = ({
@@ -28,33 +28,33 @@ export const Source = ({
   const reviewed = reviewedDate ? new Date(reviewedDate) : null;
 
   const monthsSv = [
-    "januari",
-    "februari",
-    "mars",
-    "april",
-    "maj",
-    "juni",
-    "juli",
-    "augusti",
-    "september",
-    "oktober",
-    "november",
-    "december"
+    'januari',
+    'februari',
+    'mars',
+    'april',
+    'maj',
+    'juni',
+    'juli',
+    'augusti',
+    'september',
+    'oktober',
+    'november',
+    'december',
   ];
 
   const monthsEn = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
   ];
 
   return (
@@ -67,21 +67,21 @@ export const Source = ({
         {sourcesCollection && sourcesCollection.items.length > 0 && (
           <p css={sourceItemsContainer}>
             <span css={sourceTitle}>
-              {sourceText ? `${sourceText} ` : "Källa: "}
+              {sourceText ? `${sourceText} ` : 'Källa: '}
             </span>
             {sourcesCollection.items.map((item, idx) => {
               return (
                 <a
                   href={item.linkUrl}
-                  key={"link-" + idx}
+                  key={'link-' + idx}
                   css={sourceLink}
                   className={
-                    isExternal(baseUrl, item.linkUrl) ? "external" : null
+                    isExternal(baseUrl, item.linkUrl) ? 'external' : null
                   }
                 >
                   {item.linkText}
                   {isExternal(baseUrl, item.linkUrl) && (
-                    <External title="Extern länk" className="external"/>
+                    <External title="Extern länk" className="external" />
                   )}
                 </a>
               );
@@ -90,16 +90,16 @@ export const Source = ({
         )}
         {reviewed && (
           <div css={rightAlign}>
-            <p css={reviewText}>{
-                `
-                  ${reviewedDateText || english == true ? "Proofread: " : "Granskad: "}
+            <p css={reviewText}>
+              {`
+                  ${reviewedDateText || english == true ? 'Proofread: ' : 'Granskad: '}
                   ${reviewed.getDate()}
-                  ${english
-                    ? monthsEn[reviewed.getMonth()]
-                    : monthsSv[reviewed.getMonth()]
+                  ${
+                    english
+                      ? monthsEn[reviewed.getMonth()]
+                      : monthsSv[reviewed.getMonth()]
                   } ${reviewed.getFullYear()}
-                `
-              }
+                `}
             </p>
           </div>
         )}

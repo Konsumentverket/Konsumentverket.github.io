@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React from 'react'
-import { jsx } from '@emotion/core'
+import React from 'react';
+import { jsx } from '@emotion/core';
 import {
   wrapperStyling,
   warningWrapperStyling,
@@ -9,12 +9,10 @@ import {
   iconWrapper,
   iconWrapperWarning,
   iconColor,
-  articleEntryMarginStyling
-} from './notice-box.css.js'
-import {
-  EditorIcon
-} from '@konsumentverket-sverige/designsystem.icons-editor';
-
+  articleEntryMarginStyling,
+} from './notice-box.css.js';
+import { EditorIcon } from '@konsumentverket-sverige/designsystem.icons-editor';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const NoticeBox = ({
   children,
@@ -24,43 +22,37 @@ export const NoticeBox = ({
   contentfulId,
   contentfulName,
   articleEntryMargin = false,
-  type = "success",
+  type = 'success',
 }) => {
-
   if (!content && !children) {
     return null;
   }
 
-  const icon = type === "warning" ? "WarningTriangle" : "MonoCheck";
+  const icon = type === 'warning' ? 'WarningTriangle' : 'Check';
 
   return (
-    <div css={[
-      wrapperStyling,
-      type === "warning" ? warningWrapperStyling : null,
-      tag ? tagMargin : null,
-      articleEntryMargin ? articleEntryMarginStyling : null,
-    ]}
-     data-comp="notice-box"
-     data-contentful-field-id={contentfulName ?? "noticeBox"}
-     data-contentful-entry-id={contentfulId}
+    <div
+      css={[
+        wrapperStyling,
+        type === 'warning' ? warningWrapperStyling : null,
+        tag ? tagMargin : null,
+        articleEntryMargin ? articleEntryMarginStyling : null,
+      ]}
+      data-comp="notice-box"
+      data-contentful-field-id={contentfulName ?? 'noticeBox'}
+      data-contentful-entry-id={contentfulId}
     >
       {tag && (
-          <div css={[
-            iconWrapper,
-            type === "warning" ? iconWrapperWarning : null,
-          ]}>
-            <EditorIcon
-              icon={icon}
-              style={iconColor}
-            />
-          </div>
-        )
-      }
-      {headline && (
-        <h2 css={titleStyling}>{headline}</h2>
+        <div
+          css={[iconWrapper, type === 'warning' ? iconWrapperWarning : null]}
+        >
+          <SystemIcon icon={icon} style={iconColor} />
+        </div>
       )}
+
+      {headline && <h2 css={titleStyling}>{headline}</h2>}
       {children}
       {content}
     </div>
-  )
-}
+  );
+};

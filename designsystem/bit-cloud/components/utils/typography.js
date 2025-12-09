@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import {css, jsx} from '@emotion/core';
-import {newColors} from "./colors";
-import {breakpoints} from "./breakpoints";
+import { css, jsx } from '@emotion/core';
+import { newColors } from './colors';
+import { breakpoints } from './breakpoints';
 
 const baseHeading = css`
   color: ${newColors.kovBlue};
@@ -10,6 +10,10 @@ const baseHeading = css`
   position: relative;
   word-break: break-word;
   margin-bottom: 16px;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.lightBlue};
+  }
 `;
 
 export const h1 = css`
@@ -32,7 +36,7 @@ export const h1NoMargin = css`
 
 export const headingLine = css`
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     background: ${newColors.primaries.mediumOrange};
     top: 0;
@@ -241,7 +245,8 @@ export const paragraph = css`
   word-break: normal;
   margin-bottom: 14px;
 
-  b, strong {
+  b,
+  strong {
     font-weight: 500;
   }
 
@@ -249,6 +254,14 @@ export const paragraph = css`
     font-size: 2rem;
     line-height: 145%;
     margin-bottom: 16px;
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+    strong,
+    b {
+      color: ${newColors.kovWhite};
+    }
   }
 `;
 
@@ -320,11 +333,11 @@ export const textMiniAlt = css`
 `;
 
 export const blockquoteText = css`
-    ${paragraph};
+  ${paragraph};
 
-    @media (min-width: ${breakpoints.m}) {
-      ${textSmall};
-    }
+  @media (min-width: ${breakpoints.m}) {
+    ${textSmall};
+  }
 `;
 
 export const linkHover = css`
@@ -352,6 +365,13 @@ export const link = css`
 
   &:not(.noStyle):focus {
     ${linkFocus};
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+    &:hover {
+      color: ${newColors.shades.fullBlue};
+    }
   }
 `;
 
@@ -429,7 +449,6 @@ export const linkParagraphStrong = css`
   ${linkParagraph};
   font-weight: 700;
 `;
-
 
 export const clickHover = css`
   text-decoration: underline;
@@ -538,11 +557,14 @@ export const clickLargeUL = css`
   text-decoration: underline;
 `;
 
-
 const baseHeadingAlt = css`
   color: ${newColors.kovBlue};
   font-style: normal;
   font-weight: 700;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.lightBlue};
+  }
 `;
 
 export const h1Alt2 = css`
@@ -553,7 +575,7 @@ export const h1Alt2 = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.8rem;
-    line-height: 128.571% /* 36px */
+    line-height: 128.571%; /* 36px */
   }
 `;
 
@@ -610,6 +632,10 @@ const baseSubHeadingAlt = css`
   font-style: normal;
   font-weight: 700;
   margin-bottom: 8px;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.lightBlue};
+  }
 `;
 
 export const subHeadingAltBig = css`
@@ -740,14 +766,14 @@ export const ulListSpacing = css`
   margin: 32px 0 32px 0;
   padding: 0 0 0 8px;
 
-  [dir="rtl"] & {
+  [dir='rtl'] & {
     padding: 0 8px 0 0;
   }
 
-  @media(min-width: ${breakpoints.m}){
+  @media (min-width: ${breakpoints.m}) {
     padding: 0 0 0 16px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding: 0 16px 0 0;
     }
   }
@@ -757,7 +783,7 @@ export const ulSmallListSpacing = css`
   margin: 16px 0;
   padding: 0 0 0 8px;
 
-  @media(min-width: ${breakpoints.m}){
+  @media (min-width: ${breakpoints.m}) {
     margin: 24px 0;
     padding: 0 0 0 16px;
   }
@@ -773,14 +799,14 @@ export const ulStyling = css`
     ${paragraph};
     margin-bottom: 16px;
 
-    @media(min-width: ${breakpoints.m}){
+    @media (min-width: ${breakpoints.m}) {
       margin-bottom: 24px;
     }
 
     &:before {
       position: relative;
       top: -1px;
-      content: " ";
+      content: ' ';
       flex-shrink: 0;
       background-color: ${newColors.shades.fullGrey};
       border: 1px solid ${newColors.shades.fullGrey};
@@ -790,7 +816,7 @@ export const ulStyling = css`
       height: 7px;
       margin-right: 16px;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         margin-right: 0;
         margin-left: 16px;
       }
@@ -799,6 +825,15 @@ export const ulStyling = css`
 
   > :last-child {
     margin-bottom: 0;
+  }
+  html[data-theme='dark'] & {
+    li {
+      color: ${newColors.kovWhite};
+      ::before {
+        background: ${newColors.shades.mediumBlue};
+        border-color: ${newColors.shades.mediumBlue};
+      }
+    }
   }
 `;
 
@@ -814,7 +849,7 @@ export const ulSmallStyling = css`
 export const olListSpacing = css`
   margin: 32px 27px; // 8px + 19px
 
-  @media(min-width: ${breakpoints.m}){
+  @media (min-width: ${breakpoints.m}) {
     margin: 32px 37px; // 16px + 21px
   }
 `;
@@ -822,7 +857,7 @@ export const olListSpacing = css`
 export const olSmallListSpacing = css`
   margin: 16px 27px; // 8px + 19px
 
-  @media(min-width: ${breakpoints.m}){
+  @media (min-width: ${breakpoints.m}) {
     margin: 24px 37px; // 16px + 21px
   }
 `;
@@ -835,11 +870,11 @@ export const olStyling = css`
     padding-left: 16px;
     margin-bottom: 16px;
 
-    @media(min-width: ${breakpoints.m}){
+    @media (min-width: ${breakpoints.m}) {
       margin-bottom: 24px;
     }
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding-left: 0;
       padding-right: 16px;
     }
@@ -858,4 +893,3 @@ export const olSmallStyling = css`
     ${textSmall};
   }
 `;
-

@@ -1,45 +1,56 @@
-import { css } from "@emotion/core";
-import { newColors, spacing, medium, typography } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  spacing,
+  medium,
+  typography,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyling = css`
-    width: 100%;
-    background-color: ${newColors.secondaries.lightGreen};
-    border-radius: 16px;
-    padding: ${spacing.m} ${spacing.s};
-    position: relative;
-    margin-top: 24px;
+  width: 100%;
+  background-color: ${newColors.secondaries.lightGreen};
+  border-radius: 16px;
+  padding: ${spacing.m} ${spacing.s};
+  position: relative;
+  margin-top: 24px;
 
-    ${medium} {
-        margin-top: 32px;
+  ${medium} {
+    margin-top: 32px;
+  }
+
+  li,
+  p {
+    ${typography.paragraphNoMargin};
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
+  }
 
+  ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
 
-    li, p {
-        ${typography.paragraphNoMargin};
+    li {
+      position: relative;
 
-        &:last-of-type {
-            margin-bottom: 0;
-        }
+      &:before {
+        content: '';
+        width: 9px;
+        height: 9px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: ${newColors.secondaries.fullGrey};
+      }
     }
-
-    ul {
-        padding-left: 0;
-        margin: 0;
-        list-style: none;
-
-        li {
-            position: relative;
-
-            &:before {
-                content: '';
-                width: 9px;
-                height: 9px;
-                display: inline-block;
-                border-radius: 50%;
-                background-color: ${newColors.secondaries.fullGrey};
-            }
-        }
+  }
+  html[data-theme='dark'] & {
+    background-color: ${newColors.secondaries.fullGreen};
+    p {
+      color: ${newColors.kovWhite};
     }
+  }
 `;
 
 export const warningWrapperStyling = css`
@@ -63,15 +74,18 @@ export const articleEntryMarginStyling = css`
 `;
 
 export const titleStyling = css`
-    ${typography.h2NoMargin};
-    color: ${newColors.primaries.kovBlack};
-    & {
-      margin-bottom: 16px;
+  ${typography.h2NoMargin};
+  color: ${newColors.primaries.kovBlack};
+  & {
+    margin-bottom: 16px;
 
-      ${medium} {
-        margin-bottom: 32px;
-      }
+    ${medium} {
+      margin-bottom: 32px;
     }
+  }
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const iconWrapper = css`
@@ -89,13 +103,20 @@ export const iconWrapper = css`
   ${medium} {
     top: -14px;
   }
+  html[data-theme='dark'] & {
+    background-color: ${newColors.secondaries.lightGreen};
+  }
 `;
 
 export const iconWrapperWarning = css`
-   background: none;
+  background: none;
 `;
-
 
 export const iconColor = css`
   fill: ${newColors.secondaries.lightGreen};
+  width: 20px;
+
+  html[data-theme='dark'] & {
+    fill: ${newColors.secondaries.fullGreen};
+  }
 `;

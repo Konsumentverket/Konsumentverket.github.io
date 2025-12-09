@@ -169,18 +169,19 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
               },
               validate: {
                 hasAt: (value) =>
-                  value.includes("@") || "E-postadressen måste innehålla ett @",
+                  value.includes('@') || 'E-postadressen måste innehålla ett @',
                 tldLength: (value) => {
-                  const domainParts = value.split(".");
+                  const domainParts = value.split('.');
                   const tld = domainParts[domainParts.length - 1];
                   return (
-                    (!tld || tld.length <= 63) ||
-                    "Toppdomänen (t.ex. .se) får inte vara längre än 63 tecken"
+                    !tld ||
+                    tld.length <= 63 ||
+                    'Toppdomänen (t.ex. .se) får inte vara längre än 63 tecken'
                   );
                 },
                 format: (value) =>
                   /^[^\s@]+@[^\s@]+\.[a-zA-ZåäöÅÄÖ]{2,}$/.test(value) ||
-                  "E-postadressen måste vara giltig (t.ex. namn@domän.se)",
+                  'E-postadressen måste vara giltig (t.ex. namn@domän.se)',
               },
             })}
           />
@@ -202,7 +203,10 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
       )}
 
       <div css={[childrenContainer]}>{children}</div>
-      <Button text="Skicka begäran" iconRight={<SystemIcon icon="ChevronRight" />} />
+      <Button
+        text="Skicka begäran"
+        iconRight={<SystemIcon icon="ChevronRight" />}
+      />
     </form>
   );
 };

@@ -1,18 +1,18 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/core';
 import {
   typographyContainerStyle,
   smallTypographyContainerStyle,
-  processStepStyle,
   alternativeHeadingStyle,
 } from './Typography.css.js';
-
 
 export const Typography = ({
   children,
   small = false,
   alternativeHeadings = false,
 }) => {
+  document.documentElement.setAttribute('data-theme', 'dark');
+
   return (
     <div
       css={[

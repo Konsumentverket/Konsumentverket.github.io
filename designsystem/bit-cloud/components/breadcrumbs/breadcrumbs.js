@@ -4,13 +4,13 @@ import React from 'react';
 import {
   breadcrumbStyle,
   breadcrumbTextStyle,
-  breadcrumbLinkStyle
+  breadcrumbLinkStyle,
 } from './Breadcrumbs.css.js';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const Breadcrumbs = ({
   items = [],
-  linkComponent: LinkComponent = 'a'
+  linkComponent: LinkComponent = 'a',
 }) => {
   return (
     <nav aria-label="breadcrumb" css={breadcrumbStyle} data-comp="breadcrumbs">
@@ -29,7 +29,7 @@ export const Breadcrumbs = ({
               {idx === items.length - 1 ? (
                 <span
                   aria-current="page"
-                  dir={crumb.isRtl ? "rtl" : null}
+                  dir={crumb.isRtl ? 'rtl' : null}
                   css={breadcrumbTextStyle}
                   lang={crumb.lang ? crumb.lang : null}
                 >
@@ -39,7 +39,7 @@ export const Breadcrumbs = ({
                 <LinkComponent
                   href={crumb.url}
                   css={breadcrumbLinkStyle}
-                  dir={crumb.isRtl ? "rtl" : null}
+                  dir={crumb.isRtl ? 'rtl' : null}
                   lang={crumb.lang ? crumb.lang : null}
                   injected={true}
                 >

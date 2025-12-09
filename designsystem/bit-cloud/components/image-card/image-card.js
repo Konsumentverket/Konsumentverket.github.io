@@ -9,7 +9,7 @@ import {
   focusText,
   iconBackground,
   puffIcon,
-  linkWrapper
+  linkWrapper,
 } from './image-card.css.js';
 import React from 'react';
 
@@ -43,11 +43,15 @@ export const ImageCard = ({
   const imageCardMarkup = () => {
     return (
       <div css={focusWrapper} className={extraClass} data-comp="image-card">
-        <div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
-        <div css={textArea} className='textarea'>
+        <div css={pictureWrapper} className={imageComponent ? 'image' : null}>
+          {imageArea}
+        </div>
+        <div css={textArea} className="textarea">
           <h3 css={focusHeadline}>
             {headline}
-            {!isExternalLink && <SystemIcon aria-hidden="true" icon="ChevronRight" />}
+            {!isExternalLink && (
+              <SystemIcon aria-hidden="true" icon="ChevronRight" />
+            )}
           </h3>
           {!!text && <p css={focusText}>{text}</p>}
         </div>

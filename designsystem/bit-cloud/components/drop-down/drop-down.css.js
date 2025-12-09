@@ -1,153 +1,194 @@
-import { css } from '@emotion/core'
-import { newColors, spacing, medium, typography } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  spacing,
+  medium,
+  typography,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyle = css`
-    display: block;
-    border: 1px solid ${newColors.shades.fullBlue};
-    background-color: ${newColors.kovWhite};
-    border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
-    box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
-`
+  display: block;
+  border: 1px solid ${newColors.shades.fullBlue};
+  background-color: ${newColors.kovWhite};
+  border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
+  box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.kovBlack};
+    border: 1px solid ${newColors.shades.mediumBlue};
+  }
+`;
 
 export const wrapperExpandedStyle = css`
-    box-shadow: none;
-    border: 1px solid transparent;
-`
+  box-shadow: none;
+  border: 1px solid transparent;
+`;
 
 export const innerWrapperStyle = css`
-    position: relative;
-`
+  position: relative;
+`;
 
 export const itemsWrapperStyle = css`
-    display: none;
+  display: none;
 `;
 
 export const itemsWrapperExpandedStyle = css`
-    display: block;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    left: -1px;
-    width: calc(100% + 2px);
-    padding: 56px ${spacing.s} ${spacing.s} ${spacing.s};
-    box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
-    background-color: ${newColors.kovWhite};
-    border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
-    border: 1px solid ${newColors.shades.fullBlue};
-    z-index: 1;
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  padding: 56px ${spacing.s} ${spacing.s} ${spacing.s};
+  box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
+  background-color: ${newColors.kovWhite};
+  border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
+  border: 1px solid ${newColors.shades.fullBlue};
+  z-index: 1;
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.kovBlack};
+    border: 1px solid ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const buttonStyle = css`
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 500;
-    line-height: 1.3333333;
-    font-size: 1.6rem;
-    gap: ${spacing.s};
-    color: ${newColors.shades.fullBlue};
-    padding: ${spacing.s} ${spacing.m};
-    background-color: transparent;
-    border: none;
-    margin: 0;
-    cursor: pointer;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  line-height: 1.3333333;
+  font-size: 1.6rem;
+  gap: ${spacing.s};
+  color: ${newColors.shades.fullBlue};
+  padding: ${spacing.s} ${spacing.m};
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  cursor: pointer;
 
-    ${medium} {
-        font-size: 1.8rem;
-    }
+  ${medium} {
+    font-size: 1.8rem;
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const chevronStyle = css`
-    fill: ${newColors.shades.fullBlue};
-    transform: rotate(90deg);
+  fill: ${newColors.shades.fullBlue};
+  transform: rotate(90deg);
 
-    @media (prefers-color-scheme: dark) {
-      fill: #fff;
-    }
-    @media (prefers-color-scheme: light) {
-      fill: ${newColors.shades.fullBlue};
-    }
+  @media (prefers-color-scheme: dark) {
+    fill: #fff;
+  }
+  @media (prefers-color-scheme: light) {
+    fill: ${newColors.shades.fullBlue};
+  }
 `;
 
 export const chevronExpandedStyle = css`
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
 `;
 
 export const maxHeightStyle = css`
-    max-height: 450px;
-    overflow: scroll;
+  max-height: 450px;
+  overflow: scroll;
 `;
 
 export const itemsListStyle = css`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid ${newColors.shades.mediumBlue};
+
+  li {
+    border-bottom: 1px solid ${newColors.shades.lightBlue};
+    display: block;
     margin: 0;
-    padding: 0;
-    list-style: none;
-    border-top: 1px solid ${newColors.shades.mediumBlue};
 
-    li {
-        border-bottom: 1px solid ${newColors.shades.lightBlue};
-        display: block;
-        margin: 0;
-
-        &:hover {
-            background-color: ${newColors.shades.lightBlue};
-        }
-
-        &:active {
-            background-color: ${newColors.shades.mediumBlue50};
-        }
-
-        &:first-of-type {
-            margin-top: ${spacing.s};
-        }
-
-        &:focus {
-          outline-offset: -4px !important;
-        }
+    &:hover {
+      background-color: ${newColors.shades.lightBlue};
     }
+
+    &:active {
+      background-color: ${newColors.shades.mediumBlue50};
+    }
+
+    &:first-of-type {
+      margin-top: ${spacing.s};
+    }
+
+    &:focus {
+      outline-offset: -4px !important;
+    }
+
+    html[data-theme='dark'] & {
+      border-bottom: 1px solid ${newColors.shades.kovBlue50};
+      &:hover {
+        background-color: ${newColors.shades.kovBlue75};
+      }
+      &:active {
+        background-color: ${newColors.shades.kovBlue75};
+      }
+    }
+  }
+
+  html[data-theme='dark'] & {
+    border-top: 1px solid ${newColors.shades.kovBlue50};
+  }
 `;
 
 export const itemLinkStyle = css`
-    display: block;
-    padding: 1.2rem 7px;
-    color: ${newColors.shades.fullBlue};
-    font-size: 1.6rem;
-    line-height: 1.5;
-    font-weight: 400;
-    text-decoration: none;
+  display: block;
+  padding: 1.2rem 7px;
+  color: ${newColors.shades.fullBlue};
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
 
-    &:hover {
-        text-decoration-thickness: 1px;
-        text-underline-offset: 2px;
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration: underline;
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const itemTextStyle = css`
-    display: block;
-    padding: 1.2rem 7px;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    font-weight: 400;
-    text-decoration: none;
-    margin-bottom: 0;
-    margin-top: 0;
+  display: block;
+  padding: 1.2rem 7px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const itemOptionWrapperStyle = css`
-    display: flex;
-    padding: 0 ${spacing.xs};
+  display: flex;
+  padding: 0 ${spacing.xs};
 `;
 
 export const applyFiltersBoxStyle = css`
-    padding-top: 16px;
-    display: inline-flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
+  padding-top: 16px;
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
 
   > :first-of-type svg {
     width: 24px;
@@ -161,7 +202,7 @@ export const applyFiltersBoxStyle = css`
 `;
 
 export const resetFilterStyle = css`
- ${typography.clickSmall};
+  ${typography.clickSmall};
   border-radius: 16px;
   color: ${newColors.primaries.fullBlue};
   position: relative;
@@ -190,13 +231,15 @@ export const resetFilterStyle = css`
     background-color: ${newColors.shades.mediumBlue50};
   }
 
-  &:hover, &:focus, &:active, &:visited {
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
     color: ${newColors.primaries.fullBlue};
     svg {
       fill: ${newColors.primaries.fullBlue};
     }
   }
-
 
   &:visited {
     color: ${newColors.primaries.fullBlue};

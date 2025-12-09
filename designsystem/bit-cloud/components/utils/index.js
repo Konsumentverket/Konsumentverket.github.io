@@ -16,7 +16,6 @@ import useOnClickOutside from './hooks/useOnClickOutside';
 
 export {
   // Utils
-
   colors,
   newColors,
   globalStyles,

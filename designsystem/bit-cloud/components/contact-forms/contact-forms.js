@@ -1,12 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import {
-  GoogleReCaptchaProvider,
-} from 'react-google-recaptcha-v3';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
-import {Guidance} from "./types/guidance";
-import {OtherCases} from "./types/otherCases";
-import {Subscribe} from "./types/subscribe";
+import { Guidance } from './types/guidance';
+import { OtherCases } from './types/otherCases';
+import { Subscribe } from './types/subscribe';
 
 export const ContactForms = ({
   recaptchaSiteKey,
@@ -21,19 +19,19 @@ export const ContactForms = ({
     guidance: Guidance,
     otherCases: OtherCases,
     subscribe: Subscribe,
-  }
+  };
 
   const SelectedForm = forms[type] || null;
 
-  if(!SelectedForm) return null;
+  if (!SelectedForm) return null;
 
   const props = {
     title,
     children,
     handleFormSubmit,
     texts,
-    isLoading
-  }
+    isLoading,
+  };
 
   return (
     <GoogleReCaptchaProvider
@@ -47,5 +45,5 @@ export const ContactForms = ({
     >
       <SelectedForm {...props} />
     </GoogleReCaptchaProvider>
-  )
+  );
 };

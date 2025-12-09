@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
-import React from "react";
+import { jsx } from '@emotion/core';
+import React from 'react';
 
 import {
   focusCardStyle,
@@ -23,23 +23,36 @@ export const FocusCard = ({
   dark = false,
   linkComponent: LinkComponent = 'a',
 }) => {
-
   return (
     <LinkComponent
-      className={"noStyle"}
+      className={'noStyle'}
       css={[focusCardStyle, dark && focusCardDarkStyle]}
       href={url}
       data-comp="focus-card"
       injected={true}
     >
       <div css={focusCardTextSectionStyle}>
-        {title && (<h3 css={focusCardTitleStyle} className="focusCardTitle">{title}</h3>)}
-        {headline && (<h3 css={focusCardTitleStyle} className="focusCardTitle">{headline}</h3>)}
-        {text && (<p css={focusCardTextStyle}>{text}</p>)}
+        {title && (
+          <h3 css={focusCardTitleStyle} className="focusCardTitle">
+            {title}
+          </h3>
+        )}
+        {headline && (
+          <h3 css={focusCardTitleStyle} className="focusCardTitle">
+            {headline}
+          </h3>
+        )}
+        {text && <p css={focusCardTextStyle}>{text}</p>}
       </div>
-      <div css={[focusCardIconSectionStyle, !dark && focusCardIconDarkSectionStyle]} className="focusCardIconSection">
+      <div
+        css={[
+          focusCardIconSectionStyle,
+          !dark && focusCardIconDarkSectionStyle,
+        ]}
+        className="focusCardIconSection"
+      >
         <SystemIcon
-          title={"Pil till höger"}
+          title={'Pil till höger'}
           icon="MonoArrowRight"
           css={focusCardChevronIconStyle}
         />

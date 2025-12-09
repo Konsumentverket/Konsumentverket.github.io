@@ -12,6 +12,10 @@ export const containerStyle = css`
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
   border: 1px solid rgba(22, 34, 89, 0.1);
   overflow: hidden;
+
+  html[data-theme='dark'] & {
+    border: 1px solid ${newColors.shades.kovBlue50};
+  }
 `;
 
 export const containerLightBlueAlternativeStyle = css`
@@ -102,6 +106,9 @@ export const titleStyle = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
   }
+  html[data-theme='dark'] & {
+    color: ${newColors.primaries.mediumBlue};
+  }
 `;
 
 export const titleAlternativeStyle = css`
@@ -128,6 +135,9 @@ export const preambleStyle = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.8rem;
+  }
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
   }
 `;
 
@@ -161,6 +171,10 @@ export const buttonResetStyle = css`
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue50};
+  }
 `;
 
 export const linkAlternativeStyle = css`
@@ -216,6 +230,10 @@ export const linkStyleExpanded = css`
     border-radius: ${spacing.s} ${spacing.s} 0 0;
     box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
   }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue75};
+  }
 `;
 
 export const linkStyleAlternativeExpanded = css`
@@ -262,6 +280,10 @@ export const chevronStyle = css`
   fill: ${newColors.primaries.fullBlue};
   transform: rotate(0);
   width: 18px;
+
+  html[data-theme='dark'] & {
+    fill: ${newColors.primaries.mediumBlue};
+  }
 `;
 
 export const chevronExpandedStyle = css`
@@ -274,6 +296,28 @@ export const expandedAreaStyle = css`
   visibility: hidden;
   padding: 0;
   height: 0;
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue75};
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: ${newColors.primaries.mediumBlue};
+    }
+    a {
+      color: ${newColors.primaries.mediumBlue};
+      &:hover {
+        color: ${newColors.primaries.fullBlue};
+      }
+    }
+    p {
+      color: ${newColors.kovWhite};
+    }
+  }
 `;
 
 export const expandedAreaAlternativeStyle = css`

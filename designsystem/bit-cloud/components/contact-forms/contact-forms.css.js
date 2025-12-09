@@ -6,9 +6,7 @@ import {
   colors,
 } from '@konsumentverket-sverige/designsystem.utils';
 
-import {
-  checkPath,
-} from '@konsumentverket-sverige/designsystem.icons-system';
+import { checkPath } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const form = css`
   display: flex;
@@ -36,11 +34,14 @@ export const form = css`
       margin-left: 8px;
     }
   }
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue};
+  }
 `;
 
 export const topLeftIcon = css`
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 32px;
     height: 32px;
@@ -60,6 +61,9 @@ export const formTitle = css`
 
   @media (min-width: ${breakpoints.m}) {
     margin-bottom: 32px;
+  }
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
   }
 `;
 
@@ -111,13 +115,16 @@ export const textAreaStyle = css`
   }
 `;
 
-
 export const labelStyle = css`
   display: block;
   font-weight: 700;
   margin-bottom: 16px;
   margin-right: 16px;
   height: 23px;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const formInputWrapper = css`
@@ -129,7 +136,6 @@ export const formInputWrapper = css`
     margin-bottom: 32px;
   }
 `;
-
 
 export const inputDescriptionStyle = css`
   //height: 57px;
@@ -173,7 +179,7 @@ export const informationButton = css`
   cursor: pointer;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     display: none;
     z-index: 2;
@@ -187,9 +193,9 @@ export const informationButton = css`
 `;
 
 export const informationButtonOpen = css`
-    &::after {
-      display: block;
-    }
+  &::after {
+    display: block;
+  }
 `;
 
 export const tooltip = css`
@@ -203,7 +209,7 @@ export const tooltip = css`
   top: calc(100% + 11px);
   z-index: 1;
   border-radius: 8px;
-  box-shadow: 0px 4px 20px rgba(22, 34, 89, 0.10);
+  box-shadow: 0px 4px 20px rgba(22, 34, 89, 0.1);
 
   button {
     background: none;
@@ -285,28 +291,30 @@ export const characterCountTextArea = css`
   bottom: 12px;
 `;
 
-
 export const exceededMaxCount = css`
   color: ${newColors.secondaries.fullPink};
   background-color: #ffffff;
 `;
 
 export const errorMessage = css`
-    align-items: center;
-    color: ${newColors.secondaries.fullPink};
-    display: flex;
-    gap: 6px;
-    font-size: 1.4rem;
-    line-height: 1.5;
-    margin-top: 8px;
+  align-items: center;
+  color: ${newColors.secondaries.fullPink};
+  display: flex;
+  gap: 6px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-top: 8px;
 
-    @media (min-width: ${breakpoints.m}) {
-      bottom: -30px;
-    }
+  @media (min-width: ${breakpoints.m}) {
+    bottom: -30px;
+  }
 
-    svg {
-      flex-shrink: 0;
-    }
+  svg {
+    flex-shrink: 0;
+  }
+  html[data-theme='dark'] & {
+    color: ${newColors.secondaries.lightPink};
+  }
 `;
 
 export const childrenContainer = css`
@@ -322,8 +330,8 @@ export const recaptchaContainer = css`
 `;
 
 export const loadingStyle = css`
-  background: #DFF1FB;
-  opacity: .5;
+  background: #dff1fb;
+  opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
@@ -464,7 +472,7 @@ export const visuallyHidden = css`
 // `;
 
 export const fileListStyle = css`
-    list-style: none;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -476,10 +484,9 @@ export const listItem = css`
   border-radius: 16px;
   background-color: ${newColors.kovWhite};
   border: 1px solid ${newColors.kovWhite};
-  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
   margin-bottom: 0;
 `;
-
 
 export const fileTileTop = css`
   display: flex;
@@ -529,24 +536,24 @@ export const fileDescriptionInstruction = css`
 `;
 
 export const checkboxLabelStyle = css`
-    display: flex;
-    align-items: center;
-    width: 100%;
-    color: ${newColors.shades.kovBlack};
-    font-size: 1.6rem;
-    line-height: 1.5;
-    font-weight: 400;
-    text-decoration: none;
-    position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: ${newColors.shades.kovBlack};
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
 
-    @media (min-width: ${breakpoints.m}) {
-      padding-right: 16px;
-    }
+  @media (min-width: ${breakpoints.m}) {
+    padding-right: 16px;
+  }
 
-    &:hover {
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2px;
-      text-decoration: underline;
+  &:hover {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration: underline;
   }
 `;
 
@@ -575,7 +582,7 @@ export const checkboxStyle = css`
     width: 24px;
     height: 24px;
     margin-right: 1.6rem;
-    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
+    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.1) inset;
   }
 
   .checkbox {
@@ -592,7 +599,9 @@ export const checkboxStyle = css`
   }
 
   .checkbox:checked + .checkbox-label:before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent('#fff')}' d='${checkPath}'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent(
+      '#fff'
+    )}' d='${checkPath}'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 48px 48px;
     background-position: 6px 8px;
@@ -613,12 +622,12 @@ export const checkboxStyle = css`
     background-color: ${newColors.shades.lightGrey25};
     box-shadow: none;
   }
-`
+`;
 
 export const labelPrimaryStyle = css`
   color: ${newColors.shades.fullBlue};
-`
+`;
 
 export const errorMargin = css`
   margin-bottom: 32px;
-`
+`;

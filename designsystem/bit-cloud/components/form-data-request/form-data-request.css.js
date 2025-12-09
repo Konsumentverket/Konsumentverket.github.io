@@ -18,18 +18,27 @@ export const form = css`
       margin-left: auto;
     }
   }
+  html[data-theme='dark'] & {
+    background: ${newColors.kovBlue};
+  }
 `;
 
 export const reasonTitle = css`
   h2 {
     margin-top: 0;
     margin-bottom: 4px;
+    html[data-theme='dark'] & {
+      color: ${newColors.shades.lightBlue};
+    }
   }
 `;
 
 export const formTitle = css`
   h3 {
     margin-bottom: 22px;
+    html[data-theme='dark'] & {
+      color: ${newColors.shades.lightBlue};
+    }
   }
 `;
 
@@ -53,6 +62,9 @@ export const formRow = css`
     display: block;
     font-weight: 700;
     margin-bottom: 18px;
+    html[data-theme='dark'] & {
+      color: ${newColors.kovWhite};
+    }
   }
 
   input {
@@ -71,21 +83,24 @@ export const formRow = css`
 `;
 
 export const errorMessage = css`
-    align-items: center;
-    color: ${newColors.secondaries.fullPink};
-    display: flex;
-    gap: 6px;
-    font-size: 1.4rem;
-    line-height: 1.5;
-    margin-top: 8px;
+  align-items: center;
+  color: ${newColors.secondaries.fullPink};
+  display: flex;
+  gap: 6px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-top: 8px;
 
-    @media (min-width: ${breakpoints.m}) {
-      bottom: -30px;
-    }
+  @media (min-width: ${breakpoints.m}) {
+    bottom: -30px;
+  }
 
-    svg {
-      flex-shrink: 0;
-    }
+  svg {
+    flex-shrink: 0;
+  }
+  html[data-theme='dark'] & {
+    color: ${newColors.secondaries.lightPink};
+  }
 `;
 
 export const childrenContainer = css`
@@ -107,7 +122,7 @@ export const radio = css`
   cursor: pointer;
   height: 0;
   width: 0;
-`
+`;
 
 export const radioLabel = css`
   display: inline-flex;
@@ -134,7 +149,7 @@ export const radioLabel = css`
     flex-shrink: 0;
     background: #fff;
     border-radius: 2px;
-    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
+    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.1) inset;
     box-sizing: border-box;
     border: 1px solid ${newColors.shades.fullBlue};
     display: inline-block;
@@ -146,5 +161,8 @@ export const radioLabel = css`
     input:checked + & {
       border: 6px solid ${newColors.shades.fullBlue};
     }
+  }
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
   }
 `;

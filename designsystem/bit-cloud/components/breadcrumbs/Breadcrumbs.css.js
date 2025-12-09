@@ -1,5 +1,9 @@
-import { css } from '@emotion/core'
-import {spacing, newColors, breakpoints, containerStyles} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  spacing,
+  newColors,
+  containerStyles,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const breadcrumbStyle = css`
   ${containerStyles};
@@ -11,6 +15,9 @@ export const breadcrumbStyle = css`
     margin: 0px calc(0.4rem);
     vertical-align: middle;
 
+    html[data-theme='dark'] & {
+      fill: ${newColors.kovWhite};
+    }
   }
 
   p {
@@ -32,6 +39,10 @@ export const breadcrumbTextStyle = css`
   ${breadcrumbItemStyle}
   text-decoration:none;
   color: ${newColors.kovBlack};
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const breadcrumbLinkStyle = css`
@@ -47,6 +58,18 @@ export const breadcrumbLinkStyle = css`
   &:visited {
     color: ${newColors.primaries.fullBlue} !important;
   }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.primaries.mediumBlue};
+
+    &:visited {
+      color: ${newColors.primaries.mediumBlue} !important;
+    }
+    &:hover {
+      background: ${newColors.shades.kovBlue50};
+      box-shadow: 0 0 0 4px ${newColors.shades.kovBlue50};
+    }
+  }
 `;
 
 export const arrowStyle = css`
@@ -56,9 +79,7 @@ export const arrowStyle = css`
   vertical-align: middle;
   fill: ${newColors.kovBlack};
 
-  @media (prefers-color-scheme: dark) {
-    fill: #fff;
+  html[data-theme='dark'] & {
+    fill: ${newColors.kovWhite};
   }
-
 `;
-

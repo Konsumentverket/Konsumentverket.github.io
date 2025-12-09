@@ -1,268 +1,339 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { css, Global } from '@emotion/core'
-import { spacing } from './spacing'
+import { css, Global } from '@emotion/core';
+import { spacing } from './spacing';
 import { colors, newColors } from './colors';
-import { paragraph } from "./typography";
+import { paragraph } from './typography';
 import React, { Children, useEffect } from 'react';
 
-export const CompositionFonts = ({children}) => {
+export const CompositionFonts = ({ children }) => {
   return (
     <>
-    <Global
-      styles={[
-        css`
-          @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-       `,
-        {
-          body: { fontFamily: 'Roboto' },
-        },
-      ]}
-    />
-    <div css={css`
-        font-family: 'Roboto';
-      `}>
-      {children}
-    </div>
+      <Global
+        styles={[
+          css`
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+          `,
+          {
+            body: { fontFamily: 'Roboto' },
+          },
+        ]}
+      />
+      <div
+        css={css`
+          font-family: 'Roboto';
+        `}
+      >
+        {children}
+      </div>
     </>
-  )
-}
+  );
+};
 
 export const GlobalStyles = ({
-  fontSize = "62.5%",
-  fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
+  fontSize = '62.5%',
+  fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
 }) => {
-
   useEffect(() => {
-    document.addEventListener('keyup', e => {
-      if (e.key === "Tab" && !document.body.classList.contains("tabnav")) {
-        document.body.classList.add("tabnav");
+    document.addEventListener('keyup', (e) => {
+      if (e.key === 'Tab' && !document.body.classList.contains('tabnav')) {
+        document.body.classList.add('tabnav');
       }
-    })
-    document.addEventListener('click', e => {
+    });
+    document.addEventListener('click', (e) => {
       // if detail is 0 it's most likely a keypress and not a mouse click
-      if (e.detail !== 0 && document.body.classList.contains("tabnav")) { document.body.classList.remove("tabnav") }
-    })
-    return () => { }
-  }, [])
+      if (e.detail !== 0 && document.body.classList.contains('tabnav')) {
+        document.body.classList.remove('tabnav');
+      }
+    });
+    return () => {};
+  }, []);
 
-  return <Global styles={globalStyles(fontSize, fontFamily)} />
-}
+  return <Global styles={globalStyles(fontSize, fontFamily)} />;
+};
 
 const fileIcon = (fileSvgPath) => `
   &:before{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 30' %3E%3Cpath fill='${encodeURIComponent(colors.theme1.mid)}' d='${fileSvgPath}'/%3E%3C/svg%3E");
   }
-`
-
+`;
 
 const globalStyles = (
-  fontSize = "62.5%",
+  fontSize = '62.5%',
   fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
 ) => css`
-  html, body,
-  button, div, span, applet,
-  object, iframe, h1, h2, h3, h4,h5, h6,
-  p, blockquote, pre,a,abbr, acronym,address,
-  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
-  small,strike,strong,sub,sup,tt,b,u,i,center,dl,
-  dt,dd,ol,ul,li,fieldset,form,label,legend,table,
-  caption,tbody,tfoot,thead,tr,th,td,article,aside,
-  canvas,details,embed,figure,figcaption,footer,
-  header,hgroup,menu,nav,output,ruby,section,summary,
-  time,mark,audio,video,textarea {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
-    html{
-      font-size: ${fontSize};
-      font-family: ${fontFamily};
-      line-height: 16px;
-      color: #4D4D4D;
-      overflow-x:hidden;
-    }
+  html,
+  body,
+  button,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video,
+  textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  html {
+    font-size: ${fontSize};
+    font-family: ${fontFamily};
+    line-height: 16px;
+    color: #4d4d4d;
+    overflow-x: hidden;
+  }
 
-    * {
-      box-sizing: border-box;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    body {
-      font-size: 1.6rem;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      margin: 0;
+  body {
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
 
-      &:not(.tabnav){
-        *:focus {
-          outline: none;
-        }
+    &:not(.tabnav) {
+      *:focus {
+        outline: none;
       }
-      &.tabnav {
-        *:focus {
-          outline: 4px solid ${newColors.secondaries.fullGreen};
-        }
-      }
-
     }
-
-    p {
-      ${paragraph};
-      display: block;
-    }
-
-    ul {
-      list-style: bullet inside none;
-
-      li {
-        margin-bottom: ${spacing.s};
+    &.tabnav {
+      *:focus {
+        outline: 4px solid ${newColors.secondaries.fullGreen};
       }
     }
+  }
 
-    i {
-      font-style: italic;
+  p {
+    ${paragraph};
+    display: block;
+  }
+
+  ul {
+    list-style: bullet inside none;
+
+    li {
+      margin-bottom: ${spacing.s};
     }
-    strong {
-      font-weight: 700;
+  }
+
+  i {
+    font-style: italic;
+  }
+  strong {
+    font-weight: 700;
+  }
+  u {
+    text-decoration: underline;
+  }
+
+  a {
+    &.external {
+      svg.external {
+        margin-left: 8px;
+      }
     }
-    u {
+
+    &:not(.noStyle) {
       text-decoration: underline;
-    }
+      font-weight: 500;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      color: ${newColors.shades.fullBlue};
 
-    a {
-
-      &.external {
-        svg.external {
-          margin-left: 8px;
-        }
+      svg {
+        fill: ${newColors.shades.fullBlue};
       }
 
-      &:not(.noStyle){
-        text-decoration: underline;
-        font-weight: 500;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 2px;
-        color:${newColors.shades.fullBlue};
-
+      &:hover {
+        box-shadow: 0 0 0 4px ${colors.theme1.midLight};
+        background-color: ${colors.theme1.midLight};
+        border-radius: 0.4rem;
+        text-decoration: none;
+        svg {
+          fill: ${colors.theme1.mid};
+        }
+      }
+      &:visited {
+        color: ${newColors.shades.fullBlue};
         svg {
           fill: ${newColors.shades.fullBlue};
         }
+      }
 
+      &:active {
+        box-shadow: 0 0 0 4px ${colors.theme1.midLight};
+        background-color: ${colors.theme1.midLight};
+        color: ${colors.theme1.xDark};
+        border-radius: 0.4rem;
+        text-decoration: none;
+
+        svg {
+          fill: ${colors.theme1.xDark};
+        }
+      }
+
+      &.invertedStyle:not(.noStyle) {
+        &:visited {
+          background-color: inherit;
+        }
         &:hover {
-          box-shadow: 0 0 0 4px ${colors.theme1.midLight};
-          background-color:${colors.theme1.midLight};
-          border-radius: .4rem;
-          text-decoration:none;
-          svg {
-            fill: ${colors.theme1.mid};
-          }
+          background-color: #fff;
+          box-shadow: 0 0 0 4px #fff;
         }
-        &:visited{
-          color:${newColors.shades.fullBlue};
-          svg {
-            fill: ${newColors.shades.fullBlue};
-          }
-        }
-
         &:active {
-          box-shadow: 0 0 0 4px ${colors.theme1.midLight};
-          background-color:${colors.theme1.midLight};
-          color: ${colors.theme1.xDark};
-          border-radius: .4rem;
-          text-decoration: none;
-
-          svg {
-            fill: ${colors.theme1.xDark};
-          }
+          box-shadow: 0 0 0 4px #fff;
+          background-color: #fff;
         }
-
-        &.invertedStyle:not(.noStyle){
-          &:visited{
-            background-color:inherit;
-          }
-          &:hover {
-            background-color:#fff;
-            box-shadow: 0 0 0 4px #fff;
-          }
-          &:active {
-            box-shadow: 0 0 0 4px #fff;
-            background-color:#fff;
-          }
-        }
-      }
-
-      .grecaptcha-badge {
-        z-index: 1;
       }
     }
 
-    .sr-only {
-      border: 0 !important;
-      clip: rect(1px, 1px, 1px, 1px) !important;
-      -webkit-clip-path: inset(50%) !important;
-      clip-path: inset(50%) !important;
-      height: 1px !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      padding: 0 !important;
-      position: absolute !important;
-      width: 1px !important;
-      white-space: nowrap !important;
-      text-transform: none;
+    .grecaptcha-badge {
+      z-index: 1;
     }
+  }
+
+  .sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+    text-transform: none;
+  }
 `;
 
 const LinkColors = css`
-  color:${colors.theme1.mid} !important;
-   &:hover {
-    background-color:${colors.theme1.midLight} !important;
-   }
-   &:active {
-    background-color:${colors.theme1.midLight} !important;
-    color:${colors.theme1.xDark} !important;
-   }
-   &:visited{
-    color:${colors.states.visited} !important;
+  color: ${colors.theme1.mid} !important;
+  &:hover {
+    background-color: ${colors.theme1.midLight} !important;
+  }
+  &:active {
+    background-color: ${colors.theme1.midLight} !important;
+    color: ${colors.theme1.xDark} !important;
+  }
+  &:visited {
+    color: ${colors.states.visited} !important;
   }
 `;
 
 const LinkColorsInverted = css`
- color:${colors.theme1.mid} !important;
-   &:hover {
-     background-color:#fff !important;
-     box-shadow: 0 0 0 4px #FFF !important;
-   }
-   &:active {
-     background-color:#fff !important;
-     box-shadow: 0 0 0 4px #FFF !important;
-     color:${colors.theme1.xDark} !important;
-   }
-   &:visited{
-    color:${colors.states.visited} !important;
+  color: ${colors.theme1.mid} !important;
+  &:hover {
+    background-color: #fff !important;
+    box-shadow: 0 0 0 4px #fff !important;
+  }
+  &:active {
+    background-color: #fff !important;
+    box-shadow: 0 0 0 4px #fff !important;
+    color: ${colors.theme1.xDark} !important;
+  }
+  &:visited {
+    color: ${colors.states.visited} !important;
   }
 `;
 
 export const LinkWrapperColorStyle = css`
-    a {
-      ${LinkColors}
-    }
+  a {
+    ${LinkColors}
+  }
 `;
 
 export const LinkWrapperInvertedColorStyle = css`
-    a {
-      ${LinkColorsInverted}
-    }
+  a {
+    ${LinkColorsInverted}
+  }
 `;
 
 export const ElementLinkColorStyle = css`
-    ${LinkColors}
+  ${LinkColors}
 `;
 
 export const ElementLinkInvertedColorStyle = css`
-    ${LinkColorsInverted}
+  ${LinkColorsInverted}
 `;
 
 export const VisuallyHidden = css`
@@ -274,7 +345,7 @@ export const VisuallyHidden = css`
   padding: 0;
   position: absolute;
   width: 1px;
-`
+`;
 
 export const viewportSmall = 420;
 export const viewportMedium = 768;

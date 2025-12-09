@@ -1,12 +1,16 @@
-import { css } from '@emotion/core'
-import { newColors, breakpoints,typography } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  breakpoints,
+  typography,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const containerStyle = css`
   position: relative;
 `;
 
 export const dropdownHasSuggestionsStyle = css`
-  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
 `;
 
 export const inputAndSubmitWrapper = css`
@@ -52,6 +56,16 @@ export const inputStyle = css`
   &:focus {
     border: 1px solid ${newColors.shades.fullBlue};
   }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.kovBlack};
+    color: ${newColors.kovWhite};
+    border: 1px solid ${newColors.shades.mediumBlue};
+
+    &::placeholder {
+      color: ${newColors.shades.mediumBlue};
+    }
+  }
 `;
 
 export const inputHeaderSearchStyle = css`
@@ -61,7 +75,7 @@ export const inputHeaderSearchStyle = css`
 `;
 
 export const clearInput = css`
-  background: ${newColors.kovWhite};
+  background: transparent;
   border: none;
   position: absolute;
   z-index: 1;
@@ -72,9 +86,13 @@ export const clearInput = css`
   padding-left: 2px;
   cursor: pointer;
 
-
   svg {
     fill: ${newColors.primaries.fullBlue};
+  }
+  html[data-theme='dark'] & {
+    svg {
+      fill: ${newColors.shades.mediumBlue};
+    }
   }
 `;
 
@@ -119,7 +137,7 @@ export const dropdownItemStyle = css`
   margin: 0;
   padding: 0;
 
-  &[aria-selected=true] {
+  &[aria-selected='true'] {
     background-color: ${newColors.primaries.lightBlue};
   }
 `;
@@ -138,7 +156,7 @@ export const dropdownButtonStyle = css`
   background-color: transparent;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 100%;
     left: 50%;
@@ -166,11 +184,11 @@ export const dropdownButtonStyle = css`
 `;
 
 export const loadingWrapperStyle = css`
-    top: 16px;
-    right: 48px;
-    position: absolute;
-    z-index: 1;
-    background: ${newColors.kovWhite};
+  top: 16px;
+  right: 48px;
+  position: absolute;
+  z-index: 1;
+  // background: ${newColors.kovWhite};
 `;
 
 export const searchButtonStyle = css`

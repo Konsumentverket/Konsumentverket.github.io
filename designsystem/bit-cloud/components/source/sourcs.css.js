@@ -1,5 +1,10 @@
-import {css} from "@emotion/core";
-import {newColors, spacing, typography, breakpoints} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  spacing,
+  typography,
+  breakpoints,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const sourceWrapperStyle = css`
   margin-bottom: 24px;
@@ -47,6 +52,9 @@ export const reviewText = css`
     font-size: 1.6rem;
     color: ${newColors.shades.kovBlack50};
   }
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const sourceTitle = css`
@@ -59,6 +67,9 @@ export const sourceTitle = css`
     font-size: 1.6rem;
     color: ${newColors.shades.kovBlack50};
   }
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const sourceLink = css`
@@ -69,7 +80,7 @@ export const sourceLink = css`
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: -9px;
@@ -92,7 +103,10 @@ export const sourceLink = css`
     top: 1px;
     left: 8px;
   }
-`
+  html[data-theme='dark'] & {
+    color: ${newColors.primaries.mediumBlue};
+  }
+`;
 
 export const bottomTextStyle = css`
   max-width: 748px;
@@ -100,4 +114,8 @@ export const bottomTextStyle = css`
   color: ${newColors.shades.kovBlack50};
   margin-top: 16px;
   margin-bottom: 0;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
 `;

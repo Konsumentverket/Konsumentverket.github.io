@@ -1,6 +1,8 @@
-import { css } from '@emotion/core'
-import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
-
+import { css } from '@emotion/core';
+import {
+  newColors,
+  breakpoints,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const focusWrapper = css`
   display: flex;
@@ -15,29 +17,42 @@ export const focusWrapper = css`
   &.fullWidth {
     @media (min-width: ${breakpoints.m}) {
       flex-direction: row !important;
-      min-width:700px;
+      min-width: 700px;
     }
   }
-`
+`;
 
 export const linkWrapper = css`
-  text-decoration:none;
-  display:flex;
+  text-decoration: none;
+  display: flex;
   flex-shrink: 0;
-  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
   border: 1px solid transparent;
   transition: background-color 0.3s;
   background-color: #fff;
   border-radius: 16px;
   height: 100%;
 
+  html[data-theme='dark'] & {
+    box-shadow: 0px 2px 4px 0px #00000080;
+    background-color: ${newColors.kovBlue};
+  }
+
   & > div {
     background-color: #fff;
     transition: background-color 0.3s;
+
+    html[data-theme='dark'] & {
+      background-color: ${newColors.kovBlue};
+    }
   }
 
   h3 {
     transition: all 0.3s;
+
+    html[data-theme='dark'] & {
+      color: ${newColors.shades.mediumBlue};
+    }
   }
 
   &:hover {
@@ -75,10 +90,11 @@ export const linkWrapper = css`
     fill: ${newColors.primaries.fullBlue};
   }
 
-  &:hover h3, &:active h3 {
+  &:hover h3,
+  &:active h3 {
     text-decoration: underline;
   }
-`
+`;
 
 export const focusHeadline = css`
   color: ${newColors.primaries.fullBlue};
@@ -107,8 +123,7 @@ export const focusHeadline = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.8rem;
   }
-
-`
+`;
 
 export const focusText = css`
   margin: 0;
@@ -118,13 +133,17 @@ export const focusText = css`
   font-weight: 400;
   line-height: 1.5;
   padding-bottom: 2.4rem;
-`
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
+`;
 
 export const textArea = css`
   padding: 0 2.4rem 0.8rem 2.4rem;
   box-sizing: border-box;
   width: 100%;
-`
+`;
 
 export const pictureWrapper = css`
   width: 100%;
@@ -157,22 +176,21 @@ export const pictureWrapper = css`
       }
     }
   }
-`
+`;
 
 export const iconBackground = css`
   border-top-right-radius: 1.6rem;
   border-top-left-radius: 1.6rem;
   position: relative;
   padding-top: 36.84%;
-`
-
+`;
 
 export const externalIcon = css`
   position: relative;
   margin-left: 0.8rem;
   fill: ${newColors.primaries.fullBlue};
-  width:2rem;
-`
+  width: 2rem;
+`;
 
 export const puffIcon = css`
   position: absolute;

@@ -45,6 +45,26 @@ export const focusCardStyle = css`
   &:active .focusCardTitle {
     text-decoration-color: currentColor;
   }
+
+  html[data-theme="dark"] & {
+    background-color: ${newColors.shades.kovBlue};
+    border: 1px solid ${newColors.shades.kovBlue};
+
+    &:hover,
+    &:focus {
+      background-color: ${newColors.shades.kovBlue75};
+      border: 1px solid ${newColors.shades.mediumBlue};
+    }
+
+    &:hover .focusCardIconSection,
+    &:focus .focusCardIconSection {
+      background-color: ${newColors.shades.fullBlue};
+    }
+
+    &:active .focusCardIconSection {
+      background-color: ${newColors.shades.fullBlue};
+    }    
+  }  
 `;
 
 export const focusCardDarkStyle = css`
@@ -76,6 +96,10 @@ export const focusCardTitleStyle = css`
     font-size: 2.4rem;
     margin: 0 0 ${spacing.s} 0;
   }
+
+  html[data-theme="dark"] & {
+    color: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const focusCardTextStyle = css`
@@ -84,6 +108,10 @@ export const focusCardTextStyle = css`
   color: ${newColors.kovBlack};
   padding: 0;
   margin-bottom: 0;
+
+  html[data-theme="dark"] & {
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const focusCardIconSectionStyle = css`
@@ -99,6 +127,10 @@ export const focusCardIconSectionStyle = css`
   border-radius: 200px 0px 0 200px;
   background-color: ${newColors.shades.lightBlue};
   // transition: background-color 0.15s ease;
+
+  html[data-theme="dark"] & {
+   background-color: ${newColors.shades.fullBlue};
+  } 
 `;
 
 export const focusCardIconDarkSectionStyle = css`
@@ -111,6 +143,8 @@ export const focusCardIconDarkSectionStyle = css`
     right: -1px;
     top: 0;
     // transition: background-color 0.15s ease;
+    html[data-theme="dark"] & {
+      background-color: ${newColors.primaries.fullBlue};
   }
 `;
 
@@ -120,4 +154,8 @@ export const focusCardChevronIconStyle = css`
   @media (min-width: ${breakpoints.m}) {
     margin-left: ${spacing.m};
   }
+
+  html[data-theme="dark"] & {
+    fill: ${newColors.primaries.mediumBlue};
+  } 
 `;

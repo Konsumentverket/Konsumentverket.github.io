@@ -1,5 +1,9 @@
-import {css} from "@emotion/core";
-import {newColors, breakpoints, typography} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  breakpoints,
+  typography,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyling = css`
   width: 100%;
@@ -26,10 +30,26 @@ export const wrapperStyling = css`
   a {
     ${typography.linkSmall};
   }
-`
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.secondaries.fullGrey};
+
+    p {
+      color: ${newColors.kovWhite};
+    }
+
+    a {
+      color: ${newColors.shades.mediumBlue};
+    }
+  }
+`;
 
 export const titleStyling = css`
   ${typography.subHeadingAltMini};
   color: ${newColors.shades.kovBlack50};
   margin-top: 0;
-`
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
+`;

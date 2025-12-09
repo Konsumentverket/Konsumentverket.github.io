@@ -12,7 +12,7 @@ import {
   buttonIconLeft,
   buttonIconRight,
   buttonIconOnly,
-  cookieStyle
+  cookieStyle,
 } from './Button.css.js';
 
 export const Button = ({
@@ -24,7 +24,7 @@ export const Button = ({
   linkStyleSmall = false,
   className,
   id,
-  type = "submit",
+  type = 'submit',
   selected,
   disabled,
   iconLeft,
@@ -39,8 +39,6 @@ export const Button = ({
   linkComponent: LinkComponent = 'a',
   ...other
 }) => {
-
-
   const cssClass = [className];
   let styles = [buttonStyle];
 
@@ -51,24 +49,24 @@ export const Button = ({
     chipsButtonStyle && styles.push(chipsStyle);
     linkStyle && styles.push(linkStyles);
     linkStyleSmall && styles.push(linkStylesSmall);
-    selected && cssClass.push("selectedButtonStyle");
-    linkStyle && cssClass.push("button--linkstyle");
-    (href && !linkStyle && !linkStyleSmall) && cssClass.push("noStyle");
-    text === '' && (iconLeft || iconRight) && styles.push(buttonIconOnly)
-    iconLeft && styles.push(buttonIconLeft)
-    iconRight && styles.push(buttonIconRight)
+    selected && cssClass.push('selectedButtonStyle');
+    linkStyle && cssClass.push('button--linkstyle');
+    href && !linkStyle && !linkStyleSmall && cssClass.push('noStyle');
+    text === '' && (iconLeft || iconRight) && styles.push(buttonIconOnly);
+    iconLeft && styles.push(buttonIconLeft);
+    iconRight && styles.push(buttonIconRight);
     smallButtonStyle && styles.push(smallStyle);
   }
 
-
-
   const ariaAttrs = {};
-  Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x]);
+  Object.keys(other)
+    .filter((x) => x.startsWith('aria-'))
+    .forEach((x) => (ariaAttrs[x] = other[x]));
 
   const props = {
     id: id,
     css: styles,
-    className: cssClass.join(" "),
+    className: cssClass.join(' '),
     disabled: disabled,
     onClick: onClick,
     ref: reference,
@@ -77,21 +75,28 @@ export const Button = ({
     ...ariaAttrs,
   };
 
-  return href
-    ? <LinkComponent
+  return href ? (
+    <LinkComponent
       data-comp="button"
       injected={true}
-      data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}
+      data-contentful-field-id={contentfulName}
+      data-contentful-entry-id={contentfulId}
       {...props}
     >
       {iconLeft}
       {text}
       {iconRight}
     </LinkComponent>
-    :
-    <button {...props} data-comp="button" data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}>
+  ) : (
+    <button
+      {...props}
+      data-comp="button"
+      data-contentful-field-id={contentfulName}
+      data-contentful-entry-id={contentfulId}
+    >
       {iconLeft}
       {text}
       {iconRight}
-    </button>;
+    </button>
+  );
 };

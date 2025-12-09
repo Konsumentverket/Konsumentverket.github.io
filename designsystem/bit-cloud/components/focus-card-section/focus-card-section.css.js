@@ -1,5 +1,6 @@
+import { breakpoints, containerStyles, newColors, spacing } from '@konsumentverket-sverige/designsystem.utils';
+
 import { css } from '@emotion/core'
-import { spacing, newColors, containerStyles, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 // Set the background color in a :before pseudo element instead?
 
@@ -11,6 +12,10 @@ export const focusCardSectionStyle = css`
     @media (min-width: ${breakpoints.m}) {
         padding: ${spacing.xl} 0;
     }
+
+    html[data-theme="dark"] & {
+        background-color: ${newColors.kovDarkModeBlue};
+    }        
 `;
 
 export const focusCardSectionContainerStyle = css`
@@ -38,6 +43,9 @@ export const focusCardSectionIconWrapperStyle = css`
     @media (min-width: ${breakpoints.m}) {
         margin-right: ${spacing.m};
     }
+    html[data-theme="dark"] & {
+        background-color: ${newColors.primaries.lightBlue};
+    }         
 `;
 
 export const focusCardSectionHeaderStyle = css`
@@ -58,6 +66,10 @@ export const focusCardSectionTitleStyle = css`
     @media (min-width: ${breakpoints.m}) {
         font-size: 2.8rem;
     }
+
+    html[data-theme="dark"] & {
+        color: ${newColors.shades.lightBlue50};
+    }           
 `;
 
 export const focusCardSectionTextStyle = css`
@@ -68,6 +80,10 @@ export const focusCardSectionTextStyle = css`
     @media (min-width: ${breakpoints.m}) {
         font-size: 2.0rem;
     }
+
+    html[data-theme="dark"] & {
+        color: ${newColors.kovWhite};
+    }         
 `;
 
 export const focusCardSectionItemsListStyle = css`

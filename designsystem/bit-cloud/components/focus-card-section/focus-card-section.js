@@ -33,7 +33,7 @@ export const FocusCardSection = ({
   };
   
   const modifierCssClass = backgroundColorMap[backgroundColor] || '';
-
+  
   return (
     <div css={[focusCardSectionStyle, modifierCssClass && modifierCssClass]} data-comp="focus-card-section">
       <div css={focusCardSectionContainerStyle}>

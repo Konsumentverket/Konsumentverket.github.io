@@ -1,4 +1,4 @@
-import {css} from '@emotion/core'
+import { css } from '@emotion/core';
 import {
   typography,
   breakpoints,
@@ -49,7 +49,9 @@ export const typographyContainerStyle = css`
     ${typography.olStyling};
   }
   blockquote:not(.noStyleComponent blockquote, .noStyle) {
-    p, a, li {
+    p,
+    a,
+    li {
       ${typography.blockquoteText};
     }
   }
@@ -94,7 +96,7 @@ export const alternativeHeadingStyle = css`
     ${typography.subHeadingMedium};
   }
   h5:not(.noStyleComponent h5),
-  h6:not(.noStyleComponent h6){
+  h6:not(.noStyleComponent h6) {
     ${typography.subHeadingSmall};
   }
   h2:not(.noStyleComponent h2),
@@ -105,4 +107,3 @@ export const alternativeHeadingStyle = css`
     ${typography.richTextHeadingMargin};
   }
 `;
-

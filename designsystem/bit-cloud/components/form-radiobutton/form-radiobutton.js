@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
-import React from 'react';
+import { jsx } from '@emotion/react'
+import React from 'react'
 import {
   wrapperStyle,
   labelStyle,
@@ -17,31 +17,31 @@ export const FormRadiobutton = ({
   disabled = false,
   checked = false,
   usePrimaryColor = false,
-}) => {
-  return (
-    <div
-      data-comp="form-radiobutton"
-      css={[wrapperStyle, fieldStyle]}
-      data-checked={checked}
+}) => (
+  <div
+    data-comp="form-radiobutton"
+    css={[wrapperStyle, fieldStyle]}
+    data-checked={checked}
+  >
+    <input
+      id={id}
+      name={name}
+      type="radio"
+      className="radio"
+      css={fieldStyle}
+      value={value}
+      disabled={disabled}
+      aria-disabled={disabled}
+      onChange={onChange}
+      checked={checked}
+    />
+    <label
+      className='radio-label'
+      htmlFor={id}
+      css={[labelStyle, usePrimaryColor && labelPrimaryStyle]}
     >
-      <input
-        id={id}
-        name={name}
-        type="radio"
-        className="radio"
-        value={value}
-        disabled={disabled}
-        aria-disabled={disabled}
-        onChange={onChange}
-        checked={checked}
-      />
-      <label
-        className="radio-label"
-        htmlFor={id}
-        css={[labelStyle, usePrimaryColor && labelPrimaryStyle]}
-      >
-        {labelText}
-      </label>
-    </div>
-  );
-};
+      {labelText}
+    </label>
+  </div>
+)
+

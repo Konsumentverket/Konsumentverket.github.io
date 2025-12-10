@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.secondaryArrowStyleCSS = exports.arrowStyle = exports.iconStyle = exports.tagItemText = exports.tagItem = exports.tagsListItem = exports.tagsList = exports.tagsArea = exports.tagIconHeading = exports.tagHeading = exports.tagLink = exports.invertedTag = exports.tagBlockItem = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _Colors = require("../Colors/Colors");
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import React, { useState, useEffect, useRef } from 'react';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import {useOnClickOutside} from '@konsumentverket-sverige/designsystem.utils';

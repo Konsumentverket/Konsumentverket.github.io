@@ -1,10 +1,13 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from "@emotion/react";
 
-import * as editorIconDefinitions from '@konsumentverket-sverige/designsystem.icons-editor';
+import 
+  * as editorIconDefinitions
+ from "@konsumentverket-sverige/designsystem.icons-editor";
+
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
-  const concatenatedIcons = {
+   const concatenatedIcons = {
     ...editorIconDefinitions,
   };
   const Element = concatenatedIcons[icon];
@@ -17,9 +20,9 @@ const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
     <Element
       title={title}
       className={className}
-      style={style}
+      css={style}
       role="img"
-      aria-label={title || icon || ''}
+      aria-label={title || icon || ""}
       {...otherAttr}
     />
   );

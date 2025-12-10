@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 export const Arrow = ({ className, style, title, ...otherAttr }) => {
 	return (
 		<svg className={className} css={style} width="24px" height="24px" viewBox="0 0 24 24" {...otherAttr}>

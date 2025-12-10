@@ -1,8 +1,6 @@
-import { css } from '@emotion/core';
-import {
-  newColors,
-  typography,
-} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/react'
+import {newColors, typography} from '@konsumentverket-sverige/designsystem.utils';
+
 
 export const ctaWrapper = css`
   display: flex;
@@ -10,7 +8,7 @@ export const ctaWrapper = css`
   width: 100%;
   justify-content: center;
   border-radius: 16px;
-  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
+  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   overflow: hidden;
 
   @media (min-width: 650px) {
@@ -28,41 +26,29 @@ export const ctaWrapper = css`
   }
 
   a:not(.button--linkstyle) {
-    @media (max-width: 450px) {
+   @media (max-width: 450px) {
       width: 100%;
     }
   }
-`;
+`
 export const noBoxshadow = css`
   box-shadow: none;
-`;
+`
 
 export const whiteBackground = css`
   background: ${newColors.kovWhite};
   border: 1px solid #fff;
-
-  html[data-theme='dark'] & {
-    background: ${newColors.kovBlue};
-  }
-`;
+`
 
 export const blueBackground = css`
   background: ${newColors.shades.lightBlue50};
   border: 1px solid ${newColors.shades.lightBlue50};
-
-  html[data-theme='dark'] & {
-    background: ${newColors.kovBlue};
-  }
-`;
+`
 
 export const greyBackground = css`
   background: ${newColors.shades.lightGrey25};
   border: 1px solid ${newColors.shades.lightGrey25};
-
-  html[data-theme='dark'] & {
-    background: ${newColors.kovBlue};
-  }
-`;
+`
 
 export const focusHeadline = css`
   font-size: 2.6rem;
@@ -76,11 +62,7 @@ export const focusHeadline = css`
     line-height: 1.4;
     margin-bottom: 3.2rem;
   }
-
-  html[data-theme='dark'] & {
-    color: ${newColors.primaries.lightBlue};
-  }
-`;
+`
 
 export const focusText = css`
   font-size: 1.6rem;
@@ -90,10 +72,7 @@ export const focusText = css`
   @media (min-width: 650px) {
     margin-bottom: 3.2rem;
   }
-  html[data-theme='dark'] & {
-    color: ${newColors.kovWhite};
-  }
-`;
+`
 
 export const paragraphStyling = css`
   ${typography.paragraph};
@@ -101,10 +80,7 @@ export const paragraphStyling = css`
   & {
     margin-bottom: 16px;
   }
-  html[data-theme='dark'] & {
-    color: ${newColors.primaries.lightBlue};
-  }
-`;
+`
 
 export const textArea = css`
   padding: 24px;
@@ -128,7 +104,7 @@ export const textArea = css`
     text-decoration: none;
     justify-content: flex-start;
   }
-`;
+`
 
 export const smallHeadlineStyle = css`
   ${typography.h3NoMargin};
@@ -136,10 +112,7 @@ export const smallHeadlineStyle = css`
   & {
     margin-bottom: 16px;
   }
-  html[data-theme='dark'] & {
-    color: ${newColors.primaries.lightBlue};
-  }
-`;
+`
 
 export const smallPaddingStyle = css`
   padding: 24px 16px;
@@ -147,7 +120,7 @@ export const smallPaddingStyle = css`
   @media (min-width: 650px) {
     padding: 24px;
   }
-`;
+`
 
 export const buttonRightStyle = css`
   a {
@@ -168,7 +141,7 @@ export const buttonRightStyle = css`
       margin-left: auto;
     }
   }
-`;
+`
 
 export const pictureWrapper = css`
   overflow: hidden;
@@ -192,20 +165,23 @@ export const pictureWrapper = css`
   }
 
   img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+   }
 
   @media (min-width: 650px) {
     width: 50%;
     min-height: 100%;
     height: auto;
   }
-`;
+`
 
-export const externalIcon = css``;
+
+export const externalIcon = css`
+
+`

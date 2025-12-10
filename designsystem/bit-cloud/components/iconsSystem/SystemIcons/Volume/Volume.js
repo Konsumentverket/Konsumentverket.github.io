@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import React from 'react';
 
 export const Volume = ({ className, style, title, ...otherAttr }) => {

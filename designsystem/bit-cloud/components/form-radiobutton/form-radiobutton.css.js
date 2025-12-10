@@ -1,32 +1,29 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react'
 import { colors, newColors } from '@konsumentverket-sverige/designsystem.utils';
 
+
 export const wrapperStyle = css`
-  position: relative;
-  display: flex;
-  width: 100%;
+    position: relative;
+    display: flex;
+    width: 100%;
 `;
 
 export const labelStyle = css`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 1.2rem 7px;
-  color: ${newColors.shades.kovBlack};
-  font-size: 1.6rem;
-  line-height: 1.5;
-  font-weight: 400;
-  text-decoration: none;
-  position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.2rem 7px;
+    color: ${newColors.shades.kovBlack};
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
 
-  &:hover {
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-    text-decoration: underline;
-  }
-
-  html[data-theme='dark'] & {
-    color: ${newColors.shades.kovWhite};
+    &:hover {
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      text-decoration: underline;
   }
 `;
 
@@ -48,7 +45,7 @@ export const fieldStyle = css`
     flex-shrink: 0;
     background: #fff;
     border-radius: 2px;
-    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.1) inset;
+    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
     border: 1px solid ${newColors.shades.fullBlue};
     display: inline-block;
     width: 16px;
@@ -58,11 +55,6 @@ export const fieldStyle = css`
 
     forced-color-adjust: none;
     -ms-high-contrast-adjust: none;
-
-    html[data-theme='dark'] & {
-      border: 1px solid ${newColors.shades.mediumBlue};
-      background-color: ${newColors.kovBlack};
-    }
   }
 
   .radio {
@@ -90,10 +82,6 @@ export const fieldStyle = css`
     left: 13px;
     top: auto;
     background: #fff;
-
-    html[data-theme='dark'] & {
-      background: ${newColors.shades.mediumBlue};
-    }
   }
 
   .radio[disabled],
@@ -110,4 +98,4 @@ export const fieldStyle = css`
     background-color: ${newColors.shades.lightGrey25};
     box-shadow: none;
   }
-`;
+`

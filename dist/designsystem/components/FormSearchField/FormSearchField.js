@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.FormSearchField = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _react = _interopRequireWildcard(require("react"));
 

@@ -1,19 +1,14 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx, css } from '@emotion/react'
 import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 
-const loaderStyle = ({
-  color = newColors.primaries.fullBlue,
-  width = '80px',
-  height = '80px',
-  border = '6px',
-}) => css`
-  display: inline-block;
-  width: ${width};
-  height: ${height};
-
+const loaderStyle = ({ color = newColors.primaries.fullBlue, width = '80px', height = "80px", border = "6px" }) => css`
+    display: inline-block;
+    width: ${width};
+    height: ${height};
+  
   &:after {
-    content: ' ';
+    content: " ";
     display: block;
     width: ${width};
     height: ${height};
@@ -30,25 +25,19 @@ const loaderStyle = ({
       transform: rotate(360deg);
     }
   }
-`;
+`
 
-export const Loading = ({ color, size = 'small', style }) => {
-  let sizeStyle = null;
+export const Loading = ({ color, size = "small", style }) => {
+  let sizeStyle = null
   switch (size) {
-    case 'small':
+    case "small":
       sizeStyle = {
         width: '20px',
         height: '20px',
         border: '3px',
-        color: color,
-      };
+        color: color
+      }
   }
 
-  return (
-    <div
-      css={[loaderStyle(sizeStyle), style]}
-      aria-busy="true"
-      className="lds-dual-ring"
-    ></div>
-  );
-};
+  return <div css={[loaderStyle(sizeStyle), style]} aria-busy="true" className="lds-dual-ring"></div>;
+}

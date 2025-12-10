@@ -1,113 +1,109 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react'
 import React from 'react';
 import {
-  wrapper,
-  mainLinkStyle,
-  childrenWrapper,
-  showAllLink,
-  customFontSize,
-  heading,
-  border,
-  iconWrapper,
+    wrapper,
+    mainLinkStyle,
+    childrenWrapper,
+    showAllLink,
+    customFontSize,
+    heading,
+    border,
+    iconWrapper
 } from './link-card.css.js';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
-const LinkCard = React.forwardRef(
-  (
-    {
-      text,
-      href,
-      expandText = 'Visa alla',
-      numResults,
-      children,
-      id,
-      icon,
-      headingLevel = 2,
-      onClick,
-      beforeToggleCount = 4,
-      childrenWrapperStyle,
-      linkComponent: LinkComponent = 'a',
-    },
-    ref
-  ) => {
+const LinkCard = React.forwardRef(({
+    text,
+    href,
+    expandText = "Visa alla",
+    numResults,
+    children,
+    id,
+    icon,
+    headingLevel = 2,
+    onClick,
+    beforeToggleCount = 4,
+    childrenWrapperStyle,
+    linkComponent: LinkComponent = 'a'
+}, ref) => {
+
     const childrenArray = React.Children.toArray(children);
     let itemsToShow = [];
     let className = 'noLinkChildren';
     let num = null;
 
     if (childrenArray && childrenArray.length > 0) {
-      itemsToShow = childrenArray.slice(0, beforeToggleCount).filter(Boolean);
-      if (childrenArray.length > 1) className = '';
-      num = numResults ?? childrenArray.length;
+        itemsToShow = childrenArray.slice(0, beforeToggleCount).filter(Boolean)
+        if (childrenArray.length > 1) className = '';
+        num = numResults ?? childrenArray.length;
     }
-    const singleItemClass = itemsToShow.length === 1 ? 'singleItem' : '';
+    const singleItemClass = itemsToShow.length === 1 ? "singleItem" : "";
 
-    const InnerLink = () => (
-      <span css={heading}>
-        <span css={iconWrapper}>
-          {icon}
-          <span
-            css={customFontSize}
-            dangerouslySetInnerHTML={{ __html: text }}
-          ></span>
-        </span>
-        <SystemIcon icon="MonoArrowRight" />
+  const InnerLink = () => (
+    <span css={heading}>
+      <span css={iconWrapper}>
+        {icon}
+        <span css={customFontSize} dangerouslySetInnerHTML={{__html: text}}></span>
       </span>
-    );
+      <SystemIcon icon="MonoArrowRight"/>
+    </span>
+  )
 
-    return (
-      <div id={id} css={[wrapper]} className={className} data-comp="link-card">
-        <LinkComponent
-          ref={ref}
-          href={href}
-          css={mainLinkStyle}
-          onClick={onClick}
-          injected={true}
-        >
-          {itemsToShow.length > 0 ? (
+  return (
+    <div id={id} css={[wrapper]} className={className} data-comp="link-card">
+      <LinkComponent
+        ref={ref}
+        href={href}
+        css={mainLinkStyle}
+        onClick={onClick}
+        injected={true}
+      >
+        {itemsToShow.length > 0
+          ? (
             <>
               <SubHeading level={headingLevel} styleLevel={3}>
-                <InnerLink />
+                <InnerLink/>
               </SubHeading>
               <div className="linkCardBorder" css={border}></div>
             </>
+
           ) : (
-            <InnerLink />
+            <InnerLink/>
           )}
+
+      </LinkComponent>
+
+      {itemsToShow.length > 0 && (
+        itemsToShow.length === 1 ? (
+          <div css={[childrenWrapper, childrenWrapperStyle]} className={singleItemClass}>
+            {itemsToShow}
+          </div>
+        ) : (
+          <ul css={[childrenWrapper, childrenWrapperStyle]}>
+            {itemsToShow.map((item, index) => (
+              <li key={index}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        )
+      )}
+
+      {childrenArray.length > beforeToggleCount &&
+        <LinkComponent
+          css={showAllLink}
+          href={href}
+          onClick={onClick}
+          injected={true}
+        >
+          {expandText} ({num}) <SystemIcon icon="MonoArrowRight"/>
         </LinkComponent>
+      }
+    </div>
+  )
+})
 
-        {itemsToShow.length > 0 &&
-          (itemsToShow.length === 1 ? (
-            <div
-              css={[childrenWrapper, childrenWrapperStyle]}
-              className={singleItemClass}
-            >
-              {itemsToShow}
-            </div>
-          ) : (
-            <ul css={[childrenWrapper, childrenWrapperStyle]}>
-              {itemsToShow.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          ))}
-
-        {childrenArray.length > beforeToggleCount && (
-          <LinkComponent
-            css={showAllLink}
-            href={href}
-            onClick={onClick}
-            injected={true}
-          >
-            {expandText} ({num}) <SystemIcon icon="MonoArrowRight" />
-          </LinkComponent>
-        )}
-      </div>
-    );
-  }
-);
-
-LinkCard.displayName = 'LinkCard';
-export { LinkCard };
+LinkCard.displayName = "LinkCard"
+export {LinkCard}

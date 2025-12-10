@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css, jsx } from '@emotion/react';
 import { newColors } from './colors';
 import { breakpoints } from './breakpoints';
 
@@ -10,10 +10,6 @@ const baseHeading = css`
   position: relative;
   word-break: break-word;
   margin-bottom: 16px;
-
-  html[data-theme='dark'] & {
-    color: ${newColors.shades.lightBlue};
-  }
 `;
 
 export const h1 = css`
@@ -255,14 +251,6 @@ export const paragraph = css`
     line-height: 145%;
     margin-bottom: 16px;
   }
-
-  html[data-theme='dark'] & {
-    color: ${newColors.kovWhite};
-    strong,
-    b {
-      color: ${newColors.kovWhite};
-    }
-  }
 `;
 
 export const paragraphNoMargin = css`
@@ -365,13 +353,6 @@ export const link = css`
 
   &:not(.noStyle):focus {
     ${linkFocus};
-  }
-
-  html[data-theme='dark'] & {
-    color: ${newColors.shades.mediumBlue};
-    &:hover {
-      color: ${newColors.shades.fullBlue};
-    }
   }
 `;
 
@@ -561,10 +542,6 @@ const baseHeadingAlt = css`
   color: ${newColors.kovBlue};
   font-style: normal;
   font-weight: 700;
-
-  html[data-theme='dark'] & {
-    color: ${newColors.shades.lightBlue};
-  }
 `;
 
 export const h1Alt2 = css`
@@ -632,10 +609,6 @@ const baseSubHeadingAlt = css`
   font-style: normal;
   font-weight: 700;
   margin-bottom: 8px;
-
-  html[data-theme='dark'] & {
-    color: ${newColors.shades.lightBlue};
-  }
 `;
 
 export const subHeadingAltBig = css`
@@ -798,6 +771,7 @@ export const ulStyling = css`
     flex-shrink: 0;
     ${paragraph};
     margin-bottom: 16px;
+    white-space-collapse: preserve;
 
     @media (min-width: ${breakpoints.m}) {
       margin-bottom: 24px;
@@ -806,7 +780,7 @@ export const ulStyling = css`
     &:before {
       position: relative;
       top: -1px;
-      content: ' ';
+      content: '';
       flex-shrink: 0;
       background-color: ${newColors.shades.fullGrey};
       border: 1px solid ${newColors.shades.fullGrey};
@@ -825,15 +799,6 @@ export const ulStyling = css`
 
   > :last-child {
     margin-bottom: 0;
-  }
-  html[data-theme='dark'] & {
-    li {
-      color: ${newColors.kovWhite};
-      ::before {
-        background: ${newColors.shades.mediumBlue};
-        border-color: ${newColors.shades.mediumBlue};
-      }
-    }
   }
 `;
 
@@ -869,6 +834,7 @@ export const olStyling = css`
     ${paragraph};
     padding-left: 16px;
     margin-bottom: 16px;
+    white-space-collapse: preserve;
 
     @media (min-width: ${breakpoints.m}) {
       margin-bottom: 24px;
@@ -893,3 +859,5 @@ export const olSmallStyling = css`
     ${textSmall};
   }
 `;
+
+//

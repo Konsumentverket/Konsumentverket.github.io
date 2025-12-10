@@ -1,8 +1,5 @@
-import { css } from '@emotion/core';
-import {
-  newColors,
-  breakpoints,
-} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/react'
+import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 export const eventBoxWrapper = css`
   display: flex;
@@ -12,15 +9,11 @@ export const eventBoxWrapper = css`
   align-items: flex-start;
   border-radius: 16px;
   background-color: ${newColors.primaries.lightBlue};
-
-  html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue75};
-  }
-`;
+`
 
 export const eventBoxInfoContainer = css`
   margin-bottom: 10px;
-`;
+`
 
 export const eventBoxInfo = css`
   font-size: 1.6rem;
@@ -28,9 +21,9 @@ export const eventBoxInfo = css`
   color: ${newColors.kovBlack};
 
   @media (min-width: ${breakpoints.m}) {
-    font-size: 2rem;
-    line-height: 1.4;
-    margin-bottom: 8px !important;
+     font-size: 2rem;
+     line-height: 1.4;
+     margin-bottom: 8px !important;
   }
 
   span {
@@ -50,24 +43,18 @@ export const eventBoxInfo = css`
   li {
     margin-bottom: 8px;
   }
-  html[data-theme='dark'] & {
-    color: ${newColors.kovWhite};
-  }
-`;
+`
 export const eventBoxDisclaimer = css`
   margin-top: 8px;
   font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 0 !important;
+  margin-bottom: 0!important;
   padding-bottom: 12px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.6rem;
   }
-  html[data-theme='dark'] & {
-    color: ${newColors.kovWhite};
-  }
-`;
+`
 export const eventBoxApply = css`
   margin-top: 16px;
 
@@ -78,7 +65,7 @@ export const eventBoxApply = css`
   a {
     width: fit-content;
   }
-`;
+`
 
 export const eventBoxOverdue = css`
   font-size: 1.8rem;
@@ -87,7 +74,7 @@ export const eventBoxOverdue = css`
   align-items: flex-start;
   line-height: 1.3;
   margin-top: 16px;
-  margin-bottom: 0 !important;
+  margin-bottom: 0!important;
   padding-bottom: 12px;
 
   @media (min-width: ${breakpoints.s}) {
@@ -108,16 +95,5 @@ export const eventBoxOverdue = css`
       min-width: 30px;
       margin-top: 0;
     }
-    html[data-theme='dark'] & {
-      path:nth-child(odd) {
-        fill: ${newColors.kovWhite};
-      }
-      path:nth-child(even) {
-        fill: ${newColors.shades.kovBlue75};
-      }
-    }
   }
-  html[data-theme='dark'] & {
-    color: ${newColors.kovWhite};
-  }
-`;
+`

@@ -29,9 +29,7 @@ export const OtherCases = ({
   isLoading,
   showV2,
   recaptchaSiteKeyV2,
-  handleV2,
-  setV2Token,
-  v2Token
+  handleV2
 }) => {
   const {
     register,
@@ -48,6 +46,7 @@ export const OtherCases = ({
 
   const {executeRecaptcha} = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
+  const [v2Token, setV2Token] = useState(null);
 
   if (!texts) return null;
 
@@ -98,7 +97,7 @@ export const OtherCases = ({
         recaptchaToken: token,
       };
 
-      handleFormSubmit(formData);
+      handleFormSubmit(formData, v2Token);
     } catch (error) {
       setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
     }
@@ -113,7 +112,7 @@ export const OtherCases = ({
     <form
       css={[form]}
       data-comp="contactForm-otherCases"
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmit, v2Token)}
       aria-busy={isLoading}
     >
 

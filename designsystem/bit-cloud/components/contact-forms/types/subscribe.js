@@ -31,8 +31,6 @@ export const Subscribe = ({
   showV2,
   recaptchaSiteKeyV2,
   handleV2,
-  setV2Token,
-  v2Token
 }) => {
   const {
     register,
@@ -43,7 +41,8 @@ export const Subscribe = ({
 
   const {executeRecaptcha} = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
-
+  const [v2Token, setV2Token] = useState(null);
+  
   if (!texts) return null;
 
   const {
@@ -55,7 +54,7 @@ export const Subscribe = ({
   } = texts;
 
   const onSubmit = (data) => {
-    handleFormSubmit(data);
+    handleFormSubmit(data, v2Token);
   };
 
 

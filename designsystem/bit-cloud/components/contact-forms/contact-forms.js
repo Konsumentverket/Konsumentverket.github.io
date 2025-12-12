@@ -27,7 +27,6 @@ export const ContactForms = ({
     subscribe: Subscribe,
   };
 
-  const [v2Token, setV2Token] = useState(null);
 
   const SelectedForm = forms[type] || null;
   if (!SelectedForm) return null;
@@ -54,13 +53,13 @@ export const ContactForms = ({
       return false;
     };
 
-    const handleSubmitInternal = async (formData) => {
+    const handleSubmitInternal = async (formData, v2Token) => {
       setPendingFormData(formData);
 
       try {
-        const v3Token = await executeRecaptcha("personuppgifter");
-
         if (!showV2) {
+          const v3Token = await executeRecaptcha("personuppgifter");
+
           const low = await scoreIsLow(v3Token);
           if (low) {
             setShowV2(true);
@@ -73,7 +72,7 @@ export const ContactForms = ({
           });
         }
         else {
-          handleV2();
+          handleV2(v2Token);
         }
 
       } catch (error) {
@@ -81,7 +80,7 @@ export const ContactForms = ({
       }
     };
 
-    const handleV2 = async () => {
+    const handleV2 = async (v2Token) => {
       if (!pendingFormData || !v2Token) return; // vänta tills token finns
       await handleFormSubmit({
         ...pendingFormData,
@@ -97,9 +96,7 @@ export const ContactForms = ({
       showV2,
       recaptchaSiteKeyV2,
       handleFormSubmit: handleSubmitInternal,
-      handleV2,
-      setV2Token,
-      v2Token
+      handleV2
     };
 
     return <SelectedForm {...props} />;

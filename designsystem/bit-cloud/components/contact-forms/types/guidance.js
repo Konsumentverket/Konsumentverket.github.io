@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
@@ -28,9 +28,7 @@ export const Guidance = ({
   isLoading,
   showV2,
   recaptchaSiteKeyV2,
-  handleV2,
-  setV2Token,
-  v2Token
+  handleV2
 }) => {
   const {
     register,
@@ -63,8 +61,10 @@ export const Guidance = ({
   const maxLengthEmail = 254;
   const maxLengthText = 2000;
 
+  const [v2Token, setV2Token] = useState(null);
+
   const onSubmit = (data) => {
-    handleFormSubmit(data);
+    handleFormSubmit(data, v2Token);
   };
 
   return (

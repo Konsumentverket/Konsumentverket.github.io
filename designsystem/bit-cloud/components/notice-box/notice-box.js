@@ -15,7 +15,6 @@ import {
   SystemIcon
 } from '@konsumentverket-sverige/designsystem.icons-system';
 
-
 export const NoticeBox = ({
   children,
   headline,
@@ -31,7 +30,7 @@ export const NoticeBox = ({
     return null;
   }
 
-  const icon = type === "warning" ? "WarningTriangle" : "MonoCheck";
+  const icon = type === "warning" ? "WarningTriangle" : "Check";
 
   return (
     <div css={[

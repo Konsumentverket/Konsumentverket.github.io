@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.baseLinkStyle = exports.collapseButtonStyle = exports.IconFullWidth = exports.IconExpandedStyle = exports.IconStyle = exports.ComponentWrapperStyle = exports.grayFocusedOnExpansionWrapper = exports.grayContentExpanderWrapper = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _globalStyles = require("../GlobalStyles/globalStyles");
 

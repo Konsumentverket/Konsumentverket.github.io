@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 
 export const MonoArrowSmall = ({ className, style, title, ...otherAttr }) => {
 	return (

@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.puffIcon = exports.externalIcon = exports.iconBackground = exports.pictureWrapper = exports.textArea = exports.focusText = exports.focusHeadline = exports.linkWrapper = exports.focusWrapper = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _Colors = require("../Colors/Colors");
 

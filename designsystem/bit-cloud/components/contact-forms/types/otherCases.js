@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/core';
+import {jsx} from '@emotion/react';
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@konsumentverket-sverige/designsystem.button';
@@ -10,6 +10,7 @@ import {
   formTitle,
   childrenContainer,
   recaptchaContainer,
+  recaptcha
 } from '../contact-forms.css.js';
 import {
   useGoogleReCaptcha,
@@ -25,7 +26,10 @@ export const OtherCases = ({
   children,
   handleFormSubmit,
   texts,
-  isLoading
+  isLoading,
+  showV2,
+  recaptchaSiteKeyV2,
+  handleV2
 }) => {
   const {
     register,
@@ -42,6 +46,7 @@ export const OtherCases = ({
 
   const {executeRecaptcha} = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
+  const [v2Token, setV2Token] = useState(null);
 
   if (!texts) return null;
 
@@ -92,7 +97,7 @@ export const OtherCases = ({
         recaptchaToken: token,
       };
 
-      handleFormSubmit(formData);
+      handleFormSubmit(formData, v2Token);
     } catch (error) {
       setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
     }
@@ -107,7 +112,7 @@ export const OtherCases = ({
     <form
       css={[form]}
       data-comp="contactForm-otherCases"
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmit, v2Token)}
       aria-busy={isLoading}
     >
 
@@ -236,9 +241,19 @@ export const OtherCases = ({
 
       {isLoading && <LoaderOverlay/>}
 
+      {/* V2 Fallback */}
+        {showV2 && (
+          <div css={recaptcha}>
+          <ReCAPTCHA
+            sitekey={recaptchaSiteKeyV2}
+            onChange={(token) => setV2Token(token)}
+          />
+          </div>
+        )}
+
       <Button
         className="submitButton"
-        disabled={isLoading}
+        disabled={isLoading || (showV2 && !v2Token)} 
         text={isLoading ? "Skickar..." : otherCasesSubmitButtonText}
         iconRight={isLoading ? <Loading color={"#FFF"}/> : <SystemIcon icon="ChevronRight"/>}
       />

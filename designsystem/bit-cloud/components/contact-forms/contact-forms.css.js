@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import {
   newColors,
   breakpoints,
@@ -328,6 +328,13 @@ export const recaptchaContainer = css`
   margin-bottom: 24px;
   position: relative;
 `;
+
+export const recaptcha = css`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px
+`;
+
 
 export const loadingStyle = css`
   background: #dff1fb;

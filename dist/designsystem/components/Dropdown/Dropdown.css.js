@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.invalidStyle = exports.selectWrapperStyle = exports.labelStyle = exports.selectStyle = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _Colors = require("../Colors/Colors");
 

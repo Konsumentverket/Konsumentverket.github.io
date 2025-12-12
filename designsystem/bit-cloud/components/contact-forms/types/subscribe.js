@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/core';
+import {jsx} from '@emotion/react';
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@konsumentverket-sverige/designsystem.button';
@@ -12,6 +12,7 @@ import {
   childrenContainer,
   recaptchaContainer,
   topLeftIcon,
+  recaptcha
 } from '../contact-forms.css.js';
 import {
   useGoogleReCaptcha,
@@ -27,6 +28,9 @@ export const Subscribe = ({
   handleFormSubmit,
   texts,
   isLoading,
+  showV2,
+  recaptchaSiteKeyV2,
+  handleV2,
 }) => {
   const {
     register,
@@ -37,7 +41,8 @@ export const Subscribe = ({
 
   const {executeRecaptcha} = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
-
+  const [v2Token, setV2Token] = useState(null);
+  
   if (!texts) return null;
 
   const {
@@ -48,29 +53,10 @@ export const Subscribe = ({
     subscribeSubmitButtonText
   } = texts;
 
-  const onSubmit = async (data) => {
-    if (!executeRecaptcha) {
-      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-      return;
-    }
-
-    try {
-      const token = await executeRecaptcha('personuppgifter');
-      if (!token) {
-        setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-        return;
-      }
-
-      const formData = {
-        ...data,
-        recaptchaToken: token,
-      };
-
-      handleFormSubmit(formData);
-    } catch (error) {
-      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-    }
+  const onSubmit = (data) => {
+    handleFormSubmit(data, v2Token);
   };
+
 
   const checkboxId = "consent";
 
@@ -158,9 +144,19 @@ export const Subscribe = ({
 
       {isLoading && <LoaderOverlay/>}
 
+      {/* V2 Fallback */}
+        {showV2 && (
+          <div css={recaptcha}>
+            <ReCAPTCHA
+              sitekey={recaptchaSiteKeyV2}
+              onChange={(token) => setV2Token(token)}
+            />
+          </div>
+        )}
+
       <Button
         className="submitButton"
-        disabled={isLoading}
+        disabled={isLoading || (showV2 && !v2Token)} 
         text={isLoading ? "Skickar..." : subscribeSubmitButtonText}
         iconRight={isLoading ? <Loading color={"#FFF"}/> : <SystemIcon icon="ChevronRight"/>}
       />

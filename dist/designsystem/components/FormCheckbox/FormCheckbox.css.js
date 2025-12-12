@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.invertedfieldStyle = exports.invertedLabelStyle = exports.checkbox = exports.labelStyle = exports.wrapperStyle = void 0;
 
-var _core = require("@emotion/core");
+var _core = require("@emotion/react");
 
 var _Colors = require("../Colors/Colors");
 

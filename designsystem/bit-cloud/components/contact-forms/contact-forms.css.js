@@ -321,6 +321,13 @@ export const recaptchaContainer = css`
   position: relative;
 `;
 
+export const recaptcha = css`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px
+`;
+
+
 export const loadingStyle = css`
   background: #DFF1FB;
   opacity: .5;

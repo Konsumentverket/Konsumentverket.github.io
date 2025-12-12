@@ -10,6 +10,7 @@ import {
   formTitle,
   childrenContainer,
   recaptchaContainer,
+  recaptcha
 } from '../contact-forms.css.js';
 import {
   useGoogleReCaptcha,
@@ -25,7 +26,10 @@ export const OtherCases = ({
   children,
   handleFormSubmit,
   texts,
-  isLoading
+  isLoading,
+  showV2,
+  recaptchaSiteKeyV2,
+  handleV2
 }) => {
   const {
     register,
@@ -235,6 +239,16 @@ export const OtherCases = ({
       <div css={[childrenContainer]}>{children}</div>
 
       {isLoading && <LoaderOverlay/>}
+
+      {/* V2 Fallback */}
+        {showV2 && (
+          <div css={recaptcha}>
+          <ReCAPTCHA
+            sitekey={recaptchaSiteKeyV2}
+            onChange={handleV2}
+          />
+          </div>
+        )}
 
       <Button
         className="submitButton"

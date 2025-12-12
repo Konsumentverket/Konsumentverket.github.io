@@ -62,6 +62,9 @@ export const BasicFormGuidance = () => {
         type={'guidance'}
         handleFormSubmit={(data) => console.log(data)}
         texts={formMicroCopy.guidance}
+                recaptchaSiteKeyV2="6Ld_DR8sAAAAALYIsQzIrZ36Lkdw5Dcrx4qvV_zG"
+        recaptchaSiteKey="6Ld7HpAqAAAAABEpwO_-vzrqZtMckt_0TFBkmEtP"
+
       >
         <WithContentExpander
           useLightBlueAlternativeStyling={true}
@@ -86,6 +89,8 @@ export const BasicFormOtherCases = () => {
         type={'otherCases'}
         handleFormSubmit={(data) => console.log(data)}
         texts={formMicroCopy.otherCases}
+        recaptchaSiteKeyV2=""
+        recaptchaSiteKey=""
       >
         <WithContentExpander
           useLightBlueAlternativeStyling={true}
@@ -119,6 +124,8 @@ export const BasicFormSubscribe = () => {
         type={'subscribe'}
         handleFormSubmit={(data) => console.log(data)}
         texts={formMicroCopy.subscribe}
+        recaptchaSiteKeyV2=""
+        recaptchaSiteKey=""
       >
         <WithContentExpander
           useLightBlueAlternativeStyling={true}

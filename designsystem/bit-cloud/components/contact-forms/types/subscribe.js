@@ -12,6 +12,7 @@ import {
   childrenContainer,
   recaptchaContainer,
   topLeftIcon,
+  recaptcha
 } from '../contact-forms.css.js';
 import {
   useGoogleReCaptcha,
@@ -27,6 +28,9 @@ export const Subscribe = ({
   handleFormSubmit,
   texts,
   isLoading,
+  showV2,
+  recaptchaSiteKeyV2,
+  handleV2
 }) => {
   const {
     register,
@@ -48,29 +52,10 @@ export const Subscribe = ({
     subscribeSubmitButtonText
   } = texts;
 
-  const onSubmit = async (data) => {
-    if (!executeRecaptcha) {
-      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-      return;
-    }
-
-    try {
-      const token = await executeRecaptcha('personuppgifter');
-      if (!token) {
-        setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-        return;
-      }
-
-      const formData = {
-        ...data,
-        recaptchaToken: token,
-      };
-
-      handleFormSubmit(formData);
-    } catch (error) {
-      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
-    }
+  const onSubmit = (data) => {
+    handleFormSubmit(data);
   };
+
 
   const checkboxId = "consent";
 
@@ -157,6 +142,16 @@ export const Subscribe = ({
       {children && <div css={[childrenContainer]}>{children}</div>}
 
       {isLoading && <LoaderOverlay/>}
+
+      {/* V2 Fallback */}
+        {showV2 && (
+          <div css={recaptcha}>
+            <ReCAPTCHA
+              sitekey={recaptchaSiteKeyV2}
+              onChange={handleV2}
+            />
+          </div>
+        )}
 
       <Button
         className="submitButton"

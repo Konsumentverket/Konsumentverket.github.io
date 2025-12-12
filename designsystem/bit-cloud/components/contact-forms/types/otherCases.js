@@ -29,7 +29,9 @@ export const OtherCases = ({
   isLoading,
   showV2,
   recaptchaSiteKeyV2,
-  handleV2
+  handleV2,
+  setV2Token,
+  v2Token
 }) => {
   const {
     register,
@@ -245,14 +247,14 @@ export const OtherCases = ({
           <div css={recaptcha}>
           <ReCAPTCHA
             sitekey={recaptchaSiteKeyV2}
-            onChange={handleV2}
+            onChange={(token) => setV2Token(token)}
           />
           </div>
         )}
 
       <Button
         className="submitButton"
-        disabled={isLoading}
+        disabled={isLoading || (showV2 && !v2Token)} 
         text={isLoading ? "Skickar..." : otherCasesSubmitButtonText}
         iconRight={isLoading ? <Loading color={"#FFF"}/> : <SystemIcon icon="ChevronRight"/>}
       />

@@ -12,8 +12,8 @@ import {
   articleEntryMarginStyling
 } from './notice-box.css.js'
 import {
-  EditorIcon
-} from '@konsumentverket-sverige/designsystem.icons-editor';
+  SystemIcon
+} from '@konsumentverket-sverige/designsystem.icons-system';
 
 
 export const NoticeBox = ({
@@ -49,7 +49,7 @@ export const NoticeBox = ({
             iconWrapper,
             type === "warning" ? iconWrapperWarning : null,
           ]}>
-            <EditorIcon
+            <SystemIcon
               icon={icon}
               style={iconColor}
             />

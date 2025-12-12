@@ -13,7 +13,7 @@ export const wrapperStyle = css`
   border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
   box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     background-color: ${newColors.kovBlack};
     border: 1px solid ${newColors.shades.mediumBlue};
   }
@@ -46,7 +46,7 @@ export const itemsWrapperExpandedStyle = css`
   border: 1px solid ${newColors.shades.fullBlue};
   z-index: 1;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     background-color: ${newColors.kovBlack};
     border: 1px solid ${newColors.shades.mediumBlue};
   }
@@ -74,7 +74,7 @@ export const buttonStyle = css`
     font-size: 1.8rem;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -127,7 +127,7 @@ export const itemsListStyle = css`
       outline-offset: -4px !important;
     }
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) & {
       border-bottom: 1px solid ${newColors.shades.kovBlue50};
       &:hover {
         background-color: ${newColors.shades.kovBlue75};
@@ -138,7 +138,7 @@ export const itemsListStyle = css`
     }
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     border-top: 1px solid ${newColors.shades.kovBlue50};
   }
 `;
@@ -158,7 +158,7 @@ export const itemLinkStyle = css`
     text-decoration: underline;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -173,7 +173,7 @@ export const itemTextStyle = css`
   margin-bottom: 0;
   margin-top: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
   }
 `;

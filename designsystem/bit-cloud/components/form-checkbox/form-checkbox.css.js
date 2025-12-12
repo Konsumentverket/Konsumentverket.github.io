@@ -27,7 +27,7 @@ export const labelStyle = css`
         text-decoration: underline;
       }
     }
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) & {
       color: ${newColors.kovWhite};
     }
 `;
@@ -55,7 +55,7 @@ export const checkboxStyle = css`
     border-radius: 4px;
     color: ${newColors.shades.fullBlue};
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) & {
       border: 1px solid ${newColors.shades.mediumBlue};
       background: ${newColors.kovBlack};
     }
@@ -81,7 +81,7 @@ export const checkboxStyle = css`
     background-position: px 0px;
     position: relative;
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) & {
       background-image: url(${checkmarkDarkSvg});
     }
   }
@@ -105,7 +105,7 @@ export const checkboxStyle = css`
 export const labelPrimaryStyle = css`
   color: ${newColors.shades.fullBlue};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
   }
 `;

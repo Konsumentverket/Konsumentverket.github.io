@@ -34,7 +34,7 @@ export const form = css`
       margin-left: 8px;
     }
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     background-color: ${newColors.shades.kovBlue};
   }
 `;
@@ -62,7 +62,7 @@ export const formTitle = css`
   @media (min-width: ${breakpoints.m}) {
     margin-bottom: 32px;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.kovWhite};
   }
 `;
@@ -122,7 +122,7 @@ export const labelStyle = css`
   margin-right: 16px;
   height: 23px;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.kovWhite};
   }
 `;
@@ -312,7 +312,7 @@ export const errorMessage = css`
   svg {
     flex-shrink: 0;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.secondaries.lightPink};
   }
 `;
@@ -332,9 +332,8 @@ export const recaptchaContainer = css`
 export const recaptcha = css`
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 16px
+  margin-bottom: 16px;
 `;
-
 
 export const loadingStyle = css`
   background: #dff1fb;

@@ -33,7 +33,7 @@ export const wrapper = css`
     margin-bottom: 10px;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     border: 1px solid ${newColors.shades.kovBlue50};
     background-color: ${newColors.shades.kovBlue75};
     box-shadow: 0px 2px 4px 0px #00000080;
@@ -56,7 +56,7 @@ export const heading = css`
     height: 16px !important;
     margin-right: 4px;
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) & {
       fill: ${newColors.shades.mediumBlue};
     }
   }
@@ -224,7 +224,7 @@ export const border = css`
   border-bottom: 1px solid ${newColors.shades.mediumBlue};
   padding: 0 !important;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     border-bottom: 1px solid ${newColors.shades.fullBlue50};
   }
 `;
@@ -261,7 +261,7 @@ export const childrenWrapper = css`
       border-radius: 2px !important;
       background-color: ${newColors.shades.lightBlue};
 
-      html[data-theme='dark'] & {
+      @media (prefers-color-scheme: dark) & {
         background-color: ${newColors.shades.kovBlue50};
         box-shadow: none !important;
       }
@@ -279,12 +279,12 @@ export const childrenWrapper = css`
       width: 12px;
       height: 16px;
 
-      html[data-theme='dark'] & {
+      @media (prefers-color-scheme: dark) & {
         fill: ${newColors.shades.mediumBlue};
       }
     }
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) & {
       color: ${newColors.shades.mediumBlue};
     }
   }
@@ -316,7 +316,7 @@ export const showAllLink = css`
     margin-left: 12px;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
     :hover {
       background-color: ${newColors.shades.kovBlue50};
@@ -336,7 +336,7 @@ export const customFontSize = css`
     font-size: 1.8rem;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
   }
 `;

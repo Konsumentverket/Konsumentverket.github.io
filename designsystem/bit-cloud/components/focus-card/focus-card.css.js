@@ -1,12 +1,18 @@
-import { css } from '@emotion/react'
-import { spacing, newColors, breakpoints, containerStyles, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/react';
+import {
+  spacing,
+  newColors,
+  breakpoints,
+  containerStyles,
+  medium,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const focusCardStyle = css`
   display: block;
   position: relative;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 2px 20px 0px rgba(22, 34, 89, 0.10);
+  box-shadow: 0px 2px 20px 0px rgba(22, 34, 89, 0.1);
   padding: ${spacing.m};
   background-color: ${newColors.kovWhite};
   border-radius: ${spacing.s};
@@ -46,7 +52,7 @@ export const focusCardStyle = css`
     text-decoration-color: currentColor;
   }
 
-  html[data-theme="dark"] & {
+  @media (prefers-color-scheme: dark) & {
     background-color: ${newColors.shades.kovBlue};
     border: 1px solid ${newColors.shades.kovBlue};
 
@@ -63,8 +69,8 @@ export const focusCardStyle = css`
 
     &:active .focusCardIconSection {
       background-color: ${newColors.shades.fullBlue};
-    }    
-  }  
+    }
+  }
 `;
 
 export const focusCardDarkStyle = css`
@@ -82,7 +88,7 @@ export const focusCardTextSectionStyle = css`
 
 export const focusCardTitleStyle = css`
   color: ${newColors.primaries.fullBlue};
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin: 0 0 ${spacing.s} 0;
   font-weight: 700;
   line-height: 1.5;
@@ -97,7 +103,7 @@ export const focusCardTitleStyle = css`
     margin: 0 0 ${spacing.s} 0;
   }
 
-  html[data-theme="dark"] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -109,7 +115,7 @@ export const focusCardTextStyle = css`
   padding: 0;
   margin-bottom: 0;
 
-  html[data-theme="dark"] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.kovWhite};
   }
 `;
@@ -128,9 +134,9 @@ export const focusCardIconSectionStyle = css`
   background-color: ${newColors.shades.lightBlue};
   // transition: background-color 0.15s ease;
 
-  html[data-theme="dark"] & {
-   background-color: ${newColors.shades.fullBlue};
-  } 
+  @media (prefers-color-scheme: dark) & {
+    background-color: ${newColors.shades.fullBlue};
+  }
 `;
 
 export const focusCardIconDarkSectionStyle = css`
@@ -143,7 +149,7 @@ export const focusCardIconDarkSectionStyle = css`
     right: -1px;
     top: 0;
     // transition: background-color 0.15s ease;
-    html[data-theme="dark"] & {
+    @media (prefers-color-scheme: dark) & {
       background-color: ${newColors.primaries.fullBlue};
   }
 `;
@@ -155,7 +161,7 @@ export const focusCardChevronIconStyle = css`
     margin-left: ${spacing.m};
   }
 
-  html[data-theme="dark"] & {
+  @media (prefers-color-scheme: dark) & {
     fill: ${newColors.primaries.mediumBlue};
-  } 
+  }
 `;

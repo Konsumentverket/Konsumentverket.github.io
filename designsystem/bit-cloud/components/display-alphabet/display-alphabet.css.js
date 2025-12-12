@@ -10,7 +10,7 @@ const displayAlphabetFont = css`
   text-decoration: none;
   line-height: 140%;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.fullGrey};
   }
 `;
@@ -29,7 +29,7 @@ export const alphabetWrapper = css`
     padding: 24px;
     border-radius: 24px;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     background: ${newColors.kovDarkModeBlue};
   }
 `;
@@ -65,7 +65,7 @@ export const validLetter = css`
     }
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
     &::after {
       border-bottom: 1px solid ${newColors.shades.mediumBlue};
@@ -95,7 +95,7 @@ export const activeLetter = css`
     visibility: visible;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) & {
     color: ${newColors.shades.mediumBlue};
     background: ${newColors.shades.kovBlue75};
     border: 1px solid ${newColors.shades.kovBlue75};

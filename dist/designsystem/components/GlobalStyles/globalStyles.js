@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.large = exports.medium = exports.small = exports.viewportLarge = exports.viewportMedium = exports.viewportSmall = exports.VisuallyHidden = exports.ElementLinkInvertedColorStyle = exports.ElementLinkColorStyle = exports.LinkWrapperInvertedColorStyle = exports.LinkWrapperColorStyle = exports.GlobalStyles = void 0;
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _Spacing = require("../Spacing/Spacing");
 

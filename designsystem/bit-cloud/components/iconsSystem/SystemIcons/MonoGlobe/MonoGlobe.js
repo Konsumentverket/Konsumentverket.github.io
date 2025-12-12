@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/react'
+import {jsx} from '@emotion/core'
 import React from 'react';
 
 export const MonoGlobe = ({className, style, title, ...otherAttr}) => {

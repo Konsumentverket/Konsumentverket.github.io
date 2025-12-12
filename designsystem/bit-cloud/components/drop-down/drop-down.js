@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useRef, useEffect } from 'react';
-import { jsx } from '@emotion/react';
+import { jsx } from '@emotion/core';
 import {
   itemsWrapperStyle,
   itemsWrapperExpandedStyle,

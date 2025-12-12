@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { jsx } from '@emotion/core';
 
 export const ArrowFat = ({ className, style, title, ...otherAttr }) => {
 	return (

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon / help_icons / lättläst</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.7133001,17.8758145 C10.1705634,17.3491759 9.89919509,16.7259486 9.89919509,15.9992334 L9.89919509,0 L14.0364124,0 L14.0364124,15.3323112 L20.9356075,15.3323112 L20.9356075,18.6646225 L12.6565734,18.6646225 C11.9068609,18.6646225 11.2560368,18.402453 10.7133001,17.8758145 M3.81410502,23.220391 C3.27136834,22.7029513 3,22.0728248 3,21.3323112 L3,5.33077808 L7.13721732,5.33077808 L7.13721732,20.665389 L14.0364124,20.665389 L14.0364124,24 L5.75737831,24 C5.00766577,24 4.3568417,23.7401303 3.81410502,23.220391" 
+        id="path-1"></path>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use fill="#000000" xlink:href="#path-1"></use>
+            <g id="Color-/-brand-/-darkblue" mask="url(#mask-2)" fill="#162259">
+                <rect x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

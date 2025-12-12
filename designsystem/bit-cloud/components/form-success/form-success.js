@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import {jsx} from '@emotion/react';
+import { jsx } from '@emotion/core';
 import {
   wrapper,
   dataListTitle,
@@ -10,11 +10,11 @@ import {
   nestedFlex,
   nestedKeyStyle,
   nestedFlexChild,
-  loader
+  loader,
 } from './form-success.css.js';
-import {NoticeBox} from '@konsumentverket-sverige/designsystem.notice-box';
-import {Loading} from '@konsumentverket-sverige/designsystem.loading';
-import {Button} from '@konsumentverket-sverige/designsystem.button';
+import { NoticeBox } from '@konsumentverket-sverige/designsystem.notice-box';
+import { Loading } from '@konsumentverket-sverige/designsystem.loading';
+import { Button } from '@konsumentverket-sverige/designsystem.button';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 
@@ -50,38 +50,38 @@ export const FormSuccess = ({
             <dl css={dataList}>
               {Object.keys(formData).map((key) => {
                 const hasNestedData = Array.isArray(formData[key]);
-                return (
-                  hasNestedData ? (
-                    <div key={key} css={nestedWrapper}>
-                      <dt css={nestedContainerTitle}>{key}:&nbsp;</dt>
-                      <dd css={nestedFlex}>
-                        {formData[key].map((item, index) => {
-                          const [key, value] = Object.entries(item)[0];
-                          return (
-                            <span key={index} css={[nestedFlex, nestedFlexChild]}>
-                              <span css={nestedKeyStyle}>{key}: </span>
-                              <span>{!!value ? value : "Saknar beskrivning."}</span>
+                return hasNestedData ? (
+                  <div key={key} css={nestedWrapper}>
+                    <dt css={nestedContainerTitle}>{key}:&nbsp;</dt>
+                    <dd css={nestedFlex}>
+                      {formData[key].map((item, index) => {
+                        const [key, value] = Object.entries(item)[0];
+                        return (
+                          <span key={index} css={[nestedFlex, nestedFlexChild]}>
+                            <span css={nestedKeyStyle}>{key}: </span>
+                            <span>
+                              {!!value ? value : 'Saknar beskrivning.'}
+                            </span>
                           </span>
-                          )
-                        })}
-                      </dd>
-                    </div>
-                  ) : (
-                    <div key={key}>
-                      <dt>{key}:&nbsp;</dt>
-                      <dd>
-                        {typeof formData[key] === "string"
-                          ? formData[key].split("\n").map((line, index) => (
+                        );
+                      })}
+                    </dd>
+                  </div>
+                ) : (
+                  <div key={key}>
+                    <dt>{key}:&nbsp;</dt>
+                    <dd>
+                      {typeof formData[key] === 'string'
+                        ? formData[key].split('\n').map((line, index) => (
                             <React.Fragment key={index}>
                               {line}
                               <br />
                             </React.Fragment>
                           ))
-                          : formData[key]}
-                      </dd>
-                    </div>
-                  )
-                )
+                        : formData[key]}
+                    </dd>
+                  </div>
+                );
               })}
             </dl>
           )}
@@ -90,10 +90,8 @@ export const FormSuccess = ({
 
       <Button
         onClick={buttonClick}
-        text={buttonText ?? "Ladda ner bekräftelse"}
-        iconRight={
-          <SystemIcon icon="MonoDownload"/>
-        }
+        text={buttonText ?? 'Ladda ner bekräftelse'}
+        iconRight={<SystemIcon icon="MonoDownload" />}
       />
     </div>
   );

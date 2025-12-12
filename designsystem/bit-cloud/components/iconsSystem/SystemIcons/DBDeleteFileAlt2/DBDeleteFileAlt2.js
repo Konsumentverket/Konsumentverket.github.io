@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/react'
+import {jsx} from '@emotion/core'
 
 export const DBDeleteFileAlt2 = ({className, style, title, ...otherAttr}) => {
   return (

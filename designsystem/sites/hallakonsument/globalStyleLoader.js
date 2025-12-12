@@ -1,4 +1,4 @@
-import { css,Global } from '@emotion/react'
+import { css,Global } from '@emotion/core'
 import {GlobalStyles} from '../../components/GlobalStyles/globalStyles'
 import React from 'react';
 import ReactDOM from 'react-dom';

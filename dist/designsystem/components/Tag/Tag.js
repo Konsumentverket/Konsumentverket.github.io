@@ -7,7 +7,7 @@ exports.Tag = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _Tag = require("./Tag.css");
 

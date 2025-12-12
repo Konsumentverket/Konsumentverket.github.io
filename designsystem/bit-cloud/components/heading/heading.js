@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { jsx } from '@emotion/core';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
 
 export const Heading = ({

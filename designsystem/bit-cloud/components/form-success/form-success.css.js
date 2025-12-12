@@ -1,8 +1,11 @@
-import { css } from "@emotion/react";
-import {newColors, typography} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  typography,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = css`
-    margin-bottom: 34px;
+  margin-bottom: 34px;
 `;
 
 export const dataListTitle = css`
@@ -33,7 +36,7 @@ export const dataList = css`
 `;
 
 export const nestedContainerTitle = css`
-    display: block;
+  display: block;
 `;
 
 export const nestedWrapper = css`

@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.linkTextWrapper = exports.customFontSize = exports.linkTextCardContentStyle = exports.innerTextWrapperStyle = exports.showAllLink = exports.childrenWrapper = exports.rotateArrow = exports.mainLinkStyle = exports.linkTextMainLinkStyle = exports.linkCardFrame = exports.wrapper = void 0;
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _Colors = require("../Colors/Colors");
 

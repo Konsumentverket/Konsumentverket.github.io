@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.sourceStyle = exports.sourceLink = exports.secondRow = exports.rightAlign = exports.firstRowUsabilla = exports.firstRow = exports.buttonStyle = void 0;
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _Colors = require("../Colors/Colors");
 

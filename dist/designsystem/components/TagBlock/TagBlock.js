@@ -7,7 +7,7 @@ exports.TagBlock = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _TagBlock = require("./TagBlock.css");
 

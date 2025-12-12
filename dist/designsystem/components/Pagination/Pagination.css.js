@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.currentPageStyle = exports.distanceIndicatorStyle = exports.prevPageStyleHidden = exports.nextPageStyle = exports.prevPageStyle = exports.pageStyle = exports.paginationWrapperStyle = void 0;
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _Colors = require("../Colors/Colors");
 

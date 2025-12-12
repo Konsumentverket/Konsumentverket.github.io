@@ -1,11 +1,18 @@
-import { css } from '@emotion/react'
-import {newColors, breakpoints} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  breakpoints,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 const displayAlphabetFont = css`
   font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
   line-height: 140%;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.fullGrey};
+  }
 `;
 
 export const alphabetWrapper = css`
@@ -22,7 +29,10 @@ export const alphabetWrapper = css`
     padding: 24px;
     border-radius: 24px;
   }
-`
+  html[data-theme='dark'] & {
+    background: ${newColors.kovDarkModeBlue};
+  }
+`;
 
 export const letter = css`
   text-align: center;
@@ -31,14 +41,14 @@ export const letter = css`
   border-radius: 2px;
   overflow: hidden;
   ${displayAlphabetFont};
-`
+`;
 
 export const validLetter = css`
   position: relative;
   color: ${newColors.shades.fullBlue};
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     height: 1px;
     bottom: 0;
@@ -55,11 +65,17 @@ export const validLetter = css`
     }
   }
 
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+    &::after {
+      border-bottom: 1px solid ${newColors.shades.mediumBlue};
+    }
+  }
 `;
 
 export const invalidLetter = css`
   color: ${newColors.shades.kovBlack50};
-`
+`;
 
 export const activeLetter = css`
   color: ${newColors.shades.kovBlue};
@@ -78,4 +94,10 @@ export const activeLetter = css`
   &:hover::after {
     visibility: visible;
   }
-`
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+    background: ${newColors.shades.kovBlue75};
+    border: 1px solid ${newColors.shades.kovBlue75};
+  }
+`;

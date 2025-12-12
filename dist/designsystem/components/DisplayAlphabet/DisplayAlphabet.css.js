@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.linkShowAll = exports.linkShowAllWrapper = exports.activeLetter = exports.invalidLetter = exports.letter = exports.alphabetWrapper = void 0;
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _Spacing = require("../Spacing/Spacing");
 

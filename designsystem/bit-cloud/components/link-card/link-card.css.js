@@ -1,9 +1,5 @@
-import { css } from '@emotion/react';
-import {
-  newColors,
-  spacing,
-  medium,
-} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import { newColors, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = css`
   background-color: #fff;
@@ -36,6 +32,16 @@ export const wrapper = css`
     line-height: 1.5;
     margin-bottom: 10px;
   }
+
+  html[data-theme='dark'] & {
+    border: 1px solid ${newColors.shades.kovBlue50};
+    background-color: ${newColors.shades.kovBlue75};
+    box-shadow: 0px 2px 4px 0px #00000080;
+
+    a:hover {
+      background-color: ${newColors.shades.kovBlue50};
+    }
+  }
 `;
 export const heading = css`
   display: flex;
@@ -49,6 +55,10 @@ export const heading = css`
     width: 12px !important;
     height: 16px !important;
     margin-right: 4px;
+
+    html[data-theme='dark'] & {
+      fill: ${newColors.shades.mediumBlue};
+    }
   }
 `;
 
@@ -133,15 +143,6 @@ export const mainLinkStyle = css`
       width: calc(100% + 12px) !important;
       margin-left: -12px !important;
       padding: 0 !important;
-
-      .noLinkChildren & {
-        z-index: 1;
-        position: relative;
-
-        width: calc(100% - 16px) !important;
-        margin-left: 4px !important;
-        padding: 0 !important;
-      }
     }
 
     .noLinkChildren & {
@@ -222,6 +223,10 @@ export const border = css`
   margin-left: 4px;
   border-bottom: 1px solid ${newColors.shades.mediumBlue};
   padding: 0 !important;
+
+  html[data-theme='dark'] & {
+    border-bottom: 1px solid ${newColors.shades.fullBlue50};
+  }
 `;
 
 export const rotateArrow = css`
@@ -255,6 +260,11 @@ export const childrenWrapper = css`
     &:hover {
       border-radius: 2px !important;
       background-color: ${newColors.shades.lightBlue};
+
+      html[data-theme='dark'] & {
+        background-color: ${newColors.shades.kovBlue50};
+        box-shadow: none !important;
+      }
     }
 
     &:active {
@@ -268,6 +278,14 @@ export const childrenWrapper = css`
       fill: ${newColors.shades.fullBlue};
       width: 12px;
       height: 16px;
+
+      html[data-theme='dark'] & {
+        fill: ${newColors.shades.mediumBlue};
+      }
+    }
+
+    html[data-theme='dark'] & {
+      color: ${newColors.shades.mediumBlue};
     }
   }
 
@@ -297,6 +315,14 @@ export const showAllLink = css`
     height: 16px;
     margin-left: 12px;
   }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+    :hover {
+      background-color: ${newColors.shades.kovBlue50};
+      box-shadow: 0 0 0 4px ${newColors.shades.kovBlue50} !important;
+    }
+  }
 `;
 
 export const customFontSize = css`
@@ -308,6 +334,10 @@ export const customFontSize = css`
 
   ${medium} {
     font-size: 1.8rem;
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
   }
 `;
 

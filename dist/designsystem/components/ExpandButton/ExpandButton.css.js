@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.expandedIconStyle = exports.iconStyle = exports.invertedSecondaryBackgroundStyle = exports.invertedBackgroundStyle = exports.secondaryStyle = exports.smallStyle = exports.expandButtonStyle = void 0;
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _Colors = require("../Colors/Colors");
 

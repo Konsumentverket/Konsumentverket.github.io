@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.FocusPuff = void 0;
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _react = _interopRequireDefault(require("react"));
 

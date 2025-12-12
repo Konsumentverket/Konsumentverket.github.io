@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Dropdown = void 0;
 
-var _core = require("@emotion/react");
+var _core = require("@emotion/core");
 
 var _Dropdown = require("./Dropdown.css");
 

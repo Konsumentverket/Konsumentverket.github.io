@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { css } from '@emotion/core'
 import { spacing, small, newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 export const iconStyle = css`

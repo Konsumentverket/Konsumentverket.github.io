@@ -1,5 +1,9 @@
-import { css } from '@emotion/react';
-import { newColors, breakpoints, typography } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  newColors,
+  breakpoints,
+  typography,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const listItemSlim = css`
   list-style: none;
@@ -13,7 +17,7 @@ export const disabled = css`
   flex-direction: column;
 
   padding: 16px 8px;
-   color: ${newColors.shades.fullGrey};
+  color: ${newColors.shades.fullGrey};
 
   @media (min-width: ${breakpoints.m}) {
     padding: 24px 16px;
@@ -47,6 +51,16 @@ export const link = css`
   &:hover {
     background: ${newColors.shades.lightBlue};
     text-decoration: underline;
+  }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.kovDarkModeBlue};
+    border-top: 1px solid ${newColors.shades.mediumBlue50};
+    color: ${newColors.shades.mediumBlue};
+
+    &:hover {
+      background-color: ${newColors.shades.kovBlue50};
+    }
   }
 `;
 

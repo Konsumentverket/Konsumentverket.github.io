@@ -1,4 +1,4 @@
-import { jsx, Global, css } from '@emotion/react';
+import { jsx, Global, css } from '@emotion/core';
 import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import { format, parseISO } from 'date-fns';
 import sv from 'date-fns/locale/sv';

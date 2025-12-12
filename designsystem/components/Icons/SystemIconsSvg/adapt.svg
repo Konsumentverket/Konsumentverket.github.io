@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon / help_icons / AA</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.57533795,4 L0,18.1562809 L3.00362677,19.7599736 L4.3316848,17.2713485 L9.78766897,17.2713485 L11.2812397,14.5057699 L5.82459611,14.5057699 L8.79195516,8.86646884 L11.5014837,14.1008902 L13.3445434,10.6541378 L9.78766897,4 L7.57533795,4 Z M16.4240026,8.42334322 L11.0220903,18.5433564 L13.3267392,19.7599736 L14.6350148,17.2713485 L20.239367,17.2713485 L21.5661062,19.7599736 L24,18.4701616 L18.6350148,8.42334322 L16.4240026,8.42334322 Z M17.4368612,11.7415101 L19.0590175,15.0596769 L15.8160237,15.0596769 L17.4368612,11.7415101 Z" id="path-1"></path>
+    </defs>
+    <g id="icon-/-help_icons-/-AA" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-/-help_icon-/-AA">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use fill="#162259" xlink:href="#path-1"></use>
+            <g id="Color-/-brand-/-darkblue" mask="url(#mask-2)" fill="#162259">
+                <rect x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

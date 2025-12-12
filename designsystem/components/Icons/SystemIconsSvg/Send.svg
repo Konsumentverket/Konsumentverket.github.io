@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>8AFC766A-0C20-41D7-934D-F3491F26CD00</title>
+    <defs>
+        <path d="M22.3144203,0.151456604 L0.585529016,12.6871751 C-0.262999426,13.1747274 -0.15517537,14.356104 0.68866507,14.7123922 L5.67201167,16.8032413 L19.1406427,4.93321909 C19.3984828,4.70350698 19.764147,5.05510716 19.5438109,5.3223233 L8.25041301,19.0816105 L8.25041301,22.8554524 C8.25041301,23.961821 9.58649371,24.3978052 10.242814,23.5961568 L13.2196956,19.9723309 L19.0609466,22.4194682 C19.726643,22.7007484 20.4860994,22.2835161 20.6079874,21.5662518 L23.9833492,1.31408121 C24.1427413,0.367104716 23.1254448,-0.31734364 22.3144203,0.151456604 Z" id="path-1"></path>
+    </defs>
+    <g id="MFS_2021_till_CF" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2021_MFS_-various_send_methods" transform="translate(-534.000000, -1469.000000)">
+            <g id="Group-10" transform="translate(-1.000000, 750.000000)">
+                <g id="card-copy-5" transform="translate(209.000000, 683.000000)">
+                    <g id="send_method_gruopp" transform="translate(193.000000, 32.000000)">
+                        <g id="to" transform="translate(133.000000, 0.000000)">
+                            <g id="default" transform="translate(0.000000, 4.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Path" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                <g id="Group" mask="url(#mask-2)" fill="#6B6B6B">
+                                    <g id="Color-/-brand-/-darkblue">
+                                        <rect id="Color-/-ui-/grey-01" x="0" y="0" width="24" height="24"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

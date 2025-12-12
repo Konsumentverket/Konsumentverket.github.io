@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon / arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.8028122,5.07167392 L11.5955809,4.25830089 C11.9312577,3.9138997 12.4740542,3.9138997 12.80616,4.25830089 L19.7482424,11.3771468 C20.0839192,11.721548 20.0839192,12.278452 19.7482424,12.6191894 L12.80616,19.7416991 C12.4704832,20.0861003 11.9276866,20.0861003 11.5955809,19.7416991 L10.8028122,18.9283261 C10.4635643,18.580261 10.4707064,18.0123655 10.8170963,17.6716281 L15.1201875,13.465537 L4.8570472,13.465537 C4.38210021,13.465537 4,13.0735058 4,12.5862148 L4,11.4137852 C4,10.9264942 4.38210021,10.534463 4.8570472,10.534463 L15.1201875,10.534463 L10.8170963,6.32837188 C10.4671354,5.98763453 10.4599933,5.41973895 10.8028122,5.07167392 Z" id="path-1"></path>
+    </defs>
+    <g id="Designskisser" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="effekter" transform="translate(-1271.000000, -79.000000)">
+            <g id="icon-/-arrow" transform="translate(1267.000000, 75.000000)">
+                <g id="icon-/-article">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Path" fill="#0074CC" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="Color-/-brand-/-darkblue" mask="url(#mask-2)" fill="#0074CC">
+                        <rect id="Color" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+                <g id="arrow-right-solid" transform="translate(3.000000, 2.000000)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { css } from '@emotion/core'
 import { colors, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 export const focusWrapper = css`

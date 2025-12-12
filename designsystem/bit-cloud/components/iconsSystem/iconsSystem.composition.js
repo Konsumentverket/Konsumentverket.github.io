@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/react";
+import { jsx } from "@emotion/core";
 import * as systemIconDefinitions from "./index";
 import {
   globalStyles as GlobalStyles,

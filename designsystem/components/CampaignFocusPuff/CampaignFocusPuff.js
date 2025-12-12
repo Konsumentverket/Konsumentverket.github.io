@@ -1,0 +1,62 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import {
+	focusWrapper,
+	pictureWrapper,
+	textArea,
+	focusHeadline,
+	externalIcon,
+	focusText,
+	iconBackground,
+	puffIcon,
+	linkWrapper
+} from './CampaignFocusPuff.css';
+import React from 'react';
+import External from '../Icons/SystemIcons/External/External';
+
+export const CampaignFocusPuff = ({
+	headline,
+	text,
+	url,
+	isExternalLink,
+	image,
+	imageAlt,
+	icon,
+	imageComponent,
+	onClick
+}) => {
+	let imageArea = imageComponent;
+	if (imageArea == null) {
+		if (image != null) imageArea = <img src={image} alt={imageAlt} />;
+		else {
+			imageArea = (
+				<div css={iconBackground}>
+					{icon && React.cloneElement(icon,{style:puffIcon})}
+				</div>
+			);
+		}
+	}
+
+	const campaignPuffMarkup = () => {
+		return (
+			<div css={focusWrapper}>
+				<div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
+				<div css={textArea} className='textarea'>
+					<h3 css={focusHeadline}>
+						{headline}
+						{isExternalLink && <External title="Extern länk" style={externalIcon} />}
+					</h3>
+					<p css={focusText}>{text}</p>
+				</div>
+			</div>
+		);
+	};
+
+	return url !== null ? (
+		<a css={linkWrapper} href={url} onClick={onClick} className="noStyle">
+			{campaignPuffMarkup(CampaignFocusPuff)}
+		</a>
+	) : (
+			campaignPuffMarkup(CampaignFocusPuff)
+		);
+};

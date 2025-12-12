@@ -1,5 +1,10 @@
-import { css } from '@emotion/react'
-import {spacing, newColors, breakpoints, containerStyles} from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/react';
+import {
+  spacing,
+  newColors,
+  breakpoints,
+  containerStyles,
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const breadcrumbStyle = css`
   ${containerStyles};
@@ -10,7 +15,6 @@ export const breadcrumbStyle = css`
     width: 1.2rem;
     margin: 0px calc(0.4rem);
     vertical-align: middle;
-
   }
 
   p {
@@ -59,6 +63,4 @@ export const arrowStyle = css`
   @media (prefers-color-scheme: dark) {
     fill: #fff;
   }
-
 `;
-

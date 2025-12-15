@@ -1,4 +1,4 @@
-import { css } from '@emotion/css';
+import { css } from '@emotion/react';
 import { colors, newColors } from '@konsumentverket-sverige/designsystem.utils';
 
 export const TextAreaStyle = css`

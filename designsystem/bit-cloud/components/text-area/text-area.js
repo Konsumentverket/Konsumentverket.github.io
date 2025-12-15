@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import {
   TextAreaStyle,
   TextAreaWrapperStyle,
@@ -25,6 +25,7 @@ export const TextArea = ({
   label,
   ...other
 }) => {
+  
   const inputRef = useRef(null);
   const [addedText, setText] = useState(null);
   const invalid = validationError ? invalidStyle : null;

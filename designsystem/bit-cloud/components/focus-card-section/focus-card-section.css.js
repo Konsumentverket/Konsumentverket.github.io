@@ -5,7 +5,7 @@ import {
   spacing,
 } from '@konsumentverket-sverige/designsystem.utils';
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 // Set the background color in a :before pseudo element instead?
 

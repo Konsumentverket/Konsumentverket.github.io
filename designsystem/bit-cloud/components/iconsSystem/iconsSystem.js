@@ -10,6 +10,7 @@ export const SystemIcon = ({ icon, className, style, title, ...otherAttr }) => {
     return null;
   }
 
+
   return (
     <Element
       title={title}

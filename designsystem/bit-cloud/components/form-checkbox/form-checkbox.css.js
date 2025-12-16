@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { colors, newColors } from '@konsumentverket-sverige/designsystem.utils';
 import checkmarkSvg from './checkmark.svg';
 import checkmarkDarkSvg from './checkmark-dark.svg';

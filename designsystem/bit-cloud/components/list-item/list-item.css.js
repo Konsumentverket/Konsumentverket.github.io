@@ -40,7 +40,7 @@ export const wrapper = css`
     }
   }
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     border-top: 1px solid ${newColors.shades.mediumBlue50};
 
     &:hover {
@@ -77,7 +77,7 @@ export const headline = css`
     fill: ${newColors.shades.fullBlue};
   }
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.mediumBlue};
 
     svg {
@@ -92,7 +92,7 @@ export const preambleStyle = css`
   line-height: 1.5;
   margin-bottom: 16px;
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -138,7 +138,7 @@ export const typeStyle = css`
     }
   }
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.fullBlue};
     &:after {
       background-color: ${newColors.shades.fullBlue};
@@ -153,7 +153,7 @@ export const dateStyle = css`
   color: ${newColors.shades.kovBlack50};
   margin-bottom: 0;
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.fullBlue};
   }
 `;
@@ -165,7 +165,7 @@ export const bottomText = css`
   padding-bottom: 0;
   margin-bottom: 0;
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.fullBlue};
   }
 `;

@@ -23,7 +23,7 @@ export const tagStyle = {
       background-color: ${newColors.shades.mediumBlue50};
     }
 
-    @media (prefers-color-scheme: dark) & {
+    @media (prefers-color-scheme: dark) {
       border: 1px solid ${newColors.shades.mediumBlue};
       color: ${newColors.shades.mediumBlue};
 

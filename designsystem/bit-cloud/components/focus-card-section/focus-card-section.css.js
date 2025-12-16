@@ -18,7 +18,7 @@ export const focusCardSectionStyle = css`
     padding: ${spacing.xl} 0;
   }
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.kovDarkModeBlue};
   }
 `;
@@ -48,7 +48,7 @@ export const focusCardSectionIconWrapperStyle = css`
   @media (min-width: ${breakpoints.m}) {
     margin-right: ${spacing.m};
   }
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.primaries.lightBlue};
   }
 `;
@@ -72,7 +72,7 @@ export const focusCardSectionTitleStyle = css`
     font-size: 2.8rem;
   }
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.lightBlue50};
   }
 `;
@@ -86,7 +86,7 @@ export const focusCardSectionTextStyle = css`
     font-size: 2rem;
   }
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;

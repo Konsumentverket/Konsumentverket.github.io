@@ -49,7 +49,7 @@ export const wrapperStyling = css`
         margin-right: 10px;
         margin-bottom: 2px;
 
-        @media (prefers-color-scheme: dark) & {
+        @media (prefers-color-scheme: dark) {
           background-color: ${newColors.primaries.lightOrange};
           border: 1px solid ${newColors.primaries.lightOrange};
         }
@@ -57,7 +57,7 @@ export const wrapperStyling = css`
       a {
         text-decoration: underline;
 
-        @media (prefers-color-scheme: dark) & {
+        @media (prefers-color-scheme: dark) {
           color: ${newColors.primaries.lightOrange};
           :hover {
             color: ${newColors.primaries.fullOrange};
@@ -66,7 +66,7 @@ export const wrapperStyling = css`
       }
     }
   }
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlack50};
   }
 `;
@@ -95,7 +95,7 @@ export const titleStyling = css`
   font-weight: 700;
   line-height: 1.4;
   margin: 0 0 24px 0;
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.primaries.lightBlue};
   }
 `;
@@ -119,7 +119,7 @@ export const iconWrapperReport = css`
 
 export const iconColor = css`
   fill: ${newColors.primaries.fullBlue};
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     fill: ${newColors.shades.mediumBlue};
     path:nth-of-type(2) {
       fill: ${newColors.kovBlue};

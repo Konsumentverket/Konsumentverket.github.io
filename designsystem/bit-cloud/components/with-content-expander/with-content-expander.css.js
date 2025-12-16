@@ -13,7 +13,7 @@ export const containerStyle = css`
   border: 1px solid rgba(22, 34, 89, 0.1);
   overflow: hidden;
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     border: 1px solid ${newColors.shades.kovBlue50};
   }
 `;
@@ -106,7 +106,7 @@ export const titleStyle = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
   }
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.primaries.mediumBlue};
   }
 `;
@@ -136,7 +136,7 @@ export const preambleStyle = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.8rem;
   }
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -172,7 +172,7 @@ export const buttonResetStyle = css`
   line-height: inherit;
   color: inherit;
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue50};
   }
 `;
@@ -231,7 +231,7 @@ export const linkStyleExpanded = css`
     box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
   }
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue75};
   }
 `;
@@ -281,7 +281,7 @@ export const chevronStyle = css`
   transform: rotate(0);
   width: 18px;
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     fill: ${newColors.primaries.mediumBlue};
   }
 `;
@@ -297,7 +297,7 @@ export const expandedAreaStyle = css`
   padding: 0;
   height: 0;
 
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue75};
 
     h1,

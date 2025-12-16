@@ -25,7 +25,7 @@ export const expandButtonStyle = css`
 
   &:hover {
     background-color: ${newColors.primaries.lightBlue};
-    @media (prefers-color-scheme: dark) & {
+    @media (prefers-color-scheme: dark) {
       background-color: ${newColors.shades.kovBlue50};
     }
   }
@@ -37,11 +37,11 @@ export const expandButtonStyle = css`
   &:disabled {
     color: ${newColors.shades.fullGrey50};
     pointer-events: none;
-    @media (prefers-color-scheme: dark) & {
+    @media (prefers-color-scheme: dark) {
       color: ${newColors.shades.fullGrey50};
     }
   }
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.mediumBlue};
     background-color: ${newColors.kovDarkModeBlue};
   }
@@ -50,7 +50,7 @@ export const expandButtonStyle = css`
 export const iconStyle = css`
   transform: rotate(0deg);
   fill: ${newColors.primaries.fullBlue};
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     fill: ${newColors.shades.mediumBlue};
   }
 `;

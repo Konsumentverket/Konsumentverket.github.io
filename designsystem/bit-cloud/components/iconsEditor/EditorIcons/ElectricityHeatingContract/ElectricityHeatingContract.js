@@ -5,7 +5,7 @@ import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 import { css } from '@emotion/core';
 
 const iconStyle = css`
-  @media (prefers-color-scheme: dark) & {
+  @media (prefers-color-scheme: dark) {
     path {
       fill: ${newColors.shades.fullBlue};
     }

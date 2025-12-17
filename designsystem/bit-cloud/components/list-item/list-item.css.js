@@ -11,7 +11,6 @@ export const wrapper = css`
   font-weight: 500;
   padding: 16px 8px;
   border-top: 1px solid ${newColors.shades.mediumBlue50};
-  font-family: 'Roboto Flex';
 
   @media (min-width: ${breakpoints.m}) {
     padding: 24px 16px;

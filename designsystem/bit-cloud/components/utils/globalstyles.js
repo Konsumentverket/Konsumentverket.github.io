@@ -12,7 +12,7 @@ export const CompositionFonts = ({ children }) => {
       <Global
         styles={[
           css`
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:ital,opsz,wght@0,8..144,400..700;1,8..144,400..700&display=swap');
           `,
           {
             body: { fontFamily: 'Roboto' },
@@ -21,7 +21,7 @@ export const CompositionFonts = ({ children }) => {
       />
       <div
         css={css`
-          font-family: 'Roboto';
+          font-family: 'Roboto Flex';
         `}
       >
         {children}
@@ -32,7 +32,8 @@ export const CompositionFonts = ({ children }) => {
 
 export const GlobalStyles = ({
   fontSize = '62.5%',
-  fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+  fontFamily = "'Roboto Flex', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+  fontVariationSettings = '"opsz" 14, "GRAD" -60'
 }) => {
   useEffect(() => {
     document.addEventListener('keyup', (e) => {
@@ -49,7 +50,7 @@ export const GlobalStyles = ({
     return () => {};
   }, []);
 
-  return <Global styles={globalStyles(fontSize, fontFamily)} />;
+  return <Global styles={globalStyles(fontSize, fontFamily, fontVariationSettings)} />;
 };
 
 const fileIcon = (fileSvgPath) => `
@@ -60,7 +61,7 @@ const fileIcon = (fileSvgPath) => `
 
 const globalStyles = (
   fontSize = '62.5%',
-  fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
+  fontFamily = "'Roboto Flex', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
 ) => css`
   html,
   body,

@@ -13,7 +13,7 @@ export const eventBoxWrapper = css`
   border-radius: 16px;
   background-color: ${newColors.primaries.lightBlue};
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlue75};
   }
 `;
@@ -50,7 +50,7 @@ export const eventBoxInfo = css`
   li {
     margin-bottom: 8px;
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.kovWhite};
   }
 `;
@@ -64,7 +64,7 @@ export const eventBoxDisclaimer = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.6rem;
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.kovWhite};
   }
 `;
@@ -108,7 +108,7 @@ export const eventBoxOverdue = css`
       min-width: 30px;
       margin-top: 0;
     }
-    @media (prefers-color-scheme: dark) {
+    html[data-theme='dark'] & {
       path:nth-child(odd) {
         fill: ${newColors.kovWhite};
       }
@@ -117,7 +117,7 @@ export const eventBoxOverdue = css`
       }
     }
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.kovWhite};
   }
 `;

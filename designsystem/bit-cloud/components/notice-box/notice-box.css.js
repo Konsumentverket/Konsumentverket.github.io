@@ -45,7 +45,7 @@ export const wrapperStyling = css`
       }
     }
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.secondaries.fullGreen};
     p {
       color: ${newColors.kovWhite};
@@ -83,7 +83,7 @@ export const titleStyling = css`
       margin-bottom: 32px;
     }
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.kovWhite};
   }
 `;
@@ -103,7 +103,7 @@ export const iconWrapper = css`
   ${medium} {
     top: -14px;
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.secondaries.lightGreen};
   }
 `;
@@ -116,7 +116,7 @@ export const iconColor = css`
   fill: ${newColors.secondaries.lightGreen};
   width: 20px;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     fill: ${newColors.secondaries.fullGreen};
   }
 `;

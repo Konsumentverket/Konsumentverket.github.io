@@ -57,7 +57,7 @@ export const inputStyle = css`
     border: 1px solid ${newColors.shades.fullBlue};
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.kovBlack};
     color: ${newColors.kovWhite};
     border: 1px solid ${newColors.shades.mediumBlue};
@@ -89,7 +89,7 @@ export const clearInput = css`
   svg {
     fill: ${newColors.primaries.fullBlue};
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     svg {
       fill: ${newColors.shades.mediumBlue};
     }

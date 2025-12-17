@@ -18,7 +18,7 @@ export const chevronStyle = css`
     transform: rotate(180deg);
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.kovWhite};
     fill: ${newColors.kovWhite};
   }
@@ -34,7 +34,7 @@ export const iconStyle = css`
     height: 32px;
     width: 32px;
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     fill: ${newColors.kovWhite};
   }
 `;
@@ -92,7 +92,7 @@ export const iconCardStyle = css`
     padding: 20px ${spacing.m};
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.kovBlue};
     span {
       color: ${newColors.kovWhite};

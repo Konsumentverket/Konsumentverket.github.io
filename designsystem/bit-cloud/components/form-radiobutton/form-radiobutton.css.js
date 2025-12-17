@@ -25,7 +25,7 @@ export const labelStyle = css`
     text-decoration: underline;
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.kovWhite};
   }
 `;
@@ -59,7 +59,7 @@ export const fieldStyle = css`
     forced-color-adjust: none;
     -ms-high-contrast-adjust: none;
 
-    @media (prefers-color-scheme: dark) {
+    html[data-theme='dark'] & {
       border: 1px solid ${newColors.shades.mediumBlue};
       background-color: ${newColors.kovBlack};
     }
@@ -91,7 +91,7 @@ export const fieldStyle = css`
     top: auto;
     background: #fff;
 
-    @media (prefers-color-scheme: dark) {
+    html[data-theme='dark'] & {
       background: ${newColors.shades.mediumBlue};
     }
   }

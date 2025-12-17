@@ -3,14 +3,14 @@ import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 
 export const kovBlackStyle = css`
   color: #161616;
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
   }
 `;
 
 export const kovBlueStyle = css`
   color: #162259;
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
   }
 `;

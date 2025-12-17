@@ -11,7 +11,7 @@ const baseHeading = css`
   word-break: break-word;
   margin-bottom: 16px;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
   }
 `;
@@ -256,7 +256,7 @@ export const paragraph = css`
     margin-bottom: 16px;
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.kovWhite};
     strong,
     b {
@@ -367,7 +367,7 @@ export const link = css`
     ${linkFocus};
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
     &:hover {
       color: ${newColors.shades.fullBlue};
@@ -562,7 +562,7 @@ const baseHeadingAlt = css`
   font-style: normal;
   font-weight: 700;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
   }
 `;
@@ -633,7 +633,7 @@ const baseSubHeadingAlt = css`
   font-weight: 700;
   margin-bottom: 8px;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
   }
 `;
@@ -826,7 +826,7 @@ export const ulStyling = css`
   > :last-child {
     margin-bottom: 0;
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     li {
       color: ${newColors.kovWhite};
       ::before {

@@ -108,7 +108,7 @@ export const linkStyles = css`
     fill: ${newColors.kovBlack};
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     svg {
       fill: #fff;
     }

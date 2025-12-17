@@ -155,6 +155,7 @@ const globalStyles = (
   html {
     font-size: ${fontSize};
     font-family: ${fontFamily};
+    font-variation-settings: "opsz" 14, "GRAD" -60;
     line-height: 16px;
     color: #4d4d4d;
     overflow-x: hidden;

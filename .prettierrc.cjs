@@ -1,8 +1,4 @@
+// bit-generated-prettier-config
 module.exports = {
-  parser: 'babel',
-  useTabs: false,
-  tabWidth: 2,
-  singleQuote: true,
-  endOfLine: 'lf',
-  trailingComma: 'es5',
-};
+  ...require('./node_modules/.cache/.prettierrc.bit.e4882af8861bcf5b0147891d8b70b40a10428881.cjs')
+}

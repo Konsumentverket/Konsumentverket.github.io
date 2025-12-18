@@ -61,7 +61,7 @@ const fileIcon = (fileSvgPath) => `
 
 const globalStyles = (
   fontSize = '62.5%',
-  fontFamily = "'Roboto Flex', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
+  fontFamily = "'Roboto Flex', 'Noto Sans Arabic', 'Noto Sans Hebrew','Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
 ) => css`
   html,
   body,

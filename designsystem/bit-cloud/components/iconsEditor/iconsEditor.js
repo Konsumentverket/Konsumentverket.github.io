@@ -3,10 +3,10 @@ import { jsx } from '@emotion/react';
 
 import * as editorIconDefinitions from './index';
 
-
 export const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
-  if (!editorIconDefinitions[icon]){ 
-    console.error("Missing icon ", icon); 
+  // document.documentElement.setAttribute('data-theme', 'dark');
+  if (!editorIconDefinitions[icon]) {
+    console.error('Missing icon ', icon);
     return null;
   }
 
@@ -23,7 +23,7 @@ export const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
       className={className}
       css={style}
       role="img"
-      aria-label={title || icon || ""}
+      aria-label={title || icon || ''}
       {...otherAttr}
     />
   );

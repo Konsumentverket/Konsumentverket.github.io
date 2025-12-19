@@ -83,6 +83,8 @@ const sectionTitle = {
 };
 
 export const typography = () => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+
   const spacing = { marginBottom: '20px' };
 
   const text =

@@ -44,11 +44,23 @@ export const buttonStyle = css`
   }
 
   &:active {
-    background-color: ${newColors.shades.kovBlue75};
+    background-color: ${newColors.shades.kovBlue50};
     text-decoration: underline;
   }
+
   &:disabled {
     ${disabled}
+  }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.fullBlue};
+    color: ${newColors.kovWhite};
+
+    &:hover,
+    &.selectedButtonStyle {
+      background-color: ${newColors.shades.kovBlue50};
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -103,6 +115,7 @@ export const linkStyles = css`
   color: ${newColors.primaries.fullBlue};
   ${typography.linkBodyMedium};
   box-shadow: none;
+  background-color: transparent !important;
 
   svg {
     fill: ${newColors.kovBlack};

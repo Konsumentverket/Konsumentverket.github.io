@@ -22,6 +22,8 @@ export const FormCheckbox = ({
   usePrimaryColor = false,
   stats = null,
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+
   return (
     <div
       data-comp="form-checkbox"

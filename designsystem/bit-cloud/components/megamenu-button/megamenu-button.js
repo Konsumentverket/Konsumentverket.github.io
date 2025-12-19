@@ -4,13 +4,13 @@ import React from 'react';
 import {
   buttonIconLeft,
   buttonIconRight,
-  buttonStyle
-} from "./megamenu-button.css";
+  buttonStyle,
+} from './megamenu-button.css';
 
 const MegamenuButton = ({
   text,
   id,
-  type = "submit",
+  type = 'submit',
   iconLeft,
   iconRight,
   onClick,
@@ -21,32 +21,32 @@ const MegamenuButton = ({
   handleLinkOnClick,
   ...other
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
   const styles = [buttonStyle];
   const cssClass = [className];
 
-  href && cssClass.push("noStyle");
+  href && cssClass.push('noStyle');
   iconLeft && styles.push(buttonIconLeft);
   iconRight && styles.push(buttonIconRight);
 
   const ariaAttrs = {};
-  Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x]);
+  Object.keys(other)
+    .filter((x) => x.startsWith('aria-'))
+    .forEach((x) => (ariaAttrs[x] = other[x]));
 
   const props = {
-    "id": id,
-    "className": cssClass.join(" "),
-    "onClick": handleLinkOnClick ?? onClick,
-    "ref": reference,
-    "css": styles,
-    "type": href !== null ? null : type,
-    "href": href || null,
+    id: id,
+    className: cssClass.join(' '),
+    onClick: handleLinkOnClick ?? onClick,
+    ref: reference,
+    css: styles,
+    type: href !== null ? null : type,
+    href: href || null,
     ...ariaAttrs,
   };
 
   return href ? (
-    <LinkComponent
-      {...props}
-      injected={true}
-    >
+    <LinkComponent {...props} injected={true}>
       {iconLeft}
       {text}
       {iconRight}

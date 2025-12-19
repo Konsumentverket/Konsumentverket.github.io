@@ -10,26 +10,26 @@ export const wrapperStyle = css`
 `;
 
 export const labelStyle = css`
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 1.2rem 7px;
-    color: ${newColors.shades.kovBlack};
-    font-size: 1.6rem;
-    line-height: 1.5;
-    font-weight: 400;
-    text-decoration: none;
-    position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem 7px;
+  color: ${newColors.shades.kovBlack};
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
 
-    &:hover .underline {
-        text-decoration-thickness: 1px;
-        text-underline-offset: 2px;
-        text-decoration: underline;
-      }
-    }
-    html[data-theme='dark'] & {
-      color: ${newColors.kovWhite};
-    }
+  &:hover .underline {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration: underline;
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const checkboxStyle = css`

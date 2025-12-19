@@ -28,6 +28,7 @@ export const FormSuccess = ({
   buttonText,
   loading = true,
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <div
       css={[wrapper]}

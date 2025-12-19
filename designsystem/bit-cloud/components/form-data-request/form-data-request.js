@@ -216,20 +216,23 @@ export const FormDataRequest = ({
   children,
   recaptchaSiteKey,
   handleFormSubmit = () => {},
-}) => (
-  <GoogleReCaptchaProvider
-    reCaptchaKey={recaptchaSiteKey}
-    useEnterprise={true}
-    scriptProps={{
-      async: true,
-      defer: true,
-      appendTo: 'head',
-    }}
-  >
-    <FormDataRequestInner
-      title={title}
-      children={children}
-      handleFormSubmit={handleFormSubmit}
-    />
-  </GoogleReCaptchaProvider>
-);
+}) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+  return (
+    <GoogleReCaptchaProvider
+      reCaptchaKey={recaptchaSiteKey}
+      useEnterprise={true}
+      scriptProps={{
+        async: true,
+        defer: true,
+        appendTo: 'head',
+      }}
+    >
+      <FormDataRequestInner
+        title={title}
+        children={children}
+        handleFormSubmit={handleFormSubmit}
+      />
+    </GoogleReCaptchaProvider>
+  );
+};

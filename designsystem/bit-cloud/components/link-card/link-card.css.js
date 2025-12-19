@@ -18,9 +18,6 @@ export const wrapper = css`
     border: 1px solid #fff;
   }
 
-  ${medium} {
-  }
-
   & > * {
     z-index: 1;
   }
@@ -157,6 +154,11 @@ export const mainLinkStyle = css`
         cursor: pointer;
         border-radius: 16px;
         border: 1px solid ${newColors.primaries.fullBlue};
+
+        html[data-theme='dark'] & {
+          border: 1px solid ${newColors.shades.mediumBlue};
+          background-color: ${newColors.shades.kovBlue50};
+        }
       }
     }
 
@@ -264,6 +266,7 @@ export const childrenWrapper = css`
       html[data-theme='dark'] & {
         background-color: ${newColors.shades.kovBlue50};
         box-shadow: none !important;
+        color: ${newColors.shades.mediumBlue};
       }
     }
 

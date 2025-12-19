@@ -25,6 +25,7 @@ export const Pagination = ({
   seoCallback,
   linkComponent: LinkComponent = 'a',
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
   if (total == 0) return null;
 
   const totalNumberOfPages = Math.ceil(total / pageSize);

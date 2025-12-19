@@ -31,6 +31,8 @@ export const CtaBlock = ({
   contactCta = false,
   removeBoxShadow = false,
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+
   let imageclass = '';
   let imageArea = imageComponent;
   if (imageArea == null) {

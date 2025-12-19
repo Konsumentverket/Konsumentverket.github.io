@@ -23,6 +23,8 @@ export const FocusCard = ({
   dark = false,
   linkComponent: LinkComponent = 'a',
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+
   return (
     <LinkComponent
       className={'noStyle'}

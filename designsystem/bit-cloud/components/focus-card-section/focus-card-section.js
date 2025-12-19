@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
-import React from "react";
+import { jsx } from '@emotion/react';
+import React from 'react';
 
 import {
   focusCardSectionStyle,
@@ -26,22 +26,30 @@ export const FocusCardSection = ({
   backgroundColor,
   items,
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
 
   const backgroundColorMap = {
     blue: focusCardSectionBlueStyle,
     grey: focusCardSectionGreyStyle,
   };
-  
+
   const modifierCssClass = backgroundColorMap[backgroundColor] || '';
-  
+
   return (
-    <div css={[focusCardSectionStyle, modifierCssClass && modifierCssClass]} data-comp="focus-card-section">
+    <div
+      css={[focusCardSectionStyle, modifierCssClass && modifierCssClass]}
+      data-comp="focus-card-section"
+    >
       <div css={focusCardSectionContainerStyle}>
         <div css={focusCardSectionHeaderStyle}>
-          {icon && (<div css={focusCardSectionIconWrapperStyle}><EditorIcon icon={icon} /></div>)}
+          {icon && (
+            <div css={focusCardSectionIconWrapperStyle}>
+              <EditorIcon icon={icon} />
+            </div>
+          )}
           <div css={focusCardSectionTextWrapperStyle}>
-            {title && (<h2 css={focusCardSectionTitleStyle}>{title}</h2>)}
-            {text && (<p css={focusCardSectionTextStyle}>{text}</p>)}
+            {title && <h2 css={focusCardSectionTitleStyle}>{title}</h2>}
+            {text && <p css={focusCardSectionTextStyle}>{text}</p>}
           </div>
         </div>
         {items && (

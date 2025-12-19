@@ -19,6 +19,8 @@ export const ListItem = ({
   linkComponent: LinkComponent = 'a',
   icon = 'MonoArrowRightSmall',
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+
   return (
     <LinkComponent
       css={[css.wrapper]}

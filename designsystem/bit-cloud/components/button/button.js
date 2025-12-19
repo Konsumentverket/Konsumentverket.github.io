@@ -39,6 +39,8 @@ export const Button = ({
   linkComponent: LinkComponent = 'a',
   ...other
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+
   const cssClass = [className];
   let styles = [buttonStyle];
 

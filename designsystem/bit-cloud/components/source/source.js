@@ -25,6 +25,7 @@ export const Source = ({
   sourceText,
   bottomBorder = true,
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
   const reviewed = reviewedDate ? new Date(reviewedDate) : null;
 
   const monthsSv = [

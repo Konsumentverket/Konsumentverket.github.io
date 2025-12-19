@@ -25,7 +25,7 @@ export const TextArea = ({
   label,
   ...other
 }) => {
-  
+  // document.documentElement.setAttribute('data-theme', 'dark');
   const inputRef = useRef(null);
   const [addedText, setText] = useState(null);
   const invalid = validationError ? invalidStyle : null;

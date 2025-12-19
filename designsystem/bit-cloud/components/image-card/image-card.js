@@ -28,6 +28,8 @@ export const ImageCard = ({
   extraClass,
   linkComponent: LinkComponent = 'a',
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+
   let imageArea = imageComponent;
   if (imageArea == null) {
     if (image != null) imageArea = <img src={image} alt={imageAlt} />;

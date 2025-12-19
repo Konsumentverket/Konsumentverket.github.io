@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
-import React from "react"
-import * as css from "./list-item-disabled.css.js"
+import { jsx } from '@emotion/react';
+import React from 'react';
+import * as css from './list-item-disabled.css.js';
 
 export const ListItemDisabled = ({
   children,
@@ -15,18 +15,33 @@ export const ListItemDisabled = ({
   headlineStyleLevel,
   style,
   invertedLinkStyle,
-  disabled
-}) => (
-  <div css={[css.wrapper, invertedLinkStyle && css.invertedLink, css.disabled, style]}>
-    {type && <p css={css.news}>{type.toUpperCase()}
-      {reviewedDate && <>: {reviewedDate}</>}</p>}
-    <p
-      css={[css.headlineDisabled, css.headline]}
-      className="listItemHeadline">
-      {headline}
-    </p>
-    {children}
-    {preamble && <p css={css.preambleStyle}>{preamble}</p>}
-    {bottomText && <p css={css.bottomText}>{bottomText}</p>}
-  </div>
-)
+  disabled,
+}) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
+  return (
+    <div
+      css={[
+        css.wrapper,
+        invertedLinkStyle && css.invertedLink,
+        css.disabled,
+        style,
+      ]}
+    >
+      {type && (
+        <p css={css.news}>
+          {type.toUpperCase()}
+          {reviewedDate && <>: {reviewedDate}</>}
+        </p>
+      )}
+      <p
+        css={[css.headlineDisabled, css.headline]}
+        className="listItemHeadline"
+      >
+        {headline}
+      </p>
+      {children}
+      {preamble && <p css={css.preambleStyle}>{preamble}</p>}
+      {bottomText && <p css={css.bottomText}>{bottomText}</p>}
+    </div>
+  );
+};

@@ -26,7 +26,7 @@ export const labelStyle = css`
   }
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.kovWhite};
+    color: ${newColors.shades.mediumBlue};
   }
 `;
 

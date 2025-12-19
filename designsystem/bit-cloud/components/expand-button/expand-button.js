@@ -15,6 +15,7 @@ export const ExpandButton = ({
   onClick,
   expanded = false,
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <button
       id={id}

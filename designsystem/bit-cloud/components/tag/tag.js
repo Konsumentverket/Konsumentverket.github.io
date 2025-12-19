@@ -4,6 +4,7 @@ import { jsx } from '@emotion/react';
 import { tagStyle } from './tag.css.js';
 
 const Tag = ({ id, url, text, onClick }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <a
       data-comp="tag"

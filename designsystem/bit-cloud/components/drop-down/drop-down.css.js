@@ -247,4 +247,14 @@ export const resetFilterStyle = css`
       fill: ${newColors.primaries.fullBlue};
     }
   }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+    &:hover {
+      color: ${newColors.shades.fullBlue};
+    }
+    &:active {
+      color: ${newColors.shades.fullBlue};
+    }
+  }
 `;

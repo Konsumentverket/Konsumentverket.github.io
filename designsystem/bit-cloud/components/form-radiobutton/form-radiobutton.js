@@ -18,6 +18,7 @@ export const FormRadiobutton = ({
   checked = false,
   usePrimaryColor = false,
 }) => {
+  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <div
       data-comp="form-radiobutton"

@@ -43,6 +43,7 @@ export const whiteBackground = css`
 
   html[data-theme='dark'] & {
     background: ${newColors.kovBlue};
+    border: 1px solid ${newColors.kovBlue};
   }
 `;
 

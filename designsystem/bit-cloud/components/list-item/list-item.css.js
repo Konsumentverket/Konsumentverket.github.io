@@ -165,6 +165,6 @@ export const bottomText = css`
   margin-bottom: 0;
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.fullBlue};
+    color: ${newColors.shades.lightGrey};
   }
 `;

@@ -122,8 +122,9 @@ export const linkStyles = css`
   }
 
   html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
     svg {
-      fill: #fff;
+      fill: ${newColors.shades.mediumBlue};
     }
   }
 

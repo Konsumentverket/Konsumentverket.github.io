@@ -11,8 +11,6 @@ export const ListItemSlim = ({
   preamble = '',
   linkComponent: LinkComponent = 'a',
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
-
   if (!headline) {
     return;
   }

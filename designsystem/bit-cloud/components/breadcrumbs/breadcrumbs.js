@@ -12,7 +12,6 @@ export const Breadcrumbs = ({
   items = [],
   linkComponent: LinkComponent = 'a',
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <nav aria-label="breadcrumb" css={breadcrumbStyle} data-comp="breadcrumbs">
       <p>

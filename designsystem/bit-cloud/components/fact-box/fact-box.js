@@ -26,8 +26,6 @@ export const FactBox = ({
   noMargin = false,
   themeColor = 'blue',
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
-
   if (!content && !children) {
     return null;
   }

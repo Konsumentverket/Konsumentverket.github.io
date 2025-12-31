@@ -8,7 +8,6 @@ export const PrerequisitesBox = ({
   contentfulName,
   contentfulId,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   if (children == null) {
     return null;
   }

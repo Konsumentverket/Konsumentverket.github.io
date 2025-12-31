@@ -47,7 +47,6 @@ export const DisplayAlphabet = ({
   activeLetter = '',
   visibleLetters = [],
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <div css={styles.alphabetWrapper} data-comp="display-alphabet">
       {alphabet.map((letter) =>

@@ -17,7 +17,6 @@ export const ListItemDisabled = ({
   invertedLinkStyle,
   disabled,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <div
       css={[

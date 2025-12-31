@@ -138,9 +138,9 @@ export const typeStyle = css`
   }
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.fullBlue};
+    color: ${newColors.shades.lightGrey};
     &:after {
-      background-color: ${newColors.shades.fullBlue};
+      background-color: ${newColors.shades.lightGrey};
     }
   }
 `;
@@ -153,7 +153,7 @@ export const dateStyle = css`
   margin-bottom: 0;
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.fullBlue};
+    color: ${newColors.shades.lightGrey};
   }
 `;
 

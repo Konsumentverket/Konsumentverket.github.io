@@ -30,8 +30,6 @@ const LinkTextCard = React.forwardRef(
     },
     ref
   ) => {
-    // document.documentElement.setAttribute('data-theme', 'dark');
-
     const renderLinkText = () => {
       if (children) {
         return (

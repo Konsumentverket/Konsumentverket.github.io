@@ -4,7 +4,6 @@ import * as SystemIcons from '@konsumentverket-sverige/designsystem.icons-system
 import * as EditorIcons from '@konsumentverket-sverige/designsystem.icons-editor';
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   const Component = SystemIcons[icon] || EditorIcons[icon];
 
   if (!Component) {

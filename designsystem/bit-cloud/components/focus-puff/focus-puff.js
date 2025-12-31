@@ -21,8 +21,6 @@ const FocusPuff = React.forwardRef(
     },
     ref
   ) => {
-    // document.documentElement.setAttribute('data-theme', 'dark');
-
     let imageArea = imageComponent;
 
     if (!imageArea) {

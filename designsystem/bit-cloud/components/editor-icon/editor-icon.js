@@ -4,8 +4,6 @@ import { jsx } from '@emotion/react';
 import * as editorIconDefinitions from '@konsumentverket-sverige/designsystem.icons-editor';
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
-
   const concatenatedIcons = {
     ...editorIconDefinitions,
   };

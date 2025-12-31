@@ -70,8 +70,6 @@ export const InputAutocomplete = forwardRef(
     },
     ref
   ) => {
-    // document.documentElement.setAttribute('data-theme', 'dark');
-
     const [query, setQuery] = useState('');
     const [initQuery, setInitQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);

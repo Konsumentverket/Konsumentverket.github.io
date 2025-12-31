@@ -26,8 +26,6 @@ export const FocusCardSection = ({
   backgroundColor,
   items,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
-
   const backgroundColorMap = {
     blue: focusCardSectionBlueStyle,
     grey: focusCardSectionGreyStyle,

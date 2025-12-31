@@ -41,8 +41,6 @@ export const FormSearchField = React.forwardRef(
     },
     ref
   ) => {
-    // document.documentElement.setAttribute('data-theme', 'dark');
-
     var styles = [searchWrapperStyle];
     style && styles.push(style);
 

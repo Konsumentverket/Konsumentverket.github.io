@@ -8,7 +8,6 @@ import {
 } from '@konsumentverket-sverige/designsystem.icons-system';
 
 const ValidationResponse = ({ success = false, text = '', children }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <div css={wrapperStyle(success)}>
       {success ? <Check /> : <Warn />}

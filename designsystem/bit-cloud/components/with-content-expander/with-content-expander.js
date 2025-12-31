@@ -59,7 +59,6 @@ export const WithContentExpander = ({
   contentfulTextName = '',
   level = 3,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   useEffect(() => {
     if (location && location.hash) {
       const split = location.hash.split(',');

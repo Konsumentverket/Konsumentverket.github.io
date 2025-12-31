@@ -33,8 +33,6 @@ const loaderStyle = ({
 `;
 
 export const Loading = ({ color, size = 'small', style }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
-
   let sizeStyle = null;
   switch (size) {
     case 'small':

@@ -15,6 +15,7 @@ import {
   cookieStyle,
 } from './Button.css.js';
 
+// document.documentElement.setAttribute('data-theme', 'dark_');
 export const Button = ({
   text,
   secondaryButtonStyle = false,
@@ -39,8 +40,6 @@ export const Button = ({
   linkComponent: LinkComponent = 'a',
   ...other
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
-
   const cssClass = [className];
   let styles = [buttonStyle];
 

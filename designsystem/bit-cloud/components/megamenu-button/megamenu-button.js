@@ -21,7 +21,6 @@ const MegamenuButton = ({
   handleLinkOnClick,
   ...other
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   const styles = [buttonStyle];
   const cssClass = [className];
 

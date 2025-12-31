@@ -24,7 +24,6 @@ export const NoticeBox = ({
   articleEntryMargin = false,
   type = 'success',
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   if (!content && !children) {
     return null;
   }

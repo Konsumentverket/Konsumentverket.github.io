@@ -4,7 +4,6 @@ import { jsx } from '@emotion/react';
 import * as editorIconDefinitions from './index';
 
 export const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   if (!editorIconDefinitions[icon]) {
     console.error('Missing icon ', icon);
     return null;

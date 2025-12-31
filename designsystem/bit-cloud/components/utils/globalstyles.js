@@ -33,7 +33,7 @@ export const CompositionFonts = ({ children }) => {
 export const GlobalStyles = ({
   fontSize = '62.5%',
   fontFamily = "'Roboto Flex', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-  fontVariationSettings = '"opsz" 14, "GRAD" -60'
+  fontVariationSettings = '"opsz" 14, "GRAD" -60',
 }) => {
   useEffect(() => {
     document.addEventListener('keyup', (e) => {
@@ -50,7 +50,11 @@ export const GlobalStyles = ({
     return () => {};
   }, []);
 
-  return <Global styles={globalStyles(fontSize, fontFamily, fontVariationSettings)} />;
+  return (
+    <Global
+      styles={globalStyles(fontSize, fontFamily, fontVariationSettings)}
+    />
+  );
 };
 
 const fileIcon = (fileSvgPath) => `
@@ -155,7 +159,9 @@ const globalStyles = (
   html {
     font-size: ${fontSize};
     font-family: ${fontFamily};
-    font-variation-settings: "opsz" 14, "GRAD" -60;
+    font-variation-settings:
+      'opsz' 14,
+      'GRAD' -60;
     line-height: 16px;
     color: #4d4d4d;
     overflow-x: hidden;
@@ -219,7 +225,6 @@ const globalStyles = (
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
       color: ${newColors.shades.fullBlue};
-
       svg {
         fill: ${newColors.shades.fullBlue};
       }
@@ -269,6 +274,34 @@ const globalStyles = (
 
     .grecaptcha-badge {
       z-index: 1;
+    }
+    html[data-theme='dark'] & {
+      color: ${newColors.shades.mediumBlue};
+      svg {
+        fill: ${newColors.shades.mediumBlue};
+      }
+      &:hover {
+        box-shadow: 0 0 0 4px ${newColors.primaries.fullBlue};
+        background-color: ${newColors.primaries.fullBlue};
+        svg {
+          fill: ${newColors.shades.mediumBlue};
+        }
+      }
+      &:visited {
+        color: ${newColors.shades.fullBlue};
+        svg {
+          fill: ${newColors.shades.fullBlue};
+        }
+      }
+
+      &:active {
+        box-shadow: 0 0 0 4px ${newColors.primaries.fullBlue};
+        background-color: ${newColors.primaries.fullBlue};
+        color: ${newColors.shades.mediumBlue};
+        svg {
+          fill: ${newColors.shades.mediumBlue};
+        }
+      }
     }
   }
 

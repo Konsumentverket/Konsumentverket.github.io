@@ -21,7 +21,6 @@ export const SubHeading = ({
   addSearch = null,
   noSnippet = null,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
   const acceptedColors = {

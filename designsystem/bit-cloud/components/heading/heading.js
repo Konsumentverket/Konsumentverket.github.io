@@ -14,7 +14,6 @@ export const Heading = ({
   addSearch = null,
   noSnippet = null,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <SubHeading
       level={level}

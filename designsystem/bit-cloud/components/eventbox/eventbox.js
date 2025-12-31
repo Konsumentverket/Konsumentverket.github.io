@@ -29,7 +29,6 @@ export const EventBox = ({
   contentfulName,
   contentfulId,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <div data-comp="event-box" css={eventBoxWrapper}>
       <div css={eventBoxInfoContainer}>

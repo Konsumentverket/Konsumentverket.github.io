@@ -11,8 +11,6 @@ export const Typography = ({
   small = false,
   alternativeHeadings = false,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
-
   return (
     <div
       css={[

@@ -27,7 +27,6 @@ const TagBlock = React.forwardRef(
     },
     ref
   ) => {
-    // document.documentElement.setAttribute('data-theme', 'dark');
     return (
       <div
         data-comp="tag-block"

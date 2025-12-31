@@ -37,8 +37,6 @@ export const InputText = React.forwardRef(
     },
     ref
   ) => {
-    // document.documentElement.setAttribute('data-theme', 'dark');
-
     let inputRef = useRef();
     let [text, setText] = useState(null);
     const invalid = validationError ? invalidStyle : null;

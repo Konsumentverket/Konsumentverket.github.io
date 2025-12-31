@@ -217,7 +217,6 @@ export const FormDataRequest = ({
   recaptchaSiteKey,
   handleFormSubmit = () => {},
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   return (
     <GoogleReCaptchaProvider
       reCaptchaKey={recaptchaSiteKey}

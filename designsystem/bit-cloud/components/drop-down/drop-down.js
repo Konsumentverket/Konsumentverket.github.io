@@ -106,7 +106,6 @@ export const Dropdown = ({
   maxHeight = false,
   closeOnChange = true,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
   const Component = componentMap[type];
   if (!Component) return null;
 

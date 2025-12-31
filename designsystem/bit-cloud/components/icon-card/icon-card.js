@@ -30,7 +30,6 @@ const IconCard = React.forwardRef(
     },
     ref
   ) => {
-    // document.documentElement.setAttribute('data-theme', 'dark');
     return (
       <LinkComponent
         data-comp="icon-card"

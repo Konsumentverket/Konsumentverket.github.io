@@ -270,39 +270,40 @@ const globalStyles = (
           background-color: #fff;
         }
       }
+
+      html[data-theme='dark'] & {
+        color: ${newColors.shades.mediumBlue};
+        svg {
+          fill: ${newColors.shades.mediumBlue};
+        }
+        &:hover {
+          box-shadow: 0 0 0 4px ${newColors.primaries.fullBlue};
+          background-color: ${newColors.primaries.fullBlue};
+          color: ${newColors.shades.mediumBlue};
+          svg {
+            fill: ${newColors.shades.mediumBlue};
+          }
+        }
+        &:visited {
+          color: ${newColors.shades.fullBlue};
+          svg {
+            fill: ${newColors.shades.fullBlue};
+          }
+        }
+
+        &:active {
+          box-shadow: 0 0 0 4px ${newColors.primaries.fullBlue};
+          background-color: ${newColors.primaries.fullBlue};
+          color: ${newColors.shades.mediumBlue};
+          svg {
+            fill: ${newColors.shades.mediumBlue};
+          }
+        }
+      }
     }
 
     .grecaptcha-badge {
       z-index: 1;
-    }
-    html[data-theme='dark'] & {
-      color: ${newColors.shades.mediumBlue};
-      svg {
-        fill: ${newColors.shades.mediumBlue};
-      }
-      &:hover {
-        box-shadow: 0 0 0 4px ${newColors.kovDarkModeBlue};
-        background-color: ${newColors.primaries.fullBlue};
-        color: ${newColors.shades.mediumBlue};
-        svg {
-          fill: ${newColors.shades.mediumBlue};
-        }
-      }
-      &:visited {
-        color: ${newColors.shades.fullBlue};
-        svg {
-          fill: ${newColors.shades.fullBlue};
-        }
-      }
-
-      &:active {
-        box-shadow: 0 0 0 4px ${newColors.kovDarkModeBlue};
-        background-color: ${newColors.primaries.fullBlue};
-        color: ${newColors.shades.mediumBlue};
-        svg {
-          fill: ${newColors.shades.mediumBlue};
-        }
-      }
     }
   }
 

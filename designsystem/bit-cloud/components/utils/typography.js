@@ -370,7 +370,7 @@ export const link = css`
   html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
     &:hover {
-      color: ${newColors.shades.fullBlue};
+      color: ${newColors.shades.mediumBlue};
     }
   }
 `;

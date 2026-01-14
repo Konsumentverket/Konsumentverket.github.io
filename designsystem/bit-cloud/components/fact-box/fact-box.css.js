@@ -22,8 +22,6 @@ export const wrapperStyling = css`
   li,
   p {
     ${typography.paragraphNoMargin};
-    color: ${newColors.primaries.lightOrange};
-
     &:last-of-type {
       margin-bottom: 0;
     }

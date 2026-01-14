@@ -285,9 +285,9 @@ const globalStyles = (
           }
         }
         &:visited {
-          color: ${newColors.shades.fullBlue};
+          color: ${newColors.shades.mediumBlue};
           svg {
-            fill: ${newColors.shades.fullBlue};
+            fill: ${newColors.shades.mediumBlue};
           }
         }
 
@@ -334,6 +334,21 @@ const LinkColors = css`
   }
   &:visited {
     color: ${colors.states.visited} !important;
+  }
+
+  [data-theme='dark'] & {
+    color: ${colors.theme1.xLight} !important;
+    &:hover {
+      background-color: ${colors.theme1.xDark} !important;
+      color: ${colors.theme1.xLight} !important;
+    }
+    &:active {
+      background-color: ${colors.theme1.xDark} !important;
+      color: ${colors.theme1.light} !important;
+    }
+    &:visited {
+      color: ${colors.states.visitedDark} !important;
+    }
   }
 `;
 

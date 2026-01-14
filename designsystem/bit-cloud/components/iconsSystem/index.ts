@@ -93,3 +93,5 @@ export * from './SystemIcons/TextEditorList/TextEditorList.js';
 export * from './SystemIcons/TextEditorUnorderedList/TextEditorUnorderedList.js';
 export * from './SystemIcons/TextEditorLink/TextEditorLink.js';
 export * from './SystemIcons/DefaultUser/DefaultUser.js';
+export * from './SystemIcons/Plus/Plus.js';
+export * from './SystemIcons/Trash/Trash.js';

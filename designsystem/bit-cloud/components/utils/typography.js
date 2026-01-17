@@ -344,12 +344,20 @@ export const linkHover = css`
   text-decoration: none;
   background: ${newColors.primaries.lightBlue};
   box-shadow: 0 0 0 2px ${newColors.primaries.lightBlue};
+  html[data-theme='dark'] & {
+    background: ${newColors.primaries.fullBlue};
+    box-shadow: 0 0 0 2px ${newColors.primaries.fullBlue};
+  }
 `;
 
 export const linkFocus = css`
   text-decoration: none;
   background: ${newColors.primaries.mediumBlue};
   box-shadow: 0 0 0 2px ${newColors.primaries.mediumBlue};
+  html[data-theme='dark'] & {
+    background: ${newColors.primaries.fullBlue};
+    box-shadow: 0 0 0 2px ${newColors.primaries.fullBlue};
+  }
 `;
 
 export const link = css`

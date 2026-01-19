@@ -37,7 +37,7 @@ export const newColors = {
     fullBlue: '#0061C2',
     fullBlue50: '#4F97D6',
     mediumBlue: '#92D2F4',
-    mediumBlue50: '#',
+    mediumBlue50: '#B9E1F6',
     lightBlue: '#DFF1FB',
     lightBlue50: '#EFF8FD',
     kovBlack: '#161616',

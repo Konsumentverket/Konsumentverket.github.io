@@ -21,6 +21,7 @@ export * from './SystemIcons/ChevronRight/ChevronRight.js';
 export * from './SystemIcons/CircledCheckmark/CircledCheckmark.js';
 export * from './SystemIcons/CircledX/CircledX.js';
 export * from './SystemIcons/Clear/Clear.js';
+export * from './SystemIcons/Close/Close.js';
 export * from './SystemIcons/DBDeleteFileAlt2/DBDeleteFileAlt2.js';
 export * from './SystemIcons/DBFileExcel/DBFileExcel.js';
 export * from './SystemIcons/DBFileImage/DBFileImage.js';

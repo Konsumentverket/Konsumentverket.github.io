@@ -31,10 +31,10 @@ export const InputStyle = (hasInnerContent) => css`
 
 export const LockedStyle = css`
   position: absolute;
-  top: 2px;
-  right: 2px;
+  top: 4px;
+  right: 4px;
 
-  height: calc(100% - 4px);   /* ← lika hög som input */
+  height: calc(100% - 8px);   /* ← lika hög som input */
   display: flex;
   align-items: center;
 

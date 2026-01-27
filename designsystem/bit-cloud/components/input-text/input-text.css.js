@@ -28,6 +28,27 @@ export const InputStyle = (hasInnerContent) => css`
     appearance: none;
   }
 `;
+
+export const LockedStyle = css`
+  position: absolute;
+  top: 2px;
+  right: 2px;
+
+  height: calc(100% - 4px);   /* ← lika hög som input */
+  display: flex;
+  align-items: center;
+
+  padding: 0 24px;
+  background: ${newColors.shades.lightGrey50};
+  border-radius: 4px;
+
+  pointer-events: none;
+`;
+export const LockedStyleWrapper = css`
+    position: relative;
+`;
+
+
 export const invalidStyle = css`
   input {
     border-color: #b50156;

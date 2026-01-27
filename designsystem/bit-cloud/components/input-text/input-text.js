@@ -8,9 +8,12 @@ import {
   Label,
   invalidStyle,
   LoadingStyle,
+  LockedStyle,
+  LockedStyleWrapper
 } from './input-text.css.js';
 import React, { useRef, useState } from 'react';
 import Loading from '@konsumentverket-sverige/designsystem.loading';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 import {
   Clear,
   VisuallyHidden,
@@ -33,6 +36,7 @@ export const InputText = React.forwardRef(
       hideLabel = false,
       loading = false,
       type = 'text',
+      styleLocked = false,
       ...other
     },
     ref
@@ -74,24 +78,29 @@ export const InputText = React.forwardRef(
           </label>
         )}
 
-        <input
-          ref={(el) => {
-            inputRef.current = el;
-            return typeof ref === 'function' ? ref(el) : null;
-          }}
-          css={[InputStyle(innerContent != null), style]}
-          name={name}
-          disabled={disabled}
-          placeholder={placeholder}
-          id={id}
-          autoComplete={autocompleteName ?? null}
-          onChange={(e) => {
-            onChange(e);
-            setText(e.target.value);
-          }}
-          type={type}
-          {...other}
-        />
+        <div css={styleLocked && LockedStyleWrapper}>
+          <input
+            ref={(el) => {
+              inputRef.current = el;
+              return typeof ref === 'function' ? ref(el) : null;
+            }}
+            css={[InputStyle(innerContent != null), style]}
+            name={name}
+            disabled={disabled}
+            placeholder={placeholder}
+            id={id}
+            autoComplete={autocompleteName ?? null}
+            onChange={(e) => {
+              onChange(e);
+              setText(e.target.value);
+            }}
+            type={type}
+            {...other}
+          />
+          { !!styleLocked && (
+            <span css={LockedStyle} aria-hidden="true"><SystemIcon icon="Lock" /></span>
+          )}
+        </div>
 
         {innerContent}
 

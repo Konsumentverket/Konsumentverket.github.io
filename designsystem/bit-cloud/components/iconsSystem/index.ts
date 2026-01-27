@@ -99,3 +99,4 @@ export * from './SystemIcons/TextEditorLink/TextEditorLink.js';
 export * from './SystemIcons/DefaultUser/DefaultUser.js';
 export * from './SystemIcons/Plus/Plus.js';
 export * from './SystemIcons/Trash/Trash.js';
+export * from './SystemIcons/Lock/Lock.js';

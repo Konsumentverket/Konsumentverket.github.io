@@ -10,3 +10,16 @@ export const BasicInputText = () => {
     />
   );
 }
+
+
+export const LockedInputText = () => {
+  return (
+    <InputText
+      label="Lorem ipsum"
+      placeholder="Lorem ipsum"
+      onChange={(e) => console.log("Onchange event: ", e.target.value)}
+      disabled={true}
+      styleLocked={true}
+    />
+  );
+}

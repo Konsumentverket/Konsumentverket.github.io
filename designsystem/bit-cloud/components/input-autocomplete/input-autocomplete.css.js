@@ -123,6 +123,14 @@ export const dropdownWrapperStyle = css`
   padding: 0;
   border-radius: 0px 0px 8px 8px;
   overflow: hidden;
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.kovBlack};
+    color: ${newColors.shades.mediumBlue};
+    border-right: 1px solid ${newColors.shades.mediumBlue};
+    border-bottom: 1px solid ${newColors.shades.mediumBlue};
+    border-left: 1px solid ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const showDropdownStyle = css`
@@ -139,6 +147,10 @@ export const dropdownItemStyle = css`
 
   &[aria-selected='true'] {
     background-color: ${newColors.primaries.lightBlue};
+
+    html[data-theme='dark'] & {
+      background-color: ${newColors.shades.kovBlue75};
+    }
   }
 `;
 
@@ -179,6 +191,16 @@ export const dropdownButtonStyle = css`
 
     &::after {
       background-color: transparent;
+    }
+  }
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+
+    &:hover {
+      background-color: ${newColors.shades.kovBlue75};
+    }
+    &:active {
+      background-color: ${newColors.shades.kovBlue75};
     }
   }
 `;

@@ -15,7 +15,7 @@ export const CompositionFonts = ({ children }) => {
             @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:ital,opsz,wght@0,8..144,400..700;1,8..144,400..700&display=swap');
           `,
           {
-            body: { fontFamily: 'Roboto' },
+            body: { fontFamily: 'Roboto Flex' },
           },
         ]}
       />

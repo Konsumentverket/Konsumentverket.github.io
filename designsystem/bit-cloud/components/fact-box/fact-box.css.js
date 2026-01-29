@@ -31,6 +31,7 @@ export const wrapperStyling = css`
     padding-left: 0;
     margin: 0;
     list-style: none;
+    margin-bottom: 16px;
 
     li {
       position: relative;

@@ -33,7 +33,7 @@
     "contact-forms": {
         "name": "contact-forms",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.210",
+        "version": "0.0.211",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/contact-forms"
     },

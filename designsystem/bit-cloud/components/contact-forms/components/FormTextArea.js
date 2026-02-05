@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/react';
+import { jsx } from '@emotion/react';
 import {
   exceededMaxCount,
   inputError,
@@ -9,30 +9,31 @@ import {
   labelStyle,
   formInputWrapper,
   characterCountTextArea,
-} from "../contact-forms.css";
-import ToolTip from "./ToolTip";
-import ErrorMessage from "./ErrorMessage";
+} from '../contact-forms.css';
+import ToolTip from './ToolTip';
+import ErrorMessage from './ErrorMessage';
 
 const FormTextArea = ({
   id,
   label,
   placeholder,
   tooltipText,
-  tooltipPosition='left',
+  tooltipPosition = 'left',
   error,
   maxLengthValidation = false,
   showCounter = false,
   maxLengthCount = 2000,
   register,
   validation,
-  watch, tooltipLabel = ''
+  watch,
+  tooltipLabel = '',
 }) => {
   return (
     <div css={formInputWrapper}>
-
       <div css={labelWrapper}>
-
-        <label htmlFor={id} css={labelStyle}>{label}</label>
+        <label htmlFor={id} css={labelStyle}>
+          {label}
+        </label>
         {!!tooltipText && (
           <ToolTip
             position={tooltipPosition}
@@ -41,7 +42,6 @@ const FormTextArea = ({
             label={tooltipLabel}
           />
         )}
-
       </div>
 
       <span css={inputWrapper}>
@@ -51,10 +51,7 @@ const FormTextArea = ({
           placeholder={placeholder}
           aria-describedby={`error-${id}`}
           aria-invalid={Boolean(error)}
-          css={[
-            textAreaStyle,
-            error ? inputError : null
-          ]}
+          css={[textAreaStyle, error ? inputError : null]}
           maxLength={maxLengthValidation ? maxLengthCount : undefined}
           {...register(id, validation)}
         />
@@ -64,22 +61,17 @@ const FormTextArea = ({
             aria-hidden={true}
             css={[
               characterCountTextArea,
-              watch(id, "").length > maxLengthCount ? exceededMaxCount : null
-            ]}>{
-            watch(id, "").length
-          }/{maxLengthCount}
+              watch(id, '').length > maxLengthCount ? exceededMaxCount : null,
+            ]}
+          >
+            {watch(id, '').length}/{maxLengthCount}
           </span>
         )}
       </span>
 
-      {error && (
-        <ErrorMessage id={`error-${id}`}>
-          {error.message}
-        </ErrorMessage>
-      )}
-
+      {error && <ErrorMessage id={`error-${id}`}>{error.message}</ErrorMessage>}
     </div>
-  )
-}
+  );
+};
 
 export default FormTextArea;

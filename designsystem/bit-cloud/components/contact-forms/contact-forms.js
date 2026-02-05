@@ -20,6 +20,8 @@ export const ContactForms = ({
   texts,
   isLoading = false,
 }) => {
+  document.documentElement.setAttribute('data-theme', 'dark');
+
   const forms = {
     guidance: Guidance,
     otherCases: OtherCases,

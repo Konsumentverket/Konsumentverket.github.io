@@ -93,6 +93,16 @@ export const inputStyle = css`
     ${typography.textSmall};
     font-style: italic;
   }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+    border: 1px solid ${newColors.primaries.mediumBlue};
+    background-color: ${newColors.kovBlack};
+
+    &::placeholder {
+      color: ${newColors.kovWhite};
+    }
+  }
 `;
 
 export const textAreaStyle = css`
@@ -112,6 +122,16 @@ export const textAreaStyle = css`
   &::placeholder {
     ${typography.textSmall};
     font-style: italic;
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+    border: 1px solid ${newColors.primaries.mediumBlue};
+    background-color: ${newColors.kovBlack};
+
+    &::placeholder {
+      color: ${newColors.kovWhite};
+    }
   }
 `;
 
@@ -152,6 +172,16 @@ export const inputDescriptionStyle = css`
   &::placeholder {
     ${typography.textSmall};
     font-style: italic;
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+    border: 1px solid ${newColors.primaries.mediumBlue};
+    background-color: ${newColors.kovBlack};
+
+    &::placeholder {
+      color: ${newColors.kovWhite};
+    }
   }
 `;
 
@@ -274,6 +304,11 @@ export const characterCount = css`
   color: ${newColors.readingBlack};
   background: #ffffff;
   padding: 2px 0 2px 2px;
+
+  html[data-theme='dark'] & {
+    background: ${newColors.kovBlack};
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const characterCountInput = css`
@@ -384,6 +419,10 @@ export const fileUploadTypes = css`
   &:hover {
     text-decoration: none;
   }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const dragArea = css`
@@ -420,6 +459,16 @@ export const uploadBox = css`
     background: ${newColors.shades.lightBlue50};
     border: 1px solid ${newColors.shades.lightBlue50};
   }
+
+  html[data-theme='dark'] & {
+    background: ${newColors.shades.kovBlue75};
+    border: 1px solid ${newColors.shades.fullBlue50};
+
+    &:hover {
+      background-color: ${newColors.shades.kovBlue50};
+      border: 1px solid ${newColors.shades.fullBlue50};
+    }
+  }
 `;
 
 export const uploadBoxActive = css`
@@ -428,10 +477,14 @@ export const uploadBoxActive = css`
 `;
 
 export const uploadBoxTitleStyle = css`
-  margin-bottom: 8px;
   ${typography.clickMedium};
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const iconMarginLeft = css`
@@ -450,6 +503,10 @@ export const iconSize = css`
 export const uploadBoxTextStyle = css`
   ${typography.textSmall};
   color: ${newColors.shades.kovBlack50};
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const visuallyHidden = css`
@@ -492,6 +549,11 @@ export const listItem = css`
   border: 1px solid ${newColors.kovWhite};
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
   margin-bottom: 0;
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue75};
+    border: 1px solid ${newColors.shades.kovBlue75};
+  }
 `;
 
 export const fileTileTop = css`
@@ -519,15 +581,24 @@ export const fileThumbnail = css`
   @media (min-width: ${breakpoints.m}) {
     margin-right: 16px;
   }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue};
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const deleteFileButton = css`
+  ${typography.clickSmallUL};
   background: none;
   cursor: pointer;
   display: flex;
   align-items: center;
-  ${typography.clickSmallUL};
   white-space: nowrap;
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const fileDescriptionInstruction = css`
@@ -560,6 +631,10 @@ export const checkboxLabelStyle = css`
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
     text-decoration: underline;
+  }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
   }
 `;
 

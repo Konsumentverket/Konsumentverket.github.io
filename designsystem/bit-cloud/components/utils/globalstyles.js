@@ -277,8 +277,8 @@ const globalStyles = (
           fill: ${newColors.shades.mediumBlue};
         }
         &:hover {
-          box-shadow: 0 0 0 4px ${newColors.primaries.fullBlue};
-          background-color: ${newColors.primaries.fullBlue};
+          box-shadow: 0 0 0 4px ${newColors.primaries.kovBlue75};
+          background-color: ${newColors.primaries.kovBlue75};
           color: ${newColors.shades.mediumBlue};
           svg {
             fill: ${newColors.shades.mediumBlue};

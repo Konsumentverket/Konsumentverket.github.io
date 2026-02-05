@@ -322,8 +322,8 @@ export const showAllLink = css`
   html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
     :hover {
-      background-color: ${newColors.shades.kovBlue50};
-      box-shadow: 0 0 0 4px ${newColors.shades.kovBlue50} !important;
+      background-color: ${newColors.shades.kovBlue75};
+      box-shadow: 0 0 0 4px ${newColors.shades.kovBlue75} !important;
     }
   }
 `;

@@ -219,12 +219,13 @@ const globalStyles = (
       }
     }
 
-    &:not(.noStyle):not(.esbRowLink) {
+    &:not(.noStyle):not(.esbRowLink):not(.btn-primary) {
       text-decoration: underline;
       font-weight: 500;
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
       color: ${newColors.shades.fullBlue};
+
       svg {
         fill: ${newColors.shades.fullBlue};
       }
@@ -257,7 +258,7 @@ const globalStyles = (
         }
       }
 
-      &.invertedStyle:not(.noStyle):not(.esbRowLink) {
+      &.invertedStyle:not(.noStyle):not(.esbRowLink):not(.btn-primary) {
         &:visited {
           background-color: inherit;
         }

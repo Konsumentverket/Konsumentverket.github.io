@@ -257,7 +257,7 @@ const globalStyles = (
         }
       }
 
-      &.invertedStyle:not(.noStyle) {
+      &.invertedStyle:not(.noStyle):not(.esbRowLink) {
         &:visited {
           background-color: inherit;
         }

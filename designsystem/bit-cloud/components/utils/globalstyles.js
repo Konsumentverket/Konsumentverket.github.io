@@ -219,7 +219,7 @@ const globalStyles = (
       }
     }
 
-    &:not(.noStyle) {
+    &:not(.noStyle):not(.esbRowLink) {
       text-decoration: underline;
       font-weight: 500;
       text-decoration-thickness: 1px;

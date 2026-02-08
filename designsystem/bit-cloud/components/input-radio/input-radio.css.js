@@ -47,6 +47,7 @@ export const colorThemeWhite = css`
 
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlack};
+    border: 1px solid ${newColors.shades.mediumBlue};
   }
 `;
 
@@ -128,7 +129,9 @@ export const fieldInput = css`
 `;
 
 export const fieldLabel = css`
-  ${typography.textSmall};
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${newColors.kovBlack};
   color: ${newColors.primaries.fullBlue};
   width: 100%;
   padding: 16px 24px 16px 0;
@@ -136,7 +139,7 @@ export const fieldLabel = css`
   user-select: none;
 
   html[data-theme='dark'] & {
-    color: ${newColors.primaries.kovWhite};
+    color: ${newColors.shades.mediumBlue};
   }
 `;
 
@@ -163,6 +166,13 @@ export const disabledStyle = css`
   &:hover {
     .radiolabel {
       text-decoration: none;
+    }
+  }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.fullGrey};
+    label {
+      color: ${newColors.shades.kovBlack50};
     }
   }
 `;

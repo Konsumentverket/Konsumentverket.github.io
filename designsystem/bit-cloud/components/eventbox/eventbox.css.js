@@ -14,7 +14,7 @@ export const eventBoxWrapper = css`
   background-color: ${newColors.primaries.lightBlue};
 
   html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue75};
+    background-color: ${newColors.shades.kovBlue};
   }
 `;
 

@@ -36,6 +36,7 @@ export const form = css`
   }
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlue};
+    border: 1px solid ${newColors.shades.kovBlue};
   }
 `;
 
@@ -551,8 +552,8 @@ export const listItem = css`
   margin-bottom: 0;
 
   html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue75};
-    border: 1px solid ${newColors.shades.kovBlue75};
+    background-color: ${newColors.shades.kovBlue};
+    border: 1px solid ${newColors.shades.kovBlue};
   }
 `;
 

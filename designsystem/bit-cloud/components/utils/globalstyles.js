@@ -271,15 +271,16 @@ const globalStyles = (
           background-color: #fff;
         }
       }
-
-      html[data-theme='dark'] & {
+    }
+    html[data-theme='dark'] & {
+      &:not(.noStyle):not(.esbRowLink):not(.btn-primary) {
         color: ${newColors.shades.mediumBlue};
         svg {
           fill: ${newColors.shades.mediumBlue};
         }
         &:hover {
-          box-shadow: 0 0 0 4px ${newColors.primaries.kovBlue75};
-          background-color: ${newColors.primaries.kovBlue75};
+          box-shadow: 0 0 0 4px ${newColors.shades.kovBlue75};
+          background-color: ${newColors.shades.kovBlue75};
           color: ${newColors.shades.mediumBlue};
           svg {
             fill: ${newColors.shades.mediumBlue};
@@ -293,8 +294,8 @@ const globalStyles = (
         }
 
         &:active {
-          box-shadow: 0 0 0 4px ${newColors.primaries.fullBlue};
-          background-color: ${newColors.primaries.fullBlue};
+          box-shadow: 0 0 0 4px ${newColors.shades.fullBlue};
+          background-color: ${newColors.shades.fullBlue};
           color: ${newColors.shades.mediumBlue};
           svg {
             fill: ${newColors.shades.mediumBlue};
@@ -302,7 +303,6 @@ const globalStyles = (
         }
       }
     }
-
     .grecaptcha-badge {
       z-index: 1;
     }

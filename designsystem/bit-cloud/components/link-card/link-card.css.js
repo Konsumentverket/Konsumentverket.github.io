@@ -31,15 +31,16 @@ export const wrapper = css`
   }
 
   html[data-theme='dark'] & {
-    border: 1px solid ${newColors.shades.kovBlue50};
-    background-color: ${newColors.shades.kovBlue75};
+    border: 1px solid ${newColors.shades.kovBlue};
+    background-color: ${newColors.shades.kovBlue};
     box-shadow: 0px 2px 4px 0px #00000080;
 
     a:hover {
-      background-color: ${newColors.shades.kovBlue50};
+      background-color: ${newColors.shades.kovBlue75};
     }
   }
 `;
+
 export const heading = css`
   display: flex;
   justify-content: space-between;
@@ -321,7 +322,7 @@ export const showAllLink = css`
 
   html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
-    :hover {
+    &:hover {
       background-color: ${newColors.shades.kovBlue75};
       box-shadow: 0 0 0 4px ${newColors.shades.kovBlue75} !important;
     }

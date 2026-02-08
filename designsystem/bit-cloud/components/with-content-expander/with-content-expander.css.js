@@ -14,7 +14,7 @@ export const containerStyle = css`
   overflow: hidden;
 
   html[data-theme='dark'] & {
-    border: 1px solid ${newColors.shades.kovBlue50};
+    border: 0;
   }
 `;
 
@@ -158,6 +158,13 @@ export const linkStyle = css`
   &:focus-within {
     outline-offset: -4px;
   }
+
+  html[data-theme='dark'] & {
+    &:hover {
+      background-color: ${newColors.shades.kovBlue75};
+      box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
+    }
+  }
 `;
 
 export const buttonResetStyle = css`
@@ -173,21 +180,27 @@ export const buttonResetStyle = css`
   color: inherit;
 
   html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue50};
+    background-color: ${newColors.shades.kovBlue};
   }
 `;
 
 export const linkAlternativeStyle = css`
   border-radius: ${spacing.s};
   background-color: ${newColors.shades.lightGrey25};
-  border-top: 1px solid ${newColors.secondaries.mediumGrey};
-  border-right: 1px solid ${newColors.secondaries.mediumGrey};
-  border-bottom: 1px solid ${newColors.secondaries.mediumGrey};
-  border-left: 1px solid ${newColors.secondaries.mediumGrey};
+  border: 1px solid ${newColors.secondaries.mediumGrey};
 
   &:hover {
     background-color: ${newColors.shades.lightGrey50};
     box-shadow: none;
+  }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue75};
+    border: 1px solid ${newColors.shades.mediumBlue};
+
+    &:hover {
+      background-color: ${newColors.shades.kovBlue};
+    }
   }
 `;
 
@@ -203,6 +216,15 @@ export const linkLightBlueAlternativeStyle = css`
     @media (min-width: ${breakpoints.m}) {
       left: 16px;
       width: calc(100% - (${spacing.s} * 2));
+    }
+  }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue75};
+    border: 1px solid ${newColors.shades.mediumBlue};
+
+    &:hover {
+      background-color: ${newColors.shades.kovBlue};
     }
   }
 `;
@@ -232,7 +254,7 @@ export const linkStyleExpanded = css`
   }
 
   html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue75};
+    background-color: ${newColors.shades.kovBlue};
   }
 `;
 
@@ -298,7 +320,7 @@ export const expandedAreaStyle = css`
   height: 0;
 
   html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue75};
+    background-color: ${newColors.shades.kovBlue};
 
     h1,
     h2,
@@ -324,6 +346,12 @@ export const expandedAreaAlternativeStyle = css`
   background-color: ${newColors.shades.lightGrey25};
   border: 1px solid ${newColors.secondaries.mediumGrey};
   border-top: 0;
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue75};
+    border: 1px solid ${newColors.shades.mediumBlue};
+    border-top: 0;
+  }
 `;
 
 export const expandedAreaLightBlueAlternativeStyle = css`

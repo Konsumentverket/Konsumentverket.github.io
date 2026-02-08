@@ -1,19 +1,19 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/react";
-import * as systemIconDefinitions from "./index";
+import { jsx } from '@emotion/react';
+import * as systemIconDefinitions from './index';
 import {
   globalStyles as GlobalStyles,
-  CompositionFonts
+  CompositionFonts,
 } from '@konsumentverket-sverige/designsystem.utils';
-import { SystemIcon } from "./iconsSystem";
+import { SystemIcon } from './iconsSystem';
 
 const iconContainerStyle = {
-  display: "block",
-  width: 80,
-  height: 80,
+  display: 'block',
+  width: 120,
+  height: 120,
   margin: 10,
-  textAlign: "center",
-  verticalAlign: "top",
+  textAlign: 'center',
+  verticalAlign: 'top',
 };
 
 const iconStyle = {
@@ -34,12 +34,19 @@ export const BasicSystemIcon = () => {
     <CompositionFonts>
       <GlobalStyles />
       <h3 style={titleStyle}>System icons ({Object.keys(icons).length})</h3>
-      {Object.keys(icons).map((key, index) => (
-        <div style={iconContainerStyle} key={key} data-id={key} data-index={index}>
-          <h4>{key}</h4>
-          <SystemIcon icon={key} style={iconStyle} fill="#4E4745"/>
-        </div>
-      ))}
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {Object.keys(icons).map((key, index) => (
+          <div
+            style={iconContainerStyle}
+            key={key}
+            data-id={key}
+            data-index={index}
+          >
+            <SystemIcon icon={key} style={iconStyle} fill="#4E4745" />
+            <h4 style={{ fontSize: '12px' }}>{key}</h4>
+          </div>
+        ))}
+      </div>
     </CompositionFonts>
   );
 };

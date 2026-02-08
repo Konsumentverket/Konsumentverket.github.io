@@ -110,12 +110,12 @@ export const smallStyle = css`
 export const linkStyles = css`
   border: none !important;
   padding: 0;
-  background: none;
+  background-color: none;
   text-decoration: underline;
   color: ${newColors.primaries.fullBlue};
   ${typography.linkBodyMedium};
   box-shadow: none;
-  background-color: transparent !important;
+  background-color: transparent;
 
   svg {
     fill: ${newColors.kovBlack};
@@ -129,7 +129,7 @@ export const linkStyles = css`
   }
 
   &:hover {
-    background: none;
+    background-color: none;
   }
 `;
 

@@ -87,7 +87,7 @@ export const sourceLink = css`
     width: 1px;
     height: 16px;
     transform: translateY(-50%);
-    background: ${newColors.shades.fullGrey};
+    background-color: ${newColors.shades.fullGrey};
   }
 
   &:first-of-type {

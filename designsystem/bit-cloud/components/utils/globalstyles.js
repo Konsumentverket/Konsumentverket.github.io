@@ -219,7 +219,7 @@ const globalStyles = (
       }
     }
 
-    &:not(.noStyle):not(.esbRowLink):not(.btn-primary) {
+    &:not(.noStyle):not(.esbRowLink):not(.btn-primary):not(.button--linkstyle) {
       text-decoration: underline;
       font-weight: 500;
       text-decoration-thickness: 1px;
@@ -258,7 +258,9 @@ const globalStyles = (
         }
       }
 
-      &.invertedStyle:not(.noStyle):not(.esbRowLink):not(.btn-primary) {
+      &.invertedStyle:not(.noStyle):not(.esbRowLink):not(.btn-primary):not(
+          .button--linkstyle
+        ) {
         &:visited {
           background-color: inherit;
         }
@@ -273,7 +275,9 @@ const globalStyles = (
       }
     }
     html[data-theme='dark'] & {
-      &:not(.noStyle):not(.esbRowLink):not(.btn-primary) {
+      &:not(.noStyle):not(.esbRowLink):not(.btn-primary):not(
+          .button--linkstyle
+        ) {
         color: ${newColors.shades.mediumBlue};
         svg {
           fill: ${newColors.shades.mediumBlue};

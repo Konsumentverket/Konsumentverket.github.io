@@ -43,7 +43,7 @@ export const colorThemeBlueWrapper = css`
 `;
 
 export const colorThemeWhite = css`
-  background: ${newColors.primaries.kovWhite};
+  background-color: ${newColors.primaries.kovWhite};
 
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlack};
@@ -52,7 +52,7 @@ export const colorThemeWhite = css`
 `;
 
 export const colorThemeBlue = css`
-  background: ${newColors.primaries.kovWhite};
+  background-color: ${newColors.primaries.kovWhite};
 
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlue};
@@ -60,7 +60,7 @@ export const colorThemeBlue = css`
 `;
 
 export const colorThemeGrey = css`
-  background: ${newColors.shades.lightGrey25};
+  background-color: ${newColors.shades.lightGrey25};
 
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.fullGrey};
@@ -76,7 +76,7 @@ export const fieldInput = css`
   vertical-align: middle;
   border-radius: 50%;
   border: 1px solid ${newColors.primaries.fullBlue};
-  background: #fff;
+  background-color: #fff;
   margin: 0;
   margin-left: 2.4rem;
   margin-right: 1.6rem;
@@ -105,7 +105,7 @@ export const fieldInput = css`
       height: 1.6rem;
       border-radius: 50%;
       display: block;
-      background: ${newColors.primaries.fullBlue};
+      background-color: ${newColors.primaries.fullBlue};
       position: absolute;
       top: 3px;
       left: 3px;
@@ -114,7 +114,7 @@ export const fieldInput = css`
       -ms-high-contrast-adjust: none;
 
       html[data-theme='dark'] & {
-        background: ${newColors.shades.mediumBlue};
+        background-color: ${newColors.shades.mediumBlue};
       }
     }
 
@@ -151,7 +151,7 @@ export const disabledStyle = css`
 
   input {
     border: 1px solid ${newColors.shades.mediumGrey};
-    background: ${newColors.shades.lightGrey25};
+    background-color: ${newColors.shades.lightGrey25};
   }
 
   label {

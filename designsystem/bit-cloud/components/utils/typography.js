@@ -38,7 +38,7 @@ export const headingLine = css`
   &::before {
     content: '';
     position: absolute;
-    background: ${newColors.primaries.mediumOrange};
+    background-color: ${newColors.primaries.mediumOrange};
     top: 0;
     height: 100%;
     width: 4px;
@@ -342,21 +342,23 @@ export const blockquoteText = css`
 
 export const linkHover = css`
   text-decoration: none;
-  background: ${newColors.primaries.lightBlue};
+  background-color: ${newColors.primaries.lightBlue};
   box-shadow: 0 0 0 2px ${newColors.primaries.lightBlue};
+
   html[data-theme='dark'] & {
-    background: ${newColors.primaries.fullBlue};
-    box-shadow: 0 0 0 2px ${newColors.primaries.fullBlue};
+    background-color: ${newColors.shades.kovBlue75};
+    box-shadow: 0 0 0 2px ${newColors.shades.kovBlue75};
   }
 `;
 
 export const linkFocus = css`
   text-decoration: none;
-  background: ${newColors.primaries.mediumBlue};
+  background-color: ${newColors.primaries.mediumBlue};
   box-shadow: 0 0 0 2px ${newColors.primaries.mediumBlue};
+
   html[data-theme='dark'] & {
-    background: ${newColors.primaries.fullBlue};
-    box-shadow: 0 0 0 2px ${newColors.primaries.fullBlue};
+    background-color: ${newColors.shades.kovBlue75};
+    box-shadow: 0 0 0 2px ${newColors.shades.kovBlue75};
   }
 `;
 
@@ -377,6 +379,7 @@ export const link = css`
 
   html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
+
     &:hover {
       color: ${newColors.shades.mediumBlue};
     }
@@ -469,7 +472,7 @@ export const clickFocus = css`
 const baseClick = css`
   color: ${newColors.primaries.fullBlue};
   text-decoration: none;
-  background: none;
+  background-color: none;
   border-radius: 3px;
   font-style: normal;
   font-weight: 500;
@@ -838,7 +841,7 @@ export const ulStyling = css`
     li {
       color: ${newColors.kovWhite};
       ::before {
-        background: ${newColors.shades.mediumBlue};
+        background-color: ${newColors.shades.mediumBlue};
         border-color: ${newColors.shades.mediumBlue};
       }
     }

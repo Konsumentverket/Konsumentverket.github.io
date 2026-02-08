@@ -66,7 +66,7 @@ export const breadcrumbLinkStyle = css`
       color: ${newColors.primaries.mediumBlue} !important;
     }
     &:hover {
-      background: ${newColors.shades.kovBlue50};
+      background-color: ${newColors.shades.kovBlue50};
       box-shadow: 0 0 0 4px ${newColors.shades.kovBlue50};
     }
   }

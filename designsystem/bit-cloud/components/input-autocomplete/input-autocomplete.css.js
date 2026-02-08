@@ -75,7 +75,7 @@ export const inputHeaderSearchStyle = css`
 `;
 
 export const clearInput = css`
-  background: transparent;
+  background-color: transparent;
   border: none;
   position: absolute;
   z-index: 1;
@@ -210,11 +210,11 @@ export const loadingWrapperStyle = css`
   right: 48px;
   position: absolute;
   z-index: 1;
-  // background: ${newColors.kovWhite};
+  // background-color: ${newColors.kovWhite};
 `;
 
 export const searchButtonStyle = css`
-  background: ${newColors.shades.fullBlue};
+  background-color: ${newColors.shades.fullBlue};
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   padding: 16px;
@@ -240,11 +240,11 @@ export const searchButtonStyle = css`
 
   &:focus,
   &:hover {
-    background: ${newColors.shades.kovBlue50};
+    background-color: ${newColors.shades.kovBlue50};
   }
 
   &:active {
-    background: ${newColors.shades.kovBlue75};
+    background-color: ${newColors.shades.kovBlue75};
   }
 `;
 

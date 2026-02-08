@@ -109,7 +109,7 @@ export const iconWrapper = css`
 `;
 
 export const iconWrapperWarning = css`
-  background: none;
+  background-color: none;
 `;
 
 export const iconColor = css`

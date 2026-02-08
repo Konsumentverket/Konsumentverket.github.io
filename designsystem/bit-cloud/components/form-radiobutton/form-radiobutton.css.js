@@ -46,7 +46,7 @@ export const fieldStyle = css`
   .radio + .radio-label:before {
     content: '';
     flex-shrink: 0;
-    background: #fff;
+    background-color: #fff;
     border-radius: 2px;
     box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.1) inset;
     border: 1px solid ${newColors.shades.fullBlue};
@@ -67,7 +67,7 @@ export const fieldStyle = css`
 
   .radio {
     &:checked + label:before {
-      background: ${newColors.shades.fullBlue};
+      background-color: ${newColors.shades.fullBlue};
       border: 1px solid ${newColors.shades.fullBlue};
 
       forced-color-adjust: none;
@@ -89,10 +89,10 @@ export const fieldStyle = css`
     position: absolute;
     left: 13px;
     top: auto;
-    background: #fff;
+    background-color: #fff;
 
     html[data-theme='dark'] & {
-      background: ${newColors.shades.mediumBlue};
+      background-color: ${newColors.shades.mediumBlue};
     }
   }
 

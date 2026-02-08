@@ -34,20 +34,19 @@ export const LockedStyle = css`
   top: 4px;
   right: 4px;
 
-  height: calc(100% - 8px);   /* ← lika hög som input */
+  height: calc(100% - 8px); /* ← lika hög som input */
   display: flex;
   align-items: center;
 
   padding: 0 24px;
-  background: ${newColors.shades.lightGrey50};
+  background-color: ${newColors.shades.lightGrey50};
   border-radius: 4px;
 
   pointer-events: none;
 `;
 export const LockedStyleWrapper = css`
-    position: relative;
+  position: relative;
 `;
-
 
 export const invalidStyle = css`
   input {

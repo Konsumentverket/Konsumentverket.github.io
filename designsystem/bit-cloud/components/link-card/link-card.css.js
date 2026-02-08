@@ -259,13 +259,14 @@ export const childrenWrapper = css`
     margin-right: 24px;
     line-height: 1.5;
     margin-bottom: 0;
+    background-color: transparent !important;
 
     &:hover {
       border-radius: 2px !important;
-      background-color: ${newColors.shades.lightBlue};
+      background-color: ${newColors.shades.lightBlue} !important;
 
       html[data-theme='dark'] & {
-        background-color: ${newColors.shades.kovBlue50};
+        background-color: ${newColors.shades.kovBlue50} !important;
         box-shadow: none !important;
         color: ${newColors.shades.mediumBlue};
       }
@@ -273,7 +274,7 @@ export const childrenWrapper = css`
 
     &:active {
       border-radius: 2px !important;
-      background-color: ${newColors.shades.mediumBlue50};
+      background-color: ${newColors.shades.mediumBlue50} !important;
     }
 
     svg {
@@ -322,6 +323,7 @@ export const showAllLink = css`
 
   html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
+
     &:hover {
       background-color: ${newColors.shades.kovBlue75};
       box-shadow: 0 0 0 4px ${newColors.shades.kovBlue75} !important;

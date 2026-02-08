@@ -38,30 +38,30 @@ export const noBoxshadow = css`
 `;
 
 export const whiteBackground = css`
-  background: ${newColors.kovWhite};
+  background-color: ${newColors.kovWhite};
   border: 1px solid #fff;
 
   html[data-theme='dark'] & {
-    background: ${newColors.kovBlue};
+    background-color: ${newColors.kovBlue};
     border: 1px solid ${newColors.kovBlue};
   }
 `;
 
 export const blueBackground = css`
-  background: ${newColors.shades.lightBlue50};
+  background-color: ${newColors.shades.lightBlue50};
   border: 1px solid ${newColors.shades.lightBlue50};
 
   html[data-theme='dark'] & {
-    background: ${newColors.kovBlue};
+    background-color: ${newColors.kovBlue};
   }
 `;
 
 export const greyBackground = css`
-  background: ${newColors.shades.lightGrey25};
+  background-color: ${newColors.shades.lightGrey25};
   border: 1px solid ${newColors.shades.lightGrey25};
 
   html[data-theme='dark'] & {
-    background: ${newColors.kovBlue};
+    background-color: ${newColors.kovBlue};
   }
 `;
 

@@ -94,12 +94,18 @@ export const iconCardStyle = css`
 
   html[data-theme='dark'] & {
     background-color: ${newColors.kovBlue};
+
     span {
-      color: ${newColors.kovWhite};
+      color: ${newColors.shades.mediumBlue};
     }
 
-    :hover {
-      background-color: ${newColors.shades.kovBlue75};
+    svg {
+      fill: ${newColors.shades.mediumBlue};
+    }
+
+    &:hover {
+      background-color: ${newColors.shades.kovBlue75} !important;
+      border: 1px solid ${newColors.shades.mediumBlue} !important;
     }
   }
 `;

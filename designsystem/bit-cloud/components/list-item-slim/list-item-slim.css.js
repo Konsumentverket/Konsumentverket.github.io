@@ -49,7 +49,7 @@ export const link = css`
 
   &:focus,
   &:hover {
-    background: ${newColors.shades.lightBlue};
+    background-color: ${newColors.shades.lightBlue};
     text-decoration: underline;
   }
 

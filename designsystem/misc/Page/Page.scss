@@ -1,42 +1,52 @@
 .page {
-    font-family: "Nunito Sans",-apple-system,".SFNSText-Regular","San Francisco",BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #2a3039;
-    max-width: 800px;
-    margin: 0 auto;
+  font-family:
+    'Nunito Sans',
+    -apple-system,
+    '.SFNSText-Regular',
+    'San Francisco',
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #2a3039;
+  max-width: 800px;
+  margin: 0 auto;
 
-    h2 {
-        font-size: 24px;
-        border-bottom: 1px solid rgba(0,0,0,.1);
-        font-weight: 400;
-    }
+  h2 {
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+  }
 
-    h3 {
-        font-size: 20px;
-        font-weight: 400;
-    }
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+  }
 }
 
 .page table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 .page td {
-    padding: 16px;
-    vertical-align: bottom;
-    border: 0;
-    border-bottom: 1px solid #e5ebed;
+  padding: 16px;
+  vertical-align: bottom;
+  border: 0;
+  border-bottom: 1px solid #e5ebed;
 }
 
 .page tr:last-child td {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .page th {
-    background: #f7f9fa;
-    color: #8091a5;
-    padding: 10px 16px;
-    text-align: left;
+  background-color: #f7f9fa;
+  color: #8091a5;
+  padding: 10px 16px;
+  text-align: left;
 }

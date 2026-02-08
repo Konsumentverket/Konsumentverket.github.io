@@ -19,7 +19,7 @@ export const form = css`
     }
   }
   html[data-theme='dark'] & {
-    background: ${newColors.kovBlue};
+    background-color: ${newColors.kovBlue};
   }
 `;
 
@@ -147,7 +147,7 @@ export const radioLabel = css`
     position: relative;
     top: 2px;
     flex-shrink: 0;
-    background: #fff;
+    background-color: #fff;
     border-radius: 2px;
     box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.1) inset;
     box-sizing: border-box;

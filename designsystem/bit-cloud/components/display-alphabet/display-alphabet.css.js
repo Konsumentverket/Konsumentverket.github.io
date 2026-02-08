@@ -23,14 +23,14 @@ export const alphabetWrapper = css`
   gap: 16px;
   padding: 16px;
   border-radius: 16px;
-  background: ${newColors.shades.lightBlue50};
+  background-color: ${newColors.shades.lightBlue50};
 
   @media (min-width: ${breakpoints.m}) {
     padding: 24px;
     border-radius: 24px;
   }
   html[data-theme='dark'] & {
-    background: ${newColors.kovDarkModeBlue};
+    background-color: ${newColors.kovDarkModeBlue};
   }
 `;
 
@@ -79,7 +79,7 @@ export const invalidLetter = css`
 
 export const activeLetter = css`
   color: ${newColors.shades.kovBlue};
-  background: ${newColors.shades.mediumBlue50};
+  background-color: ${newColors.shades.mediumBlue50};
   border: 1px solid ${newColors.shades.mediumBlue50};
 
   &::after {
@@ -97,7 +97,7 @@ export const activeLetter = css`
 
   html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
-    background: ${newColors.shades.kovBlue75};
+    background-color: ${newColors.shades.kovBlue75};
     border: 1px solid ${newColors.shades.kovBlue75};
   }
 `;

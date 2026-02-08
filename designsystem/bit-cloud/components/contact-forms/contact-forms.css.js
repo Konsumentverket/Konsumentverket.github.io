@@ -206,7 +206,7 @@ export const informationButton = css`
   align-items: center;
   justify-content: center;
   position: relative;
-  background: none;
+  background-color: none;
   cursor: pointer;
 
   &::after {
@@ -231,7 +231,7 @@ export const informationButtonOpen = css`
 
 export const tooltip = css`
   display: none;
-  background: ${newColors.primaries.lightOrange};
+  background-color: ${newColors.primaries.lightOrange};
   border: 1px solid ${newColors.primaries.lightOrange};
   padding: 16px 16px 0 16px;
   position: absolute;
@@ -243,7 +243,7 @@ export const tooltip = css`
   box-shadow: 0px 4px 20px rgba(22, 34, 89, 0.1);
 
   button {
-    background: none;
+    background-color: none;
     display: flex;
     align-self: baseline;
     margin-left: 8px;
@@ -303,11 +303,11 @@ export const resetRightPadding = css`
 export const characterCount = css`
   ${typography.textSmall};
   color: ${newColors.readingBlack};
-  background: #ffffff;
+  background-color: #ffffff;
   padding: 2px 0 2px 2px;
 
   html[data-theme='dark'] & {
-    background: ${newColors.kovBlack};
+    background-color: ${newColors.kovBlack};
     color: ${newColors.kovWhite};
   }
 `;
@@ -372,7 +372,7 @@ export const recaptcha = css`
 `;
 
 export const loadingStyle = css`
-  background: #dff1fb;
+  background-color: #dff1fb;
   opacity: 0.5;
   position: absolute;
   top: 0;
@@ -451,18 +451,18 @@ export const uploadBox = css`
   padding: 32px;
   display: flex;
   flex-direction: column;
-  background: ${newColors.shades.lightBlue};
+  background-color: ${newColors.shades.lightBlue};
   border: 1px solid ${newColors.shades.fullBlue50};
   border-radius: 8px;
   align-items: center;
 
   &:hover {
-    background: ${newColors.shades.lightBlue50};
+    background-color: ${newColors.shades.lightBlue50};
     border: 1px solid ${newColors.shades.lightBlue50};
   }
 
   html[data-theme='dark'] & {
-    background: ${newColors.shades.kovBlue75};
+    background-color: ${newColors.shades.kovBlue75};
     border: 1px solid ${newColors.shades.fullBlue50};
 
     &:hover {
@@ -473,7 +473,7 @@ export const uploadBox = css`
 `;
 
 export const uploadBoxActive = css`
-  background: ${newColors.shades.lightBlue50};
+  background-color: ${newColors.shades.lightBlue50};
   border: 1px solid ${newColors.shades.lightBlue50};
 `;
 
@@ -591,7 +591,7 @@ export const fileThumbnail = css`
 
 export const deleteFileButton = css`
   ${typography.clickSmallUL};
-  background: none;
+  background-color: none;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -657,7 +657,7 @@ export const checkboxStyle = css`
   .checkbox + .checkbox-label:before {
     content: '';
     flex-shrink: 0;
-    background: #fff;
+    background-color: #fff;
     border-radius: 2px;
     border: 1px solid ${newColors.shades.fullBlue};
     display: inline-block;
@@ -669,7 +669,7 @@ export const checkboxStyle = css`
 
   .checkbox {
     &:checked + .checkbox-label:before {
-      background: ${newColors.shades.fullBlue};
+      background-color: ${newColors.shades.fullBlue};
       border: 1px solid ${newColors.shades.fullBlue};
     }
   }

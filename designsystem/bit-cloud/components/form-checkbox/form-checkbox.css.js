@@ -44,7 +44,7 @@ export const checkboxStyle = css`
   .checkbox + .checkbox-label:before {
     content: '';
     flex-shrink: 0;
-    background: #fff;
+    background-color: #fff;
     border-radius: 2px;
     border: 1px solid ${newColors.shades.fullBlue};
     display: inline-block;
@@ -57,13 +57,13 @@ export const checkboxStyle = css`
 
     html[data-theme='dark'] & {
       border: 1px solid ${newColors.shades.mediumBlue};
-      background: ${newColors.kovBlack};
+      background-color: ${newColors.kovBlack};
     }
   }
 
   .checkbox {
     &:checked + .checkbox-label:before {
-      background: ${newColors.shades.kovWhite};
+      background-color: ${newColors.shades.kovWhite};
       border: 1px solid ${newColors.shades.fullBlue};
     }
   }

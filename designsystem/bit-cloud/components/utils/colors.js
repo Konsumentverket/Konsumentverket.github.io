@@ -10,7 +10,7 @@ export const newColors = {
     fullBlue: '#0061C2',
     mediumBlue: '#92D2F4',
     lightBlue: '#DFF1FB',
-    fullOrange: '#000000ff',
+    fullOrange: '#5A3F2C',
     mediumOrange: '#F59C00',
     lightOrange: '#FCEBD5',
     kovWhite: '#FFF',

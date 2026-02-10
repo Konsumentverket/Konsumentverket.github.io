@@ -26,7 +26,8 @@ export const InputRadio = ({
   dataAnswer,
   colorTheme = 'white',
 }) => {
-  document.documentElement.setAttribute('data-theme', 'dark');
+  // document.documentElement.setAttribute('data-theme', 'dark');
+
   const inputRef = useRef(null);
   return (
     <div

@@ -77,7 +77,7 @@ export const wrapperStyling = css`
 
     p,
     li {
-      color: ${newColors.primaries.lightOrange};
+      color: ${newColors.primaries.lightOrange} !important;
     }
   }
 `;

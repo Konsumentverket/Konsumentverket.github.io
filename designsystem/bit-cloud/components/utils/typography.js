@@ -831,19 +831,21 @@ export const ulStyling = css`
         margin-right: 0;
         margin-left: 16px;
       }
+
+      html[data-theme='dark'] & {
+        background-color: ${newColors.primaries.lightOrange};
+        border: 1px solid ${newColors.primaries.lightOrange};
+      }
     }
   }
 
   > :last-child {
     margin-bottom: 0;
   }
+
   html[data-theme='dark'] & {
     li {
       color: ${newColors.kovWhite};
-      ::before {
-        background-color: ${newColors.shades.mediumBlue};
-        border-color: ${newColors.shades.mediumBlue};
-      }
     }
   }
 `;

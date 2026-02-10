@@ -22,6 +22,8 @@ export const wrapperStyling = css`
   li,
   p {
     ${typography.paragraphNoMargin};
+    margin-bottom: 16px;
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -57,16 +59,26 @@ export const wrapperStyling = css`
         text-decoration: underline;
 
         html[data-theme='dark'] & {
-          color: ${newColors.primaries.lightOrange};
-          :hover {
-            color: ${newColors.primaries.fullOrange};
+          color: ${newColors.primaries.lightOrange} !important;
+
+          &:hover {
+            color: ${newColors.primaries.fullOrange} !important;
+            background-color: ${newColors.primaries.lightOrange} !important;
+            box-shadow: 0 0 0 4px ${newColors.primaries.lightOrange} !important;
           }
         }
       }
     }
   }
+
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlack50};
+    border: 1px solid ${newColors.shades.kovBlack50};
+
+    p,
+    li {
+      color: ${newColors.primaries.lightOrange};
+    }
   }
 `;
 
@@ -94,6 +106,7 @@ export const titleStyling = css`
   font-weight: 700;
   line-height: 1.4;
   margin: 0 0 24px 0;
+
   html[data-theme='dark'] & {
     color: ${newColors.primaries.lightBlue};
   }
@@ -118,8 +131,10 @@ export const iconWrapperReport = css`
 
 export const iconColor = css`
   fill: ${newColors.primaries.fullBlue};
+
   html[data-theme='dark'] & {
     fill: ${newColors.shades.mediumBlue};
+
     path:nth-of-type(2) {
       fill: ${newColors.kovBlue};
     }

@@ -11,6 +11,7 @@ const disabled = css`
   text-decoration: none;
   box-shadow: none;
   cursor: inherit;
+
   svg {
     fill: ${newColors.secondaries.fullGrey};
   }
@@ -110,26 +111,30 @@ export const smallStyle = css`
 export const linkStyles = css`
   border: none !important;
   padding: 0;
-  background-color: none;
+  background: none;
   text-decoration: underline;
   color: ${newColors.primaries.fullBlue};
   ${typography.linkBodyMedium};
   box-shadow: none;
-  background-color: transparent;
+  background-color: transparent !important;
 
   svg {
     fill: ${newColors.kovBlack};
   }
 
+  &:hover {
+    background: none;
+  }
+
   html[data-theme='dark'] & {
+    background-color: transparent !important;
     color: ${newColors.shades.mediumBlue};
     svg {
       fill: ${newColors.shades.mediumBlue};
     }
-  }
-
-  &:hover {
-    background-color: none;
+    &:hover {
+      background: none;
+    }
   }
 `;
 

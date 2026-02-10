@@ -101,3 +101,4 @@ export * from './SystemIcons/Plus/Plus.js';
 export * from './SystemIcons/Trash/Trash.js';
 export * from './SystemIcons/Lock/Lock.js';
 export * from './SystemIcons/Save/Save.js';
+export * from './SystemIcons/UserProfile/UserProfile.js';

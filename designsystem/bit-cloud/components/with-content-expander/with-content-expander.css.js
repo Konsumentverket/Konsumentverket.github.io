@@ -12,10 +12,6 @@ export const containerStyle = css`
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
   border: 1px solid rgba(22, 34, 89, 0.1);
   overflow: hidden;
-
-  html[data-theme='dark'] & {
-    border: 0;
-  }
 `;
 
 export const containerLightBlueAlternativeStyle = css`
@@ -106,9 +102,6 @@ export const titleStyle = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
   }
-  html[data-theme='dark'] & {
-    color: ${newColors.primaries.mediumBlue};
-  }
 `;
 
 export const titleAlternativeStyle = css`
@@ -136,9 +129,6 @@ export const preambleStyle = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.8rem;
   }
-  html[data-theme='dark'] & {
-    color: ${newColors.kovWhite};
-  }
 `;
 
 export const linkStyle = css`
@@ -158,13 +148,6 @@ export const linkStyle = css`
   &:focus-within {
     outline-offset: -4px;
   }
-
-  html[data-theme='dark'] & {
-    &:hover {
-      background-color: ${newColors.shades.kovBlue75};
-      box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
-    }
-  }
 `;
 
 export const buttonResetStyle = css`
@@ -178,29 +161,19 @@ export const buttonResetStyle = css`
   font-size: inherit;
   line-height: inherit;
   color: inherit;
-
-  html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue};
-  }
 `;
 
 export const linkAlternativeStyle = css`
   border-radius: ${spacing.s};
   background-color: ${newColors.shades.lightGrey25};
-  border: 1px solid ${newColors.secondaries.mediumGrey};
+  border-top: 1px solid ${newColors.secondaries.mediumGrey};
+  border-right: 1px solid ${newColors.secondaries.mediumGrey};
+  border-bottom: 1px solid ${newColors.secondaries.mediumGrey};
+  border-left: 1px solid ${newColors.secondaries.mediumGrey};
 
   &:hover {
     background-color: ${newColors.shades.lightGrey50};
     box-shadow: none;
-  }
-
-  html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue75};
-    border: 1px solid ${newColors.shades.mediumBlue};
-
-    &:hover {
-      background-color: ${newColors.shades.kovBlue};
-    }
   }
 `;
 
@@ -216,15 +189,6 @@ export const linkLightBlueAlternativeStyle = css`
     @media (min-width: ${breakpoints.m}) {
       left: 16px;
       width: calc(100% - (${spacing.s} * 2));
-    }
-  }
-
-  html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue75};
-    border: 1px solid ${newColors.shades.mediumBlue};
-
-    &:hover {
-      background-color: ${newColors.shades.kovBlue};
     }
   }
 `;
@@ -251,10 +215,6 @@ export const linkStyleExpanded = css`
   &:hover {
     border-radius: ${spacing.s} ${spacing.s} 0 0;
     box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
-  }
-
-  html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue};
   }
 `;
 
@@ -302,10 +262,6 @@ export const chevronStyle = css`
   fill: ${newColors.primaries.fullBlue};
   transform: rotate(0);
   width: 18px;
-
-  html[data-theme='dark'] & {
-    fill: ${newColors.primaries.mediumBlue};
-  }
 `;
 
 export const chevronExpandedStyle = css`
@@ -318,40 +274,12 @@ export const expandedAreaStyle = css`
   visibility: hidden;
   padding: 0;
   height: 0;
-
-  html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue};
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: ${newColors.primaries.mediumBlue};
-    }
-    a {
-      color: ${newColors.primaries.mediumBlue};
-      &:hover {
-        color: ${newColors.primaries.fullBlue};
-      }
-    }
-    p {
-      color: ${newColors.kovWhite};
-    }
-  }
 `;
 
 export const expandedAreaAlternativeStyle = css`
   background-color: ${newColors.shades.lightGrey25};
   border: 1px solid ${newColors.secondaries.mediumGrey};
   border-top: 0;
-
-  html[data-theme='dark'] & {
-    background-color: ${newColors.shades.kovBlue75};
-    border: 1px solid ${newColors.shades.mediumBlue};
-    border-top: 0;
-  }
 `;
 
 export const expandedAreaLightBlueAlternativeStyle = css`

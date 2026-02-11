@@ -102,3 +102,5 @@ export * from './SystemIcons/Trash/Trash.js';
 export * from './SystemIcons/Lock/Lock.js';
 export * from './SystemIcons/Save/Save.js';
 export * from './SystemIcons/UserProfile/UserProfile.js';
+export * from './SystemIcons/SpeechBubble/SpeechBubble.js';
+export * from './SystemIcons/SpeechBubblesGrey/SpeechBubblesGrey.js';

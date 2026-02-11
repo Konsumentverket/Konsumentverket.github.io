@@ -27,6 +27,7 @@ export const FormSuccess = ({
   buttonClick = () => {},
   buttonText,
   loading = true,
+  showButton = true
 }) => {
   return (
     <div
@@ -38,7 +39,7 @@ export const FormSuccess = ({
     >
       <NoticeBox headline={headline}>{children}</NoticeBox>
 
-      <h3 css={dataListTitle}>Inskickade uppgifter:</h3>
+      {formData && (<h3 css={dataListTitle}>Inskickade uppgifter:</h3>)}
 
       {loading ? (
         <div css={[loader]}>
@@ -88,11 +89,13 @@ export const FormSuccess = ({
         </div>
       )}
 
-      <Button
-        onClick={buttonClick}
-        text={buttonText ?? 'Ladda ner bekräftelse'}
-        iconRight={<SystemIcon icon="MonoDownload" />}
-      />
+      {showButton && (
+        <Button
+          onClick={buttonClick}
+          text={buttonText ?? 'Ladda ner bekräftelse'}
+          iconRight={<SystemIcon icon="MonoDownload" />}
+        />
+      )}
     </div>
   );
 };

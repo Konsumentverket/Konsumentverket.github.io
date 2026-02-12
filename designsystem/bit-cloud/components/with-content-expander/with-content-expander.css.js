@@ -23,7 +23,7 @@ export const containerStyle = css`
   }
 
   html[data-theme='dark'] .commentform &,
-  html[data-theme='dark'] form[data-comp='contactForm-guidance'] & {
+  html[data-theme='dark'] form[data-comp] & {
     background-color: ${newColors.shades.kovBlue75} !important;
   }
 `;
@@ -177,14 +177,13 @@ export const linkStyle = css`
 
   html[data-theme='dark'] & {
     background-color: transparent;
-
     &:hover {
-      background-color: ${newColors.shades.kovBlue75};
+      background-color: ${newColors.shades.kovBlue50};
     }
   }
 
   html[data-theme='dark'] .commentform &,
-  html[data-theme='dark'] form[data-comp='contactForm-guidance'] & {
+  html[data-theme='dark'] form[data-comp] & {
     &:hover {
       background-color: ${newColors.shades.kovBlue50} !important;
     }

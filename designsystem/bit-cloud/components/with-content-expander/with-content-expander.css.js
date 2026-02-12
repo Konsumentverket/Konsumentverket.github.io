@@ -12,6 +12,15 @@ export const containerStyle = css`
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
   border: 1px solid rgba(22, 34, 89, 0.1);
   overflow: hidden;
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue};
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+    & .withContentExpander {
+      background-color: ${newColors.shades.kovBlue50};
+    }
+  }
 `;
 
 export const containerLightBlueAlternativeStyle = css`
@@ -22,6 +31,10 @@ export const containerLightBlueAlternativeStyle = css`
 export const containerAlternativeStyle = css`
   border: 1px solid ${newColors.secondaries.lightGrey};
   box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
+
+  html[data-theme='dark'] & {
+    border: 1px solid ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const noLeftBorderRadiusStyling = css`
@@ -102,6 +115,10 @@ export const titleStyle = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
   }
+
+  html[data-theme='dark'] & {
+    color: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const titleAlternativeStyle = css`
@@ -148,6 +165,14 @@ export const linkStyle = css`
   &:focus-within {
     outline-offset: -4px;
   }
+
+  html[data-theme='dark'] & {
+    background-color: transparent;
+
+    &:hover {
+      background-color: ${newColors.shades.kovBlue75};
+    }
+  }
 `;
 
 export const buttonResetStyle = css`
@@ -174,6 +199,10 @@ export const linkAlternativeStyle = css`
   &:hover {
     background-color: ${newColors.shades.lightGrey50};
     box-shadow: none;
+  }
+
+  html[data-theme='dark'] & {
+    border: 0 !important;
   }
 `;
 
@@ -209,6 +238,10 @@ export const linkStyleExpanded = css`
     @media (min-width: ${breakpoints.m}) {
       left: ${spacing.m};
       width: calc(100% - (${spacing.m} * 2));
+    }
+
+    html[data-theme='dark'] & {
+      background-color: ${newColors.shades.mediumBlue};
     }
   }
 
@@ -262,6 +295,10 @@ export const chevronStyle = css`
   fill: ${newColors.primaries.fullBlue};
   transform: rotate(0);
   width: 18px;
+
+  html[data-theme='dark'] & {
+    fill: ${newColors.shades.mediumBlue};
+  }
 `;
 
 export const chevronExpandedStyle = css`
@@ -274,6 +311,12 @@ export const expandedAreaStyle = css`
   visibility: hidden;
   padding: 0;
   height: 0;
+
+  html[data-theme='dark'] & {
+    background-color: transparent;
+    border: 0;
+    color: ${newColors.kovWhite};
+  }
 `;
 
 export const expandedAreaAlternativeStyle = css`

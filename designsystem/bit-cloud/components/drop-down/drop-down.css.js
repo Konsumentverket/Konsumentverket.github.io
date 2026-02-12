@@ -249,7 +249,6 @@ export const resetFilterStyle = css`
   }
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.mediumBlue};
     &:hover {
       color: ${newColors.shades.fullBlue};
     }

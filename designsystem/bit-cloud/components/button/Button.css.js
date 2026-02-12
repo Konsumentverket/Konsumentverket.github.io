@@ -102,6 +102,16 @@ export const chipsStyle = css`
     height: 14px;
     margin-right: 8px;
   }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.kovDarkModeBlue};
+    border: 1px solid ${newColors.shades.mediumBlue};
+    color: ${newColors.primaries.kovWhite};
+
+    &:hover {
+      background-color: ${newColors.shades.kovBlue75};
+    }
+  }
 `;
 
 export const smallStyle = css`
@@ -129,9 +139,7 @@ export const linkStyles = css`
   html[data-theme='dark'] & {
     background-color: transparent !important;
     color: ${newColors.shades.mediumBlue};
-    svg {
-      fill: ${newColors.shades.mediumBlue};
-    }
+
     &:hover {
       background: none;
     }

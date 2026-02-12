@@ -78,11 +78,12 @@ export const checkboxStyle = css`
     background-image: url(${checkmarkSvg});
     background-repeat: no-repeat;
     background-size: 48px 48px;
-    background-position: px 0px;
+    background-position: 0px 0px;
     position: relative;
 
     html[data-theme='dark'] & {
       background-image: url(${checkmarkDarkSvg});
+      background-size: 26px 26px;
     }
   }
 

@@ -106,7 +106,7 @@ export const chipsStyle = css`
   html[data-theme='dark'] & {
     background-color: ${newColors.kovDarkModeBlue};
     border: 1px solid ${newColors.shades.mediumBlue};
-    color: ${newColors.primaries.kovWhite};
+    color: ${newColors.shades.mediumBlue};
 
     &:hover {
       background-color: ${newColors.shades.kovBlue75};

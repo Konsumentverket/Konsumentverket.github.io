@@ -63,7 +63,7 @@ export const inputStyle = css`
     border: 1px solid ${newColors.shades.mediumBlue};
 
     &::placeholder {
-      color: ${newColors.shades.mediumBlue};
+      color: ${newColors.kovWhite};
     }
   }
 `;

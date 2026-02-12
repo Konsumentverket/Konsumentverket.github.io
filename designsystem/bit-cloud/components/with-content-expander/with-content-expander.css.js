@@ -18,7 +18,7 @@ export const containerStyle = css`
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 
     & .withContentExpander {
-      background-color: ${newColors.shades.kovBlue50};
+      background-color: ${newColors.shades.kovBlue75};
     }
   }
 `;
@@ -26,6 +26,10 @@ export const containerStyle = css`
 export const containerLightBlueAlternativeStyle = css`
   box-shadow: none;
   border: 1px solid ${newColors.primaries.lightBlue};
+
+  html[data-theme='dark'] & {
+    border: 1px solid ${newColors.shades.kovBlue};
+  }
 `;
 
 export const containerAlternativeStyle = css`
@@ -33,7 +37,7 @@ export const containerAlternativeStyle = css`
   box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
 
   html[data-theme='dark'] & {
-    border: 1px solid ${newColors.shades.mediumBlue};
+    border: 1px solid ${newColors.shades.kovBlue};
   }
 `;
 
@@ -170,7 +174,7 @@ export const linkStyle = css`
     background-color: transparent;
 
     &:hover {
-      background-color: ${newColors.shades.kovBlue75};
+      background-color: ${newColors.shades.kovBlue50};
     }
   }
 `;

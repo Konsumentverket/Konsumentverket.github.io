@@ -33,7 +33,7 @@
     "contact-forms": {
         "name": "contact-forms",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.238",
+        "version": "0.0.239",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/contact-forms"
     },
@@ -117,7 +117,7 @@
     "form-data-request": {
         "name": "form-data-request",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.255",
+        "version": "0.0.256",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-data-request"
     },
@@ -187,7 +187,7 @@
     "input-autocomplete": {
         "name": "input-autocomplete",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.253",
+        "version": "0.0.254",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/input-autocomplete"
     },
@@ -341,7 +341,7 @@
     "with-content-expander": {
         "name": "with-content-expander",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.345",
+        "version": "0.0.346",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/with-content-expander"
     }

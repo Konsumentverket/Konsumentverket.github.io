@@ -182,6 +182,13 @@ export const linkStyle = css`
       background-color: ${newColors.shades.kovBlue75};
     }
   }
+
+  html[data-theme='dark'] .commentform &,
+  html[data-theme='dark'] form[data-comp='contactForm-guidance'] & {
+    &:hover {
+      background-color: ${newColors.shades.kovBlue50} !important;
+    }
+  }
 `;
 
 export const buttonResetStyle = css`

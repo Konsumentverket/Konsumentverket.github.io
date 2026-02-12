@@ -84,9 +84,9 @@ export const innerHeaderTextStyle = css`
 `;
 
 export const iconStyle = css`
+  flex-shrink: 0;
   fill: ${newColors.primaries.fullBlue};
   margin-right: ${spacing.s};
-  flex-shrink: 0;
 
   @media (min-width: ${breakpoints.m}) {
     margin-right: ${spacing.m};
@@ -94,9 +94,9 @@ export const iconStyle = css`
 `;
 
 export const titleStyle = css`
+  font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.5;
-  font-weight: 500;
   color: ${newColors.primaries.fullBlue};
 
   @media (min-width: ${breakpoints.m}) {

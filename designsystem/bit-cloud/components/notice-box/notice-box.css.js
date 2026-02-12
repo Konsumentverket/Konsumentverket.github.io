@@ -55,6 +55,11 @@ export const wrapperStyling = css`
 
 export const warningWrapperStyling = css`
   background-color: ${newColors.primaries.lightOrange};
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.primaries.fullOrange};
+    color: ${newColors.primaries.lightOrange};
+  }
 `;
 
 export const tagMargin = css`

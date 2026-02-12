@@ -48,6 +48,7 @@ export const colorThemeWhite = css`
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlack};
     border: 1px solid ${newColors.shades.mediumBlue};
+    border-radius: 16px;
   }
 `;
 

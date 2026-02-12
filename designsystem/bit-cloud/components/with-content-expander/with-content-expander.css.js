@@ -22,8 +22,9 @@ export const containerStyle = css`
     }
   }
 
-  html[data-theme='dark'] .commentform & {
-    background-color: ${newColors.shades.kovBlue50} !important;
+  html[data-theme='dark'] .commentform &,
+  html[data-theme='dark'] form[data-comp='contactForm-guidance'] & {
+    background-color: ${newColors.shades.kovBlue75} !important;
   }
 `;
 
@@ -178,7 +179,7 @@ export const linkStyle = css`
     background-color: transparent;
 
     &:hover {
-      background-color: ${newColors.shades.kovBlue50};
+      background-color: ${newColors.shades.kovBlue75};
     }
   }
 `;

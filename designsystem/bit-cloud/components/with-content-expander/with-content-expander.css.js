@@ -13,13 +13,15 @@ export const containerStyle = css`
   border: 1px solid rgba(22, 34, 89, 0.1);
   overflow: hidden;
 
+  .commentform & {
+    html[data-theme='dark'] & {
+      background-color: ${newColors.shades.kovBlue50};
+    }
+  }
+
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlue};
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-
-    .commentform & {
-      background-color: ${newColors.shades.kovBlue50};
-    }
 
     & .withContentExpander {
       background-color: ${newColors.shades.kovBlue75};

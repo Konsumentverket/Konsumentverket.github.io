@@ -195,7 +195,7 @@ const globalStyles = (
   }
 
   ul {
-    list-style: bullet inside none;
+    list-style: disc inside none;
 
     li {
       margin-bottom: ${spacing.s};

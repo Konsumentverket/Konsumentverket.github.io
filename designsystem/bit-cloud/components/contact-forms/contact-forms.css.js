@@ -34,6 +34,7 @@ export const form = css`
       margin-left: 8px;
     }
   }
+
   html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlue};
     border: 1px solid ${newColors.shades.kovBlue};
@@ -206,7 +207,7 @@ export const informationButton = css`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: none;
+  background: none;
   cursor: pointer;
 
   &::after {

@@ -19,6 +19,7 @@ export const containerStyle = css`
 
     & .withContentExpander {
       background-color: ${newColors.shades.kovBlue75};
+      border: 1px solid ${newColors.shades.mediumBlue};
     }
   }
 
@@ -178,7 +179,7 @@ export const linkStyle = css`
   html[data-theme='dark'] & {
     background-color: transparent;
     &:hover {
-      background-color: ${newColors.shades.kovBlue50};
+      background-color: ${newColors.shades.kovBlue75};
     }
   }
 

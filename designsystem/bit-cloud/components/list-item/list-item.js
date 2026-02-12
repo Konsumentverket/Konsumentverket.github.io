@@ -39,7 +39,7 @@ export const ListItem = ({
 
       <div css={css.dateWrapper}>
         {type && <p css={css.typeStyle}>{type}</p>}
-        {updatedAt && <p css={css.dateStyle}> Uppdaterad den {updatedAt}</p>}
+        {updatedAt && <p css={css.dateStyle}>Uppdaterad den {updatedAt}</p>}
         {!updatedAt && publishedAt && <p css={css.dateStyle}>{publishedAt}</p>}
 
         {webbinairDateStart && webbinairDateEnd && (

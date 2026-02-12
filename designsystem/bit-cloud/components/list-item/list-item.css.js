@@ -138,9 +138,9 @@ export const typeStyle = css`
   }
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.lightGrey};
+    color: ${newColors.shades.fullBlue50};
     &:after {
-      background-color: ${newColors.shades.lightGrey};
+      background-color: ${newColors.shades.fullBlue50};
     }
   }
 `;
@@ -153,7 +153,7 @@ export const dateStyle = css`
   margin-bottom: 0;
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.lightGrey};
+    color: ${newColors.shades.fullBlue50};
   }
 `;
 
@@ -165,6 +165,6 @@ export const bottomText = css`
   margin-bottom: 0;
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.lightGrey};
+    color: ${newColors.shades.fullBlue50};
   }
 `;

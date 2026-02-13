@@ -32,6 +32,7 @@ export * from './SystemIcons/DBFileUpload/DBFileUpload.js';
 export * from './SystemIcons/DualBlueAiChat/DualBlueAiChat.js';
 export * from './SystemIcons/DualBlueBin/DualBlueBin.js';
 export * from './SystemIcons/DualWhiteBin/DualWhiteBin.js';
+export * from './SystemIcons/DualBlueEdit/DualBlueEdit.js';
 export * from './SystemIcons/DualBlueChatAnswer/DualBlueChatAnswer.js';
 export * from './SystemIcons/DualBlueHelpChat/DualBlueHelpChat.js';
 export * from './SystemIcons/DualBlueNews/DualBlueNews.js';

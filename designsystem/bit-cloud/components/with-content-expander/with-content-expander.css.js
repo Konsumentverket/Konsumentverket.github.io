@@ -27,6 +27,9 @@ export const containerStyle = css`
   html[data-theme='dark'] form[data-comp] & {
     background-color: ${newColors.shades.kovBlue75} !important;
   }
+  html[data-theme='dark'] form[data-comp='contactForm-subscribe'] & {
+    box-shadow: none;
+  }
 `;
 
 export const containerLightBlueAlternativeStyle = css`

@@ -30,6 +30,13 @@ export const containerStyle = css`
   html[data-theme='dark'] form[data-comp='contactForm-subscribe'] &,
   html[data-theme='dark'] form[data-comp='contactForm-guidance'] & {
     box-shadow: none;
+
+    h3 {
+      color: ${newColors.kovWhite} !important;
+    }
+    svg {
+      fill: ${newColors.kovWhite} !important;
+    }
   }
 `;
 

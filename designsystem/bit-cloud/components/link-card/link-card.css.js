@@ -137,11 +137,6 @@ export const mainLinkStyle = css`
     .noLinkChildren & {
       border-radius: 16px !important;
     }
-    .linkCardBorder {
-      width: calc(100% + 12px) !important;
-      margin-left: -12px !important;
-      padding: 0 !important;
-    }
 
     .noLinkChildren & {
       &:before {
@@ -226,8 +221,11 @@ export const border = css`
   margin-left: 4px;
   border-bottom: 1px solid ${newColors.shades.mediumBlue};
   padding: 0 !important;
+  position: relative;
 
   html[data-theme='dark'] & {
+    width: calc(100% - 16px) !important;
+    margin-left: 4px !important;
     border-bottom: 1px solid ${newColors.shades.fullBlue50};
   }
 `;

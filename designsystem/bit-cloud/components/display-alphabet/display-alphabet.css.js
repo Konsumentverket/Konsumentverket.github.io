@@ -29,6 +29,7 @@ export const alphabetWrapper = css`
     padding: 24px;
     border-radius: 24px;
   }
+
   html[data-theme='dark'] & {
     background-color: ${newColors.kovDarkModeBlue};
   }
@@ -67,6 +68,12 @@ export const validLetter = css`
 
   html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
+
+    &:hover {
+      color: ${newColors.shades.kovBlue50};
+      background-color: ${newColors.shades.mediumBlue50};
+    }
+
     &::after {
       border-bottom: 1px solid ${newColors.shades.mediumBlue};
     }
@@ -96,8 +103,8 @@ export const activeLetter = css`
   }
 
   html[data-theme='dark'] & {
-    color: ${newColors.shades.mediumBlue};
-    background-color: ${newColors.shades.kovBlue75};
+    color: ${newColors.shades.kovBlue50};
+    background-color: ${newColors.shades.mediumBlue50};
     border: 1px solid ${newColors.shades.kovBlue75};
   }
 `;

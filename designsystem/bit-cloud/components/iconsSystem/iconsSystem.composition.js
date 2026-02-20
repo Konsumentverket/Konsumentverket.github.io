@@ -29,12 +29,19 @@ const titleStyle = {
 
 export const BasicSystemIcon = () => {
   const icons = systemIconDefinitions || {}; // fallback
+  // document.documentElement.setAttribute('data-theme', 'dark');
 
   return (
     <CompositionFonts>
       <GlobalStyles />
       <h3 style={titleStyle}>System icons ({Object.keys(icons).length})</h3>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          // backgroundColor: '#13182F',
+        }}
+      >
         {Object.keys(icons).map((key, index) => (
           <div
             style={iconContainerStyle}

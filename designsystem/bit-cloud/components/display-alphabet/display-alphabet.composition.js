@@ -1,24 +1,26 @@
 import React from 'react';
 
-import {DisplayAlphabet} from './display-alphabet.js';
+import { DisplayAlphabet } from './display-alphabet.js';
 import {
   globalStyles as GlobalStyles,
-  CompositionFonts
+  CompositionFonts,
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const BasicDisplayAlphabet = () => {
+  document.documentElement.setAttribute('data-theme', 'dark');
+
   return (
     <CompositionFonts>
-      <GlobalStyles/>
+      <GlobalStyles />
       <DisplayAlphabet
         activeLetter="L"
-        visibleLetters={["L", "O", "R", "E", "M"]}
+        visibleLetters={['L', 'O', 'R', 'E', 'M']}
         onClickLetter={(e) => {
           e.preventDefault();
-          const dataLetter = e.target.getAttribute('data-letter')
+          const dataLetter = e.target.getAttribute('data-letter');
           console.log('Clicked: ' + dataLetter);
         }}
       />
     </CompositionFonts>
   );
-}
+};

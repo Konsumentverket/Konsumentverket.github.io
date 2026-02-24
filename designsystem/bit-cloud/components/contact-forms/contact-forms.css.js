@@ -65,7 +65,7 @@ export const formTitle = css`
     margin-bottom: 32px;
   }
   html[data-theme='dark'] & {
-    color: ${newColors.kovWhite};
+    color: ${newColors.shades.lightBlue};
   }
 `;
 

@@ -128,10 +128,6 @@ export const linkStyles = css`
   box-shadow: none;
   background-color: transparent !important;
 
-  svg {
-    fill: ${newColors.kovBlack};
-  }
-
   &:hover {
     background: none;
   }
@@ -174,7 +170,7 @@ export const buttonIconLeft = css`
   }
 
   svg {
-    max-width: 2.4rem;
+    max-width: 1.8rem;
     height: auto;
     margin-right: 1.6rem;
   }

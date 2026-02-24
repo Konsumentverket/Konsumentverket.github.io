@@ -61,6 +61,7 @@ export const inputStyle = css`
     background-color: ${newColors.kovBlack};
     color: ${newColors.kovWhite};
     border: 1px solid ${newColors.shades.mediumBlue};
+    border-right: 0;
 
     &::placeholder {
       color: ${newColors.kovWhite};

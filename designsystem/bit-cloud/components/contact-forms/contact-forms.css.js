@@ -6,7 +6,7 @@ import {
   colors,
 } from '@konsumentverket-sverige/designsystem.utils';
 
-import { checkPath } from '@konsumentverket-sverige/designsystem.icons-system';
+import { checkPathData } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const form = css`
   display: flex;
@@ -684,7 +684,7 @@ export const checkboxStyle = css`
   .checkbox:checked + .checkbox-label:before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent(
       '#fff'
-    )}' d='${checkPath}'/%3E%3C/svg%3E");
+    )}' d='${checkPathData}'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 48px 48px;
     background-position: 6px 8px;

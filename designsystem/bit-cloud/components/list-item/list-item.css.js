@@ -42,6 +42,10 @@ export const wrapper = css`
   html[data-theme='dark'] & {
     border-top: 1px solid ${newColors.shades.mediumBlue50};
 
+    p.listItemHeadline {
+      color: ${newColors.shades.mediumBlue};
+    }
+
     &:hover {
       background-color: ${newColors.shades.kovBlue75};
     }

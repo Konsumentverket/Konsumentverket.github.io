@@ -62,7 +62,7 @@ export const WithContentExpander = ({
   // document.documentElement.setAttribute('data-theme', 'dark');
 
   useEffect(() => {
-    if (location && location.hash) {
+    if (typeof location !== 'undefined' && location.hash) {
       const split = location.hash.split(',');
       open = split.some((x) => x === `#${wrapperId}`);
       if (open) scrollIntoView = true;

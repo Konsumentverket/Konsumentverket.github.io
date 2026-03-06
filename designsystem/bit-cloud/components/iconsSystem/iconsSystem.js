@@ -5,8 +5,7 @@ import * as systemIconDefinitions from './index';
 export const SystemIcon = ({ icon, className, style, title, ...otherAttr }) => {
   const Element = systemIconDefinitions[icon];
 
-  if (Element === undefined) {
-    console.log(`Could not find icon in storybook tried to load: ${icon}`);
+  if (typeof Element !== 'function') {
     return null;
   }
 

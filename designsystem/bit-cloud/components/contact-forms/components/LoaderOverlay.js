@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import {jsx} from "@emotion/react";
 import {loadingStyle, visuallyHidden} from "../contact-forms.css";
 

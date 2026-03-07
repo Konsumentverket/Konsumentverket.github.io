@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { css, Global } from '@emotion/react';
 import { spacing } from './spacing';
 import { colors, newColors } from './colors';

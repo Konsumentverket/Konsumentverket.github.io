@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 import * as styles from './display-alphabet.css.js';
 

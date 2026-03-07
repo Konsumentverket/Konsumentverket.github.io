@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 
 export const DBPublications = ({ className, style, title, ...otherAttr }) => {

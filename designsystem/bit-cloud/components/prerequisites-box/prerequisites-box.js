@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { wrapperStyling, titleStyling } from './prerequisites-box.css.js';
 
 export const PrerequisitesBox = ({

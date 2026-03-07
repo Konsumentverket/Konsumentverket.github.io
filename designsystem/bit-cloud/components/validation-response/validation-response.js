@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 import { wrapperStyle } from './validation-response.css.js';
 import {

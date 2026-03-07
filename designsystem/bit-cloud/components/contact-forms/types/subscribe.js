@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import {jsx} from '@emotion/react';
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';

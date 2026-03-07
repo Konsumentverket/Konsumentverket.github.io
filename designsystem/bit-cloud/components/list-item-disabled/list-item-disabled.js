@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 import * as css from './list-item-disabled.css.js';
 

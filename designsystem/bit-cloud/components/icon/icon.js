@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import * as SystemIcons from '@konsumentverket-sverige/designsystem.icons-system';
 import * as EditorIcons from '@konsumentverket-sverige/designsystem.icons-editor';
 

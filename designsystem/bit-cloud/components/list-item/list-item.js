@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 import * as css from './list-item.css.js';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';

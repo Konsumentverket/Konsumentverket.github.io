@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 
 export const DefaultUser = ({ className, style, title, ...otherAttr }) => {
   return (

@@ -1,6 +1,5 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import React, { useRef, useEffect } from 'react';
-import { jsx } from '@emotion/react';
 import {
   itemsWrapperStyle,
   itemsWrapperExpandedStyle,

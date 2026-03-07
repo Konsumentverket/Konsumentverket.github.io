@@ -1,6 +1,6 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import React from 'react';
-import { css, jsx } from '@emotion/react';
+import { css } from '@emotion/react';
 import { newColors } from './colors.js';
 import { GlobalStyles, CompositionFonts } from './globalstyles';
 import { gridStyles, containerStyles } from './grid';

@@ -1,6 +1,6 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import React from 'react';
-import {css, jsx} from '@emotion/react';
+import {css} from '@emotion/react';
 import {breakpoints} from './breakpoints';
 import {spacing} from './spacing';
 

@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import { format, parseISO } from 'date-fns';
 import { sv, enUS } from 'date-fns/locale';
 

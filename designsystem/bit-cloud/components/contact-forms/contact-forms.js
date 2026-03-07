@@ -1,6 +1,5 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import React, { useState } from 'react';
-import { jsx } from '@emotion/react';
 import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,

@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 
 export const DBFurnitureIcon = ({ className, style, title, ...otherAttr }) => {

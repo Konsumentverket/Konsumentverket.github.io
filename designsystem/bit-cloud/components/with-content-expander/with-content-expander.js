@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import React, { useState, useRef, useEffect } from 'react';
 import { Typography } from '@konsumentverket-sverige/designsystem.typography';
 import {

@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 
 export const DBFoodIcon = ({ className, style, title, ...otherAttr }) => {

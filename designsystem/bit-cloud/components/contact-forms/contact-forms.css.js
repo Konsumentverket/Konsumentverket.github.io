@@ -256,6 +256,15 @@ export const tooltip = css`
     width: 14px;
     height: 14px;
   }
+
+  html[data-theme='dark'] & {
+    border: 1px solid ${newColors.primaries.fullOrange};
+    background-color: ${newColors.primaries.fullOrange};
+
+    svg {
+      fill: ${newColors.primaries.lightOrange};
+    }
+  }
 `;
 
 export const tooltipText = css`

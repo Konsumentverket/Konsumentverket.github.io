@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { useState, useEffect, useRef } from 'react';
 import {
   characterCountInput,

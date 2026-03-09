@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 
 export const LogOut = ({ className, style, title, ...otherAttr }) => {
   return (

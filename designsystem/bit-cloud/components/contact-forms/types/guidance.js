@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
@@ -10,14 +11,13 @@ import {
   formRow,
   childrenContainer,
   recaptchaContainer,
-  recaptcha
+  recaptcha,
 } from '../contact-forms.css.js';
-import FormInput from "../components/FormInput";
-import FormTextArea from "../components/FormTextArea";
-import ErrorMessage from "../components/ErrorMessage";
-import LoaderOverlay from "../components/LoaderOverlay";
-import ReCAPTCHA from "react-google-recaptcha";
-
+import FormInput from '../components/FormInput';
+import FormTextArea from '../components/FormTextArea';
+import ErrorMessage from '../components/ErrorMessage';
+import LoaderOverlay from '../components/LoaderOverlay';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export const Guidance = ({
   title,
@@ -27,7 +27,7 @@ export const Guidance = ({
   isLoading,
   showV2,
   recaptchaSiteKeyV2,
-  handleV2
+  handleV2,
 }) => {
   const {
     register,
@@ -53,7 +53,7 @@ export const Guidance = ({
     guidanceSubjectHelpText,
     guidanceQuestionLabel,
     guidanceQuestionPlaceholder,
-    guidanceSubmitButtonText
+    guidanceSubmitButtonText,
   } = texts;
 
   const maxLengthInput = 40;
@@ -73,11 +73,7 @@ export const Guidance = ({
       onSubmit={handleSubmit(onSubmit)}
       aria-busy={isLoading}
     >
-      {title && (
-        <h2 css={formTitle}>
-          {title}
-        </h2>
-      )}
+      {title && <h2 css={formTitle}>{title}</h2>}
 
       <div css={[formRow]}>
         <FormInput
@@ -91,19 +87,26 @@ export const Guidance = ({
           maxLengthValidation={false}
           register={register}
           validation={{
-            required: "Du behöver skriva din e-postadress.",
+            required: 'Du behöver skriva din e-postadress.',
             maxLength: {
               value: maxLengthEmail,
               message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken`,
             },
             validate: {
-              hasAt: (v) => v.includes("@") || "E-postadressen måste innehålla ett @",
+              hasAt: (v) =>
+                v.includes('@') || 'E-postadressen måste innehålla ett @',
               tldLength: (v) => {
-                const parts = v.split(".");
+                const parts = v.split('.');
                 const tld = parts[parts.length - 1];
-                return (!tld || tld.length <= 63) || "Toppdomänen får inte vara längre än 63 tecken";
+                return (
+                  !tld ||
+                  tld.length <= 63 ||
+                  'Toppdomänen får inte vara längre än 63 tecken'
+                );
               },
-              format: (v) => /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(v) || "E-postadressen måste vara giltig",
+              format: (v) =>
+                /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(v) ||
+                'E-postadressen måste vara giltig',
             },
           }}
           watch={watch}
@@ -162,7 +165,7 @@ export const Guidance = ({
         maxLengthCount={maxLengthInput}
         register={register}
         validation={{
-          required: "Du behöver beskriva vad din fråga handlar om.",
+          required: 'Du behöver beskriva vad din fråga handlar om.',
           maxLength: {
             value: maxLengthInput,
             message: `Ämnet får inte vara mer än ${maxLengthInput} tecken.`,
@@ -181,7 +184,7 @@ export const Guidance = ({
         showCounter
         register={register}
         validation={{
-          required: "Du behöver skriva vad du vill ha hjälp med.",
+          required: 'Du behöver skriva vad du vill ha hjälp med.',
           maxLength: {
             value: maxLengthText,
             message: `Texten får inte vara mer än ${maxLengthText} tecken.`,
@@ -193,21 +196,27 @@ export const Guidance = ({
       {children && <div css={[childrenContainer]}>{children}</div>}
 
       {isLoading && <LoaderOverlay />}
-      
-       {/* V2 Fallback */}
-        {showV2 && (
-          <div css={recaptcha}>
-            <ReCAPTCHA
-              sitekey={recaptchaSiteKeyV2}
-              onChange={(token) => setV2Token(token)}
-            />
-          </div>
-        )}
+
+      {/* V2 Fallback */}
+      {showV2 && (
+        <div css={recaptcha}>
+          <ReCAPTCHA
+            sitekey={recaptchaSiteKeyV2}
+            onChange={(token) => setV2Token(token)}
+          />
+        </div>
+      )}
       <Button
         className="submitButton"
-        disabled={isLoading || (showV2 && !v2Token)} 
-        text={isLoading ? "Skickar..." : guidanceSubmitButtonText}
-        iconRight={isLoading ? <Loading color="#FFF" /> : <SystemIcon icon="ChevronRight" />}
+        disabled={isLoading || (showV2 && !v2Token)}
+        text={isLoading ? 'Skickar...' : guidanceSubmitButtonText}
+        iconRight={
+          isLoading ? (
+            <Loading color="#FFF" />
+          ) : (
+            <SystemIcon icon="ChevronRight" />
+          )
+        }
       />
     </form>
   );

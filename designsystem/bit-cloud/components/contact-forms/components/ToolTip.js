@@ -1,17 +1,22 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { useState, useEffect, useRef } from 'react';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
-import {useOnClickOutside} from '@konsumentverket-sverige/designsystem.utils';
+import { useOnClickOutside } from '@konsumentverket-sverige/designsystem.utils';
 import {
   centerPosition,
-  informationButton, informationButtonOpen,
+  informationButton,
+  informationButtonOpen,
   informationButtonWrapper,
   leftPosition,
-  rightPosition, showTooltip, tooltip, tooltipText
-} from "../contact-forms.css";
+  rightPosition,
+  showTooltip,
+  tooltip,
+  tooltipText,
+} from '../contact-forms.css';
 
-const ToolTip = ({position = 'left', id = '', text='', label=''}) => {
-  const [isOpen , setIsOpen] = useState(false);
+const ToolTip = ({ position = 'left', id = '', text = '', label = '' }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const tooltipRef = useRef();
 
@@ -39,13 +44,13 @@ const ToolTip = ({position = 'left', id = '', text='', label=''}) => {
 
   const onClick = () => {
     setIsOpen(!isOpen);
-  }
+  };
 
   const positions = {
     left: leftPosition,
     center: centerPosition,
     right: rightPosition,
-  }
+  };
 
   const handleBlur = (e) => {
     // Close tooltip when focusing outside of it
@@ -56,7 +61,6 @@ const ToolTip = ({position = 'left', id = '', text='', label=''}) => {
 
   return (
     <div css={informationButtonWrapper} className="tooltip">
-
       <button
         type="button"
         css={[informationButton, isOpen ? informationButtonOpen : null]}
@@ -65,22 +69,17 @@ const ToolTip = ({position = 'left', id = '', text='', label=''}) => {
         aria-expanded={isOpen}
         aria-label={`Visa en hjälpande text för detta fält: ${label}`}
       >
-        <SystemIcon icon={'Information'}/>
+        <SystemIcon icon={'Information'} />
       </button>
 
       <div
-        css={[
-          tooltip,
-          positions[position],
-          isOpen ? showTooltip : null
-        ]}
+        css={[tooltip, positions[position], isOpen ? showTooltip : null]}
         role="tooltip"
         className="tooltip"
         ref={tooltipRef}
         onBlur={handleBlur}
         id={`tooltip-${id}`}
       >
-
         <p css={tooltipText}>{text}</p>
 
         <button
@@ -89,12 +88,11 @@ const ToolTip = ({position = 'left', id = '', text='', label=''}) => {
           aria-controls={`tooltip-${id}`}
           aria-label={`Stäng tooltip ${label}`}
         >
-          <SystemIcon icon={'MonoDeleteSmall'}/>
+          <SystemIcon icon={'MonoDeleteSmall'} />
         </button>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ToolTip;

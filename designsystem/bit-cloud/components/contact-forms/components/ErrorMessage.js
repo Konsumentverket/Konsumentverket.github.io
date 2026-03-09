@@ -1,19 +1,15 @@
-/** @jsxImportSource @emotion/react */
-import {jsx} from '@emotion/react';
-import {errorMessage} from "../contact-forms.css";
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import { errorMessage } from '../contact-forms.css';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
-const ErrorMessage = ({id, children}) => {
+const ErrorMessage = ({ id, children }) => {
   return (
-    <span
-      css={[errorMessage]}
-      id={id}
-      role="alert"
-    >
-      <SystemIcon icon="Warn"/>
+    <span css={[errorMessage]} id={id} role="alert">
+      <SystemIcon icon="Warn" />
       {children}
     </span>
-  )
-}
+  );
+};
 
 export default ErrorMessage;

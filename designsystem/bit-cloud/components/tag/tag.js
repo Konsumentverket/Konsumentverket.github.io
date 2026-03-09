@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React from 'react';
 import { tagStyle } from './tag.css.js';
 

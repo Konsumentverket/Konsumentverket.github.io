@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import * as systemIconDefinitions from './index';
 import {
   globalStyles as GlobalStyles,

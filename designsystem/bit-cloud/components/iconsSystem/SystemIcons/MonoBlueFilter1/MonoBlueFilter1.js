@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 
 import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 import { css } from '@emotion/react';

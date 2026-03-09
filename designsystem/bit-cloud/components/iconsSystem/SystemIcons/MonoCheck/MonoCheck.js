@@ -1,6 +1,6 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React from 'react';
-
 
 export const MonoCheck = ({ className, style, title, ...otherAttr }) => {
   return (
@@ -16,4 +16,3 @@ export const MonoCheck = ({ className, style, title, ...otherAttr }) => {
     </svg>
   );
 };
-

@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { css, Global } from '@emotion/react';
 import { spacing } from './spacing';
 import { colors, newColors } from './colors';
@@ -195,7 +196,6 @@ const globalStyles = (
 
   ul {
     list-style: disc inside none;
-    
 
     li {
       margin-bottom: ${spacing.s};

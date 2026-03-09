@@ -1,10 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import {jsx} from '@emotion/react';
-import React, {useState} from 'react';
-import {useForm} from 'react-hook-form';
-import {Button} from '@konsumentverket-sverige/designsystem.button';
-import {SystemIcon} from '@konsumentverket-sverige/designsystem.icons-system';
-import {Loading} from '@konsumentverket-sverige/designsystem.loading';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@konsumentverket-sverige/designsystem.button';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import {
   form,
   formTitle,
@@ -12,15 +12,13 @@ import {
   childrenContainer,
   recaptchaContainer,
   topLeftIcon,
-  recaptcha
+  recaptcha,
 } from '../contact-forms.css.js';
-import {
-  useGoogleReCaptcha,
-} from 'react-google-recaptcha-v3';
-import FormInput from "../components/FormInput";
-import {Checkbox} from "../components/CheckBox";
-import ErrorMessage from "../components/ErrorMessage";
-import LoaderOverlay from "../components/LoaderOverlay";
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import FormInput from '../components/FormInput';
+import { Checkbox } from '../components/CheckBox';
+import ErrorMessage from '../components/ErrorMessage';
+import LoaderOverlay from '../components/LoaderOverlay';
 
 export const Subscribe = ({
   title,
@@ -36,13 +34,13 @@ export const Subscribe = ({
     register,
     handleSubmit,
     watch,
-    formState: {errors},
-  } = useForm({mode: 'onTouched'});
+    formState: { errors },
+  } = useForm({ mode: 'onTouched' });
 
-  const {executeRecaptcha} = useGoogleReCaptcha();
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
   const [v2Token, setV2Token] = useState(null);
-  
+
   if (!texts) return null;
 
   const {
@@ -50,15 +48,14 @@ export const Subscribe = ({
     subscribeEmailPlaceholder,
     subscribeEmailHelpText,
     consentLabel,
-    subscribeSubmitButtonText
+    subscribeSubmitButtonText,
   } = texts;
 
   const onSubmit = (data) => {
     handleFormSubmit(data, v2Token);
   };
 
-
-  const checkboxId = "consent";
+  const checkboxId = 'consent';
 
   const maxLengthEmail = 254;
 
@@ -69,28 +66,22 @@ export const Subscribe = ({
       onSubmit={handleSubmit(onSubmit)}
       aria-busy={isLoading}
     >
-
-      {title && (
-        <h2 css={formTitle}>
-          {title}
-        </h2>
-      )}
+      {title && <h2 css={formTitle}>{title}</h2>}
 
       <div css={[formRow]}>
-
         <FormInput
-          id={"email"}
-          type={"email"}
+          id={'email'}
+          type={'email'}
           label={subscribeEmailLabel}
           placeholder={subscribeEmailPlaceholder}
           tooltipText={subscribeEmailHelpText}
-          tooltipLabel={"e-post"}
+          tooltipLabel={'e-post'}
           error={errors && errors.email}
           register={register}
           validation={{
             required: {
               value: true,
-              message: "Du behöver skriva din e-postadress.",
+              message: 'Du behöver skriva din e-postadress.',
             },
             maxLength: {
               value: maxLengthEmail,
@@ -98,18 +89,19 @@ export const Subscribe = ({
             },
             validate: {
               hasAt: (value) =>
-                value.includes("@") || "E-postadressen måste innehålla ett @",
+                value.includes('@') || 'E-postadressen måste innehålla ett @',
               tldLength: (value) => {
-                const domainParts = value.split(".");
+                const domainParts = value.split('.');
                 const tld = domainParts[domainParts.length - 1];
                 return (
-                  (!tld || tld.length <= 63) ||
-                  "Toppdomänen (t.ex. .se) får inte vara längre än 63 tecken"
+                  !tld ||
+                  tld.length <= 63 ||
+                  'Toppdomänen (t.ex. .se) får inte vara längre än 63 tecken'
                 );
               },
               format: (value) =>
                 /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(value) ||
-                "E-postadressen måste vara giltig, (t.ex. namn@domän.se)",
+                'E-postadressen måste vara giltig, (t.ex. namn@domän.se)',
             },
           }}
           watch={watch}
@@ -125,8 +117,9 @@ export const Subscribe = ({
           validation={{
             required: {
               value: true,
-              message: 'För att ta emot nyheter från Konsumentverket behöver du godkänna att vi får använda din e-postadress.',
-            }
+              message:
+                'För att ta emot nyheter från Konsumentverket behöver du godkänna att vi får använda din e-postadress.',
+            },
           }}
           error={errors && errors[checkboxId]}
         />
@@ -134,31 +127,35 @@ export const Subscribe = ({
 
       {recaptchaError !== '' && (
         <div css={[recaptchaContainer]}>
-          <ErrorMessage id="recaptcha-error">
-            {recaptchaError}
-          </ErrorMessage>
+          <ErrorMessage id="recaptcha-error">{recaptchaError}</ErrorMessage>
         </div>
       )}
 
       {children && <div css={[childrenContainer]}>{children}</div>}
 
-      {isLoading && <LoaderOverlay/>}
+      {isLoading && <LoaderOverlay />}
 
       {/* V2 Fallback */}
-        {showV2 && (
-          <div css={recaptcha}>
-            <ReCAPTCHA
-              sitekey={recaptchaSiteKeyV2}
-              onChange={(token) => setV2Token(token)}
-            />
-          </div>
-        )}
+      {showV2 && (
+        <div css={recaptcha}>
+          <ReCAPTCHA
+            sitekey={recaptchaSiteKeyV2}
+            onChange={(token) => setV2Token(token)}
+          />
+        </div>
+      )}
 
       <Button
         className="submitButton"
-        disabled={isLoading || (showV2 && !v2Token)} 
-        text={isLoading ? "Skickar..." : subscribeSubmitButtonText}
-        iconRight={isLoading ? <Loading color={"#FFF"}/> : <SystemIcon icon="ChevronRight"/>}
+        disabled={isLoading || (showV2 && !v2Token)}
+        text={isLoading ? 'Skickar...' : subscribeSubmitButtonText}
+        iconRight={
+          isLoading ? (
+            <Loading color={'#FFF'} />
+          ) : (
+            <SystemIcon icon="ChevronRight" />
+          )
+        }
       />
     </form>
   );

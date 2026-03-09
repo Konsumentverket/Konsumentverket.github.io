@@ -1,10 +1,11 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React from 'react';
-import {css} from '@emotion/react';
-import {breakpoints} from './breakpoints';
-import {spacing} from './spacing';
+import { css } from '@emotion/react';
+import { breakpoints } from './breakpoints';
+import { spacing } from './spacing';
 
-const maxWidthGrid = '960px'
+const maxWidthGrid = '960px';
 
 export const containerStyles = css`
   width: 100%;

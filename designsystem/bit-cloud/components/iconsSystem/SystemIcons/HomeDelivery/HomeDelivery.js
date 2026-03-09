@@ -1,6 +1,7 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 
-export const HomeDelivery =  ({ className, style, title, ...otherAttr }) => {
+export const HomeDelivery = ({ className, style, title, ...otherAttr }) => {
   return (
     <svg
       className={className}

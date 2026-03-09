@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import {
   InputStyle,
   InputWrapperStyle,
@@ -7,7 +8,7 @@ import {
   invalidStyle,
   LoadingStyle,
   LockedStyle,
-  LockedStyleWrapper
+  LockedStyleWrapper,
 } from './input-text.css.js';
 import React, { useRef, useState } from 'react';
 import Loading from '@konsumentverket-sverige/designsystem.loading';
@@ -95,8 +96,10 @@ export const InputText = React.forwardRef(
             type={type}
             {...other}
           />
-          { !!styleLocked && (
-            <span css={LockedStyle} aria-hidden="true"><SystemIcon icon="Lock" /></span>
+          {!!styleLocked && (
+            <span css={LockedStyle} aria-hidden="true">
+              <SystemIcon icon="Lock" />
+            </span>
           )}
         </div>
 

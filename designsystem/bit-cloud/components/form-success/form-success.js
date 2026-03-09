@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React from 'react';
 import {
   wrapper,
@@ -26,7 +27,7 @@ export const FormSuccess = ({
   buttonClick = () => {},
   buttonText,
   loading = true,
-  showButton = true
+  showButton = true,
 }) => {
   return (
     <div
@@ -38,7 +39,7 @@ export const FormSuccess = ({
     >
       <NoticeBox headline={headline}>{children}</NoticeBox>
 
-      {formData && (<h3 css={dataListTitle}>Inskickade uppgifter:</h3>)}
+      {formData && <h3 css={dataListTitle}>Inskickade uppgifter:</h3>}
 
       {loading ? (
         <div css={[loader]}>

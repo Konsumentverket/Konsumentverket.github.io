@@ -7,7 +7,7 @@ import {
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const BasicDisplayAlphabet = () => {
-  document.documentElement.setAttribute('data-theme', 'dark');
+  // document.documentElement.setAttribute('data-theme', 'dark');
 
   return (
     <CompositionFonts>

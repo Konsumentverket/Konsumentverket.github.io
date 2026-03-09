@@ -47,7 +47,7 @@
     "display-alphabet": {
         "name": "display-alphabet",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.261",
+        "version": "0.0.262",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/display-alphabet"
     },

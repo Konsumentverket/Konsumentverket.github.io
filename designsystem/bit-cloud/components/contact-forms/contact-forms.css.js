@@ -244,7 +244,7 @@ export const tooltip = css`
   box-shadow: 0px 4px 20px rgba(22, 34, 89, 0.1);
 
   button {
-    background-color: none;
+    background-color: transparent;
     display: flex;
     align-self: baseline;
     margin-left: 8px;

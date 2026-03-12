@@ -1,9 +1,5 @@
 import { css } from '@emotion/react';
-import {
-  typography,
-  breakpoints,
-  newColors,
-} from '@konsumentverket-sverige/designsystem.utils';
+import { typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const typographyContainerStyle = css`
   & > :first-child {

@@ -35,7 +35,7 @@ export const pageStyle = css`
     border-radius: ${spacing.xs} !important;
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
     background-color: ${newColors.shades.kovBlue50};
     border: 1px solid ${newColors.shades.fullBlue};
@@ -71,7 +71,7 @@ export const distanceIndicatorStyle = css`
   font-weight: 500;
   color: ${newColors.shades.fullBlue50};
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -88,7 +88,7 @@ export const currentPageStyle = css`
     text-decoration: underline;
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
     background-color: ${newColors.kovBlue75};
     border: 1px solid ${newColors.shades.mediumBlue};

@@ -274,7 +274,7 @@ const globalStyles = (
         }
       }
     }
-    @media (prefers-color-scheme: dark) {
+    html[data-theme='dark'] & {
       &:not(.noStyle):not(.esbRowLink):not(.btn-primary):not(
           .button--linkstyle
         ) {

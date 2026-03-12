@@ -57,7 +57,7 @@ export const inputStyle = css`
     border: 1px solid ${newColors.shades.fullBlue};
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.kovBlack};
     color: ${newColors.kovWhite};
     border: 1px solid ${newColors.shades.mediumBlue};
@@ -90,7 +90,7 @@ export const clearInput = css`
   svg {
     fill: ${newColors.primaries.fullBlue};
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     svg {
       fill: ${newColors.shades.mediumBlue};
     }
@@ -125,7 +125,7 @@ export const dropdownWrapperStyle = css`
   border-radius: 0px 0px 8px 8px;
   overflow: hidden;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.kovBlack};
     color: ${newColors.shades.mediumBlue};
     border-right: 1px solid ${newColors.shades.mediumBlue};
@@ -149,7 +149,7 @@ export const dropdownItemStyle = css`
   &[aria-selected='true'] {
     background-color: ${newColors.primaries.lightBlue};
 
-    @media (prefers-color-scheme: dark) {
+    html[data-theme='dark'] & {
       background-color: ${newColors.shades.kovBlue};
     }
   }
@@ -194,7 +194,7 @@ export const dropdownButtonStyle = css`
       background-color: transparent;
     }
   }
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
 
     &:hover {

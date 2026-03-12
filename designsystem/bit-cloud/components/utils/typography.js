@@ -12,7 +12,7 @@ const baseHeading = css`
   word-break: break-word;
   margin-bottom: 16px;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
   }
 `;
@@ -257,7 +257,7 @@ export const paragraph = css`
     margin-bottom: 16px;
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.kovWhite};
     strong,
     b {
@@ -346,7 +346,7 @@ export const linkHover = css`
   background-color: ${newColors.primaries.lightBlue};
   box-shadow: 0 0 0 2px ${newColors.primaries.lightBlue};
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlue75};
     box-shadow: 0 0 0 2px ${newColors.shades.kovBlue75};
   }
@@ -357,7 +357,7 @@ export const linkFocus = css`
   background-color: ${newColors.primaries.mediumBlue};
   box-shadow: 0 0 0 2px ${newColors.primaries.mediumBlue};
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlue75};
     box-shadow: 0 0 0 2px ${newColors.shades.kovBlue75};
   }
@@ -378,7 +378,7 @@ export const link = css`
     ${linkFocus};
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
 
     &:hover {
@@ -574,7 +574,7 @@ const baseHeadingAlt = css`
   font-style: normal;
   font-weight: 700;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
   }
 `;
@@ -645,7 +645,7 @@ const baseSubHeadingAlt = css`
   font-weight: 700;
   margin-bottom: 8px;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
   }
 `;
@@ -833,7 +833,7 @@ export const ulStyling = css`
         margin-left: 16px;
       }
 
-      @media (prefers-color-scheme: dark) {
+      html[data-theme='dark'] & {
         background-color: ${newColors.primaries.lightOrange};
         border: 1px solid ${newColors.primaries.lightOrange};
       }
@@ -844,7 +844,7 @@ export const ulStyling = css`
     margin-bottom: 0;
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     li {
       color: ${newColors.kovWhite};
     }

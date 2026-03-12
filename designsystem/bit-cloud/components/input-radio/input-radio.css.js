@@ -45,7 +45,7 @@ export const colorThemeBlueWrapper = css`
 export const colorThemeWhite = css`
   background-color: ${newColors.primaries.kovWhite};
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlack};
     border: 1px solid ${newColors.shades.mediumBlue};
     border-radius: 16px;
@@ -55,7 +55,7 @@ export const colorThemeWhite = css`
 export const colorThemeBlue = css`
   background-color: ${newColors.primaries.kovWhite};
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.shades.kovBlue};
   }
 `;
@@ -63,7 +63,7 @@ export const colorThemeBlue = css`
 export const colorThemeGrey = css`
   background-color: ${newColors.shades.lightGrey25};
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.shades.fullGrey};
   }
 `;
@@ -114,7 +114,7 @@ export const fieldInput = css`
       forced-color-adjust: none;
       -ms-high-contrast-adjust: none;
 
-      @media (prefers-color-scheme: dark) {
+      html[data-theme='dark'] & {
         background-color: ${newColors.shades.mediumBlue};
       }
     }
@@ -139,7 +139,7 @@ export const fieldLabel = css`
   display: flex;
   user-select: none;
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -170,7 +170,7 @@ export const disabledStyle = css`
     }
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.shades.fullGrey};
     label {
       color: ${newColors.shades.kovBlack50};

@@ -14,7 +14,7 @@ const iconStyle = css`
     fill: ${newColors.shades.lightBlue50};
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     path:first-of-type {
       fill: ${newColors.primaries.mediumBlue};
       stroke: ${newColors.primaries.mediumBlue};

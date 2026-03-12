@@ -53,7 +53,7 @@ export const buttonStyle = css`
     ${disabled}
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.shades.fullBlue};
     color: ${newColors.kovWhite};
 
@@ -103,7 +103,7 @@ export const chipsStyle = css`
     margin-right: 8px;
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: ${newColors.kovDarkModeBlue};
     border: 1px solid ${newColors.shades.mediumBlue};
     color: ${newColors.shades.mediumBlue};
@@ -132,7 +132,7 @@ export const linkStyles = css`
     background: none;
   }
 
-  @media (prefers-color-scheme: dark) {
+  html[data-theme='dark'] & {
     background-color: transparent !important;
     color: ${newColors.shades.mediumBlue};
 

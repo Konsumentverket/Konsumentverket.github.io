@@ -39,7 +39,7 @@ export const wrapper = css`
     }
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     border-top: 1px solid ${newColors.shades.mediumBlue50};
 
     p.listItemHeadline {
@@ -80,7 +80,7 @@ export const headline = css`
     fill: ${newColors.shades.fullBlue};
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.mediumBlue};
 
     svg {
@@ -95,7 +95,7 @@ export const preambleStyle = css`
   line-height: 1.5;
   margin-bottom: 16px;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -141,7 +141,7 @@ export const typeStyle = css`
     }
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.fullBlue50};
     &:after {
       background-color: ${newColors.shades.fullBlue50};
@@ -156,7 +156,7 @@ export const dateStyle = css`
   color: ${newColors.shades.kovBlack50};
   margin-bottom: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.fullBlue50};
   }
 `;
@@ -168,7 +168,7 @@ export const bottomText = css`
   padding-bottom: 0;
   margin-bottom: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.fullBlue50};
   }
 `;

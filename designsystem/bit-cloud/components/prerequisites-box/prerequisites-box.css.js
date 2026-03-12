@@ -31,7 +31,7 @@ export const wrapperStyling = css`
     ${typography.linkSmall};
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.secondaries.fullGrey};
 
     p {
@@ -49,7 +49,7 @@ export const titleStyling = css`
   color: ${newColors.shades.kovBlack50};
   margin-top: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;

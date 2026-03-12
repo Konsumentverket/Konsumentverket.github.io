@@ -11,7 +11,7 @@ export const wrapperStyle = css`
   border-radius: 16px;
   background-color: ${newColors.shades.lightBlue50};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue75};
   }
 `;
@@ -53,7 +53,7 @@ export const headingStyle = css`
     font-size: 2.4rem;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -77,7 +77,7 @@ export const noItemsStyle = css`
   line-height: 1.5;
   margin: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;

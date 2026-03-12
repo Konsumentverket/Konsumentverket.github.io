@@ -15,7 +15,7 @@ export const breadcrumbStyle = css`
     margin: 0px calc(0.4rem);
     vertical-align: middle;
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) {
       fill: ${newColors.kovWhite};
     }
   }
@@ -40,7 +40,7 @@ export const breadcrumbTextStyle = css`
   text-decoration:none;
   color: ${newColors.kovBlack};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -59,7 +59,7 @@ export const breadcrumbLinkStyle = css`
     color: ${newColors.primaries.fullBlue} !important;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.primaries.mediumBlue};
 
     &:visited {
@@ -79,7 +79,7 @@ export const arrowStyle = css`
   vertical-align: middle;
   fill: ${newColors.kovBlack};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     fill: ${newColors.kovWhite};
   }
 `;

@@ -53,7 +53,7 @@ export const link = css`
     text-decoration: underline;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.kovDarkModeBlue};
     border-top: 1px solid ${newColors.shades.mediumBlue50};
     color: ${newColors.shades.mediumBlue};

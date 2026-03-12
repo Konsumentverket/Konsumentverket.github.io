@@ -52,7 +52,7 @@ export const focusCardStyle = css`
     text-decoration-color: currentColor;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue};
     border: 1px solid ${newColors.shades.kovBlue};
 
@@ -103,7 +103,7 @@ export const focusCardTitleStyle = css`
     margin: 0 0 ${spacing.s} 0;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -115,7 +115,7 @@ export const focusCardTextStyle = css`
   padding: 0;
   margin-bottom: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -134,7 +134,7 @@ export const focusCardIconSectionStyle = css`
   background-color: ${newColors.shades.lightBlue};
   // transition: background-color 0.15s ease;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.fullBlue};
   }
 `;
@@ -149,7 +149,7 @@ export const focusCardIconDarkSectionStyle = css`
     right: -1px;
     top: 0;
     // transition: background-color 0.15s ease;
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) {
       background-color: ${newColors.primaries.fullBlue};
   }
 `;
@@ -161,7 +161,7 @@ export const focusCardChevronIconStyle = css`
     margin-left: ${spacing.m};
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     fill: ${newColors.primaries.mediumBlue};
   }
 `;

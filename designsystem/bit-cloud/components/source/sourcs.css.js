@@ -52,7 +52,7 @@ export const reviewText = css`
     font-size: 1.6rem;
     color: ${newColors.shades.kovBlack50};
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -67,7 +67,7 @@ export const sourceTitle = css`
     font-size: 1.6rem;
     color: ${newColors.shades.kovBlack50};
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -103,7 +103,7 @@ export const sourceLink = css`
     top: 1px;
     left: 8px;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.primaries.mediumBlue};
   }
 `;
@@ -115,7 +115,7 @@ export const bottomTextStyle = css`
   margin-top: 16px;
   margin-bottom: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;

@@ -11,7 +11,7 @@ const iconStyle = css`
   path:nth-child(even) {
     fill: ${newColors.shades.fullBlue};
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     path:nth-child(odd) {
       fill: ${newColors.shades.fullBlue50};
     }

@@ -45,7 +45,7 @@ export const wrapperStyling = css`
       }
     }
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.secondaries.fullGreen};
     p {
       color: ${newColors.kovWhite};
@@ -56,7 +56,7 @@ export const wrapperStyling = css`
 export const warningWrapperStyling = css`
   background-color: ${newColors.primaries.lightOrange};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.primaries.fullOrange};
     color: ${newColors.primaries.lightOrange};
   }
@@ -88,7 +88,7 @@ export const titleStyling = css`
       margin-bottom: 32px;
     }
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -108,7 +108,7 @@ export const iconWrapper = css`
   ${medium} {
     top: -14px;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.secondaries.lightGreen};
   }
 `;
@@ -121,7 +121,7 @@ export const iconColor = css`
   fill: ${newColors.secondaries.lightGreen};
   width: 20px;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     fill: ${newColors.secondaries.fullGreen};
   }
 `;

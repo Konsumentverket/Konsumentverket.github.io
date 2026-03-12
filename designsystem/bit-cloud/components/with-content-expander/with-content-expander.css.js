@@ -13,7 +13,7 @@ export const containerStyle = css`
   border: 1px solid rgba(22, 34, 89, 0.1);
   overflow: hidden;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue};
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 
@@ -21,20 +21,24 @@ export const containerStyle = css`
       background-color: ${newColors.shades.kovBlue75};
       border: 1px solid ${newColors.shades.mediumBlue};
     }
-  }
 
-  html[data-theme='dark'] .commentform &,
-  html[data-theme='dark'] form[data-comp] & {
-    background-color: ${newColors.shades.kovBlue75} !important;
-  }
-  html[data-theme='dark'] form[data-comp='contactForm-subscribe'] &,
-  html[data-theme='dark'] form[data-comp='contactForm-guidance'] & {
-    box-shadow: none;
-    h3 {
-      color: ${newColors.kovWhite} !important;
+    .commentform &,
+    form[data-comp] & {
+      background-color: ${newColors.shades.kovBlue75} !important;
     }
-    svg {
-      fill: ${newColors.kovWhite} !important;
+
+    form[data-comp='contactForm-otherCases'] & {
+      box-shadow: none;
+    }
+    form[data-comp='contactForm-subscribe'] &,
+    form[data-comp='contactForm-guidance'] & {
+      box-shadow: none;
+      h3 {
+        color: ${newColors.kovWhite} !important;
+      }
+      svg {
+        fill: ${newColors.kovWhite} !important;
+      }
     }
   }
 `;
@@ -43,7 +47,7 @@ export const containerLightBlueAlternativeStyle = css`
   box-shadow: none;
   border: 1px solid ${newColors.primaries.lightBlue};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     border: 1px solid ${newColors.shades.kovBlue};
   }
 `;
@@ -52,7 +56,7 @@ export const containerAlternativeStyle = css`
   border: 1px solid ${newColors.secondaries.lightGrey};
   box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     border: 1px solid ${newColors.shades.kovBlue};
   }
 `;
@@ -136,7 +140,7 @@ export const titleStyle = css`
     font-size: 2.4rem;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -186,17 +190,18 @@ export const linkStyle = css`
     outline-offset: -4px;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: transparent;
+
     &:hover {
       background-color: ${newColors.shades.kovBlue75};
     }
-  }
 
-  html[data-theme='dark'] .commentform &,
-  html[data-theme='dark'] form[data-comp] & {
-    &:hover {
-      background-color: ${newColors.shades.kovBlue50} !important;
+    .commentform &,
+    form[data-comp] & {
+      &:hover {
+        background-color: ${newColors.shades.kovBlue50} !important;
+      }
     }
   }
 `;
@@ -227,7 +232,7 @@ export const linkAlternativeStyle = css`
     box-shadow: none;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     border: 0 !important;
   }
 `;
@@ -266,7 +271,7 @@ export const linkStyleExpanded = css`
       width: calc(100% - (${spacing.m} * 2));
     }
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) {
       background-color: ${newColors.shades.mediumBlue};
     }
   }
@@ -322,7 +327,7 @@ export const chevronStyle = css`
   transform: rotate(0);
   width: 18px;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     fill: ${newColors.shades.mediumBlue};
   }
 `;
@@ -338,7 +343,7 @@ export const expandedAreaStyle = css`
   padding: 0;
   height: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: transparent;
     border: 0;
     color: ${newColors.kovWhite};

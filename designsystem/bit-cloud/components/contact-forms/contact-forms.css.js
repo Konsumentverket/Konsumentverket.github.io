@@ -35,7 +35,7 @@ export const form = css`
     }
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue};
     border: 1px solid ${newColors.shades.kovBlue};
   }
@@ -64,7 +64,7 @@ export const formTitle = css`
   @media (min-width: ${breakpoints.m}) {
     margin-bottom: 32px;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.lightBlue};
   }
 `;
@@ -96,7 +96,7 @@ export const inputStyle = css`
     font-style: italic;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
     border: 1px solid ${newColors.primaries.mediumBlue};
     background-color: ${newColors.kovBlack};
@@ -126,7 +126,7 @@ export const textAreaStyle = css`
     font-style: italic;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
     border: 1px solid ${newColors.primaries.mediumBlue};
     background-color: ${newColors.kovBlack};
@@ -144,7 +144,7 @@ export const labelStyle = css`
   margin-right: 16px;
   height: 23px;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -176,7 +176,7 @@ export const inputDescriptionStyle = css`
     font-style: italic;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
     border: 1px solid ${newColors.primaries.mediumBlue};
     background-color: ${newColors.kovBlack};
@@ -222,6 +222,12 @@ export const informationButton = css`
     border-right: 7px solid transparent;
     border-bottom: 7px solid ${newColors.primaries.lightOrange};
   }
+
+  @media (prefers-color-scheme: dark) {
+    &::after {
+      border-bottom: 7px solid ${newColors.primaries.fullOrange};
+    }
+  }
 `;
 
 export const informationButtonOpen = css`
@@ -257,7 +263,7 @@ export const tooltip = css`
     height: 14px;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     border: 1px solid ${newColors.primaries.fullOrange};
     background-color: ${newColors.primaries.fullOrange};
 
@@ -316,7 +322,7 @@ export const characterCount = css`
   background-color: #ffffff;
   padding: 2px 0 2px 2px;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.kovBlack};
     color: ${newColors.kovWhite};
   }
@@ -358,7 +364,7 @@ export const errorMessage = css`
   svg {
     flex-shrink: 0;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.secondaries.lightPink};
   }
 `;
@@ -431,7 +437,7 @@ export const fileUploadTypes = css`
     text-decoration: none;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -471,7 +477,7 @@ export const uploadBox = css`
     border: 1px solid ${newColors.shades.lightBlue50};
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue75};
     border: 1px solid ${newColors.shades.fullBlue50};
 
@@ -493,7 +499,7 @@ export const uploadBoxTitleStyle = css`
   display: flex;
   align-items: center;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -515,7 +521,7 @@ export const uploadBoxTextStyle = css`
   ${typography.textSmall};
   color: ${newColors.shades.kovBlack50};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -561,7 +567,7 @@ export const listItem = css`
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.1);
   margin-bottom: 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue};
     border: 1px solid ${newColors.shades.kovBlue};
   }
@@ -593,7 +599,7 @@ export const fileThumbnail = css`
     margin-right: 16px;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlue};
     color: ${newColors.kovWhite};
   }
@@ -607,7 +613,7 @@ export const deleteFileButton = css`
   align-items: center;
   white-space: nowrap;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.shades.mediumBlue};
   }
 `;
@@ -644,7 +650,7 @@ export const checkboxLabelStyle = css`
     text-decoration: underline;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;

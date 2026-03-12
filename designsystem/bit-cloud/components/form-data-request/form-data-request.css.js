@@ -18,7 +18,7 @@ export const form = css`
       margin-left: auto;
     }
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.kovBlue};
   }
 `;
@@ -27,7 +27,7 @@ export const reasonTitle = css`
   h2 {
     margin-top: 0;
     margin-bottom: 4px;
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) {
       color: ${newColors.shades.lightBlue};
     }
   }
@@ -36,7 +36,7 @@ export const reasonTitle = css`
 export const formTitle = css`
   h3 {
     margin-bottom: 22px;
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) {
       color: ${newColors.shades.lightBlue};
     }
   }
@@ -62,7 +62,7 @@ export const formRow = css`
     display: block;
     font-weight: 700;
     margin-bottom: 18px;
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) {
       color: ${newColors.kovWhite};
     }
   }
@@ -98,7 +98,7 @@ export const errorMessage = css`
   svg {
     flex-shrink: 0;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.secondaries.lightPink};
   }
 `;
@@ -162,7 +162,7 @@ export const radioLabel = css`
       border: 6px solid ${newColors.shades.fullBlue};
     }
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;

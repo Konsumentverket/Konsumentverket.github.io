@@ -33,7 +33,7 @@ export const linkWrapper = css`
   border-radius: 16px;
   height: 100%;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     box-shadow: 0px 2px 4px 0px #00000080;
     background-color: ${newColors.kovBlue};
   }
@@ -42,7 +42,7 @@ export const linkWrapper = css`
     background-color: #fff;
     transition: background-color 0.3s;
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) {
       background-color: ${newColors.kovBlue};
     }
   }
@@ -50,7 +50,7 @@ export const linkWrapper = css`
   h3 {
     transition: all 0.3s;
 
-    html[data-theme='dark'] & {
+    @media (prefers-color-scheme: dark) {
       color: ${newColors.shades.mediumBlue};
     }
   }
@@ -134,7 +134,7 @@ export const focusText = css`
   line-height: 1.5;
   padding-bottom: 2.4rem;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;

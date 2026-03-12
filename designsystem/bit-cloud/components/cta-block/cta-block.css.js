@@ -41,7 +41,7 @@ export const whiteBackground = css`
   background-color: ${newColors.kovWhite};
   border: 1px solid #fff;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.kovBlue};
     border: 1px solid ${newColors.kovBlue};
   }
@@ -51,7 +51,7 @@ export const blueBackground = css`
   background-color: ${newColors.shades.lightBlue50};
   border: 1px solid ${newColors.shades.lightBlue50};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.kovBlue};
   }
 `;
@@ -60,7 +60,7 @@ export const greyBackground = css`
   background-color: ${newColors.shades.lightGrey25};
   border: 1px solid ${newColors.shades.lightGrey25};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.kovBlue};
   }
 `;
@@ -78,7 +78,7 @@ export const focusHeadline = css`
     margin-bottom: 3.2rem;
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.primaries.lightBlue};
   }
 `;
@@ -91,7 +91,7 @@ export const focusText = css`
   @media (min-width: 650px) {
     margin-bottom: 3.2rem;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.kovWhite};
   }
 `;
@@ -102,7 +102,7 @@ export const paragraphStyling = css`
   & {
     margin-bottom: 16px;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.primaries.lightBlue};
   }
 `;
@@ -137,7 +137,7 @@ export const smallHeadlineStyle = css`
   & {
     margin-bottom: 16px;
   }
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.primaries.lightBlue};
   }
 `;

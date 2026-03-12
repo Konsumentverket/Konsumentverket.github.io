@@ -50,7 +50,7 @@ export const wrapperStyling = css`
         margin-right: 10px;
         margin-bottom: 2px;
 
-        html[data-theme='dark'] & {
+        @media (prefers-color-scheme: dark) {
           background-color: ${newColors.primaries.lightOrange};
           border: 1px solid ${newColors.primaries.lightOrange};
         }
@@ -58,7 +58,7 @@ export const wrapperStyling = css`
       a {
         text-decoration: underline;
 
-        html[data-theme='dark'] & {
+        @media (prefers-color-scheme: dark) {
           color: ${newColors.primaries.lightOrange} !important;
 
           &:hover {
@@ -71,7 +71,7 @@ export const wrapperStyling = css`
     }
   }
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     background-color: ${newColors.shades.kovBlack50};
     border: 1px solid ${newColors.shades.kovBlack50};
 
@@ -107,7 +107,7 @@ export const titleStyling = css`
   line-height: 1.4;
   margin: 0 0 24px 0;
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     color: ${newColors.primaries.lightBlue};
   }
 `;
@@ -132,7 +132,7 @@ export const iconWrapperReport = css`
 export const iconColor = css`
   fill: ${newColors.primaries.fullBlue};
 
-  html[data-theme='dark'] & {
+  @media (prefers-color-scheme: dark) {
     fill: ${newColors.shades.mediumBlue};
 
     path:nth-of-type(2) {

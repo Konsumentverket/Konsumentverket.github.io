@@ -19,8 +19,8 @@ export const chevronStyle = css`
   }
 
   html[data-theme='dark'] & {
-    color: ${newColors.kovWhite};
-    fill: ${newColors.kovWhite};
+    color: ${newColors.shades.mediumBlue};
+    fill: ${newColors.shades.mediumBlue};
   }
 `;
 
@@ -35,7 +35,7 @@ export const iconStyle = css`
     width: 32px;
   }
   html[data-theme='dark'] & {
-    fill: ${newColors.kovWhite};
+    fill: ${newColors.shades.mediumBlue};
   }
 `;
 

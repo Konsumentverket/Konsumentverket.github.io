@@ -32,10 +32,10 @@ export const wrapperStyling = css`
   }
 
   html[data-theme='dark'] & {
-    background-color: ${newColors.secondaries.fullGrey};
+    background-color: ${newColors.primaries.fullOrange};
 
     p {
-      color: ${newColors.kovWhite};
+      color: ${newColors.primaries.lightOrange};
     }
 
     a {

@@ -49,12 +49,12 @@ const CheckboxOption = ({
   </div>
 );
 
-const RadioOption = ({ text, value, id, onChange, stateValue, disabled }) => (
+const RadioOption = ({ text, value, id, name, onChange, stateValue, disabled }) => (
   <div css={itemOptionWrapperStyle}>
     <FormRadiobutton
       id={id}
       labelText={text}
-      name={id}
+      name={name || id}
       value={value}
       onChange={onChange}
       usePrimaryColor={true}
@@ -114,9 +114,11 @@ export const Dropdown = ({
 
   useEffect(() => {
     if (isExpanded && focusedIndex >= 0 && dropdownRef.current) {
-      const options = dropdownRef.current.querySelectorAll('li[tabindex="0"]');
+      const options = dropdownRef.current.querySelectorAll('ul li');
       if (options[focusedIndex]) {
-        options[focusedIndex].focus();
+        const focusable = options[focusedIndex].querySelector('input:not([disabled]), a, button:not([disabled])');
+        if (focusable) focusable.focus();
+        else options[focusedIndex].focus();
       }
     }
   }, [focusedIndex, isExpanded]);
@@ -193,7 +195,6 @@ export const Dropdown = ({
       data-comp="drop-down"
       css={[wrapperStyle, isExpanded && wrapperExpandedStyle]}
       ref={dropdownRef}
-      tabIndex="-1"
       onBlur={handleBlur}
     >
       <div css={innerWrapperStyle}>
@@ -233,17 +234,22 @@ export const Dropdown = ({
                 <li
                   key={index}
                   role="button"
-                  tabIndex={isExpanded ? 0 : -1}
+                  tabIndex={type === 'text' ? 0 : -1}
                   onKeyDown={(e) => {
                     if (!isExpanded) return;
                     if (e.key === 'Enter') {
-                      setValue(item.text);
-                      setIsExpanded(false);
+                      if (type === 'radio' || type === 'checkbox') {
+                        handleOptionChange(item.value, e);
+                      } else {
+                        setValue(item.text);
+                        setIsExpanded(false);
+                      }
                     }
                   }}
                 >
                   <Component
                     id={`${id}-${index}`}
+                    name={id}
                     onChange={(checked) =>
                       handleOptionChange(item.value, checked)
                     }

@@ -28,6 +28,7 @@ const IconCard = React.forwardRef(
       contentfulId,
       linkComponent: LinkComponent = 'a',
       isExternal = false,
+      isPortal = false
     },
     ref
   ) => {
@@ -53,7 +54,7 @@ const IconCard = React.forwardRef(
         className="noStyle"
         data-contentful-field-id={contentfulName}
         data-contentful-entry-id={contentfulId}
-        injected={true}
+        injected={isPortal ? false : true}
         isExternal={isExternal}
       >
         {icon &&

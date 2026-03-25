@@ -98,6 +98,7 @@ export const focusCardTitleStyle = css`
   text-decoration-color: transparent;
   // transition: text-decoration-color 0.15s ease;
   display: flex;
+  align-items: center;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;

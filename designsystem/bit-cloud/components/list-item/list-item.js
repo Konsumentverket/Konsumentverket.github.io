@@ -30,8 +30,7 @@ export const ListItem = ({
       onClick={onClick}
       data-comp="listitem"
       injected={true}
-      target={isExternal && isPortal ? '_blank' : undefined}
-      rel={isExternal && isPortal ? 'noopener noreferrer' : undefined}
+      isExternal={isExternal && isPortal}
     >
       <p css={css.headline} className="listItemHeadline">
         {headline} {<SystemIcon icon={icon} />}

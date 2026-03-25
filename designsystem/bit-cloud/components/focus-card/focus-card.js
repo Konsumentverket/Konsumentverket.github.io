@@ -11,6 +11,7 @@ import {
   focusCardIconSectionStyle,
   focusCardIconDarkSectionStyle,
   focusCardChevronIconStyle,
+  focusCardExternalIconStyle,
 } from './focus-card.css.js';
 
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
@@ -22,6 +23,7 @@ export const FocusCard = ({
   url,
   dark = false,
   linkComponent: LinkComponent = 'a',
+  isExternal = false
 }) => {
   return (
     <LinkComponent
@@ -30,16 +32,19 @@ export const FocusCard = ({
       href={url}
       data-comp="focus-card"
       injected={true}
+      isExternal={isExternal}
     >
       <div css={focusCardTextSectionStyle}>
         {title && (
           <h3 css={focusCardTitleStyle} className="focusCardTitle">
             {title}
+            {isExternal && <SystemIcon icon="External" title="Extern länk" css={focusCardExternalIconStyle} />}
           </h3>
         )}
         {headline && (
           <h3 css={focusCardTitleStyle} className="focusCardTitle">
             {headline}
+            {isExternal && <SystemIcon icon="External" title="Extern länk" css={focusCardExternalIconStyle} />}
           </h3>
         )}
         {text && <p css={focusCardTextStyle}>{text}</p>}
@@ -52,7 +57,7 @@ export const FocusCard = ({
         className="focusCardIconSection"
       >
         <SystemIcon
-          title={'Pil till höger'}
+          title="Pil till höger"
           icon="MonoArrowRight"
           css={focusCardChevronIconStyle}
         />

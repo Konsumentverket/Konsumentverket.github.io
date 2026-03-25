@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import {
   newColors,
   breakpoints,
+  spacing
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const focusWrapper = css`
@@ -19,6 +20,16 @@ export const focusWrapper = css`
       flex-direction: row !important;
       min-width: 700px;
     }
+  }
+`;
+
+export const imageCardExternalIconStyle = css`
+  fill: ${newColors.primaries.fullBlue};
+  vertical-align: middle;
+  margin-left: ${spacing.xs};
+
+  html[data-theme='dark'] & {
+    fill: ${newColors.primaries.mediumBlue};
   }
 `;
 

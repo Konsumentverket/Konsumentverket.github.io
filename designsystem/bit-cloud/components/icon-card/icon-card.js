@@ -27,6 +27,7 @@ const IconCard = React.forwardRef(
       contentfulName,
       contentfulId,
       linkComponent: LinkComponent = 'a',
+      isExternal = false,
     },
     ref
   ) => {
@@ -53,6 +54,7 @@ const IconCard = React.forwardRef(
         data-contentful-field-id={contentfulName}
         data-contentful-entry-id={contentfulId}
         injected={true}
+        isExternal={isExternal}
       >
         {icon &&
           React.cloneElement(icon, { 'aria-hidden': 'true', style: iconStyle })}

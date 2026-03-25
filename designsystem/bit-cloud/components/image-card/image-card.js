@@ -9,6 +9,7 @@ import {
   focusText,
   iconBackground,
   puffIcon,
+  imageCardExternalIconStyle,
   linkWrapper,
 } from './image-card.css.js';
 import React from 'react';
@@ -19,13 +20,14 @@ export const ImageCard = ({
   headline,
   text,
   url,
-  isExternalLink,
+  isExternalLink = false,
   image,
   imageAlt,
   icon,
   imageComponent,
   onClick,
   extraClass,
+  isPortal = false,
   linkComponent: LinkComponent = 'a',
 }) => {
   let imageArea = imageComponent;
@@ -51,6 +53,9 @@ export const ImageCard = ({
             {headline}
             {!isExternalLink && (
               <SystemIcon aria-hidden="true" icon="ChevronRight" />
+            )}
+             {isExternalLink && isPortal && (
+              <SystemIcon icon="External" title="Extern länk" css={imageCardExternalIconStyle} />
             )}
           </h3>
           {!!text && <p css={focusText}>{text}</p>}

@@ -97,6 +97,7 @@ export const focusCardTitleStyle = css`
   text-underline-offset: 2px;
   text-decoration-color: transparent;
   // transition: text-decoration-color 0.15s ease;
+  display: flex;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
@@ -151,6 +152,16 @@ export const focusCardIconDarkSectionStyle = css`
     // transition: background-color 0.15s ease;
     html[data-theme='dark'] & {
       background-color: ${newColors.primaries.fullBlue};
+  }
+`;
+
+export const focusCardExternalIconStyle = css`
+  fill: ${newColors.primaries.fullBlue};
+  vertical-align: middle;
+  margin-left: ${spacing.xs};
+
+  html[data-theme='dark'] & {
+    fill: ${newColors.primaries.mediumBlue};
   }
 `;
 

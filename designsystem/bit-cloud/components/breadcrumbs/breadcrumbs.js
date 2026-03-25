@@ -11,9 +11,10 @@ import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 export const Breadcrumbs = ({
   items = [],
   linkComponent: LinkComponent = 'a',
+  ignoreInSearch = false,
 }) => {
   return (
-    <nav aria-label="breadcrumb" css={breadcrumbStyle} data-comp="breadcrumbs">
+    <nav aria-label="breadcrumb" css={breadcrumbStyle} data-comp="breadcrumbs" className={ignoreInSearch ? 'addsearch-ignore' : undefined}>
       <p>
         {items.map((crumb, idx) => {
           return (

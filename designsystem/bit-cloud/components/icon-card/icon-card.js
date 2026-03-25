@@ -60,7 +60,7 @@ const IconCard = React.forwardRef(
         {icon &&
           React.cloneElement(icon, { 'aria-hidden': 'true', style: iconStyle })}
         <span css={iconTextStyle}>{text}</span>
-        { !isExternal || !isPortal && <ChevronRight aria-hidden="true" style={chevronStyle} /> }
+        {(!isExternal || !isPortal) && <ChevronRight aria-hidden="true" style={chevronStyle} />}
       </LinkComponent>
     );
   }

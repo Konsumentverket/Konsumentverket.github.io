@@ -159,7 +159,7 @@
     "icon-card": {
         "name": "icon-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.315",
+        "version": "0.0.316",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/icon-card"
     },

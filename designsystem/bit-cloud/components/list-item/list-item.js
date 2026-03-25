@@ -18,6 +18,8 @@ export const ListItem = ({
   bottomText,
   linkComponent: LinkComponent = 'a',
   icon = 'MonoArrowRightSmall',
+  isPortal = false,
+  isExternal = false
 }) => {
   // document.documentElement.setAttribute('data-theme', 'dark');
   return (
@@ -28,6 +30,8 @@ export const ListItem = ({
       onClick={onClick}
       data-comp="listitem"
       injected={true}
+      target={isExternal && isPortal ? '_blank' : undefined}
+      rel={isExternal && isPortal ? 'noopener noreferrer' : undefined}
     >
       <p css={css.headline} className="listItemHeadline">
         {headline} {<SystemIcon icon={icon} />}

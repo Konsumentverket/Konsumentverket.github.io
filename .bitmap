@@ -12,7 +12,7 @@
     "breadcrumbs": {
         "name": "breadcrumbs",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.297",
+        "version": "0.0.298",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/breadcrumbs"
     },

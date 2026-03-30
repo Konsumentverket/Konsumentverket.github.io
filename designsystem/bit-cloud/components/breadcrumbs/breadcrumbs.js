@@ -14,7 +14,7 @@ export const Breadcrumbs = ({
   ignoreInSearch = false,
 }) => {
   return (
-    <nav aria-label="breadcrumb" css={breadcrumbStyle} data-comp="breadcrumbs" className={ignoreInSearch ? 'addsearch-ignore' : undefined}>
+    <nav aria-label="breadcrumb" css={breadcrumbStyle} data-comp="breadcrumbs" data-addsearch={ignoreInSearch ? 'exclude' : undefined}>
       <p>
         {items.map((crumb, idx) => {
           return (

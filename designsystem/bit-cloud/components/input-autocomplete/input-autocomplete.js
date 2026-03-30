@@ -192,7 +192,7 @@ export const InputAutocomplete = forwardRef(
     };
 
     const handleInputKeyDown = (event) => {
-      setInitQuery('');
+      if (event.key !== 'Tab') setInitQuery('');
       if (event.key === 'Escape') {
         setIsDropdownOpen(false);
         return;

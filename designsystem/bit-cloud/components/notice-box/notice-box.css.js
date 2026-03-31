@@ -16,6 +16,7 @@ export const wrapperStyling = css`
 
   ${medium} {
     margin-top: 32px;
+    padding: ${spacing.m} ${spacing.m};
   }
 
   li,
@@ -85,7 +86,7 @@ export const titleStyling = css`
     margin-bottom: 16px;
 
     ${medium} {
-      margin-bottom: 32px;
+      margin-bottom: 18px;
     }
   }
   html[data-theme='dark'] & {

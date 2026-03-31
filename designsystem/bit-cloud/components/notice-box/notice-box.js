@@ -46,7 +46,7 @@ export const NoticeBox = ({
         <div
           css={[iconWrapper, type === 'warning' ? iconWrapperWarning : null]}
         >
-          <SystemIcon icon={icon} style={[iconWrapper, type === 'warning' ? null : iconColor]} />
+          <SystemIcon icon={icon} style={[type === 'warning' ? null : iconColor]} />
         </div>
       )}
 

@@ -114,7 +114,7 @@ export const iconWrapper = css`
 `;
 
 export const iconWrapperWarning = css`
-  background-color: none;
+  background-color: unset !important;
 `;
 
 export const iconColor = css`

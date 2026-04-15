@@ -64,8 +64,11 @@ export const WithContentExpander = ({
   useEffect(() => {
     if (typeof location !== 'undefined' && location.hash) {
       const split = location.hash.split(',');
-      open = split.some((x) => x === `#${wrapperId}`);
-      if (open) scrollIntoView = true;
+      const hashMatch = split.some((x) => x === `#${wrapperId}`);
+      if (hashMatch) {
+        open = true;
+        scrollIntoView = true;
+      }
     }
 
     return () => setExpanded(false);

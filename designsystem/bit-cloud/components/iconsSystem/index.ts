@@ -38,6 +38,7 @@ export * from './SystemIcons/DualBlueEdit/DualBlueEdit.js';
 export * from './SystemIcons/DualBlueChatAnswer/DualBlueChatAnswer.js';
 export * from './SystemIcons/DualBlueHelpChat/DualBlueHelpChat.js';
 export * from './SystemIcons/DualBlueNews/DualBlueNews.js';
+export * from './SystemIcons/ECourse/ECourse.js';
 export * from './SystemIcons/Ecc/Ecc.js';
 export * from './SystemIcons/Exclamationmark/Exclamationmark.js';
 export * from './SystemIcons/External/External.js';

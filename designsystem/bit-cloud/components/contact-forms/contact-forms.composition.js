@@ -11,6 +11,8 @@ const formMicroCopy = {
   guidance: {
     guidanceEmailLabel: 'E-post (obligatoriskt)*',
     guidanceEmailPlaceholder: 'Skriv din e-postadress',
+    guidanceEmailLabelRepeat: 'Skriv in din e-post igen (obligatorisk)*',
+    guidanceEmailPlaceholderRepeat: 'Skriv in din e-postadress igen',
     guidanceEmailHelpText: 'Hjälptext för emailfält',
     guidanceMunicipalityLabel: 'Kommun (frivilligt)',
     guidanceMunicipalityPlaceholder: 'Skriv din kommun',
@@ -28,6 +30,8 @@ const formMicroCopy = {
   otherCases: {
     otherCasesEmailLabel: 'E-post (obligatoriskt)*',
     otherCasesEmailPlaceholder: 'Skriv din e-postadress',
+    otherCasesEmailLabelRepeat: 'Skriv in din e-post igen (obligatorisk)*',
+    otherCasesEmailPlaceholderRepeat: 'Skriv in din e-postadress igen',
     otherCasesEmailHelpText: 'Hjälptext för emailfält',
     otherCasesSubjectLabel: 'Ämne (obligatoriskt)*',
     otherCasesSubjectPlaceholder: 'Beskriv kort vad din fråga handlar om',

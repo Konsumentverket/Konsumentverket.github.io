@@ -190,7 +190,7 @@ export const inputDescriptionStyle = css`
 export const labelWrapper = css`
   display: inline-flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 
   label {
     margin-bottom: 0;

@@ -51,6 +51,8 @@ export const OtherCases = ({
   const {
     otherCasesEmailLabel,
     otherCasesEmailPlaceholder,
+    otherCasesEmailLabelRepeat,
+    otherCasesEmailPlaceholderRepeat,
     otherCasesEmailHelpText,
     otherCasesSubjectLabel,
     otherCasesSubjectPlaceholder,
@@ -154,6 +156,26 @@ export const OtherCases = ({
       />
 
       <FormInput
+        id={'confirmEmail'}
+        type={'email'}
+        label={otherCasesEmailLabelRepeat}
+        placeholder={otherCasesEmailPlaceholderRepeat}
+        error={errors && errors.confirmEmail}
+        register={register}
+        validation={{
+          required: {
+            value: true,
+            message: 'Du behöver bekräfta din e-postadress.',
+          },
+          validate: {
+            matches: (value) =>
+              value === watch('email') || 'Kontrollera att du angett rätt e-post i båda fälten.',
+          },
+        }}
+        watch={watch}
+      />
+
+      <FormInput
         id={'subject'}
         label={otherCasesSubjectLabel}
         placeholder={otherCasesSubjectPlaceholder}
@@ -185,6 +207,7 @@ export const OtherCases = ({
         maxLengthValidation={true}
         maxLengthCount={maxLengthText}
         showCounter={true}
+        rows={12}
         register={register}
         validation={{
           required: {

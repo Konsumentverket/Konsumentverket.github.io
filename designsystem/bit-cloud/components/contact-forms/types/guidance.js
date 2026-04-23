@@ -41,6 +41,8 @@ export const Guidance = ({
   const {
     guidanceEmailLabel,
     guidanceEmailPlaceholder,
+    guidanceEmailLabelRepeat,
+    guidanceEmailPlaceholderRepeat,
     guidanceEmailHelpText,
     guidanceMunicipalityLabel,
     guidanceMunicipalityPlaceholder,
@@ -111,7 +113,30 @@ export const Guidance = ({
           }}
           watch={watch}
         />
+        </div>
 
+      <div css={[formRow]}>
+        <FormInput
+          id="confirmEmail"
+          type="email"
+          label={guidanceEmailLabelRepeat}
+          placeholder={guidanceEmailPlaceholderRepeat}
+          error={errors?.confirmEmail}
+          maxLengthValidation={false}
+          register={register}
+          validation={{
+            required: 'Du behöver bekräfta din e-postadress.',
+            validate: {
+              matches: (v) =>
+                v === watch('email') || 'Kontrollera att du angett rätt e-post i båda fälten.',
+            },
+          }}
+          watch={watch}
+        />
+        </div>
+
+
+      <div css={[formRow]}>
         <FormInput
           id="municipality"
           label={guidanceMunicipalityLabel}
@@ -181,6 +206,7 @@ export const Guidance = ({
         error={errors?.question}
         maxLengthValidation
         maxLengthCount={maxLengthText}
+        rows={12}
         showCounter
         register={register}
         validation={{

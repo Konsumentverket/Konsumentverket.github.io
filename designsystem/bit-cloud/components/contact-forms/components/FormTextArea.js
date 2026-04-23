@@ -27,6 +27,7 @@ const FormTextArea = ({
   validation,
   watch,
   tooltipLabel = '',
+  rows = 5
 }) => {
   return (
     <div css={formInputWrapper}>
@@ -47,7 +48,7 @@ const FormTextArea = ({
       <span css={inputWrapper}>
         <textarea
           id={id}
-          rows={5}
+          rows={ rows }
           placeholder={placeholder}
           aria-describedby={`error-${id}`}
           aria-invalid={Boolean(error)}

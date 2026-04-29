@@ -10,6 +10,7 @@ import {
   heading,
   border,
   iconWrapper,
+  linkEntireCardWrapperStyle,
 } from './link-card.css.js';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
 import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
@@ -29,6 +30,7 @@ const LinkCard = React.forwardRef(
       beforeToggleCount = 4,
       childrenWrapperStyle,
       linkComponent: LinkComponent = 'a',
+      linkEntireCard = false,
     },
     ref
   ) => {
@@ -59,6 +61,53 @@ const LinkCard = React.forwardRef(
       </span>
     );
 
+    const headingContent =
+      itemsToShow.length > 0 ? (
+        <>
+          <SubHeading level={headingLevel} styleLevel={3}>
+            <InnerLink />
+          </SubHeading>
+          <div className="linkCardBorder" css={border}></div>
+        </>
+      ) : (
+        <InnerLink />
+      );
+
+    const childrenContent =
+      itemsToShow.length > 0 &&
+      (itemsToShow.length === 1 ? (
+        <div
+          css={[childrenWrapper, childrenWrapperStyle]}
+          className={singleItemClass}
+        >
+          {itemsToShow}
+        </div>
+      ) : (
+        <ul css={[childrenWrapper, childrenWrapperStyle]}>
+          {itemsToShow.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      ));
+
+    if (linkEntireCard) {
+      return (
+        <LinkComponent
+          ref={ref}
+          id={id}
+          href={href}
+          css={[wrapper, linkEntireCardWrapperStyle]}
+          className={`${className} noStyle`}
+          data-comp="link-card"
+          onClick={onClick}
+          injected={true}
+        >
+          <span css={mainLinkStyle}>{headingContent}</span>
+          {childrenContent}
+        </LinkComponent>
+      );
+    }
+
     return (
       <div id={id} css={[wrapper]} className={className} data-comp="link-card">
         <LinkComponent
@@ -68,33 +117,10 @@ const LinkCard = React.forwardRef(
           onClick={onClick}
           injected={true}
         >
-          {itemsToShow.length > 0 ? (
-            <>
-              <SubHeading level={headingLevel} styleLevel={3}>
-                <InnerLink />
-              </SubHeading>
-              <div className="linkCardBorder" css={border}></div>
-            </>
-          ) : (
-            <InnerLink />
-          )}
+          {headingContent}
         </LinkComponent>
 
-        {itemsToShow.length > 0 &&
-          (itemsToShow.length === 1 ? (
-            <div
-              css={[childrenWrapper, childrenWrapperStyle]}
-              className={singleItemClass}
-            >
-              {itemsToShow}
-            </div>
-          ) : (
-            <ul css={[childrenWrapper, childrenWrapperStyle]}>
-              {itemsToShow.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          ))}
+        {childrenContent}
 
         {childrenArray.length > beforeToggleCount && (
           <LinkComponent

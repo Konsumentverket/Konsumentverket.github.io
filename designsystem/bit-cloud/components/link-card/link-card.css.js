@@ -128,6 +128,14 @@ export const mainLinkStyle = css`
     }
   }
 
+  width: 100%;
+
+  [dir='rtl'] & {
+    svg {
+      right: 1.4rem;
+    }
+  }
+
   &:hover {
     background-color: ${newColors.primaries.lightBlue};
     border-radius: 16px 16px 0 0 !important;
@@ -206,16 +214,7 @@ export const mainLinkStyle = css`
       outline: 4px solid ${newColors.secondaries.fullGreen};
     }
   }
-
-  width: 100%;
-
-  [dir='rtl'] & {
-    svg {
-      right: 1.4rem;
-    }
-  }
 `;
-
 export const border = css`
   width: calc(100% - 16px);
   margin-left: 4px;
@@ -348,4 +347,27 @@ export const customFontSize = css`
 export const iconWrapper = css`
   display: flex;
   align-items: center;
+`;
+
+export const linkEntireCardWrapperStyle = css`
+  text-decoration: none !important;
+
+  &:hover {
+    border: 1px solid ${newColors.primaries.fullBlue} !important;
+    background-color: ${newColors.primaries.lightBlue};
+
+    html[data-theme='dark'] & {
+      border-color: ${newColors.shades.mediumBlue} !important;
+      background-color: ${newColors.shades.kovBlue75};
+    }
+  }
+
+  &:hover > span {
+    border-radius: 16px 16px 0 0 !important;
+    box-shadow: none !important;
+  }
+
+  &:focus-visible {
+    outline: 4px solid ${newColors.secondaries.fullGreen};
+  }
 `;

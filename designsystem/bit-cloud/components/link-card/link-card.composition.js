@@ -103,7 +103,7 @@ export const BasicTextLinkCardWithH3 = () => {
         id="one"
         href="#"
         text="Sport och fritid"
-        icon={<Icon icon="BeautyEngagement" />}
+        icon={<Icon icon="HomeDelivery" />}
         headingLevel={3}
       >
         <p>
@@ -122,6 +122,28 @@ export const BasicOnlyTitleLinkCard = () => {
       <GlobalStyles />
 
       <LinkCard id="one" href="#" text="Sport och fritid"></LinkCard>
+    </CompositionFonts>
+  );
+};
+
+export const LinkEntireCardExample = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+
+      <LinkCard
+        id="one"
+        href="http://www.google.com"
+        text="Sport och fritid"
+        icon={<Icon icon="HomeDelivery" />}
+        linkEntireCard
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor
+        </p>
+      </LinkCard>
     </CompositionFonts>
   );
 };

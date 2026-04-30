@@ -365,6 +365,10 @@ export const linkEntireCardWrapperStyle = css`
   &:hover > span {
     border-radius: 16px 16px 0 0 !important;
     box-shadow: none !important;
+
+    &:before {
+      display: none !important;
+    }
   }
 
   &:focus-visible {

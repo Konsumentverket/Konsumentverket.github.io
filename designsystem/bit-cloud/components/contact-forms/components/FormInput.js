@@ -51,8 +51,12 @@ const FormInput = ({
         <input
           id={id}
           placeholder={placeholder}
-          aria-describedby={`tooltip-${id} error-${id}`}
+          aria-describedby={[
+            tooltipText ? `tooltip-${id}` : null,
+            error ? `error-${id}` : null,
+          ].filter(Boolean).join(' ') || undefined}
           aria-invalid={Boolean(error)}
+          required={Boolean(validation?.required)}
           css={[inputStyle, error ? inputError : null]}
           {...register(id, validation)}
           maxLength={maxLengthValidation ? maxLengthCount : undefined}

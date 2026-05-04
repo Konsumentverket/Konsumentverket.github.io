@@ -50,8 +50,12 @@ const FormTextArea = ({
           id={id}
           rows={ rows }
           placeholder={placeholder}
-          aria-describedby={`error-${id}`}
+          aria-describedby={[
+            tooltipText ? `tooltip-${id}` : null,
+            error ? `error-${id}` : null,
+          ].filter(Boolean).join(' ') || undefined}
           aria-invalid={Boolean(error)}
+          required={Boolean(validation?.required)}
           css={[textAreaStyle, error ? inputError : null]}
           maxLength={maxLengthValidation ? maxLengthCount : undefined}
           {...register(id, validation)}

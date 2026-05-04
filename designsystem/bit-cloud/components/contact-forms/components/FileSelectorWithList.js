@@ -346,8 +346,8 @@ const FileSelectorWithList = ({
               onChange={onChange}
               id="file-upload"
               css={visuallyHidden}
-              aria-invalid={errors[FORM_FILE_INPUT_KEY]?.message}
-              aria-describedby="file-error"
+              aria-invalid={Boolean(errors[FORM_FILE_INPUT_KEY]?.message)}
+              aria-describedby={errors[FORM_FILE_INPUT_KEY]?.message ? 'file-error' : undefined}
             />
           </label>
           <input

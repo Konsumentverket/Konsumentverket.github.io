@@ -23,13 +23,6 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/button"
     },
-    "campaign-focus-puff": {
-        "name": "campaign-focus-puff",
-        "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.260",
-        "mainFile": "index.ts",
-        "rootDir": "designsystem/bit-cloud/components/campaign-focus-puff"
-    },
     "contact-forms": {
         "name": "contact-forms",
         "scope": "konsumentverket-sverige.designsystem",

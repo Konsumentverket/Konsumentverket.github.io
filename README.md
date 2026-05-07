@@ -1,10 +1,10 @@
 ﻿# Konsumentverkets Designsystem
 
-
 Designsystem för Konsumentverkets sajter:
 [https://bit.cloud/konsumentverket-sverige/designsystem](https://bit.cloud/konsumentverket-sverige/designsystem)
 
 ## Install dependencies
+
 ```
 > npm install
 ```
@@ -28,7 +28,7 @@ Designsystem för Konsumentverkets sajter:
 
 ```
 
-## Lägg till ny ikon 
+## Lägg till ny ikon
 
 ```
 1. Skapa komponenten som renderar ikonen (utgå från t.ex UserInjured komponenten) i iconsSystem/SystemIcons eller iconsEditor/EditorIcons beroende på ikontyp

@@ -11,6 +11,7 @@ export * from './SystemIcons/ArrowAngleRight/ArrowAngleRight.js';
 export * from './SystemIcons/ArrowFat/ArrowFat.js';
 export * from './SystemIcons/AtBranch/AtBranch.js';
 export * from './SystemIcons/BankAccount/BankAccount.js';
+export * from './SystemIcons/BlueChecklist/BlueChecklist.js';
 export * from './SystemIcons/BlueCity/BlueCity.js';
 export * from './SystemIcons/BlueWebinar/BlueWebinar.js';
 export * from './SystemIcons/Calendar/Calendar.js';

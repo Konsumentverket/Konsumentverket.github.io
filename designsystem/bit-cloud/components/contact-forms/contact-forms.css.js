@@ -62,10 +62,25 @@ export const formTitle = css`
   margin-bottom: 16px;
 
   @media (min-width: ${breakpoints.m}) {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
+  }
+`;
+
+export const formIntro = css`
+  margin-bottom: 24px;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-bottom: 32px;
+  }
+  html[data-theme='dark'] & {
+    color: ${newColors.kovWhite};
   }
 `;
 

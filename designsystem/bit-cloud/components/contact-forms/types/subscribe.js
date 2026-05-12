@@ -8,6 +8,7 @@ import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import {
   form,
   formTitle,
+  formIntro,
   formRow,
   childrenContainer,
   recaptchaContainer,
@@ -22,6 +23,7 @@ import LoaderOverlay from '../components/LoaderOverlay';
 
 export const Subscribe = ({
   title,
+  intro,
   children,
   handleFormSubmit,
   texts,
@@ -67,6 +69,8 @@ export const Subscribe = ({
       aria-busy={isLoading}
     >
       {title && <h2 css={formTitle}>{title}</h2>}
+
+      {intro && <p css={formIntro}>{intro}</p>}
 
       <div css={[formRow]}>
         <FormInput

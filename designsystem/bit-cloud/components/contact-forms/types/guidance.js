@@ -8,6 +8,7 @@ import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import {
   form,
   formTitle,
+  formIntro,
   formRow,
   childrenContainer,
   recaptchaContainer,
@@ -21,6 +22,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 export const Guidance = ({
   title,
+  intro,
   children,
   handleFormSubmit,
   texts,
@@ -76,6 +78,7 @@ export const Guidance = ({
       aria-busy={isLoading}
     >
       {title && <h2 css={formTitle}>{title}</h2>}
+      {intro && <p css={formIntro}>{intro}</p>}
 
       <div css={[formRow]}>
         <FormInput

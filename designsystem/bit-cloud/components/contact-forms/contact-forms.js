@@ -14,6 +14,7 @@ export const ContactForms = ({
   recaptchaSiteKey,
   recaptchaSiteKeyV2,
   title,
+  intro,
   children,
   handleFormSubmit = () => {},
   type = 'guidance',
@@ -88,6 +89,7 @@ export const ContactForms = ({
 
     const props = {
       title,
+      intro,
       children,
       texts,
       isLoading,

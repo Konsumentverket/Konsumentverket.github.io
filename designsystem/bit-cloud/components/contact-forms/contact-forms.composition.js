@@ -63,6 +63,7 @@ export const BasicFormGuidance = () => {
       <GlobalStyles />
       <ContactForms
         title="Kontakta vägledning"
+        intro="Detta formulär skickas in som ett e-postmeddelande till vår vägledning. Beskriv ditt problem tydligt så att vi kan hjälpa dig på bästa sätt."
         type={'guidance'}
         handleFormSubmit={(data) => console.log(data)}
         texts={formMicroCopy.guidance}

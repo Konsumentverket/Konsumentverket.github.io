@@ -130,6 +130,7 @@ export const linkStyles = css`
 
   &:hover {
     background: none;
+    box-shadow: unset!important;
   }
 
   html[data-theme='dark'] & {

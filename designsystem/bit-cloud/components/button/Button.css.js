@@ -129,7 +129,7 @@ export const linkStyles = css`
   background-color: transparent !important;
 
   &:hover {
-    background: none;
+    background:  ${newColors.primaries.lightBlue} !important;
     box-shadow: unset!important;
   }
 

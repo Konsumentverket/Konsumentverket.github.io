@@ -34,7 +34,7 @@ const LinkCard = React.forwardRef(
     },
     ref
   ) => {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    //document.documentElement.setAttribute('data-theme', 'dark');
 
     const childrenArray = React.Children.toArray(children);
     let itemsToShow = [];

@@ -116,3 +116,4 @@ export * from './SystemIcons/UserProfile/UserProfile.js';
 export * from './SystemIcons/SpeechBubble/SpeechBubble.js';
 export * from './SystemIcons/SpeechBubblesGrey/SpeechBubblesGrey.js';
 export * from './SystemIcons/LeftUturnArrow/LeftUTurnArrow.js';
+export * from './SystemIcons/SortOrder/SortOrder.js';

@@ -6,6 +6,7 @@ import {
   globalStyles as GlobalStyles,
   CompositionFonts,
 } from '@konsumentverket-sverige/designsystem.utils';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const BasicLinksDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -169,6 +170,54 @@ export const BasicCheckboxDropDown = () => {
           onResetFilter={resetValue}
           closeOnChange={false}
         />
+      </CompositionFonts>
+    </div>
+  );
+};
+
+export const PlainSortDropDown = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [selected, setSelected] = useState(['updated']);
+
+  const sortOptions = [
+    { text: 'Senast uppdaterad', value: 'updated' },
+    { text: 'Kort lektionstid överst', value: 'shortTime' },
+    { text: 'Lång lektionstid överst', value: 'longTime' },
+    { text: 'Namn på lektion (A-Ö)', value: 'nameAZ' },
+  ];
+
+  const currentLabel =
+    sortOptions.find((o) => o.value === selected[0])?.text ?? '';
+
+  return (
+    <div style={{ minHeight: '400px', padding: '24px' }}>
+      <CompositionFonts>
+        <GlobalStyles />
+        <div
+          style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+        >
+          <Dropdown
+            id="plain-sort"
+            plain={true}
+            panelWidth="310px"
+            type="radio"
+            showApplyButton={false}
+            isExpanded={isExpanded}
+            setIsExpanded={setIsExpanded}
+            label={
+              <>
+                <SystemIcon icon="SortOrder" aria-hidden="true" />
+                {currentLabel}
+              </>
+            }
+            value={selected}
+            onChange={(value) => {
+              setSelected(value);
+              setIsExpanded(false);
+            }}
+            data={sortOptions}
+          />
+        </div>
       </CompositionFonts>
     </div>
   );

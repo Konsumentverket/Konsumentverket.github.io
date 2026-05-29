@@ -201,6 +201,49 @@ export const applyFiltersBoxStyle = css`
   }
 `;
 
+export const plainContainerStyle = css`
+  position: relative;
+  display: inline-block;
+`;
+
+export const plainDropdownPanelStyle = css`
+  position: absolute;
+  top: -17px;
+  left: -33px;
+  z-index: 10;
+  min-width: 250px;
+  padding: ${spacing.s};
+  background-color: ${newColors.kovWhite};
+  border: 1px solid ${newColors.shades.fullBlue};
+  border-radius: ${spacing.s};
+  box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.kovBlack};
+    border: 1px solid ${newColors.shades.mediumBlue};
+  }
+`;
+
+export const buttonPanelTopStyle = css`
+  padding: 0 16px 16px 16px;
+`;
+
+export const buttonPlainStyle = css`
+  width: auto;
+  font-size: 1.6rem;
+  padding: 0;
+
+  ${medium} {
+    font-size: 1.6rem;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+`;
+
 export const resetFilterStyle = css`
   ${typography.clickSmall};
   border-radius: 16px;

@@ -8,6 +8,10 @@ import {
   innerWrapperStyle,
   wrapperExpandedStyle,
   buttonStyle,
+  buttonPlainStyle,
+  buttonPanelTopStyle,
+  plainContainerStyle,
+  plainDropdownPanelStyle,
   chevronStyle,
   chevronExpandedStyle,
   itemsListStyle,
@@ -105,6 +109,8 @@ export const Dropdown = ({
   setValue = () => {},
   maxHeight = false,
   closeOnChange = true,
+  plain = false,
+  panelWidth = null,
 }) => {
   const Component = componentMap[type];
   if (!Component) return null;
@@ -190,6 +196,104 @@ export const Dropdown = ({
     closeDropdown();
   };
 
+  const optionList = data && (
+    <ul css={[itemsListStyle, maxHeight && maxHeightStyle]}>
+      {data.map((item, index) => (
+        <li
+          key={index}
+          role="button"
+          tabIndex={type === 'text' ? 0 : -1}
+          onKeyDown={(e) => {
+            if (!isExpanded) return;
+            if (e.key === 'Enter') {
+              if (type === 'radio' || type === 'checkbox') {
+                handleOptionChange(item.value, e);
+              } else {
+                setValue(item.text);
+                setIsExpanded(false);
+              }
+            }
+          }}
+        >
+          <Component
+            id={`${id}-${index}`}
+            name={id}
+            onChange={(checked) => handleOptionChange(item.value, checked)}
+            stateValue={value}
+            setValue={setValue}
+            setIsExpanded={setIsExpanded}
+            value={item.text}
+            text={item.text}
+            {...item}
+          />
+        </li>
+      ))}
+    </ul>
+  );
+
+  const applyFilterBlock = showApplyButton && (
+    <div css={applyFiltersBoxStyle}>
+      <Button
+        secondaryButtonStyle={true}
+        text="Använd filter"
+        onClick={handleApplyFilter}
+        iconLeft={<SystemIcon icon="MonoBlueFilter1" />}
+      />
+      <button css={resetFilterStyle} onClick={handleResetFilter}>
+        <SystemIcon icon="DualBlueBin" />
+        Rensa filter
+      </button>
+    </div>
+  );
+
+  const toggleButton = (extraCss, showChevron = true) => label && (
+    <button
+      css={extraCss}
+      aria-controls={`dropdown-${id}`}
+      aria-expanded={isExpanded}
+      onClick={(e) => {
+        e.preventDefault();
+        if (e.clientX === 0 && e.clientY === 0) return;
+        setIsExpanded(!isExpanded);
+      }}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') {
+          if (!dropdownRef?.current?.contains(e.target)) return;
+          e.preventDefault();
+          setIsExpanded(!isExpanded);
+        }
+      }}
+    >
+      {label}
+      {showChevron && (
+        <ChevronRight
+          aria-hidden="true"
+          style={[chevronStyle, isExpanded && chevronExpandedStyle]}
+        />
+      )}
+    </button>
+  );
+
+  if (plain) {
+    return (
+      <div
+        data-comp="drop-down"
+        css={plainContainerStyle}
+        ref={dropdownRef}
+        onBlur={handleBlur}
+      >
+        {toggleButton([buttonStyle, buttonPlainStyle], false)}
+        {isExpanded && (
+          <div id={`dropdown-${id}`} css={plainDropdownPanelStyle} style={panelWidth ? { minWidth: panelWidth } : undefined}>
+            {toggleButton([buttonStyle, buttonPlainStyle, buttonPanelTopStyle])}
+            {optionList}
+            {applyFilterBlock}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div
       data-comp="drop-down"
@@ -198,87 +302,13 @@ export const Dropdown = ({
       onBlur={handleBlur}
     >
       <div css={innerWrapperStyle}>
-        {label && (
-          <button
-            css={buttonStyle}
-            aria-controls={`dropdown-${id}`}
-            aria-expanded={isExpanded}
-            onClick={(e) => {
-              e.preventDefault();
-              if (e.clientX === 0 && e.clientY === 0) return;
-
-              setIsExpanded(!isExpanded);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                if (!dropdownRef?.current?.contains(e.target)) return;
-                e.preventDefault();
-                setIsExpanded(!isExpanded);
-              }
-            }}
-          >
-            {label}
-            <ChevronRight
-              aria-hidden="true"
-              style={[chevronStyle, isExpanded && chevronExpandedStyle]}
-            />
-          </button>
-        )}
+        {toggleButton(buttonStyle)}
         <div
           id={`dropdown-${id}`}
           css={[itemsWrapperStyle, isExpanded && itemsWrapperExpandedStyle]}
         >
-          {data && (
-            <ul css={[itemsListStyle, maxHeight && maxHeightStyle]}>
-              {data.map((item, index) => (
-                <li
-                  key={index}
-                  role="button"
-                  tabIndex={type === 'text' ? 0 : -1}
-                  onKeyDown={(e) => {
-                    if (!isExpanded) return;
-                    if (e.key === 'Enter') {
-                      if (type === 'radio' || type === 'checkbox') {
-                        handleOptionChange(item.value, e);
-                      } else {
-                        setValue(item.text);
-                        setIsExpanded(false);
-                      }
-                    }
-                  }}
-                >
-                  <Component
-                    id={`${id}-${index}`}
-                    name={id}
-                    onChange={(checked) =>
-                      handleOptionChange(item.value, checked)
-                    }
-                    stateValue={value}
-                    setValue={setValue}
-                    setIsExpanded={setIsExpanded}
-                    value={item.text}
-                    text={item.text}
-                    {...item}
-                  />
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {showApplyButton && (
-            <div css={applyFiltersBoxStyle}>
-              <Button
-                secondaryButtonStyle={true}
-                text="Använd filter"
-                onClick={handleApplyFilter}
-                iconLeft={<SystemIcon icon="MonoBlueFilter1" />}
-              />
-              <button css={resetFilterStyle} onClick={handleResetFilter}>
-                <SystemIcon icon="DualBlueBin" />
-                Rensa filter
-              </button>
-            </div>
-          )}
+          {optionList}
+          {applyFilterBlock}
         </div>
       </div>
     </div>

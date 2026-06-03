@@ -397,6 +397,13 @@ export const linkEntireCardWrapperStyle = css`
       width: calc(100% - 16px) !important;
       margin-left: 4px !important;
     }
+
+    html[data-theme='dark'] & {
+      h2,
+      span {
+        color: ${newColors.shades.mediumBlue} !important;
+      }
+    }
   }
 
   &:focus-visible {

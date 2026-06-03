@@ -223,6 +223,54 @@ export const PlainSortDropDown = () => {
   );
 };
 
+export const PlainSortDropDownToTheFarRight = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [selected, setSelected] = useState(['updated']);
+
+  const sortOptions = [
+    { text: 'Senast uppdaterad', value: 'updated' },
+    { text: 'Kort lektionstid överst', value: 'shortTime' },
+    { text: 'Lång lektionstid överst', value: 'longTime' },
+    { text: 'Namn på lektion (A-Ö)', value: 'nameAZ' },
+  ];
+
+  const currentLabel =
+    sortOptions.find((o) => o.value === selected[0])?.text ?? '';
+
+  return (
+    <div style={{ minHeight: '400px', padding: '24px' }}>
+      <CompositionFonts>
+        <GlobalStyles />
+        <div
+          style={{ width: '100%', display: 'flex', justifyContent: 'right' }}
+        >
+          <Dropdown
+            id="plain-sort"
+            plain={true}
+            panelWidth="310px"
+            type="radio"
+            showApplyButton={false}
+            isExpanded={isExpanded}
+            setIsExpanded={setIsExpanded}
+            label={
+              <>
+                <SystemIcon icon="SortOrder" aria-hidden="true" />
+                {currentLabel}
+              </>
+            }
+            value={selected}
+            onChange={(value) => {
+              setSelected(value);
+              setIsExpanded(false);
+            }}
+            data={sortOptions}
+          />
+        </div>
+      </CompositionFonts>
+    </div>
+  );
+};
+
 export const BasicRadioDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [dropdownValue, setDropdownValue] = useState([]);

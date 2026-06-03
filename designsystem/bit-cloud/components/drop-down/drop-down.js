@@ -116,6 +116,7 @@ export const Dropdown = ({
   if (!Component) return null;
 
   const dropdownRef = useRef();
+  const panelRef = useRef(null);
   const [focusedIndex, setFocusedIndex] = React.useState(-1);
 
   useEffect(() => {
@@ -128,6 +129,19 @@ export const Dropdown = ({
       }
     }
   }, [focusedIndex, isExpanded]);
+
+  useEffect(() => {
+    if (plain && isExpanded && panelRef.current) {
+      const rect = panelRef.current.getBoundingClientRect();
+      if (rect.right > window.innerWidth) {
+        panelRef.current.style.left = 'auto';
+        panelRef.current.style.right = '0';
+      } else {
+        panelRef.current.style.left = '';
+        panelRef.current.style.right = '';
+      }
+    }
+  }, [plain, isExpanded]);
 
   const closeDropdown = () => setIsExpanded(false);
   useOnClickOutside(dropdownRef, () => closeDropdown());
@@ -284,7 +298,7 @@ export const Dropdown = ({
       >
         {toggleButton([buttonStyle, buttonPlainStyle], false)}
         {isExpanded && (
-          <div id={`dropdown-${id}`} css={plainDropdownPanelStyle} style={panelWidth ? { minWidth: panelWidth } : undefined}>
+          <div id={`dropdown-${id}`} css={plainDropdownPanelStyle} style={panelWidth ? { minWidth: panelWidth } : undefined} ref={panelRef}>
             {toggleButton([buttonStyle, buttonPlainStyle, buttonPanelTopStyle])}
             {optionList}
             {applyFilterBlock}

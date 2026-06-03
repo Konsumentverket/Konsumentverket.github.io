@@ -379,6 +379,26 @@ export const linkEntireCardWrapperStyle = css`
     }
   }
 
+  &:active {
+    background-color: ${newColors.shades.mediumBlue50} !important;
+    border: 1px solid ${newColors.primaries.fullBlue} !important;
+
+    html[data-theme='dark'] & {
+      background-color: ${newColors.shades.kovBlue50} !important;
+      border-color: ${newColors.shades.mediumBlue} !important;
+    }
+  }
+
+  &:active > span {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+
+    .linkCardBorder {
+      width: calc(100% - 16px) !important;
+      margin-left: 4px !important;
+    }
+  }
+
   &:focus-visible {
     outline: 4px solid ${newColors.secondaries.fullGreen};
   }

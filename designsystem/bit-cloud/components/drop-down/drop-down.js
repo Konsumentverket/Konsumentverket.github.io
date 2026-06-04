@@ -133,7 +133,8 @@ export const Dropdown = ({
   useEffect(() => {
     if (plain && isExpanded && panelRef.current) {
       const rect = panelRef.current.getBoundingClientRect();
-      if (rect.right > window.innerWidth) {
+      const viewportWidth = document.documentElement.clientWidth;
+      if (rect.right > viewportWidth) {
         panelRef.current.style.left = 'auto';
         panelRef.current.style.right = '0';
       } else {

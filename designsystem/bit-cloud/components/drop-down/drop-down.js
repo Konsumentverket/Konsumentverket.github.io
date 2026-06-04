@@ -53,7 +53,15 @@ const CheckboxOption = ({
   </div>
 );
 
-const RadioOption = ({ text, value, id, name, onChange, stateValue, disabled }) => (
+const RadioOption = ({
+  text,
+  value,
+  id,
+  name,
+  onChange,
+  stateValue,
+  disabled,
+}) => (
   <div css={itemOptionWrapperStyle}>
     <FormRadiobutton
       id={id}
@@ -123,7 +131,9 @@ export const Dropdown = ({
     if (isExpanded && focusedIndex >= 0 && dropdownRef.current) {
       const options = dropdownRef.current.querySelectorAll('ul li');
       if (options[focusedIndex]) {
-        const focusable = options[focusedIndex].querySelector('input:not([disabled]), a, button:not([disabled])');
+        const focusable = options[focusedIndex].querySelector(
+          'input:not([disabled]), a, button:not([disabled])'
+        );
         if (focusable) focusable.focus();
         else options[focusedIndex].focus();
       }
@@ -138,7 +148,7 @@ export const Dropdown = ({
         panelRef.current.style.left = 'auto';
         panelRef.current.style.right = '0';
       } else {
-        panelRef.current.style.left = '';
+        panelRef.current.style.left = '-33px';
         panelRef.current.style.right = '';
       }
     }
@@ -261,33 +271,34 @@ export const Dropdown = ({
     </div>
   );
 
-  const toggleButton = (extraCss, showChevron = true) => label && (
-    <button
-      css={extraCss}
-      aria-controls={`dropdown-${id}`}
-      aria-expanded={isExpanded}
-      onClick={(e) => {
-        e.preventDefault();
-        if (e.clientX === 0 && e.clientY === 0) return;
-        setIsExpanded(!isExpanded);
-      }}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter') {
-          if (!dropdownRef?.current?.contains(e.target)) return;
+  const toggleButton = (extraCss, showChevron = true) =>
+    label && (
+      <button
+        css={extraCss}
+        aria-controls={`dropdown-${id}`}
+        aria-expanded={isExpanded}
+        onClick={(e) => {
           e.preventDefault();
+          if (e.clientX === 0 && e.clientY === 0) return;
           setIsExpanded(!isExpanded);
-        }
-      }}
-    >
-      {label}
-      {showChevron && (
-        <ChevronRight
-          aria-hidden="true"
-          style={[chevronStyle, isExpanded && chevronExpandedStyle]}
-        />
-      )}
-    </button>
-  );
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            if (!dropdownRef?.current?.contains(e.target)) return;
+            e.preventDefault();
+            setIsExpanded(!isExpanded);
+          }
+        }}
+      >
+        {label}
+        {showChevron && (
+          <ChevronRight
+            aria-hidden="true"
+            style={[chevronStyle, isExpanded && chevronExpandedStyle]}
+          />
+        )}
+      </button>
+    );
 
   if (plain) {
     return (
@@ -299,7 +310,12 @@ export const Dropdown = ({
       >
         {toggleButton([buttonStyle, buttonPlainStyle], false)}
         {isExpanded && (
-          <div id={`dropdown-${id}`} css={plainDropdownPanelStyle} style={panelWidth ? { minWidth: panelWidth } : undefined} ref={panelRef}>
+          <div
+            id={`dropdown-${id}`}
+            css={plainDropdownPanelStyle}
+            style={panelWidth ? { minWidth: panelWidth } : undefined}
+            ref={panelRef}
+          >
             {toggleButton([buttonStyle, buttonPlainStyle, buttonPanelTopStyle])}
             {optionList}
             {applyFilterBlock}

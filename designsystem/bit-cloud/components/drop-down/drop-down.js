@@ -145,8 +145,8 @@ export const Dropdown = ({
       const rect = panelRef.current.getBoundingClientRect();
       const viewportWidth = document.documentElement.clientWidth;
       // Reposition the dropdown if it overflows to the right
-      if (rect.right > viewportWidth) {
-        const overflow = rect.right - viewportWidth;
+      if (rect.right > viewportWidth - 16) {
+        const overflow = rect.right - (viewportWidth - 16);
         const shift = Math.min(overflow, Math.max(0, rect.left));
         panelRef.current.style.transform = `translateX(-${shift}px)`;
       }

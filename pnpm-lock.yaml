@@ -199,22 +199,6 @@ importers:
         specifier: 22.10.5
         version: 22.10.5
 
-  designsystem/bit-cloud/components/campaign-focus-puff:
-    dependencies:
-      '@emotion/react':
-        specifier: ^11.14.0
-        version: 11.14.0(@types/react@18.2.23)(react@18.3.1)
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-    devDependencies:
-      '@types/jest':
-        specifier: 26.0.20
-        version: 26.0.20
-      '@types/node':
-        specifier: 22.10.5
-        version: 22.10.5
-
   designsystem/bit-cloud/components/contact-forms:
     dependencies:
       '@emotion/react':
@@ -957,154 +941,149 @@ importers:
     dependencies:
       '@konsumentverket-sverige/designsystem.breadcrumbs':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/breadcrumbs(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/breadcrumbs(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.button':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.campaign-focus-puff':
-        specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/campaign-focus-puff(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.contact-forms':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/contact-forms(@types/react@18.2.23)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/contact-forms(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.cta-block':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/cta-block(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/cta-block(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.display-alphabet':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/display-alphabet(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/display-alphabet(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.drop-down':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/drop-down(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/drop-down(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.editor-icon':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/editor-icon(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/editor-icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.eventbox':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/eventbox(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/eventbox(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.expand-button':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/expand-button(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/expand-button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.fact-box':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/fact-box(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/fact-box(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.focus-card':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/focus-card(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/focus-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.focus-card-section':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/focus-card-section(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/focus-card-section(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.focus-puff':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/focus-puff(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/focus-puff(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.form-checkbox':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/form-checkbox(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/form-checkbox(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.form-data-request':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/form-data-request(@types/react@18.2.23)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/form-data-request(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.form-radiobutton':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/form-radiobutton(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/form-radiobutton(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.form-search-field':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/form-search-field(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/form-search-field(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.form-success':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/form-success(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/form-success(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.heading':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/heading(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/heading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.icon':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/icon(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.icon-card':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/icon-card(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/icon-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.icons-editor':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/iconsEditor(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/iconsEditor(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.icons-system':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.image-card':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/image-card(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/image-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.input-autocomplete':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/input-autocomplete(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/input-autocomplete(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.input-radio':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/input-radio(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/input-radio(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.input-text':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/input-text(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/input-text(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.link-card':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/link-card(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/link-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.link-text-card':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/link-text-card(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/link-text-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.list-item':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/list-item(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/list-item(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.list-item-disabled':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/list-item-disabled(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/list-item-disabled(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.list-item-slim':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/list-item-slim(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/list-item-slim(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.loading':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/loading(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/loading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.megamenubtn':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/megamenu-button(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/megamenu-button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.notice-box':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/notice-box(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/notice-box(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.pagination':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/pagination(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/pagination(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.prerequisites-box':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/prerequisites-box(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/prerequisites-box(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.skeleton':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/skeleton(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/skeleton(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.source':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/source(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/source(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.sub-heading':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/sub-heading(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/sub-heading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.tag':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/tag(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/tag(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.tag-block':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/tag-block(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/tag-block(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.text-area':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/text-area(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/text-area(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.typography':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/typography(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/typography(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.utils':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.validation-response':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/validation-response(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/validation-response(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       '@konsumentverket-sverige/designsystem.with-content-expander':
         specifier: workspace:*
-        version: file:designsystem/bit-cloud/components/with-content-expander(@types/react@18.2.23)(react@19.0.0)
+        version: file:designsystem/bit-cloud/components/with-content-expander(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
     dependenciesMeta:
       '@konsumentverket-sverige/designsystem.breadcrumbs':
         injected: true
       '@konsumentverket-sverige/designsystem.button':
-        injected: true
-      '@konsumentverket-sverige/designsystem.campaign-focus-puff':
         injected: true
       '@konsumentverket-sverige/designsystem.contact-forms':
         injected: true
@@ -2680,241 +2659,283 @@ packages:
   '@konsumentverket-sverige/designsystem.breadcrumbs@file:designsystem/bit-cloud/components/breadcrumbs':
     resolution: {directory: designsystem/bit-cloud/components/breadcrumbs, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.button@file:designsystem/bit-cloud/components/button':
     resolution: {directory: designsystem/bit-cloud/components/button, type: directory}
     peerDependencies:
-      react: 18.3.1
-
-  '@konsumentverket-sverige/designsystem.campaign-focus-puff@file:designsystem/bit-cloud/components/campaign-focus-puff':
-    resolution: {directory: designsystem/bit-cloud/components/campaign-focus-puff, type: directory}
-    peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.contact-forms@file:designsystem/bit-cloud/components/contact-forms':
     resolution: {directory: designsystem/bit-cloud/components/contact-forms, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.cta-block@file:designsystem/bit-cloud/components/cta-block':
     resolution: {directory: designsystem/bit-cloud/components/cta-block, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.display-alphabet@file:designsystem/bit-cloud/components/display-alphabet':
     resolution: {directory: designsystem/bit-cloud/components/display-alphabet, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.drop-down@file:designsystem/bit-cloud/components/drop-down':
     resolution: {directory: designsystem/bit-cloud/components/drop-down, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.editor-icon@file:designsystem/bit-cloud/components/editor-icon':
     resolution: {directory: designsystem/bit-cloud/components/editor-icon, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.eventbox@file:designsystem/bit-cloud/components/eventbox':
     resolution: {directory: designsystem/bit-cloud/components/eventbox, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.expand-button@file:designsystem/bit-cloud/components/expand-button':
     resolution: {directory: designsystem/bit-cloud/components/expand-button, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.fact-box@file:designsystem/bit-cloud/components/fact-box':
     resolution: {directory: designsystem/bit-cloud/components/fact-box, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.focus-card-section@file:designsystem/bit-cloud/components/focus-card-section':
     resolution: {directory: designsystem/bit-cloud/components/focus-card-section, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.focus-card@file:designsystem/bit-cloud/components/focus-card':
     resolution: {directory: designsystem/bit-cloud/components/focus-card, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.focus-puff@file:designsystem/bit-cloud/components/focus-puff':
     resolution: {directory: designsystem/bit-cloud/components/focus-puff, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.form-checkbox@file:designsystem/bit-cloud/components/form-checkbox':
     resolution: {directory: designsystem/bit-cloud/components/form-checkbox, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.form-data-request@file:designsystem/bit-cloud/components/form-data-request':
     resolution: {directory: designsystem/bit-cloud/components/form-data-request, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.form-radiobutton@file:designsystem/bit-cloud/components/form-radiobutton':
     resolution: {directory: designsystem/bit-cloud/components/form-radiobutton, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.form-search-field@file:designsystem/bit-cloud/components/form-search-field':
     resolution: {directory: designsystem/bit-cloud/components/form-search-field, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.form-success@file:designsystem/bit-cloud/components/form-success':
     resolution: {directory: designsystem/bit-cloud/components/form-success, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.heading@file:designsystem/bit-cloud/components/heading':
     resolution: {directory: designsystem/bit-cloud/components/heading, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.icon-card@file:designsystem/bit-cloud/components/icon-card':
     resolution: {directory: designsystem/bit-cloud/components/icon-card, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.icon@file:designsystem/bit-cloud/components/icon':
     resolution: {directory: designsystem/bit-cloud/components/icon, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.icons-editor@file:designsystem/bit-cloud/components/iconsEditor':
     resolution: {directory: designsystem/bit-cloud/components/iconsEditor, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.icons-system@file:designsystem/bit-cloud/components/iconsSystem':
     resolution: {directory: designsystem/bit-cloud/components/iconsSystem, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.image-card@file:designsystem/bit-cloud/components/image-card':
     resolution: {directory: designsystem/bit-cloud/components/image-card, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.input-autocomplete@file:designsystem/bit-cloud/components/input-autocomplete':
     resolution: {directory: designsystem/bit-cloud/components/input-autocomplete, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.input-radio@file:designsystem/bit-cloud/components/input-radio':
     resolution: {directory: designsystem/bit-cloud/components/input-radio, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.input-text@file:designsystem/bit-cloud/components/input-text':
     resolution: {directory: designsystem/bit-cloud/components/input-text, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.link-card@file:designsystem/bit-cloud/components/link-card':
     resolution: {directory: designsystem/bit-cloud/components/link-card, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.link-text-card@file:designsystem/bit-cloud/components/link-text-card':
     resolution: {directory: designsystem/bit-cloud/components/link-text-card, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.list-item-disabled@file:designsystem/bit-cloud/components/list-item-disabled':
     resolution: {directory: designsystem/bit-cloud/components/list-item-disabled, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.list-item-slim@file:designsystem/bit-cloud/components/list-item-slim':
     resolution: {directory: designsystem/bit-cloud/components/list-item-slim, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.list-item@file:designsystem/bit-cloud/components/list-item':
     resolution: {directory: designsystem/bit-cloud/components/list-item, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.loading@file:designsystem/bit-cloud/components/loading':
     resolution: {directory: designsystem/bit-cloud/components/loading, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.megamenubtn@file:designsystem/bit-cloud/components/megamenu-button':
     resolution: {directory: designsystem/bit-cloud/components/megamenu-button, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.notice-box@file:designsystem/bit-cloud/components/notice-box':
     resolution: {directory: designsystem/bit-cloud/components/notice-box, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.pagination@file:designsystem/bit-cloud/components/pagination':
     resolution: {directory: designsystem/bit-cloud/components/pagination, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.prerequisites-box@file:designsystem/bit-cloud/components/prerequisites-box':
     resolution: {directory: designsystem/bit-cloud/components/prerequisites-box, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.skeleton@file:designsystem/bit-cloud/components/skeleton':
     resolution: {directory: designsystem/bit-cloud/components/skeleton, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.source@file:designsystem/bit-cloud/components/source':
     resolution: {directory: designsystem/bit-cloud/components/source, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.sub-heading@file:designsystem/bit-cloud/components/sub-heading':
     resolution: {directory: designsystem/bit-cloud/components/sub-heading, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.tag-block@file:designsystem/bit-cloud/components/tag-block':
     resolution: {directory: designsystem/bit-cloud/components/tag-block, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.tag@file:designsystem/bit-cloud/components/tag':
     resolution: {directory: designsystem/bit-cloud/components/tag, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.text-area@file:designsystem/bit-cloud/components/text-area':
     resolution: {directory: designsystem/bit-cloud/components/text-area, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.typography@file:designsystem/bit-cloud/components/typography':
     resolution: {directory: designsystem/bit-cloud/components/typography, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.utils@file:designsystem/bit-cloud/components/utils':
     resolution: {directory: designsystem/bit-cloud/components/utils, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.validation-response@file:designsystem/bit-cloud/components/validation-response':
     resolution: {directory: designsystem/bit-cloud/components/validation-response, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.with-content-expander@file:designsystem/bit-cloud/components/with-content-expander':
     resolution: {directory: designsystem/bit-cloud/components/with-content-expander, type: directory}
     peerDependencies:
+      '@emotion/react': ^11.14.0
       react: 18.3.1
 
   '@leichtgewicht/ip-codec@2.0.5':
@@ -15554,501 +15575,353 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@konsumentverket-sverige/designsystem.breadcrumbs@file:designsystem/bit-cloud/components/breadcrumbs(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.breadcrumbs@file:designsystem/bit-cloud/components/breadcrumbs(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.button@file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.button@file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.campaign-focus-puff@file:designsystem/bit-cloud/components/campaign-focus-puff(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.contact-forms@file:designsystem/bit-cloud/components/contact-forms(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
-      react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
-
-  '@konsumentverket-sverige/designsystem.contact-forms@file:designsystem/bit-cloud/components/contact-forms(@types/react@18.2.23)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.loading': file:designsystem/bit-cloud/components/loading(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.with-content-expander': file:designsystem/bit-cloud/components/with-content-expander(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.loading': file:designsystem/bit-cloud/components/loading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.with-content-expander': file:designsystem/bit-cloud/components/with-content-expander(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
       react-google-recaptcha: 3.1.0(react@19.0.0)
       react-google-recaptcha-v3: 1.11.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-hook-form: 7.68.0(react@19.0.0)
     transitivePeerDependencies:
-      - '@types/react'
       - react-dom
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.cta-block@file:designsystem/bit-cloud/components/cta-block(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.cta-block@file:designsystem/bit-cloud/components/cta-block(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.display-alphabet@file:designsystem/bit-cloud/components/display-alphabet(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.display-alphabet@file:designsystem/bit-cloud/components/display-alphabet(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.drop-down@file:designsystem/bit-cloud/components/drop-down(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.drop-down@file:designsystem/bit-cloud/components/drop-down(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.form-checkbox': file:designsystem/bit-cloud/components/form-checkbox(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.form-radiobutton': file:designsystem/bit-cloud/components/form-radiobutton(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.form-checkbox': file:designsystem/bit-cloud/components/form-checkbox(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.form-radiobutton': file:designsystem/bit-cloud/components/form-radiobutton(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.editor-icon@file:designsystem/bit-cloud/components/editor-icon(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.editor-icon@file:designsystem/bit-cloud/components/editor-icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.eventbox@file:designsystem/bit-cloud/components/eventbox(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.eventbox@file:designsystem/bit-cloud/components/eventbox(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.expand-button@file:designsystem/bit-cloud/components/expand-button(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.expand-button@file:designsystem/bit-cloud/components/expand-button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.fact-box@file:designsystem/bit-cloud/components/fact-box(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.fact-box@file:designsystem/bit-cloud/components/fact-box(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.focus-card-section@file:designsystem/bit-cloud/components/focus-card-section(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.focus-card-section@file:designsystem/bit-cloud/components/focus-card-section(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.focus-card': file:designsystem/bit-cloud/components/focus-card(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.focus-card': file:designsystem/bit-cloud/components/focus-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.focus-card@file:designsystem/bit-cloud/components/focus-card(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.focus-card@file:designsystem/bit-cloud/components/focus-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.focus-puff@file:designsystem/bit-cloud/components/focus-puff(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.focus-puff@file:designsystem/bit-cloud/components/focus-puff(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.form-checkbox@file:designsystem/bit-cloud/components/form-checkbox(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.form-checkbox@file:designsystem/bit-cloud/components/form-checkbox(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.form-data-request@file:designsystem/bit-cloud/components/form-data-request(@types/react@18.2.23)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.form-data-request@file:designsystem/bit-cloud/components/form-data-request(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.heading': file:designsystem/bit-cloud/components/heading(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.with-content-expander': file:designsystem/bit-cloud/components/with-content-expander(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.heading': file:designsystem/bit-cloud/components/heading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.with-content-expander': file:designsystem/bit-cloud/components/with-content-expander(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
       react-google-recaptcha-v3: 1.11.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-hook-form: 7.68.0(react@19.0.0)
     transitivePeerDependencies:
-      - '@types/react'
       - react-dom
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.form-radiobutton@file:designsystem/bit-cloud/components/form-radiobutton(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.form-radiobutton@file:designsystem/bit-cloud/components/form-radiobutton(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.form-search-field@file:designsystem/bit-cloud/components/form-search-field(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.form-search-field@file:designsystem/bit-cloud/components/form-search-field(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.form-success@file:designsystem/bit-cloud/components/form-success(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.form-success@file:designsystem/bit-cloud/components/form-success(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.loading': file:designsystem/bit-cloud/components/loading(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.notice-box': file:designsystem/bit-cloud/components/notice-box(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.loading': file:designsystem/bit-cloud/components/loading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.notice-box': file:designsystem/bit-cloud/components/notice-box(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.heading@file:designsystem/bit-cloud/components/heading(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.heading@file:designsystem/bit-cloud/components/heading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.sub-heading': file:designsystem/bit-cloud/components/sub-heading(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.sub-heading': file:designsystem/bit-cloud/components/sub-heading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.icon-card@file:designsystem/bit-cloud/components/icon-card(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.icon-card@file:designsystem/bit-cloud/components/icon-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.icon@file:designsystem/bit-cloud/components/icon(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.icon@file:designsystem/bit-cloud/components/icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.icons-editor@file:designsystem/bit-cloud/components/iconsEditor(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.icons-editor@file:designsystem/bit-cloud/components/iconsEditor(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.icons-system@file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.icons-system@file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.image-card@file:designsystem/bit-cloud/components/image-card(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.image-card@file:designsystem/bit-cloud/components/image-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.input-autocomplete@file:designsystem/bit-cloud/components/input-autocomplete(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.input-autocomplete@file:designsystem/bit-cloud/components/input-autocomplete(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.loading': file:designsystem/bit-cloud/components/loading(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.loading': file:designsystem/bit-cloud/components/loading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.input-radio@file:designsystem/bit-cloud/components/input-radio(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.input-radio@file:designsystem/bit-cloud/components/input-radio(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.input-text@file:designsystem/bit-cloud/components/input-text(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.input-text@file:designsystem/bit-cloud/components/input-text(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.loading': file:designsystem/bit-cloud/components/loading(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.loading': file:designsystem/bit-cloud/components/loading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.link-card@file:designsystem/bit-cloud/components/link-card(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.link-card@file:designsystem/bit-cloud/components/link-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.sub-heading': file:designsystem/bit-cloud/components/sub-heading(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.sub-heading': file:designsystem/bit-cloud/components/sub-heading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.link-text-card@file:designsystem/bit-cloud/components/link-text-card(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.link-text-card@file:designsystem/bit-cloud/components/link-text-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.link-card': file:designsystem/bit-cloud/components/link-card(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.sub-heading': file:designsystem/bit-cloud/components/sub-heading(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.link-card': file:designsystem/bit-cloud/components/link-card(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.sub-heading': file:designsystem/bit-cloud/components/sub-heading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.list-item-disabled@file:designsystem/bit-cloud/components/list-item-disabled(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.list-item-disabled@file:designsystem/bit-cloud/components/list-item-disabled(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.list-item-slim@file:designsystem/bit-cloud/components/list-item-slim(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.list-item-slim@file:designsystem/bit-cloud/components/list-item-slim(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.list-item@file:designsystem/bit-cloud/components/list-item(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.list-item@file:designsystem/bit-cloud/components/list-item(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.loading@file:designsystem/bit-cloud/components/loading(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.loading@file:designsystem/bit-cloud/components/loading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.megamenubtn@file:designsystem/bit-cloud/components/megamenu-button(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.megamenubtn@file:designsystem/bit-cloud/components/megamenu-button(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.notice-box@file:designsystem/bit-cloud/components/notice-box(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.notice-box@file:designsystem/bit-cloud/components/notice-box(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.pagination@file:designsystem/bit-cloud/components/pagination(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.pagination@file:designsystem/bit-cloud/components/pagination(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.prerequisites-box@file:designsystem/bit-cloud/components/prerequisites-box(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.prerequisites-box@file:designsystem/bit-cloud/components/prerequisites-box(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.skeleton@file:designsystem/bit-cloud/components/skeleton(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.skeleton@file:designsystem/bit-cloud/components/skeleton(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.source@file:designsystem/bit-cloud/components/source(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.source@file:designsystem/bit-cloud/components/source(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.sub-heading@file:designsystem/bit-cloud/components/sub-heading(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.sub-heading@file:designsystem/bit-cloud/components/sub-heading(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.tag-block@file:designsystem/bit-cloud/components/tag-block(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.tag-block@file:designsystem/bit-cloud/components/tag-block(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.tag': file:designsystem/bit-cloud/components/tag(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.tag': file:designsystem/bit-cloud/components/tag(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.tag@file:designsystem/bit-cloud/components/tag(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.tag@file:designsystem/bit-cloud/components/tag(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.text-area@file:designsystem/bit-cloud/components/text-area(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.text-area@file:designsystem/bit-cloud/components/text-area(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.typography@file:designsystem/bit-cloud/components/typography(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.typography@file:designsystem/bit-cloud/components/typography(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.utils@file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.utils@file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
       date-fns: 3.6.0
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.validation-response@file:designsystem/bit-cloud/components/validation-response(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.validation-response@file:designsystem/bit-cloud/components/validation-response(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
-  '@konsumentverket-sverige/designsystem.with-content-expander@file:designsystem/bit-cloud/components/with-content-expander(@types/react@18.2.23)(react@19.0.0)':
+  '@konsumentverket-sverige/designsystem.with-content-expander@file:designsystem/bit-cloud/components/with-content-expander(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.typography': file:designsystem/bit-cloud/components/typography(@types/react@18.2.23)(react@19.0.0)
-      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@types/react@18.2.23)(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-editor': file:designsystem/bit-cloud/components/iconsEditor(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.icons-system': file:designsystem/bit-cloud/components/iconsSystem(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.typography': file:designsystem/bit-cloud/components/typography(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
+      '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/react@11.14.0(@types/react@18.2.23)(react@19.0.0))(react@19.0.0)
       react: 19.0.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
 
   '@leichtgewicht/ip-codec@2.0.5': {}
 

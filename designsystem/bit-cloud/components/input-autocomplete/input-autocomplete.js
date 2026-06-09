@@ -224,9 +224,9 @@ export const InputAutocomplete = forwardRef(
 
     const sanitizeText = (txt) => {
       if (!sanitizeSuggestions) return txt;
+      if (!txt || txt.length > 500) return txt ?? '';
 
-      const regex = /(<([^>]+)>)/gi;
-      return txt ? txt.replace(regex, '') : '';
+      return txt.replace(/<[^>]*>/gi, '');
     };
 
     const showingResult = isDropdownOpen && suggestions.length > 0 && !loading;

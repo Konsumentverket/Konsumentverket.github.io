@@ -10,6 +10,8 @@ export const MonoWhiteAiChat = ({ className, style, ...otherAttr }) => {
       height="32"
       viewBox="0 0 32 32"
       fill="none"
+      role="img"
+      aria-label="AI-chatt"
       {...otherAttr}
     >
       <path

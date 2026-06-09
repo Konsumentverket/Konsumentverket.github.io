@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 
-export const MonoBookmark = ({ className, style, title, ...otherAttr }) => {
+export const MonoBookmark = ({ className, style, ...otherAttr }) => {
   return (
     <svg
       width="24"
@@ -11,6 +11,7 @@ export const MonoBookmark = ({ className, style, title, ...otherAttr }) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       css={style}
+      aria-hidden={true}
       {...otherAttr}
     >
       <g>

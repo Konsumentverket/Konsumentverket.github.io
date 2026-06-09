@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import React from 'react';
 
-export const ChevronRight = ({ className, style, title, ...otherAttr }) => {
+export const ChevronRight = ({ className, style, ...otherAttr }) => {
   return (
     <svg
       width="18"
@@ -11,6 +11,7 @@ export const ChevronRight = ({ className, style, title, ...otherAttr }) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       css={style}
+      aria-hidden={true}
       {...otherAttr}
     >
       <path

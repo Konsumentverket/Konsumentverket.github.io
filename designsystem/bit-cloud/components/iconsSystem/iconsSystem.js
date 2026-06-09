@@ -14,8 +14,8 @@ export const SystemIcon = ({ icon, className, style, title, ...otherAttr }) => {
       title={title}
       className={className}
       css={style}
-      role="img"
-      aria-label={title || icon || ''}
+      role={title ? 'img' : undefined}
+      aria-label={title || undefined}
       {...otherAttr}
     />
   );

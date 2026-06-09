@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import React from 'react';
 
-export const MonoSigning = ({ className, style, title, ...otherAttr }) => {
+export const MonoSigning = ({ className, style, ...otherAttr }) => {
   return (
     <svg
       className={className}
@@ -12,6 +12,8 @@ export const MonoSigning = ({ className, style, title, ...otherAttr }) => {
       height="18"
       viewBox="0 0 18 18"
       fill="none"
+      role="img"
+      aria-label="Teckenspråk"
       {...otherAttr}
     >
       <g fillRule="evenodd" clipPath="url(#a)" clipRule="evenodd">

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import React from 'react';
 
-export const MonoListen = ({ className, style, title, ...otherAttr }) => {
+export const MonoListen = ({ className, style, ...otherAttr }) => {
   return (
     <svg
       className={className}
@@ -12,6 +12,8 @@ export const MonoListen = ({ className, style, title, ...otherAttr }) => {
       height="18"
       viewBox="0 0 18 18"
       fill="none"
+      role="img"
+      aria-label="Lyssna"
       {...otherAttr}
     >
       <g clipPath="url(#clip0_129_11)">

@@ -2,6 +2,8 @@
 import { jsx } from '@emotion/react';
 import * as systemIconDefinitions from './index';
 
+const ACCESSIBLE_ICONS = ['External'];
+
 export const SystemIcon = ({ icon, className, style, title, ...otherAttr }) => {
   const Element = systemIconDefinitions[icon];
 
@@ -9,13 +11,15 @@ export const SystemIcon = ({ icon, className, style, title, ...otherAttr }) => {
     return null;
   }
 
+  const isAccessible = ACCESSIBLE_ICONS.includes(icon);
+
   return (
     <Element
-      title={title}
       className={className}
       css={style}
-      role={title ? 'img' : undefined}
-      aria-label={title || undefined}
+      focusable="false"
+      {...(!isAccessible && !title ? { 'aria-hidden': true } : {})}
+      {...(title ? { role: 'img', 'aria-label': title } : {})}
       {...otherAttr}
     />
   );

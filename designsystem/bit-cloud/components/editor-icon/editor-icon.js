@@ -4,22 +4,18 @@ import { jsx } from '@emotion/react';
 import * as editorIconDefinitions from '@konsumentverket-sverige/designsystem.icons-editor';
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
-  const concatenatedIcons = {
-    ...editorIconDefinitions,
-  };
-  const Element = concatenatedIcons[icon];
+  const Element = editorIconDefinitions[icon];
 
-  if (Element === undefined) {
+  if (typeof Element !== 'function') {
     return null;
   }
 
   return (
     <Element
-      title={title}
       className={className}
       style={style}
-      role="img"
-      aria-label={title || icon || ''}
+      focusable="false"
+      {...(title ? { role: 'img', 'aria-label': title } : { 'aria-hidden': true })}
       {...otherAttr}
     />
   );

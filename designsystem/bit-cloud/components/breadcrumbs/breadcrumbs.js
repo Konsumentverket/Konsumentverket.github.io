@@ -6,7 +6,7 @@ import {
   breadcrumbTextStyle,
   breadcrumbLinkStyle,
 } from './Breadcrumbs.css.js';
-import { ArrowFat } from '@konsumentverket-sverige/designsystem.icons-system';
+import { ArrowFat } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/ArrowFat/ArrowFat';
 
 export const Breadcrumbs = ({
   items = [],

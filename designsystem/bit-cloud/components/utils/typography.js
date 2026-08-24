@@ -139,12 +139,12 @@ export const h3LineNoMargin = css`
 export const h4 = css`
   ${baseHeading};
 
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   line-height: 130%;
   margin-top: 16px;
 
   @media (min-width: ${breakpoints.m}) {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 140%;
     margin-top: 24px;
   }
@@ -152,7 +152,7 @@ export const h4 = css`
 
 export const h5 = css`
   ${baseHeading};
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.8rem;
   line-height: 130%;
   margin-top: 16px;
@@ -248,7 +248,7 @@ export const paragraph = css`
 
   b,
   strong {
-    font-weight: 500;
+    font-weight: 700;
   }
 
   @media (min-width: ${breakpoints.m}) {
@@ -277,7 +277,7 @@ export const paragraphNoMargin = css`
 
 export const paragraphStrong = css`
   ${paragraph};
-  font-weight: 500;
+  font-weight: 700;
 
   @media (min-width: ${breakpoints.m}) {
     line-height: 150%;
@@ -308,7 +308,7 @@ export const textSmall = css`
 
 export const textSmallAlt = css`
   ${textSmall};
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 export const textMini = css`
@@ -326,7 +326,7 @@ export const textMini = css`
 
 export const textMiniAlt = css`
   ${textMini};
-  font-weight: 500;
+  font-weight: 600;
 
   @media (min-width: ${breakpoints.m}) {
     line-height: 150%;
@@ -449,6 +449,7 @@ export const linkLarge = css`
 
 export const linkParagraph = css`
   ${link};
+  font-weight: 700;
   font-size: 1.8rem;
 
   @media (min-width: ${breakpoints.m}) {

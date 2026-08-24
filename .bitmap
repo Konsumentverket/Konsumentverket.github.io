@@ -12,329 +12,329 @@
     "breadcrumbs": {
         "name": "breadcrumbs",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.317",
+        "version": "0.0.318",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/breadcrumbs"
     },
     "button": {
         "name": "button",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.346",
+        "version": "0.0.347",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/button"
     },
     "contact-forms": {
         "name": "contact-forms",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.293",
+        "version": "0.0.294",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/contact-forms"
     },
     "cta-block": {
         "name": "cta-block",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.344",
+        "version": "0.0.345",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/cta-block"
     },
     "display-alphabet": {
         "name": "display-alphabet",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.275",
+        "version": "0.0.276",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/display-alphabet"
     },
     "drop-down": {
         "name": "drop-down",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.373",
+        "version": "0.0.374",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/drop-down"
     },
     "editor-icon": {
         "name": "editor-icon",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.280",
+        "version": "0.0.281",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/editor-icon"
     },
     "eventbox": {
         "name": "eventbox",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.256",
+        "version": "0.0.257",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/eventbox"
     },
     "expand-button": {
         "name": "expand-button",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.264",
+        "version": "0.0.265",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/expand-button"
     },
     "fact-box": {
         "name": "fact-box",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.338",
+        "version": "0.0.339",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/fact-box"
     },
     "focus-card": {
         "name": "focus-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.300",
+        "version": "0.0.301",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/focus-card"
     },
     "focus-card-section": {
         "name": "focus-card-section",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.301",
+        "version": "0.0.302",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/focus-card-section"
     },
     "focus-puff": {
         "name": "focus-puff",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.292",
+        "version": "0.0.293",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/focus-puff"
     },
     "form-checkbox": {
         "name": "form-checkbox",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.295",
+        "version": "0.0.296",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-checkbox"
     },
     "form-data-request": {
         "name": "form-data-request",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.306",
+        "version": "0.0.307",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-data-request"
     },
     "form-radiobutton": {
         "name": "form-radiobutton",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.268",
+        "version": "0.0.269",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-radiobutton"
     },
     "form-search-field": {
         "name": "form-search-field",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.346",
+        "version": "0.0.347",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-search-field"
     },
     "form-success": {
         "name": "form-success",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.254",
+        "version": "0.0.255",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-success"
     },
     "heading": {
         "name": "heading",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.274",
+        "version": "0.0.275",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/heading"
     },
     "icon": {
         "name": "icon",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.310",
+        "version": "0.0.311",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/icon"
     },
     "icon-card": {
         "name": "icon-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.333",
+        "version": "0.0.334",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/icon-card"
     },
     "icons-editor": {
         "name": "icons-editor",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.83",
+        "version": "0.0.84",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/iconsEditor"
     },
     "icons-system": {
         "name": "icons-system",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.97",
+        "version": "0.0.98",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/iconsSystem"
     },
     "image-card": {
         "name": "image-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.302",
+        "version": "0.0.303",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/image-card"
     },
     "input-autocomplete": {
         "name": "input-autocomplete",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.288",
+        "version": "0.0.289",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/input-autocomplete"
     },
     "input-radio": {
         "name": "input-radio",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.269",
+        "version": "0.0.270",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/input-radio"
     },
     "input-text": {
         "name": "input-text",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.287",
+        "version": "0.0.288",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/input-text"
     },
     "link-card": {
         "name": "link-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.380",
+        "version": "0.0.381",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/link-card"
     },
     "link-text-card": {
         "name": "link-text-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.381",
+        "version": "0.0.382",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/link-text-card"
     },
     "list-item": {
         "name": "list-item",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.326",
+        "version": "0.0.327",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/list-item"
     },
     "list-item-disabled": {
         "name": "list-item-disabled",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.263",
+        "version": "0.0.264",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/list-item-disabled"
     },
     "list-item-slim": {
         "name": "list-item-slim",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.304",
+        "version": "0.0.305",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/list-item-slim"
     },
     "loading": {
         "name": "loading",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.263",
+        "version": "0.0.264",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/loading"
     },
     "megamenubtn": {
         "name": "megamenubtn",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.322",
+        "version": "0.0.323",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/megamenu-button"
     },
     "notice-box": {
         "name": "notice-box",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.223",
+        "version": "0.0.224",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/notice-box"
     },
     "pagination": {
         "name": "pagination",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.314",
+        "version": "0.0.315",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/pagination"
     },
     "prerequisites-box": {
         "name": "prerequisites-box",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.268",
+        "version": "0.0.269",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/prerequisites-box"
     },
     "skeleton": {
         "name": "skeleton",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.263",
+        "version": "0.0.264",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/skeleton"
     },
     "source": {
         "name": "source",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.280",
+        "version": "0.0.281",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/source"
     },
     "sub-heading": {
         "name": "sub-heading",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.273",
+        "version": "0.0.274",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/sub-heading"
     },
     "tag": {
         "name": "tag",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.269",
+        "version": "0.0.270",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/tag"
     },
     "tag-block": {
         "name": "tag-block",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.270",
+        "version": "0.0.271",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/tag-block"
     },
     "text-area": {
         "name": "text-area",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.266",
+        "version": "0.0.267",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/text-area"
     },
     "typography": {
         "name": "typography",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.249",
+        "version": "0.0.250",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/typography"
     },
     "utils": {
         "name": "utils",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.262",
+        "version": "0.0.263",
         "mainFile": "index.js",
         "rootDir": "designsystem/bit-cloud/components/utils"
     },
     "validation-response": {
         "name": "validation-response",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.292",
+        "version": "0.0.293",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/validation-response"
     },
     "with-content-expander": {
         "name": "with-content-expander",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.391",
+        "version": "0.0.392",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/with-content-expander"
     }

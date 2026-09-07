@@ -2,10 +2,9 @@
 import { jsx } from '@emotion/react';
 import React, { useState, useRef, useEffect } from 'react';
 import { Typography } from '@konsumentverket-sverige/designsystem.typography';
-import {
-  MonoArrowDown,
-  MonoArrowDownSmall,
-} from '@konsumentverket-sverige/designsystem.icons-system';
+import { MonoArrowBend } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoArrowBend/MonoArrowBend.js';
+import { MonoArrowDown } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoArrowDown/MonoArrowDown.js';
+import { MonoArrowDownSmall } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoArrowDownSmall/MonoArrowDownSmall.js';
 import { EditorIcon } from '@konsumentverket-sverige/designsystem.icons-editor';
 
 import {
@@ -38,6 +37,13 @@ import {
   expandedAreaExpandedStyle,
   headerLightBlueAlternativeStyle,
   buttonResetStyle,
+  containerPanelStyle,
+  linkPanelStyle,
+  expandedAreaPanelStyle,
+  titlePanelStyle,
+  indentArrowPanelStyle,
+  headerPanelStyle,
+  expandedAreaExpandedPanelStyle,
 } from './with-content-expander.css.js';
 
 export const WithContentExpander = ({
@@ -54,6 +60,7 @@ export const WithContentExpander = ({
   useAlternativeStyling = false,
   useLightBlueAlternativeStyling = false,
   useProcessStepStyling = false,
+  usePanelStyling = false,
   contentfulId = null,
   contentfulName = '',
   contentfulTextName = '',
@@ -126,6 +133,7 @@ export const WithContentExpander = ({
     useAlternativeStyling && containerAlternativeStyle,
     useLightBlueAlternativeStyling && containerLightBlueAlternativeStyle,
     useProcessStepStyling && noLeftBorderRadiusStyling,
+    usePanelStyling && containerPanelStyle,
   ];
 
   const buttonStyles = [
@@ -147,12 +155,14 @@ export const WithContentExpander = ({
       noLeftBorderRadiusStyling &&
       linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
     useProcessStepStyling && noLeftBorderRadiusStyling,
+    usePanelStyling && linkPanelStyle,
   ];
 
   const headerStyles = [
     headerStyle,
     useProcessStepStyling && headerProcessStepStyle,
     useLightBlueAlternativeStyling && headerLightBlueAlternativeStyle,
+    usePanelStyling && headerPanelStyle,
   ];
 
   const titleStyles = [
@@ -160,6 +170,7 @@ export const WithContentExpander = ({
     useAlternativeStyling && titleAlternativeStyle,
     useLightBlueAlternativeStyling && titleLightBlueAlternativeStyle,
     useProcessStepStyling && titleProcessStepStyle,
+    usePanelStyling && titlePanelStyle,
   ];
 
   const chevronStyles = [chevronStyle, expanded && chevronExpandedStyle];
@@ -172,6 +183,8 @@ export const WithContentExpander = ({
       useLightBlueAlternativeStyling &&
       expandedAreaLightBlueAlternativeStyle,
     useProcessStepStyling && noLeftBorderRadiusStyling,
+    usePanelStyling && expandedAreaPanelStyle,
+    expanded && usePanelStyling && expandedAreaExpandedPanelStyle,
   ];
 
   return (
@@ -245,6 +258,13 @@ export const WithContentExpander = ({
           disabled ? 'expanded' : ''
         }`}
       >
+        {usePanelStyling && (
+          <MonoArrowBend
+            aria-hidden="true"
+            className="expand-indent-icon"
+            css={indentArrowPanelStyle}
+          />
+        )}
         <Typography
           useProcessStepStyling={useProcessStepStyling}
           small={useLightBlueAlternativeStyling}

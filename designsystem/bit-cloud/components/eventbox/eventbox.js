@@ -12,8 +12,14 @@ import {
   eventBoxApply,
 } from './eventbox.css.js';
 
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { External } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/External/External.js';
+import { WarningCircle } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/WarningCircle/WarningCircle.js';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ External, WarningCircle });
 
 export const EventBox = ({
   date,

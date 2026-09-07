@@ -12,11 +12,16 @@ import {
 } from './input-text.css.js';
 import React, { useRef, useState } from 'react';
 import Loading from '@konsumentverket-sverige/designsystem.loading';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { Lock } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Lock/Lock.js';
 import {
   Clear,
   VisuallyHidden,
 } from '@konsumentverket-sverige/designsystem.utils';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ Lock });
 
 export const InputText = React.forwardRef(
   (

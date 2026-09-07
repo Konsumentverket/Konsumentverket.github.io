@@ -6,7 +6,12 @@ import {
   globalStyles as GlobalStyles,
   CompositionFonts,
 } from '@konsumentverket-sverige/designsystem.utils';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { SortOrder } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/SortOrder/SortOrder.js';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ SortOrder });
 
 export const BasicLinksDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);

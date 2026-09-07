@@ -12,7 +12,7 @@ import {
   VisuallyHidden,
 } from './form-search-field.css.js';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
-import { Clear } from '@konsumentverket-sverige/designsystem.icons-system';
+import { Clear } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Clear/Clear.js';
 
 export const FormSearchField = React.forwardRef(
   (

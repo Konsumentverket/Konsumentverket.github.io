@@ -3,7 +3,8 @@ import { jsx } from '@emotion/react';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { ChevronRight } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/ChevronRight/ChevronRight.js';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import {
   form,
@@ -19,6 +20,10 @@ import FormTextArea from '../components/FormTextArea';
 import ErrorMessage from '../components/ErrorMessage';
 import LoaderOverlay from '../components/LoaderOverlay';
 import ReCAPTCHA from 'react-google-recaptcha';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ ChevronRight });
 
 export const Guidance = ({
   title,

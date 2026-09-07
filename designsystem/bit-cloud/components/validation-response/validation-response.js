@@ -2,10 +2,8 @@
 import { jsx } from '@emotion/react';
 import React from 'react';
 import { wrapperStyle } from './validation-response.css.js';
-import {
-  Check,
-  Warn,
-} from '@konsumentverket-sverige/designsystem.icons-system';
+import { Check } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Check/Check.js';
+import { Warn } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Warn/Warn.js';
 
 const ValidationResponse = ({ success = false, text = '', children }) => {
   return (

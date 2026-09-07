@@ -13,7 +13,12 @@ import {
   linkEntireCardWrapperStyle,
 } from './link-card.css.js';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { MonoArrowRight } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoArrowRight/MonoArrowRight.js';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ MonoArrowRight });
 
 const LinkCard = React.forwardRef(
   (

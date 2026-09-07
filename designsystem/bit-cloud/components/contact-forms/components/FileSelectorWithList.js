@@ -28,8 +28,18 @@ import {
   uploadBoxTitleStyle,
   visuallyHidden,
 } from '../contact-forms.css';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { DBFileUpload } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/DBFileUpload/DBFileUpload.js';
+import { DBDeleteFileAlt2 } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/DBDeleteFileAlt2/DBDeleteFileAlt2.js';
+import { Warn } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Warn/Warn.js';
+import { DBFilePDF } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/DBFilePDF/DBFilePDF.js';
+import { DBFileText } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/DBFileText/DBFileText.js';
+import { DBFileImage } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/DBFileImage/DBFileImage.js';
 import ErrorMessage from './ErrorMessage';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ DBFileUpload, DBDeleteFileAlt2, Warn, DBFilePDF, DBFileText, DBFileImage });
 
 const MAX_MEGABYTES = 20;
 const MAX_TOTAL_SIZE = MAX_MEGABYTES * 1024 * 1024; // 20 MB in bytes

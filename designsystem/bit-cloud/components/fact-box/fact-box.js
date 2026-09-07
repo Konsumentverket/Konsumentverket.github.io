@@ -12,7 +12,13 @@ import {
   iconColor,
   articleEntryMarginStyling,
 } from './fact-box.css.js';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { Information } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Information/Information.js';
+import { MonoBookmark } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoBookmark/MonoBookmark.js';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ Information, MonoBookmark });
 
 export const FactBox = ({
   children,

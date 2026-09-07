@@ -14,7 +14,13 @@ import {
 } from './image-card.css.js';
 import React from 'react';
 
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { ChevronRight } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/ChevronRight/ChevronRight.js';
+import { External } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/External/External.js';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ ChevronRight, External });
 
 export const ImageCard = ({
   headline,

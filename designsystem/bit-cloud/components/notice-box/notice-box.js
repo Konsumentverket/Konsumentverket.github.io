@@ -12,7 +12,7 @@ import {
   articleEntryMarginStyling,
 } from './notice-box.css.js';
 import { EditorIcon } from '@konsumentverket-sverige/designsystem.icons-editor';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
 
 export const NoticeBox = ({
   children,

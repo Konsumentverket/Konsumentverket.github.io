@@ -25,9 +25,15 @@ import {
 import { FormCheckbox } from '@konsumentverket-sverige/designsystem.form-checkbox';
 import { FormRadiobutton } from '@konsumentverket-sverige/designsystem.form-radiobutton';
 import { useOnClickOutside } from '@konsumentverket-sverige/designsystem.utils';
-import { ChevronRight } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { ChevronRight } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/ChevronRight/ChevronRight.js';
+import { MonoBlueFilter1 } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoBlueFilter1/MonoBlueFilter1.js';
+import { DualBlueBin } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/DualBlueBin/DualBlueBin.js';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ MonoBlueFilter1, DualBlueBin });
 
 const CheckboxOption = ({
   text,

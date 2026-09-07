@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import React from 'react';
 import * as css from './list-item.css.js';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
 
 export const ListItem = ({
   headline,

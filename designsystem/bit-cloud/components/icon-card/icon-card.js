@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React from 'react';
-import { ChevronRight } from '@konsumentverket-sverige/designsystem.icons-system';
+import { ChevronRight } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/ChevronRight/ChevronRight.js';
 
 import {
   iconCardStyle,

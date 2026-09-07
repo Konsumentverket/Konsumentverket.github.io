@@ -13,6 +13,14 @@ import {
 } from './pagination.css.js';
 
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
+import { registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { MonoArrowRight } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoArrowRight/MonoArrowRight.js';
+
+// Komponenten renderar sin pil via den generiska Icon, som slar upp systemikoner i
+// registret. Utan detta skulle pilen forsvinna tyst i projekt som inte rakar ha
+// registrerat just MonoArrowRight. En komponent ska inte krava att konsumenten kanner
+// till dess inre ikonbehov.
+registerIcons({ MonoArrowRight });
 
 export const Pagination = ({
   pageSize,

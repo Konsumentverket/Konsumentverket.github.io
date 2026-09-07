@@ -10,7 +10,7 @@ import {
   linkTextMainLinkStyle,
 } from '@konsumentverket-sverige/designsystem.link-card';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
-import { Arrow } from '@konsumentverket-sverige/designsystem.icons-system';
+import { Arrow } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Arrow/Arrow.js';
 
 const LinkTextCard = React.forwardRef(
   (

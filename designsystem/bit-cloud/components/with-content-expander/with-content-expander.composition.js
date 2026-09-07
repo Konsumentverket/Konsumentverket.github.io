@@ -13,7 +13,7 @@ export const BasicWithIconAndPreambleAndSubComponentWithContentExpander =
         <GlobalStyles />
         <WithContentExpander
           wrapperId={'test'}
-          icon={'FurnituresAndDecoration'}
+          icon={'AppsAndGames'}
           text={'Lorem ipsum dolor sit amet consectetur adipiscing elit'}
           preamble={
             'Pellentesque vulputate risus sit amet lorem volutpat eu aliquam odio varius?'
@@ -67,7 +67,7 @@ export const WithLinksInList = () => {
     <CompositionFonts>
       <GlobalStyles />
       <WithContentExpander
-        icon={'FurnituresAndDecoration'}
+        icon={'AppsAndGames'}
         text={'Lorem ipsum dolor sit amet consectetur adipiscing elit'}
         preamble={
           'Pellentesque vulputate risus sit amet lorem volutpat eu aliquam odio varius?'
@@ -449,6 +449,54 @@ export const WithJustLinksInLists = () => {
           </ul>
         }
       />
+    </CompositionFonts>
+  );
+};
+
+/*
+ * Panelvarianten. Notera att panelens bakgrund, radie och avdelarna mellan posterna
+ * sätts av den omgivande listan – komponenten tar bara bort sitt eget kortutseende.
+ */
+export const PanelStylingWithContentExpander = () => {
+  const questions = [
+    'Vad gäller om varan är försenad?',
+    'Hur länge har jag ångerrätt?',
+    'Vem betalar returfrakten?',
+  ];
+
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <ul
+        style={{
+          listStyle: 'none',
+          margin: 0,
+          padding: '16px 24px',
+          borderRadius: '16px',
+          backgroundColor: '#EFF8FD',
+        }}
+      >
+        {questions.map((question, index) => (
+          <li
+            key={question}
+            style={{
+              borderTop: index === 0 ? 'none' : '1px solid #DFF1FB',
+            }}
+          >
+            <WithContentExpander
+              wrapperId={`panel-${index}`}
+              text={question}
+              usePanelStyling={true}
+              wrappedComponent={
+                <p>
+                  Suspendisse rhoncus sem quis feugiat facilisis. Pellentesque
+                  vulputate risus sit amet lorem volutpat.
+                </p>
+              }
+            />
+          </li>
+        ))}
+      </ul>
     </CompositionFonts>
   );
 };

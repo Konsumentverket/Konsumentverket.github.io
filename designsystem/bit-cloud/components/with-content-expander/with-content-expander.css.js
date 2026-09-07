@@ -377,3 +377,136 @@ export const expandedAreaExpandedStyle = css`
     padding: ${spacing.m} ${spacing.m} ${spacing.l} ${spacing.m};
   }
 `;
+
+/*
+ * Panelvariant. Används när expandrarna ligger i en gemensam, färgad panel och själva
+ * ska sakna eget kort-utseende: ingen bakgrund, ram, skugga eller radie. Panelens
+ * bakgrund och avdelarna mellan posterna sätts av den omgivande listan, inte här.
+ */
+export const containerPanelStyle = css`
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+
+  html[data-theme='dark'] & {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+  }
+`;
+
+export const linkPanelStyle = css`
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+
+  /* Standardvariantens hover ritar tillbaka hela kortet: en ljusblå platta med
+     inset-kant. I panelen blir det fel – plattan har dessutom exakt samma färg som
+     avdelarna mellan posterna. Hover-regeln i linkStyle har högre specificitet än
+     bastillståndet ovan, så den måste nollas uttryckligen. Kvar som affordans blir
+     understruken rubrik. */
+  &:hover {
+    background-color: transparent;
+    box-shadow: none;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-decoration: underline;
+    }
+  }
+
+  html[data-theme='dark'] & {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+`;
+
+export const expandedAreaPanelStyle = css`
+  background-color: transparent;
+  border: 0;
+
+  /* Svaret ligger indraget bredvid en böjd pil som pekar in mot texten. Pilen är
+     dekorativ och ligger först i flödet; innehållet tar resten av bredden.
+     min-width: 0 behövs för att långa ord och kodblock ska kunna brytas i stället
+     för att spränga flexboxen. */
+  display: flex;
+  align-items: flex-start;
+  gap: ${spacing.s};
+
+  > :last-child {
+    flex: 1;
+    min-width: 0;
+  }
+
+  html[data-theme='dark'] & {
+    background-color: transparent;
+    border: 0;
+  }
+`;
+
+/*
+ * Panelen sätter redan sin egen vågräta padding, så raderna ska inte ha någon:
+ * annars hamnar frågetexten dubbelt indragen (24px + 24px på desktop). Kvar blir
+ * bara luft över och under, som ger raderna sin höjd.
+ */
+export const headerPanelStyle = css`
+  padding: ${spacing.s} 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: ${spacing.s} 0;
+  }
+`;
+
+/*
+ * Måste vara skild från expandedAreaPanelStyle och villkorad på expanded – i
+ * hopfällt läge är höjden 0, och padding där skulle ge varje hopfälld rad extra
+ * höjd trots att innehållet är dolt.
+ */
+export const expandedAreaExpandedPanelStyle = css`
+  padding: 0 0 ${spacing.s} 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: 0 0 ${spacing.s} 0;
+  }
+`;
+
+export const indentArrowPanelStyle = css`
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+
+  @media (min-width: ${breakpoints.m}) {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Ikonen har fill hårdkodad på sin path, så färgen måste sättas där och inte på
+     svg-elementet. */
+  path {
+    fill: ${newColors.primaries.fullBlue};
+  }
+
+  html[data-theme='dark'] & path {
+    fill: ${newColors.shades.mediumBlue};
+  }
+`;
+
+export const titlePanelStyle = css`
+  font-size: 1.8rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.8rem;
+  }
+`;

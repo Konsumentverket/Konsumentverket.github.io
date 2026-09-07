@@ -6,7 +6,7 @@ import {
   colors,
 } from '@konsumentverket-sverige/designsystem.utils';
 
-import { checkPathData } from '@konsumentverket-sverige/designsystem.icons-system';
+import { checkPathData } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/CheckPath/checkPath.js';
 
 export const form = css`
   display: flex;

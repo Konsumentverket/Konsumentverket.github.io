@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
 import { Heading } from '@konsumentverket-sverige/designsystem.heading';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { Warn } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Warn/Warn.js';
+import { ChevronRight } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/ChevronRight/ChevronRight.js';
 import {
   form,
   reasonTitle,
@@ -21,6 +23,10 @@ import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ Warn, ChevronRight });
 
 const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
   const {

@@ -15,8 +15,13 @@ import {
 import { NoticeBox } from '@konsumentverket-sverige/designsystem.notice-box';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { MonoDownload } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoDownload/MonoDownload.js';
 import { newColors } from '@konsumentverket-sverige/designsystem.utils';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ MonoDownload });
 
 export const FormSuccess = ({
   formData,

@@ -10,7 +10,9 @@ import React, {
   useMemo,
 } from 'react';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { MonoDelete } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoDelete/MonoDelete.js';
+import { MonoSearch } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoSearch/MonoSearch.js';
 import {
   containerStyle,
   dropdownHasSuggestionsStyle,
@@ -32,6 +34,10 @@ import {
   searchButtonStyle,
   searchButtonTextStyle,
 } from './input-autocomplete.css.js';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ MonoDelete, MonoSearch });
 
 const defaultFormatSuggestionsResult = (data) =>
   data.predictions.map((item) => ({

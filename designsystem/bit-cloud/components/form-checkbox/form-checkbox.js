@@ -9,7 +9,6 @@ import {
   labelPrimaryStyle,
   statsStyle,
 } from './form-checkbox.css.js';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
 
 export const FormCheckbox = ({
   name,

@@ -1,10 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import * as SystemIcons from '@konsumentverket-sverige/designsystem.icons-system';
+import { getRegisteredIcon } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
 import * as EditorIcons from '@konsumentverket-sverige/designsystem.icons-editor';
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
-  const Component = SystemIcons[icon] || EditorIcons[icon];
+  /*
+   * Systemikonerna hämtas ur registret, som appen fyller med just de ikoner den
+   * använder. Redigeringsikonerna slås fortfarande upp i sin barrel: de väljs av
+   * redaktörer i Contentful, så vilka namn som kan förekomma går inte att veta vid
+   * byggtid.
+   */
+  const Component = getRegisteredIcon(icon) || EditorIcons[icon];
 
   if (!Component) {
     console.warn(`Icon not found: ${icon}`);

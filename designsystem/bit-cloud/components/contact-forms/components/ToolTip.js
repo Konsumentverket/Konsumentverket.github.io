@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { useState, useEffect, useRef } from 'react';
-import { SystemIcon } from '@konsumentverket-sverige/designsystem.icons-system';
+import { SystemIcon, registerIcons } from '@konsumentverket-sverige/designsystem.icons-system/dist/iconsSystem.js';
+import { Information } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Information/Information.js';
+import { MonoDeleteSmall } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/MonoDeleteSmall/MonoDeleteSmall.js';
 import { useOnClickOutside } from '@konsumentverket-sverige/designsystem.utils';
 import {
   centerPosition,
@@ -14,6 +16,10 @@ import {
   tooltip,
   tooltipText,
 } from '../contact-forms.css';
+
+// Bara de ikoner komponenten faktiskt anvander registreras, sa att barreln med
+// samtliga 113 ikoner inte dras in i bundlen.
+registerIcons({ Information, MonoDeleteSmall });
 
 const ToolTip = ({ position = 'left', id = '', text = '', label = '' }) => {
   const [isOpen, setIsOpen] = useState(false);

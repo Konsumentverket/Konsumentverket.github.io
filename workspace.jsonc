@@ -44,6 +44,24 @@
       ]
     }
   },
+  /**
+   * Ikonerna importeras avsiktligt fil för fil, till exempel
+   * icons-system/dist/SystemIcons/ChevronRight/ChevronRight.js, i stället för via
+   * paketets huvudfil.
+   *
+   * Huvudfilen är en barrel som återexporterar samtliga 113 ikoner med CommonJS. Den
+   * kan därför inte tree-shakas: en enda import drog in alla ikoner i bundlen, vilket
+   * utgjorde runt halva designsystemets vikt på varje sidladdning. Import per fil ger
+   * den granularitet som behövs.
+   *
+   * ImportNonMainFiles är alltså inte ett fel här utan själva avsikten. Alternativet
+   * inom bits modell vore att göra varje ikon till en egen komponent.
+   */
+  "teambit.component/issues": {
+    "ignoreIssues": [
+      "ImportNonMainFiles"
+    ]
+  },
   "teambit.workspace/workspace-config-files": {
     "enableWorkspaceConfigWrite": true
   }

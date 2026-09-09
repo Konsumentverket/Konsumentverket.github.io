@@ -378,11 +378,7 @@ export const expandedAreaExpandedStyle = css`
   }
 `;
 
-/*
- * Panelvariant. Används när expandrarna ligger i en gemensam, färgad panel och själva
- * ska sakna eget kort-utseende: ingen bakgrund, ram, skugga eller radie. Panelens
- * bakgrund och avdelarna mellan posterna sätts av den omgivande listan, inte här.
- */
+
 export const containerPanelStyle = css`
   background-color: transparent;
   box-shadow: none;
@@ -401,11 +397,6 @@ export const linkPanelStyle = css`
   box-shadow: none;
   border: 0;
 
-  /* Standardvariantens hover ritar tillbaka hela kortet: en ljusblå platta med
-     inset-kant. I panelen blir det fel – plattan har dessutom exakt samma färg som
-     avdelarna mellan posterna. Hover-regeln i linkStyle har högre specificitet än
-     bastillståndet ovan, så den måste nollas uttryckligen. Kvar som affordans blir
-     understruken rubrik. */
   &:hover {
     background-color: transparent;
     box-shadow: none;
@@ -436,10 +427,6 @@ export const expandedAreaPanelStyle = css`
   background-color: transparent;
   border: 0;
 
-  /* Svaret ligger indraget bredvid en böjd pil som pekar in mot texten. Pilen är
-     dekorativ och ligger först i flödet; innehållet tar resten av bredden.
-     min-width: 0 behövs för att långa ord och kodblock ska kunna brytas i stället
-     för att spränga flexboxen. */
   display: flex;
   align-items: flex-start;
   gap: ${spacing.s};
@@ -449,17 +436,30 @@ export const expandedAreaPanelStyle = css`
     min-width: 0;
   }
 
+  /*
+   * Tre ampersand behövs. Typographys regel är
+   * .kov-xxxxx p:not(.noStyleComponent p, .noStyle), alltså specificitet (0,2,2): en
+   * klass, ett element, och ett :not() som ärver vikten från .noStyleComponent p.
+   * && ger bara (0,2,1) och förlorar på elementräkningen. &&& ger (0,3,1), och
+   * eftersom klasskolumnen jämförs först vinner den.
+   */
+  &&& p,
+  &&& li,
+  &&& a,
+  &&& strong,
+  &&& em,
+  &&& td,
+  &&& th {
+    font-size: 1.6rem;
+  }
+
   html[data-theme='dark'] & {
     background-color: transparent;
     border: 0;
   }
 `;
 
-/*
- * Panelen sätter redan sin egen vågräta padding, så raderna ska inte ha någon:
- * annars hamnar frågetexten dubbelt indragen (24px + 24px på desktop). Kvar blir
- * bara luft över och under, som ger raderna sin höjd.
- */
+
 export const headerPanelStyle = css`
   padding: ${spacing.s} 0;
 
@@ -468,16 +468,31 @@ export const headerPanelStyle = css`
   }
 `;
 
-/*
- * Måste vara skild från expandedAreaPanelStyle och villkorad på expanded – i
- * hopfällt läge är höjden 0, och padding där skulle ge varje hopfälld rad extra
- * höjd trots att innehållet är dolt.
- */
+
 export const expandedAreaExpandedPanelStyle = css`
   padding: 0 0 ${spacing.s} 0;
 
   @media (min-width: ${breakpoints.m}) {
     padding: 0 0 ${spacing.s} 0;
+  }
+
+   > :last-child > :first-child {
+    margin-top: 0;
+  }
+`;
+
+
+export const linkExpandedPanelStyle = css`
+  &:after {
+    display: none;
+  }
+`;
+
+export const headerExpandedPanelStyle = css`
+  padding-bottom: ${spacing.xs};
+
+  @media (min-width: ${breakpoints.m}) {
+    padding-bottom: ${spacing.xs};
   }
 `;
 

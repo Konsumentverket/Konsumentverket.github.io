@@ -44,6 +44,8 @@ import {
   indentArrowPanelStyle,
   headerPanelStyle,
   expandedAreaExpandedPanelStyle,
+  linkExpandedPanelStyle,
+  headerExpandedPanelStyle,
 } from './with-content-expander.css.js';
 
 export const WithContentExpander = ({
@@ -156,6 +158,7 @@ export const WithContentExpander = ({
       linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
     useProcessStepStyling && noLeftBorderRadiusStyling,
     usePanelStyling && linkPanelStyle,
+    expanded && usePanelStyling && linkExpandedPanelStyle,
   ];
 
   const headerStyles = [
@@ -163,6 +166,7 @@ export const WithContentExpander = ({
     useProcessStepStyling && headerProcessStepStyle,
     useLightBlueAlternativeStyling && headerLightBlueAlternativeStyle,
     usePanelStyling && headerPanelStyle,
+    expanded && usePanelStyling && headerExpandedPanelStyle,
   ];
 
   const titleStyles = [

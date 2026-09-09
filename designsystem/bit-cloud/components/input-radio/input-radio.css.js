@@ -64,7 +64,7 @@ export const colorThemeGrey = css`
   background-color: ${newColors.shades.lightGrey25};
 
   html[data-theme='dark'] & {
-    background-color: ${newColors.shades.fullGrey};
+    background-color: ${newColors.kovBlack};
   }
 `;
 

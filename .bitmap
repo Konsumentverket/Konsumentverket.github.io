@@ -187,7 +187,7 @@
     "input-radio": {
         "name": "input-radio",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.270",
+        "version": "0.0.271",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/input-radio"
     },

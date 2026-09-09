@@ -48,6 +48,11 @@ import {
   headerExpandedPanelStyle,
 } from './with-content-expander.css.js';
 
+/**
+ * Event som fäller ut eller ihop samtliga expandrar på sidan samtidigt.
+ */
+export const EXPAND_ALL_EVENT = 'kov:expand-all';
+
 export const WithContentExpander = ({
   wrappedComponent,
   text,
@@ -68,7 +73,6 @@ export const WithContentExpander = ({
   contentfulTextName = '',
   level = 3,
 }) => {
-  // document.documentElement.setAttribute('data-theme', 'dark');
 
   useEffect(() => {
     if (typeof location !== 'undefined' && location.hash) {
@@ -84,6 +88,9 @@ export const WithContentExpander = ({
   }, []);
 
   const [expanded, setExpanded] = useState(open);
+  // Sätts när utfällningen kommer från EXPAND_ALL_EVENT. Utan den skulle varje
+  // expander försöka scrolla sig själv i bild
+  const skipScrollOnce = useRef(false);
   const linkContainerRef = useRef();
   const linkRef = useRef();
   const topOfComponent = useRef();
@@ -116,7 +123,20 @@ export const WithContentExpander = ({
   }, [open]);
 
   useEffect(() => {
+    const onExpandAll = (event) => {
+      skipScrollOnce.current = true;
+      setExpanded(event?.detail?.expanded !== false);
+    };
+    window.addEventListener(EXPAND_ALL_EVENT, onExpandAll);
+    return () => window.removeEventListener(EXPAND_ALL_EVENT, onExpandAll);
+  }, []);
+
+  useEffect(() => {
     let timeout;
+    if (skipScrollOnce.current) {
+      skipScrollOnce.current = false;
+      return undefined;
+    }
     if (scrollIntoView && topOfComponent.current && expanded) {
       topOfComponent.current.scrollIntoView({
         behavior: 'smooth',

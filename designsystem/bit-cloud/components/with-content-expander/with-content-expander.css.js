@@ -429,7 +429,7 @@ export const expandedAreaPanelStyle = css`
 
   display: flex;
   align-items: flex-start;
-  gap: ${spacing.s};
+  gap: ${spacing.xs};
 
   > :last-child {
     flex: 1;
@@ -496,11 +496,23 @@ export const headerExpandedPanelStyle = css`
   }
 `;
 
+export const panelStyleWrapper = css`
+  background-color: #fff;
+  margin-top: ${spacing.xs};
+  border-radius: 16px;
+  padding: ${spacing.m};
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.kovBlue75}
+  }
+
+`;
+
 export const indentArrowPanelStyle = css`
   flex: 0 0 auto;
   width: 20px;
   height: 20px;
-  margin-top: 2px;
+  margin-top: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     width: 24px;

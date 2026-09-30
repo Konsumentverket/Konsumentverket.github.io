@@ -46,6 +46,7 @@ import {
   expandedAreaExpandedPanelStyle,
   linkExpandedPanelStyle,
   headerExpandedPanelStyle,
+  panelStyleWrapper
 } from './with-content-expander.css.js';
 
 /**
@@ -73,20 +74,6 @@ export const WithContentExpander = ({
   contentfulTextName = '',
   level = 3,
 }) => {
-
-  useEffect(() => {
-    if (typeof location !== 'undefined' && location.hash) {
-      const split = location.hash.split(',');
-      const hashMatch = split.some((x) => x === `#${wrapperId}`);
-      if (hashMatch) {
-        open = true;
-        scrollIntoView = true;
-      }
-    }
-
-    return () => setExpanded(false);
-  }, []);
-
   const [expanded, setExpanded] = useState(open);
   // Sätts när utfällningen kommer från EXPAND_ALL_EVENT. Utan den skulle varje
   // expander försöka scrolla sig själv i bild
@@ -121,6 +108,32 @@ export const WithContentExpander = ({
   useEffect(() => {
     setExpanded(open);
   }, [open]);
+
+  /*
+   * Fäller ut expandern när sidans hash pekar på den.
+   *
+   * Tidigare tilldelade den här effekten propen `open`, vilket inte gör någonting:
+   * useState har redan läst sitt startvärde när effekten körs. Hash-öppningen har
+   * därför aldrig fungerat via komponenten, bara genom att anroparen själv räknat ut
+   * `open` före första renderingen.
+   *
+   * Hashen kan också peka på den utfällbara ytan i stället för på expandern, eftersom
+   * dess id är `${wrapperId}-content`. Länkar som genereras från sidans innehåll gör
+   * det. Suffixet tas därför bort före jämförelsen så att båda varianterna träffar.
+   */
+  useEffect(() => {
+    if (typeof location === 'undefined' || !location.hash) return undefined;
+
+    const targets = location.hash
+      .split(',')
+      .map((part) => part.replace(/-content$/, ''));
+
+    if (targets.includes(`#${wrapperId}`)) {
+      setExpanded(true);
+    }
+
+    return undefined;
+  }, []);
 
   useEffect(() => {
     const onExpandAll = (event) => {
@@ -289,12 +302,14 @@ export const WithContentExpander = ({
             css={indentArrowPanelStyle}
           />
         )}
-        <Typography
-          useProcessStepStyling={useProcessStepStyling}
-          small={useLightBlueAlternativeStyling}
-        >
-          {wrappedComponent}
-        </Typography>
+        <div css={usePanelStyling && panelStyleWrapper }>
+          <Typography
+            useProcessStepStyling={useProcessStepStyling}
+            small={useLightBlueAlternativeStyling}
+          >
+            {wrappedComponent}
+          </Typography>
+        </div>
       </div>
     </div>
   );

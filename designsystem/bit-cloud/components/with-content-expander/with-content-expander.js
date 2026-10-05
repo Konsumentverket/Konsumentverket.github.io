@@ -120,20 +120,34 @@ export const WithContentExpander = ({
    * Hashen kan också peka på den utfällbara ytan i stället för på expandern, eftersom
    * dess id är `${wrapperId}-content`. Länkar som genereras från sidans innehåll gör
    * det. Suffixet tas därför bort före jämförelsen så att båda varianterna träffar.
+   *
+   * Kontrollen måste köras om vid navigering, inte bara vid mount. Mount täcker
+   * direktladdning och sidbyten som monterar om komponenten, medan hashchange och
+   * popstate täcker klick inom samma sida och bakåtknappen.
    */
   useEffect(() => {
-    if (typeof location === 'undefined' || !location.hash) return undefined;
+    if (typeof window === 'undefined' || !wrapperId) return undefined;
 
-    const targets = location.hash
-      .split(',')
-      .map((part) => part.replace(/-content$/, ''));
+    const openIfTargeted = () => {
+      const { hash } = window.location;
+      if (!hash) return;
 
-    if (targets.includes(`#${wrapperId}`)) {
-      setExpanded(true);
-    }
+      const targets = hash
+        .split(',')
+        .map((part) => part.replace(/-content$/, ''));
 
-    return undefined;
-  }, []);
+      if (targets.includes(`#${wrapperId}`)) setExpanded(true);
+    };
+
+    openIfTargeted();
+    window.addEventListener('hashchange', openIfTargeted);
+    window.addEventListener('popstate', openIfTargeted);
+
+    return () => {
+      window.removeEventListener('hashchange', openIfTargeted);
+      window.removeEventListener('popstate', openIfTargeted);
+    };
+  }, [wrapperId]);
 
   useEffect(() => {
     const onExpandAll = (event) => {

@@ -308,7 +308,7 @@ export const textSmall = css`
 
 export const textSmallAlt = css`
   ${textSmall};
-  font-weight: 600;
+  font-weight: 640;
 `;
 
 export const textMini = css`
@@ -326,7 +326,7 @@ export const textMini = css`
 
 export const textMiniAlt = css`
   ${textMini};
-  font-weight: 600;
+  font-weight: 640;
 
   @media (min-width: ${breakpoints.m}) {
     line-height: 150%;

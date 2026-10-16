@@ -60,7 +60,7 @@ export const formRow = css`
 
   label {
     display: block;
-    font-weight: 700;
+    font-weight: 640;
     margin-bottom: 18px;
     html[data-theme='dark'] & {
       color: ${newColors.kovWhite};

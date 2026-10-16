@@ -34,7 +34,7 @@ export const eventBoxInfo = css`
   }
 
   span {
-    font-weight: bold;
+    font-weight: 640;
     display: block;
 
     @media (min-width: ${breakpoints.m}) {
@@ -57,7 +57,7 @@ export const eventBoxInfo = css`
 export const eventBoxDisclaimer = css`
   margin-top: 8px;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 640;
   margin-bottom: 0 !important;
   padding-bottom: 12px;
 
@@ -82,7 +82,7 @@ export const eventBoxApply = css`
 
 export const eventBoxOverdue = css`
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 640;
   display: flex;
   align-items: flex-start;
   line-height: 1.3;

@@ -206,7 +206,7 @@ const globalStyles = (
     font-style: italic;
   }
   strong {
-    font-weight: 700;
+    font-weight: 640;
   }
   u {
     text-decoration: underline;

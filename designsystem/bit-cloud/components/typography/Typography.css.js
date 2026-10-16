@@ -59,7 +59,7 @@ export const smallTypographyContainerStyle = css`
 
     strong {
       ${typography.textSmall};
-      font-weight: 700;
+      font-weight: 640;
     }
   }
 
@@ -69,7 +69,7 @@ export const smallTypographyContainerStyle = css`
   h5:not(.noStyleComponent h5, .link-element-container h5),
   h6:not(.noStyleComponent h6, .link-element-container h6) {
     ${typography.textSmall};
-    font-weight: 700;
+    font-weight: 640;
   }
 
   a:not(.noStyleComponent a, .noStyle) {

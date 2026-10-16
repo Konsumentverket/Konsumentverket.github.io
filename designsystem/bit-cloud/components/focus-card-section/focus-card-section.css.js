@@ -65,7 +65,7 @@ export const focusCardSectionHeaderStyle = css`
 export const focusCardSectionTitleStyle = css`
   font-size: 1.8rem;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 640;
   color: ${newColors.shades.kovBlue75};
 
   @media (min-width: ${breakpoints.m}) {

@@ -68,7 +68,7 @@ export const greyBackground = css`
 export const focusHeadline = css`
   font-size: 2.6rem;
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: 640;
   color: ${newColors.kovBlue};
   margin-bottom: 1.6rem;
 

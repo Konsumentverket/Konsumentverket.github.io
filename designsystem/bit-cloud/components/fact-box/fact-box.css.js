@@ -103,7 +103,7 @@ export const articleEntryMarginStyling = css`
 export const titleStyling = css`
   color: ${newColors.primaries.kovBlue};
   font-size: 2.4rem;
-  font-weight: 700;
+  font-weight: 640;
   line-height: 1.4;
   margin: 0 0 24px 0;
 

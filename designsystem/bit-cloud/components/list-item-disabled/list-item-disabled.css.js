@@ -52,7 +52,7 @@ export const headline = css`
   font-size: ${spacing.m};
   padding-bottom: ${spacing.xs};
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: 640;
   display: block;
   padding-top: .4rem;
 `

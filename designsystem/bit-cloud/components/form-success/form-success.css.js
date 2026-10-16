@@ -23,7 +23,7 @@ export const dataList = css`
 
     dt {
       display: inline-block;
-      font-weight: bold;
+      font-weight: 640;
       margin-right: 8px;
       vertical-align: top;
     }
@@ -58,7 +58,7 @@ export const nestedFlexChild = css`
 `;
 
 export const nestedKeyStyle = css`
-  font-weight: bold;
+  font-weight: 640;
   margin-right: 8px;
 `;
 

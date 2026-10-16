@@ -46,7 +46,7 @@ export const headingLinkStyle = css`
 export const headingStyle = css`
   font-size: 2rem;
   line-height: 1.4;
-  font-weight: 700;
+  font-weight: 640;
   margin: 0;
 
   ${medium} {

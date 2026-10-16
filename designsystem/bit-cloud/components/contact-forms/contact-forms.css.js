@@ -154,7 +154,7 @@ export const textAreaStyle = css`
 
 export const labelStyle = css`
   display: block;
-  font-weight: 700;
+  font-weight: 640;
   margin-bottom: 16px;
   margin-right: 16px;
   height: 23px;

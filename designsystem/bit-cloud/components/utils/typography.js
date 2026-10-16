@@ -7,7 +7,7 @@ import { breakpoints } from './breakpoints';
 const baseHeading = css`
   color: ${newColors.kovBlue};
   font-style: normal;
-  font-weight: 700;
+  font-weight: 640;
   position: relative;
   word-break: break-word;
   margin-bottom: 16px;
@@ -152,7 +152,7 @@ export const h4 = css`
 
 export const h5 = css`
   ${baseHeading};
-  font-weight: 700;
+  font-weight: 640;
   font-size: 1.8rem;
   line-height: 130%;
   margin-top: 16px;
@@ -248,7 +248,7 @@ export const paragraph = css`
 
   b,
   strong {
-    font-weight: 700;
+    font-weight: 640;
   }
 
   @media (min-width: ${breakpoints.m}) {
@@ -277,7 +277,7 @@ export const paragraphNoMargin = css`
 
 export const paragraphStrong = css`
   ${paragraph};
-  font-weight: 700;
+  font-weight: 640;
 
   @media (min-width: ${breakpoints.m}) {
     line-height: 150%;
@@ -449,7 +449,7 @@ export const linkLarge = css`
 
 export const linkParagraph = css`
   ${link};
-  font-weight: 700;
+  font-weight: 640;
   font-size: 1.8rem;
 
   @media (min-width: ${breakpoints.m}) {
@@ -460,7 +460,7 @@ export const linkParagraph = css`
 
 export const linkParagraphStrong = css`
   ${linkParagraph};
-  font-weight: 700;
+  font-weight: 640;
 `;
 
 export const clickHover = css`
@@ -557,7 +557,7 @@ export const clickMediumAltUL = css`
 
 export const clickLarge = css`
   ${baseClick};
-  font-weight: 700;
+  font-weight: 640;
   font-size: 2rem;
 
   @media (min-width: ${breakpoints.m}) {
@@ -573,7 +573,7 @@ export const clickLargeUL = css`
 const baseHeadingAlt = css`
   color: ${newColors.kovBlue};
   font-style: normal;
-  font-weight: 700;
+  font-weight: 640;
 
   html[data-theme='dark'] & {
     color: ${newColors.shades.lightBlue};
@@ -584,7 +584,7 @@ export const h1Alt2 = css`
   ${baseHeadingAlt};
   font-size: 2.6rem;
   line-height: 130%;
-  font-weight: 700;
+  font-weight: 640;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.8rem;
@@ -643,7 +643,7 @@ export const h2SmallAlt = css`
 const baseSubHeadingAlt = css`
   color: ${newColors.kovBlue};
   font-style: normal;
-  font-weight: 700;
+  font-weight: 640;
   margin-bottom: 8px;
 
   html[data-theme='dark'] & {

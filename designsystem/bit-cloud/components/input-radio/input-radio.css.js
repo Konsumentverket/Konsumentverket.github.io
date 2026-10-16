@@ -16,7 +16,7 @@ export const fieldWrapper = css`
 
   &.inputHasValue {
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: 640;
   }
 
   &:hover {

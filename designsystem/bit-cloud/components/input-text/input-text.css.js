@@ -83,6 +83,6 @@ export const LoadingStyle = css`
 `;
 export const Label = css`
   display: block;
-  font-weight: 700;
+  font-weight: 640;
   margin-bottom: 18px;
 `;

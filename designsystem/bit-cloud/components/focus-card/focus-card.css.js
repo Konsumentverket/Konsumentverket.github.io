@@ -90,7 +90,7 @@ export const focusCardTitleStyle = css`
   color: ${newColors.primaries.fullBlue};
   font-size: 2rem;
   margin: 0 0 ${spacing.s} 0;
-  font-weight: 700;
+  font-weight: 640;
   line-height: 1.5;
   text-decoration: underline;
   text-decoration-thickness: 2px;

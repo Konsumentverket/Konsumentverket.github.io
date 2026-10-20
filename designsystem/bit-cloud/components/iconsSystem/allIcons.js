@@ -4,6 +4,7 @@
  * barreln, och barreln kan i sin tur registrera hela uppsättningen.
  */
 export * from './SystemIcons/Adapt/Adapt.js';
+export * from './SystemIcons/AIDualBlue/AIDualBlue.js';
 export * from './SystemIcons/AirTime/AirTime.js';
 export * from './SystemIcons/Arrow/Arrow.js';
 export * from './SystemIcons/ArrowAngleRight/ArrowAngleRight.js';

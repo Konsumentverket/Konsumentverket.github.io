@@ -105,7 +105,7 @@ export const statusStyle = css`
 /*
  * Spärrar klick medan något pågår, så att samma åtgärd inte kan skickas två gånger.
  */
-export const loadingStyle = css`
+export const inactiveStyle = css`
   pointer-events: none;
 `;
 

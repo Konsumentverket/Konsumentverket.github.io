@@ -329,6 +329,7 @@ export const ButtonStates = () => {
       <GlobalStyles />
       <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', padding: '24px' }}>
         <Button text="Spara inställningar" />
+        <Button state="pending" text="Spara inställningar" />
         <Button state="loading" text="Sparar..." />
         <Button state="done" text="Inställningar är sparade" />
       </div>

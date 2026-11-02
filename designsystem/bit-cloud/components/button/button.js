@@ -16,9 +16,21 @@ import {
   buttonIconOnly,
   cookieStyle,
   statusStyle,
-  loadingStyle,
+  inactiveStyle,
   spinnerStyle,
 } from './Button.css.js';
+
+/*
+ * aria-disabled i stället för disabled-attributet. disabled hade dels gjort knappen
+ * grå via :disabled och ätit upp statusfärgen, dels tagit bort den ur tabbordningen –
+ * och då kan den som navigerar med tangentbord inte hitta knappen och förstå varför
+ * den inte går att använda. Priset är att knappen fortfarande går att aktivera med
+ * Enter, så klicket måste stoppas här. pointer-events i css räcker bara för mus.
+ */
+const blockInactiveClick = (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+};
 
 const ButtonSpinner = () => (
   <svg
@@ -76,6 +88,13 @@ export const Button = ({
 
   const isLoading = state === 'loading';
   const isDone = state === 'done';
+  const isPending = state === 'pending';
+
+  /*
+   * Både loading och pending går att klicka på utan effekt, men av olika skäl:
+   * det ena pågår redan, det andra är ännu inte möjligt att utföra.
+   */
+  const isInactive = isLoading || isPending;
 
   const statusIcon = isLoading ? <ButtonSpinner /> : isDone ? <Check width="20" height="17" /> : null;
 
@@ -96,8 +115,8 @@ export const Button = ({
     iconLeft && styles.push(buttonIconLeft);
     iconRight && styles.push(buttonIconRight);
     smallButtonStyle && styles.push(smallStyle);
-    statusIcon && styles.push(statusStyle);
-    isLoading && styles.push(loadingStyle);
+    (statusIcon || isPending) && styles.push(statusStyle);
+    isInactive && styles.push(inactiveStyle);
   }
 
   const ariaAttrs = {};
@@ -110,11 +129,12 @@ export const Button = ({
     css: styles,
     className: cssClass.join(' '),
     disabled: disabled,
-    onClick: onClick,
+    onClick: isInactive ? blockInactiveClick : onClick,
     ref: reference,
     type: href ? null : type,
     href: href || null,
     ...(isLoading ? { 'aria-busy': true } : {}),
+    ...(isInactive ? { 'aria-disabled': true } : {}),
     ...ariaAttrs,
   };
 

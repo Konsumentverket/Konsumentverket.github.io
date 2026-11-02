@@ -65,6 +65,69 @@ export const buttonStyle = css`
   }
 `;
 
+/*
+ * Statuslägen. Knappen byter till en ljusare blå medan något pågår och när det är
+ * klart, så att den läses som samma knapp i ett nytt läge i stället för som en ny
+ * knapp. Hover och active neutraliseras – i de här lägena finns inget att klicka på
+ * som ger något nytt.
+ *
+ * disabled-attributet går inte att använda för det här, eftersom :disabled gör
+ * knappen grå och då försvinner hela statusfärgen.
+ */
+export const statusStyle = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background-color: ${newColors.shades.fullBlue50};
+  border-color: ${newColors.shades.fullBlue50};
+  color: ${newColors.kovWhite};
+
+  &:hover,
+  &:active,
+  &.selectedButtonStyle {
+    background-color: ${newColors.shades.fullBlue50};
+    text-decoration: none;
+  }
+
+  html[data-theme='dark'] & {
+    background-color: ${newColors.shades.fullBlue50};
+    color: ${newColors.kovWhite};
+
+    &:hover,
+    &.selectedButtonStyle {
+      background-color: ${newColors.shades.fullBlue50};
+      text-decoration: none;
+    }
+  }
+`;
+
+/*
+ * Spärrar klick medan något pågår, så att samma åtgärd inte kan skickas två gånger.
+ */
+export const loadingStyle = css`
+  pointer-events: none;
+`;
+
+export const spinnerStyle = css`
+  flex-shrink: 0;
+  animation: button-spinner-rotate 1s steps(8) infinite;
+
+  @keyframes button-spinner-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*
+   * Stannar inte helt vid reducerad rörelse – en spinnare som står still ser ut som
+   * att något hängt sig. Den saktas ned i stället.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 3s;
+  }
+`;
+
 export const secondaryStyle = css`
   background-color: ${newColors.primaries.kovWhite};
   color: ${newColors.primaries.fullBlue};

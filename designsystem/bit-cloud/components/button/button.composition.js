@@ -322,3 +322,16 @@ export const BasicChipsButton = () => {
     </>
   );
 };
+
+export const ButtonStates = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', padding: '24px' }}>
+        <Button text="Spara inställningar" />
+        <Button state="loading" text="Sparar..." />
+        <Button state="done" text="Inställningar är sparade" />
+      </div>
+    </CompositionFonts>
+  );
+};

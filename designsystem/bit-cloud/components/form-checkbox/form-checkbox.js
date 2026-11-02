@@ -5,6 +5,7 @@ import React from 'react';
 import {
   wrapperStyle,
   checkboxStyle,
+  checkboxBlueStyle,
   labelStyle,
   labelPrimaryStyle,
   statsStyle,
@@ -19,12 +20,13 @@ export const FormCheckbox = ({
   disabled = false,
   checked = false,
   usePrimaryColor = false,
+  useBlueStyling = false,
   stats = null,
 }) => {
   return (
     <div
       data-comp="form-checkbox"
-      css={[wrapperStyle, checkboxStyle]}
+      css={[wrapperStyle, checkboxStyle, useBlueStyling && checkboxBlueStyle]}
       data-checked={checked}
     >
       <input

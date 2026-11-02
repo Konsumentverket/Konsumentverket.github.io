@@ -2,6 +2,8 @@ import { css } from '@emotion/react';
 import { colors, newColors } from '@konsumentverket-sverige/designsystem.utils';
 import checkmarkSvg from './checkmark.svg';
 import checkmarkDarkSvg from './checkmark-dark.svg';
+import checkmarkWhiteSvg from './checkmark-white.svg';
+import checkmarkMediumBlueSvg from './checkmark-medium-blue.svg';
 
 export const wrapperStyle = css`
   position: relative;
@@ -100,6 +102,22 @@ export const checkboxStyle = css`
     border: 1px solid ${newColors.shades.mediumGrey};
     background-color: ${newColors.shades.lightGrey25};
     box-shadow: none;
+  }
+`;
+
+export const checkboxBlueStyle = css`
+  .checkbox:checked + .checkbox-label:before {
+    background-color: ${newColors.kovBlue};
+    border-color: ${newColors.kovBlue};
+    background-image: url(${checkmarkWhiteSvg});
+    box-shadow: none;
+
+    html[data-theme='dark'] & {
+      background-color: ${newColors.kovBlue};
+      border-color: ${newColors.shades.mediumBlue};
+      background-image: url(${checkmarkMediumBlueSvg});
+      background-size: 48px 48px;
+    }
   }
 `;
 

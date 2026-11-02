@@ -2,6 +2,8 @@
 import { jsx } from '@emotion/react';
 import React from 'react';
 
+import { Check } from '@konsumentverket-sverige/designsystem.icons-system/dist/SystemIcons/Check/Check.js';
+
 import {
   buttonStyle,
   smallStyle,
@@ -13,7 +15,36 @@ import {
   buttonIconRight,
   buttonIconOnly,
   cookieStyle,
+  statusStyle,
+  loadingStyle,
+  spinnerStyle,
 } from './Button.css.js';
+
+const ButtonSpinner = () => (
+  <svg
+    css={spinnerStyle}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    aria-hidden="true"
+    focusable="false"
+  >
+    {Array.from({ length: 8 }, (_, i) => (
+      <rect
+        key={i}
+        x="9.1"
+        y="1.2"
+        width="1.8"
+        height="5"
+        rx="0.9"
+        fill="currentColor"
+        opacity={0.25 + (i / 8) * 0.75}
+        transform={`rotate(${i * 45} 10 10)`}
+      />
+    ))}
+  </svg>
+);
 
 export const Button = ({
   text,
@@ -36,10 +67,17 @@ export const Button = ({
   contentfulId,
   isCookie = false,
   noStyle = false,
+  // 'default' | 'loading' | 'done'
+  state = 'default',
   linkComponent: LinkComponent = 'a',
   ...other
 }) => {
   // document.documentElement.setAttribute('data-theme', 'dark');
+
+  const isLoading = state === 'loading';
+  const isDone = state === 'done';
+
+  const statusIcon = isLoading ? <ButtonSpinner /> : isDone ? <Check width="20" height="17" /> : null;
 
   const cssClass = [className];
   let styles = [buttonStyle];
@@ -58,6 +96,8 @@ export const Button = ({
     iconLeft && styles.push(buttonIconLeft);
     iconRight && styles.push(buttonIconRight);
     smallButtonStyle && styles.push(smallStyle);
+    statusIcon && styles.push(statusStyle);
+    isLoading && styles.push(loadingStyle);
   }
 
   const ariaAttrs = {};
@@ -74,6 +114,7 @@ export const Button = ({
     ref: reference,
     type: href ? null : type,
     href: href || null,
+    ...(isLoading ? { 'aria-busy': true } : {}),
     ...ariaAttrs,
   };
 
@@ -85,7 +126,7 @@ export const Button = ({
       data-contentful-entry-id={contentfulId}
       {...props}
     >
-      {iconLeft}
+      {statusIcon || iconLeft}
       {text}
       {iconRight}
     </LinkComponent>
@@ -96,7 +137,7 @@ export const Button = ({
       data-contentful-field-id={contentfulName}
       data-contentful-entry-id={contentfulId}
     >
-      {iconLeft}
+      {statusIcon || iconLeft}
       {text}
       {iconRight}
     </button>

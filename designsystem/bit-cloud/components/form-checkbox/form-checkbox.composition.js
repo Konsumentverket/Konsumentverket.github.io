@@ -89,3 +89,37 @@ export const BasicPrimaryCheckedFormCheckbox = () => {
     </CompositionFonts>
   );
 }
+
+export const BlueFormCheckbox = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <FormCheckbox
+        id="Lorem-check-blue"
+        name="lorem-check-blue"
+        value="Lorem ipsum"
+        labelText="Jag har tyvärr ingen fil att ladda upp"
+        useBlueStyling={true}
+        checked={false}
+        onChange={(e) => console.log(e.target.value)}
+      />
+    </CompositionFonts>
+  );
+}
+
+export const BlueCheckedFormCheckbox = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <FormCheckbox
+        id="Lorem-check-checked-blue"
+        name="lorem-check-checked-blue"
+        value="Lorem ipsum-checked"
+        labelText="Jag har tyvärr ingen fil att ladda upp"
+        useBlueStyling={true}
+        checked={true}
+        onChange={(e) => console.log(e.target.value)}
+      />
+    </CompositionFonts>
+  );
+}
